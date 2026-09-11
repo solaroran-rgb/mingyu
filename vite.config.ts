@@ -101,6 +101,29 @@ const isAiDefaultEnabled = isAiBuiltinEnabled && readBuildEnv('AI_DEFAULT_ENABLE
 const aiProviderName = readBuildEnv('AI_PROVIDER_NAME') ?? '';
 const isDonationBoxEnabled = readBuildEnv('VITE_ENABLE_DONATION_BOX') === 'true';
 
+/**
+ * iztro-vendor 是 CommonJS 整包（无 ESM 子路径），main build 与 worker build
+ * 各自产出内容相同的 474KB chunk。用无哈希文件名让两次 build 覆盖到同一路径，
+ * 浏览器只下载一次。其余 chunk 保留内容哈希以利用长效缓存。
+ *
+ * Worker build 的 manualChunks 只提取 iztro-vendor；其余依赖（tyme4ts、celestine、
+ * 自身计算代码）保持内联，避免为每个 worker 再复制一份 tyme-vendor/ziwei-engine。
+ */
+function sharedChunkFileNames(chunkInfo: { name: string }) {
+  if (chunkInfo.name === 'iztro-vendor') {
+    return 'assets/iztro-vendor.js';
+  }
+  return 'assets/[name]-[hash].js';
+}
+
+/** Worker build 专用 manualChunks：只隔离 iztro，其余内联到 worker 入口。 */
+function workerManualChunks(id: string) {
+  if (id.includes('node_modules/iztro')) {
+    return 'iztro-vendor';
+  }
+  return undefined;
+}
+
 export default defineConfig({
   define: {
     'import.meta.env.VITE_AI_ENABLED': JSON.stringify(isAiDefaultEnabled ? 'true' : 'false'),
@@ -118,6 +141,15 @@ export default defineConfig({
   plugins: [react(), aiProxyDevPlugin()],
   worker: {
     format: 'es',
+    rollupOptions: {
+      output: {
+        manualChunks(id: string) {
+          return workerManualChunks(id);
+        },
+        chunkFileNames: sharedChunkFileNames,
+        inlineDynamicImports: false,
+      },
+    },
   },
   resolve: {
     alias: {
@@ -132,6 +164,7 @@ export default defineConfig({
         manualChunks(id) {
           return getManualChunk(id);
         },
+        chunkFileNames: sharedChunkFileNames,
       },
     },
   },
