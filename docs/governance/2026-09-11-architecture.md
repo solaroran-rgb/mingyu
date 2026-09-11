@@ -241,3 +241,40 @@ solaroran-rgb 远程分支实测（git ls-remote）：
 - CF Dashboard：Pages 项目 production_branch codex/website-basic-settings -> main（前置 main 已 = cbeb64c，条件已满足，切换时机由主控定）。
 - GitHub：议题② rename solaroran-rgb/mingyu -> solaroran-rgb/temposoul（用户确认后执行）。
 - 议题③裸域、议题④ origin->upstream：维持线程 E 决策，待用户/主控在线上执行。
+
+---
+
+## 9. 执行状态（2026-09-12 第三轮收尾 · 线程 h1 · 治理收尾）
+
+- 执行线程：线程 h1（分支 thread-h1-gov，基于 07fb977 独立 worktree）。
+- 本线程只做：main 同步、worktree 清理、远端已合并分支清理、本文档更新；**不触碰** Cloudflare 线上配置、不 wrangler pages deploy、不推 origin。
+
+### 9.1 main 分支同步（议题①第 1 步，二次同步）
+- 第一轮同步（g7）：main 已从 fc09fdb 快进到 cbeb64c。
+- 第三轮本轮：第二轮 8 线程（a/b/c/d/e/g1-g8）+ 第三轮 6 线程（h2-h7）全部合并到 codex/website-basic-settings，推进至 90f844d。
+- 执行：`git push solaroran-rgb codex/website-basic-settings:main`（线性快进）。
+- 验收（push 后 ls-remote + rev-parse 全量 hash）：
+  - main（远端 solaroran-rgb）= 90f844de7a8cb0dd70114c22626db685d95be187
+  - codex/website-basic-settings（本地主仓）= 90f844de7a8cb0dd70114c22626db685d95be187
+  - 两者一致 = True。
+
+### 9.2 Worktree 清理（已完成）
+- 清理前：主仓 + .temposoul-wt/ 下 19 个线程 worktree（thread-a..e、g1-g8、h2-h7）。
+- 清理方法：各 worktree 分支已合并到主分支，目录内容为 node_modules + 源码副本，直接 `rmdir /s /q` 删除目录后 `git worktree prune --expire=now`。
+- 清理后 `git worktree list` 仅剩 2 项：
+  1. 主仓（codex/website-basic-settings @ 90f844d）
+  2. .temposoul-wt/thread-h1-gov（@ 07fb977）
+
+### 9.3 远端已合并分支清理（已完成）
+- 已从 solaroran-rgb 删除 19 个远端分支：thread-a-468、thread-b-lexicon、thread-c-perf、thread-d-legal、thread-e-gov、thread-g1-perf、thread-g2-468fix、thread-g3-vedic、thread-g4-geo、thread-g5-lexicon、thread-g6-treeshake、thread-g7-gov、thread-g8-commerce、thread-h2-vedic、thread-h3-iztro、thread-h4-si、thread-h5-i18n、thread-h6-rename、thread-h7-root。
+- 本地对应分支已 `git branch -D` 全部删除。
+- 清理后 solaroran-rgb 远端仅剩 4 个分支：
+  - main（90f844d）
+  - codex/website-basic-settings（07fb977）
+  - codex/optimize-algorithm-foundation（c94ad9a）
+  - codex/true-solar-iana-forwarding（9b7b91a）
+  - thread-h1-gov（本线程推送后出现）
+
+### 9.4 待主控线上动作（未变）
+- **CF Dashboard**：Pages 项目 production_branch 从 `codex/website-basic-settings` 切换到 `main`（前置条件已满足：main 已 = 90f844d，与 codex/website-basic-settings 同点）。切换时机由主控决定。
+- GitHub 仓改名、裸域配置、origin->upstream：维持前述决策，待用户在线上执行。
