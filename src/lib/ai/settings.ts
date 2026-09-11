@@ -33,39 +33,69 @@ type RuntimeAiConfig = {
 
 export const AI_PROVIDER_PRESETS: AiProviderPreset[] = [
   {
-    id: 'deepseek',
-    label: 'DeepSeek',
-    baseUrl: 'https://api.deepseek.com/v1',
-  },
-  {
     id: 'openai',
-    label: 'OpenAI',
+    label: 'OpenAI（美国）',
     baseUrl: 'https://api.openai.com/v1',
   },
   {
+    id: 'anthropic',
+    label: 'Anthropic（美国）',
+    baseUrl: 'https://api.anthropic.com/v1',
+  },
+  {
+    id: 'google-gemini',
+    label: 'Google Gemini（美国）',
+    baseUrl: 'https://generativelanguage.googleapis.com/v1beta/openai',
+  },
+  {
+    id: 'mistral',
+    label: 'Mistral（法国）',
+    baseUrl: 'https://api.mistral.ai/v1',
+  },
+  {
+    id: 'groq',
+    label: 'Groq（美国）',
+    baseUrl: 'https://api.groq.com/openai/v1',
+  },
+  {
+    id: 'openrouter',
+    label: 'OpenRouter（美国）',
+    baseUrl: 'https://openrouter.ai/api/v1',
+  },
+  {
+    id: 'deepinfra',
+    label: 'DeepInfra（美国）',
+    baseUrl: 'https://api.deepinfra.com/v1/inference',
+  },
+  {
+    id: 'deepseek',
+    label: 'DeepSeek（中国）',
+    baseUrl: 'https://api.deepseek.com/v1',
+  },
+  {
     id: 'qwen',
-    label: '通义千问',
+    label: '通义千问（中国）',
     baseUrl: 'https://dashscope.aliyuncs.com/compatible-mode/v1',
   },
   {
     id: 'doubao',
-    label: '豆包',
+    label: '豆包（中国）',
     baseUrl: 'https://ark.cn-beijing.volces.com/api/v3',
   },
   {
     id: 'moonshot',
-    label: 'Moonshot',
+    label: 'Moonshot（中国）',
     baseUrl: 'https://api.moonshot.cn/v1',
   },
   {
     id: 'zhipu',
-    label: '智谱',
+    label: '智谱（中国）',
     baseUrl: 'https://open.bigmodel.cn/api/paas/v4',
   },
   {
-    id: 'groq',
-    label: 'Groq',
-    baseUrl: 'https://api.groq.com/openai/v1',
+    id: 'custom',
+    label: '自定义供应商…',
+    baseUrl: '',
   },
 ];
 

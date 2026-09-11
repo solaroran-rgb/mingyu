@@ -130,6 +130,21 @@ export function AiSettingsModal({ settings, onApply, onClose }: AiSettingsModalP
                 </select>
               </label>
 
+              {draft.providerId === 'custom' ? (
+                <label className="field-card">
+                  <div className="field-header">
+                    <span>自定义接口地址</span>
+                  </div>
+                  <input
+                    value={draft.baseUrl}
+                    placeholder="填写任意 OpenAI 兼容接口，如 https://your-endpoint.com/v1"
+                    onChange={(event) =>
+                      setDraft((current) => ({ ...current, baseUrl: event.target.value }))
+                    }
+                  />
+                </label>
+              ) : null}
+
               <label className="field-card">
                 <div className="field-header">
                   <span>接口地址</span>
