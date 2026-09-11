@@ -9,6 +9,8 @@ export * from './civil-time';
 export * from './true-solar-time';
 export * from './china-dst';
 export * from './astronomical-time';
+export * from './utc-tt';
+export * from './samoa-skip-day';
 export * from './historical-timezone';
 export * from './solar-term-evidence';
 export * from './moon-phase-evidence';

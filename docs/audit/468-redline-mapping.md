@@ -73,17 +73,17 @@ _pass 0 / partial 0 / fail 0 / na 15_
 
 ### 1.1 天文历法与时间基准
 
-_pass 17 / partial 3 / fail 2 / na 0_
+_pass 19 / partial 3 / fail 0_（2026-09-11 线程 g2 已把 1.1-03、1.1-07 两项 P0 fail 修复为 pass）
 
 | ID | 检查项 | 状态 | 证据 / 说明 |
 |---|---|---|---|
 | 1.1-01 | 经度校正公式 | pass | packages/core/src/calendar/true-solar-time.ts:647-720（Meeus 完整均时差 + 经度4分/度）；tests/true-solar-time.test.ts |
 | 1.1-02 | 均时差公式 | pass | packages/core/src/calendar/true-solar-time.ts:620-680（Meeus Ch.7/28）；tests/meeus-golden.test.ts；实现 L0/M/C/λ/ε/章动完整 Meeus 式，±1s |
-| 1.1-03 | UTC 转 TDT（TT）换算 | fail | core/src 全仓无 32.184s / UTC→TT / 闰秒 ΔAT 实现（grep 0 命中）；西洋占星走 astronomy-engine，七政四余走 Swiss Ephemeris，均未显式 TT 换算 |
+| 1.1-03 | UTC 转 TDT（TT）换算 | pass（2026-09-11 线程 g2 由 fail 修复） | packages/core/src/calendar/utc-tt.ts（TT_TAI_OFFSET_SECONDS=32.184 + IERS_LEAP_SECONDS 28 行 1972→2017 + deltaAtSeconds/utcToTtOffsetSeconds/utcToTtSeconds/utcJdToTtJd）；tests/utc-tt-samoa.test.ts |
 | 1.1-04 | 经纬度数据库 | partial | packages/core/src/location/index.ts + scripts/generate-china-location-data.mjs（中国省市区树）；tests/core-location-china.test.ts / check:location-data；中国县级覆盖有生成脚本，但全球≥1 |
 | 1.1-05 | 中国夏令时（1986-1991） | pass | packages/core/src/calendar/china-dst.ts:19-74（1986-1991 逐年硬编码起止） |
 | 1.1-06 | 国际夏令时（IANA tzdata） | partial | packages/core/src/calendar/civil-time.ts（timeZoneId 历史规则）；tests/civil-time.test.ts；依赖运行时 Intl/tzdata，无上游 48h 同步部署机制（部署属运维） |
-| 1.1-07 | 萨摩亚跳日 | fail | 萨摩亚 2011-12-30 跳日无专门处理；civil-time 仅做通用偏移解析，无该异常日期提示分支 |
+| 1.1-07 | 萨摩亚跳日 | pass（2026-09-11 线程 g2 由 fail 修复） | packages/core/src/calendar/samoa-skip-day.ts（isSamoaSkipDay/diagnoseSamoaSkipDay）+ historical-timezone.ts 无匹配分支接入；tests/utc-tt-samoa.test.ts 覆盖 2011-12-30 专用错误与相邻 12-29/12-31 偏移 |
 | 1.1-08 | 极端经度翻转 | pass | packages/core/src/calendar/true-solar-time.ts:647-720（Meeus 完整均时差 + 经度4分/度）；tests/true-solar-time.test.ts |
 | 1.1-09 | 公海/极地降级 | pass | packages/core/src/calendar/true-solar-time.ts:647-720（Meeus 完整均时差 + 经度4分/度）；tests/true-solar-time.test.ts |
 | 1.1-10 | 排盘结果幂等性 | pass | packages/core/src/shared/validation.ts + calendar/date-validation.ts；tests/core-validation.test.ts / input-validation.test.ts / date-validation.test.ts |
