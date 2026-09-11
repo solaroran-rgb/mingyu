@@ -61,6 +61,19 @@ export function getManualChunk(id: string) {
     return 'ziwei-prompts';
   }
 
+  // Astrolabe topic/shortcut data — tiny arrays needed by query-state
+  // (InputPage URL sync). Isolate so the landing page doesn't pull the full
+  // prompt-engine barrel (which carries bazi/divination prompt text only used
+  // by ResultPage).
+  if (
+    id.includes('packages/core/dist/prompt/astrolabe.js') ||
+    id.includes('packages/core/dist/prompt/presets.js') ||
+    id.includes('packages/core/src/prompt/astrolabe') ||
+    id.includes('packages/core/src/prompt/presets')
+  ) {
+    return 'astrolabe-data';
+  }
+
   if (id.includes('src/lib/prompt-engine.ts') || id.includes('src/utils/ai')) {
     return 'prompt-engine';
   }

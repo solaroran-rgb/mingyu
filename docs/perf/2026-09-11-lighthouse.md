@@ -132,3 +132,64 @@ chart-engine chunk **已消除**（被拆分为 calendar-engine + bazi-engine + 
 - [ ] LCP / FCP / TTI 实测
 - [ ] Service Worker 更新（cache version bump）
 - [ ] PWA 安装提示触发验证
+
+## 7. 第二轮拆分（线程 g6 · tree-shaking）
+
+> 分支: thread-g6-treeshake @ 基线 cbeb64c
+> 范围: 仅改 `build/chunking.ts`（manualChunks 规则），不动业务逻辑
+
+### 7.1 发现的问题
+
+第一轮将 prompt-engine 标注为"已在 ResultPage 动态导入，不在首屏"。但 chunk 依赖图审计发现：
+
+- `src/lib/query-state.ts` 在首屏（InputPage）静态导入 `ASTROLABE_PROMPT_TOPICS`
+- 该值经 `@/lib/astrolabe-prompts.ts` re-export 自 `@temposoul/core/prompt`（整包 barrel）
+- barrel 中除 astrolabe 数据外，还含 bazi/divination/inspiration 等大量提示词文本
+- Rollup 将 barrel 全部模块归入 `prompt-engine` chunk（因 aiPrompts 静态引用）
+- 结果：**访问 `/` 首页时，query-state → prompt-engine（639KB）被一并下载**
+
+### 7.2 措施
+
+在 `build/chunking.ts` 中新增规则，将 astrolabe 提示词数据（`dist/prompt/astrolabe.js` + `dist/prompt/presets.js`）隔离到独立的 `astrolabe-data` chunk：
+
+```ts
+if (id.includes('packages/core/dist/prompt/astrolabe.js') ||
+    id.includes('packages/core/dist/prompt/presets.js')) {
+  return 'astrolabe-data';
+}
+```
+
+### 7.3 before / after 对比
+
+| chunk | before | after | 说明 |
+|-------|--------|-------|------|
+| prompt-engine | 639.08 kB / gzip 206.84 kB | 634.52 kB / gzip 205.32 kB | 体积略降；**关键变化：不再被 InputPage 依赖** |
+| astrolabe-data | — | **16.27 kB / gzip 7.17 kB** | 新增；替代 prompt-engine 被 query-state 引用 |
+| iztro-vendor | 474.36 kB / gzip 150.26 kB | 474.36 kB / gzip 150.26 kB | 不变（仍为 ResultPage lazy，决策保留） |
+| ziwei-engine | 151.72 kB / gzip 45.92 kB | 140.15 kB / gzip 40.99 kB | 顺带下降 |
+
+### 7.4 首屏（InputPage）依赖变化
+
+| | before | after |
+|---|--------|-------|
+| query-state 依赖 | prompt-engine (639KB) | astrolabe-data (16KB) |
+| 首页额外下载（未压缩） | ~639 KB | ~16 KB |
+| 首页额外下载（gzip） | ~207 KB | ~7 KB |
+
+**首页 JS 传输量降低 ~199 KB gzip**（prompt-engine 从首屏移除）。
+
+### 7.5 尝试但放弃的方案
+
+- **worker manualChunks 共享**：曾尝试在 `vite.config.ts` 的 `worker.rollupOptions.output.manualChunks` 复用同一 `getManualChunk`，期望 main-thread 与 worker 共享 iztro-vendor。实测 Vite 对每个 worker 执行独立 Rollup build，同名 chunk 并未合并，反而复制出 tyme-vendor/ziwei-engine/calendar-engine 等多份副本，体积反增。已回滚，保留 worker 自包含打包。
+
+### 7.6 保留决策（文档化）
+
+- **prompt-engine (634KB / gzip 205KB)**：现仅被 ResultPage / AiChatPanel / 六爻等 lazy 路径引用，不在首屏。内容为业务必须的提示词模板文本，保留。
+- **iztro-vendor (474KB / gzip 150KB)**：仅被 ResultPage 经 ziwei-engine 动态 `import()` 加载；worker 侧另有一份自包含副本（Vite 独立 build 限制，见 7.5），属架构性重复，不在本线程消除。
+
+### 7.7 验证
+
+- `pnpm build` 通过（732 modules transformed）
+- `pnpm test:api` 107/107 pass
+- `pnpm test:prompt` 229/229 pass
+- index.html modulepreload 清单不变（vite-helpers / react-vendor / router-vendor）
