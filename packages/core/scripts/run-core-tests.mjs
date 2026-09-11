@@ -7,7 +7,7 @@ const scriptDir = dirname(fileURLToPath(import.meta.url));
 const repoRoot = resolve(scriptDir, '../../..');
 const testsDir = join(repoRoot, 'tests');
 
-const CORE_IMPORT_PATTERNS = [/packages\/core\/src/, /@temposoul/core/, /@core\//];
+const CORE_IMPORT_PATTERNS = [/packages\/core\/src/, /@temposoul\/core/, /@core\//];
 const INTEGRATION_TEST_PATHS = [/^tests\/mcp\//, /^tests\/public-api(?:-docs)?\.test\.ts$/];
 
 function walkTests(dir) {
