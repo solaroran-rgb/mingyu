@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 
 const publicApiDocs = readFileSync('docs/api.md', 'utf8');
-const publicSkill = readFileSync('public/skills/aov-mingyu-api/SKILL.md', 'utf8');
+const publicSkill = readFileSync('public/skills/temposoul-api/SKILL.md', 'utf8');
 
 test('公开 API 文档和 skill 应写明 AI 接口', () => {
   for (const content of [publicApiDocs, publicSkill]) {

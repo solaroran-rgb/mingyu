@@ -20,7 +20,7 @@ import { PROMPT_GUIDANCE_TEXT as PROMPT_ROLE_TEXT } from '../src/lib/prompt-guid
 (globalThis as Record<string, unknown>)['__DISABLE_PUBLIC_API_RATE_LIMIT__'] = true;
 
 async function callApi(path: string, init?: RequestInit) {
-  const request = new Request(`https://aov.cc/api/v1/${path}`, init);
+  const request = new Request(`https://www.temposoul.com/api/v1/${path}`, init);
   const response = await handlePublicApiRequest(request);
   const text = await response.text();
   return {
@@ -83,7 +83,7 @@ test('公开 API 健康检查应返回统一成功结构', async () => {
   assert.equal(response.headers.get('Access-Control-Allow-Origin'), '*');
   assert.equal(body.ok, true);
   assert.equal(body.data.status, 'ok');
-  assert.equal(body.meta.service, 'aov.cc');
+  assert.equal(body.meta.service, 'www.temposoul.com');
 });
 
 test('公开 API 基础路径本身应返回健康检查', async () => {
@@ -112,8 +112,8 @@ test('公开 API manifest 应暴露 OpenAPI 和 skill 地址', async () => {
   const { body } = await callApi('manifest');
 
   assert.equal(body.ok, true);
-  assert.equal(body.data.openapiUrl, 'https://aov.cc/api/v1/openapi.json');
-  assert.equal(body.data.skillUrl, 'https://aov.cc/skills/aov-mingyu-api/SKILL.md');
+  assert.equal(body.data.openapiUrl, 'https://www.temposoul.com/api/v1/openapi.json');
+  assert.equal(body.data.skillUrl, 'https://www.temposoul.com/skills/temposoul-api/SKILL.md');
   assert.ok(body.data.endpoints.includes('POST /api/v1/bazi/calculate'));
   assert.ok(body.data.endpoints.includes('POST /api/v1/bazi/compatibility'));
   assert.ok(body.data.endpoints.includes('POST /api/v1/bazi/compatibility/prompt'));
@@ -138,7 +138,7 @@ test('公开 API manifest 应暴露 OpenAPI 和 skill 地址', async () => {
   assert.ok(body.data.endpoints.includes('POST /api/v1/metaphysics/huangji-jingshi/prompt'));
   assert.ok(body.data.endpoints.includes('POST /api/v1/ai/analyze'));
   assert.ok(body.data.endpoints.includes('POST /api/v1/ai/models'));
-  assert.ok(body.data.endpoints.includes('GET /.well-known/aov-mingyu-api.json'));
+  assert.ok(body.data.endpoints.includes('GET /.well-known/temposoul-api.json'));
 });
 
 test('公开 API 八字双盘应返回交叉证据与完整提示词', async () => {
@@ -232,13 +232,13 @@ test('公开 API 元数据应跟随当前访问域名', async () => {
   assert.equal(body.data.service, 'example.pages.dev');
   assert.equal(body.data.baseUrl, 'https://example.pages.dev/api/v1');
   assert.equal(body.data.openapiUrl, 'https://example.pages.dev/api/v1/openapi.json');
-  assert.equal(body.data.skillUrl, 'https://example.pages.dev/skills/aov-mingyu-api/SKILL.md');
+  assert.equal(body.data.skillUrl, 'https://example.pages.dev/skills/temposoul-api/SKILL.md');
 });
 
 test('公开 API well-known 元数据应跟随当前访问域名', async () => {
   const response = await handleWellKnownApiRequest({
-    request: new Request('https://example.pages.dev/.well-known/aov-mingyu-api.json'),
-    params: { path: 'aov-mingyu-api.json' },
+    request: new Request('https://example.pages.dev/.well-known/temposoul-api.json'),
+    params: { path: 'temposoul-api.json' },
   });
   const body = (await response.json()) as {
     service: string;
@@ -253,7 +253,7 @@ test('公开 API well-known 元数据应跟随当前访问域名', async () => {
   assert.equal(body.service, 'example.pages.dev');
   assert.equal(body.baseUrl, 'https://example.pages.dev/api/v1');
   assert.equal(body.openapiUrl, 'https://example.pages.dev/api/v1/openapi.json');
-  assert.equal(body.skillUrl, 'https://example.pages.dev/skills/aov-mingyu-api/SKILL.md');
+  assert.equal(body.skillUrl, 'https://example.pages.dev/skills/temposoul-api/SKILL.md');
   assert.ok(body.endpoints.includes('POST /api/v1/bazi-ziwei/prompt'));
   assert.ok(body.endpoints.includes('POST /api/v1/ai/analyze'));
 });

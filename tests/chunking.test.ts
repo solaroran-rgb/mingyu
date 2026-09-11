@@ -15,10 +15,10 @@ test('命理核心模块进入统一计算分块，避免八字与紫微互相�
   assert.equal(getManualChunk('D:/project/node_modules/tyme4ts/dist/index.js'), 'tyme-vendor');
   assert.equal(
     getManualChunk('D:/project/packages/core/src/ziwei/iztro/runtime-helpers.ts'),
-    'bazi-engine',
+    'ziwei-engine',
   );
-  assert.equal(getManualChunk('D:/project/src/lib/full-chart-engine/ziwei.ts'), 'ziwei-engine');
-  assert.equal(getManualChunk('D:/project/src/lib/full-chart-engine/bazi.ts'), 'bazi-engine');
+  assert.equal(getManualChunk('D:/project/src/lib/full-chart-engine/ziwei.ts'), 'chart-combined');
+  assert.equal(getManualChunk('D:/project/src/lib/full-chart-engine/bazi.ts'), 'chart-combined');
   assert.equal(
     getManualChunk('D:/project/packages/core/src/bazi/baziCalculator.ts'),
     'bazi-engine',
