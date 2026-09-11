@@ -6,7 +6,7 @@ export type PublicApiRuntime = {
 };
 
 export const DEFAULT_PUBLIC_API_RUNTIME: PublicApiRuntime = {
-  service: 'mingyu',
+  service: 'temposoul',
   origin: 'http://localhost:3000',
 };
 
@@ -15,7 +15,7 @@ export const PUBLIC_API_ENDPOINTS = [
   'GET /api/v1/manifest',
   'GET /api/v1/openapi.json',
   'GET /api/v1/foundation/capabilities',
-  'GET /.well-known/aov-mingyu-api.json',
+  'GET /.well-known/temposoul-api.json',
   'POST /api/v1/calendar/true-solar-time',
   'POST /api/v1/calendar/true-solar-birth',
   'POST /api/v1/calendar/astronomical-time',
@@ -88,12 +88,12 @@ export function getPublicApiManifest(runtime: PublicApiRuntime = DEFAULT_PUBLIC_
   const baseUrl = `${runtime.origin}/api/${API_VERSION}`;
 
   return {
-    name: 'AOV 命理与占卜公开 API',
+    name: 'TempoSoul 命律 · 命理与占卜公开 API',
     service: runtime.service,
     version: API_VERSION,
     baseUrl,
     openapiUrl: `${baseUrl}/openapi.json`,
-    skillUrl: `${runtime.origin}/skills/aov-mingyu-api/SKILL.md`,
+    skillUrl: `${runtime.origin}/skills/temposoul-api/SKILL.md`,
     endpoints: [...PUBLIC_API_ENDPOINTS],
   };
 }

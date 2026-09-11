@@ -4,8 +4,22 @@ import { useI18n } from '@/i18n';
 import { PageTopbar } from '@/components/PageTopbar';
 import { lexicon, type LexiconCategory, type LexiconEntry } from '@/data/lexicon';
 
-const CATEGORIES = ['全部', '天干', '地支', '五行', '十神', '紫微星曜', '基础', '神煞'] as const;
-type CatFilter = (typeof CATEGORIES)[number];
+/**
+ * 词库分类按钮：覆盖 src/data/lexicon.ts + lexicon-extra.ts 中实际出现的
+ * 全部 37 个分类，按命理域分为 7 组，每组一行横向滚动，避免按钮撑爆布局。
+ */
+const CATEGORY_GROUPS: { label: string; items: LexiconCategory[] }[] = [
+  { label: '基础干支', items: ['基础', '天干', '地支', '五行', '十神', '十二长生', '十干禄'] },
+  { label: '干支关系', items: ['天干五合', '地支关系', '干支组合', '三合三会', '纳音'] },
+  { label: '神煞格局', items: ['神煞', '八字格局', '紫微四化', '紫微格局'] },
+  { label: '紫微斗数', items: ['紫微星曜', '十二宫'] },
+  { label: '周易八卦', items: ['八卦', '六十四卦', '十二消息卦', '九宫', '河洛'] },
+  { label: '星象历法', items: ['二十八宿', '北斗七星', '七政四余', '节气', '三元九运', '二十四山'] },
+  { label: '术数流派', items: ['奇门遁甲', '六壬', '择日', '风水', '三才四象', '推命体系', '命理流派', '命理典籍'] },
+];
+
+const ALL_ITEMS: ('全部' | LexiconCategory)[] = ['全部', ...CATEGORY_GROUPS.flatMap((g) => g.items)];
+type CatFilter = (typeof ALL_ITEMS)[number];
 
 export function LexiconPage() {
   const { t } = useI18n();
@@ -40,17 +54,31 @@ export function LexiconPage() {
             onChange={(e) => setQ(e.target.value)}
           />
           <div className="lexicon-cats">
-            {CATEGORIES.map((c) => (
-              <button
-                key={c}
-                type="button"
-                className={`lexicon-cat${cat === c ? ' is-active' : ''}`}
-                onClick={() => setCat(c)}
-              >
-                {c === '全部' ? t('lexicon.all') : c}
-              </button>
-            ))}
+            <button
+              type="button"
+              className={`lexicon-cat${cat === '全部' ? ' is-active' : ''}`}
+              onClick={() => setCat('全部')}
+            >
+              {t('lexicon.all')}
+            </button>
           </div>
+          {CATEGORY_GROUPS.map((group) => (
+            <div className="lexicon-cat-group" key={group.label}>
+              <span className="lexicon-cat-group-label">{group.label}</span>
+              <div className="lexicon-cat-group-chips">
+                {group.items.map((c) => (
+                  <button
+                    key={c}
+                    type="button"
+                    className={`lexicon-cat${cat === c ? ' is-active' : ''}`}
+                    onClick={() => setCat(c)}
+                  >
+                    {c}
+                  </button>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
         <p className="lexicon-count">
           {results.length} {t('lexicon.count')}
