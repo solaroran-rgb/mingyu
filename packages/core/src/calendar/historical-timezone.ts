@@ -3,6 +3,8 @@
  * @description 通过运行环境 Intl/IANA 数据库解析当地钟表时刻的历史 UTC 偏移，并识别 DST 歧义与缺失时刻。
  */
 
+import { diagnoseSamoaSkipDay } from './samoa-skip-day';
+
 export interface HistoricalTimezoneInput {
   year: number;
   month: number;
@@ -213,6 +215,10 @@ export function resolveHistoricalTimezone(
     .sort((first, second) => first.timestamp - second.timestamp);
 
   if (!matches.length) {
+    const samoa = diagnoseSamoaSkipDay(timeZoneId, target.year, target.month, target.day);
+    if (samoa.isSkipDay) {
+      throw new Error(samoa.message!);
+    }
     throw new Error(
       `${timeZoneId} 的当地钟表时间 ${wallClockDateTime} 不存在，通常由夏令时跳时造成。`,
     );

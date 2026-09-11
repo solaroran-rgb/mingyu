@@ -3,14 +3,14 @@
 > 仅列 **fail / partial** 项，按体系分组、按严重度排序。**na 项（组织/基础设施/前端/业务）不在本清单**。
 > 严重度：**P0**=红线级错误会污染排盘结果；**P1**=能力缺失影响审计闭环；**P2**=可改进/在调用侧补齐。
 
-## 汇总：fail 2 项，partial 131 项
+## 汇总：fail 0 项，partial 131 项（2026-09-11 线程 g2 已修复 1.1-03 / 1.1-07 两项 P0）
 
 ## 1.1 天文历法与时间基准
 
 | ID | 严重度 | 检查项 | 现状 | 修复建议 |
 |---|---|---|---|---|
-| 1.1-03 | P0 | UTC 转 TDT（TT）换算 | core/src 全仓无 32.184s / UTC→TT / 闰秒 ΔAT 实现（grep 0 命中）；西洋占星走 astronomy-engine，七政四余走 Swiss Ep | 在 calendar/astronomical-time.ts 增 TT=UTC+ΔAT+32.184s 纯函数与 IERS 闰秒表；西洋/七政排盘入口显式转 TT |
-| 1.1-07 | P0 | 萨摩亚跳日 | 萨摩亚 2011-12-30 跳日无专门处理；civil-time 仅做通用偏移解析，无该异常日期提示分支 | 在 civil-time/true-solar-time 增萨摩亚 2011-12-30 不存在日期分支并抛 CHINA_DST_NONEXISTENT 同类错误 |
+| 1.1-03 | ~~P0~~ ✅已修复（2026-09-11 线程 g2） | UTC 转 TDT（TT）换算 | 已修复：新增 packages/core/src/calendar/utc-tt.ts，导出 TT_TAI_OFFSET_SECONDS=32.184、IERS_LEAP_SECONDS（28 行 1972→2017）、deltaAtSeconds/utcToTtOffsetSeconds/utcToTtSeconds/utcJdToTtJd 纯函数；tests/utc-tt-samoa.test.ts 覆盖 2024-01-01=69.184s、1972-01-01=42.184s、2016 闰秒前后 36→37、J2000 JD(TT) 折算 | 后续若 IERS 发布新闰秒，往 IERS_LEAP_SECONDS 追加一行即可 |
+| 1.1-07 | ~~P0~~ ✅已修复（2026-09-11 线程 g2） | 萨摩亚跳日 | 已修复：新增 packages/core/src/calendar/samoa-skip-day.ts（isSamoaSkipDay/diagnoseSamoaSkipDay），并在 historical-timezone.ts 无匹配分支接入；Pacific/Apia 2011-12-30 抛专用错误，相邻 12-29=UTC-10 / 12-31=UTC+14 正常解析 | 已在 tests/utc-tt-samoa.test.ts 覆盖 |
 | 1.1-04 | P1 | 经纬度数据库 | packages/core/src/location/index.ts + scripts/generate-china-location-data.mjs（中国省市区树）；tes | 扩充 location 数据集至全球≥10万条/4位小数，标注来源与时区 ID |
 | 1.1-06 | P1 | 国际夏令时（IANA tzdata） | packages/core/src/calendar/civil-time.ts（timeZoneId 历史规则）；tests/civil-time.test.ts；依赖运行时 I | 在 CI 加 tzdata 版本核对与 48h 同步检查脚本 |
 | 1.1-11 | P1 | 高纬度地区校验 | packages/core/src/calendar/true-solar-time.ts:647-720（Meeus 完整均时差 + 经度4分/度）；tests/true-sol | 高纬度极昼极夜时辰显示增加说明分支 |
