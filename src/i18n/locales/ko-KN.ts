@@ -58,6 +58,23 @@ export const koKN: Dict = {
     categoryLabel: '분류',
     source: '출처',
   },
+  newsletter: {
+    title: '무료 AI 심층 해석 템플릿 받기',
+    subtitle: '매주 점술 팁과 기능 업데이트를 보내드립니다.',
+    placeholder: '이메일 주소',
+    subscribe: '구독',
+    success: '구독 완료! 신뢰해 주셔서 감사합니다.',
+    error: '이메일 형식이 올바르지 않습니다.',
+    privacy: '업데이트 전송에만 사용하며 이메일을 공유하지 않습니다.',
+  },
+  premium: {
+    title: '명률 프로',
+    desc: '무제한 AI 해석과 전문가급 보고서 잠금 해제',
+    perks: ['무제한 AI 심층 해석', '전문가급 합반·길일 보고서', '새로운 기능 우선 체험'],
+    cta: '지금 업그레이드',
+    quotaHint: '오늘 남은 무료 사용 횟수',
+    loginHint: '로그인하여 구독 관리',
+  },
   analytics: {
     notice: '본 사이트는 개인정보 친화적 분석을 사용하며 기본적으로 비활성화되어 있고 배포 시 활성화할 수 있습니다.',
   },

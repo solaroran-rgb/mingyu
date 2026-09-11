@@ -70,6 +70,7 @@ import { useZiweiCalculations } from './hooks/useZiweiCalculations';
 import { FRONTEND_DEFAULT_TIME_ZONE_ID } from '@/lib/time-policy';
 import { usePromptShortcuts } from './hooks/usePromptShortcuts';
 import { AiChatPanel } from '@/components/AiChatPanel';
+import { PremiumGate } from '@/components/PremiumGate';
 import { useAiSettings } from '@/hooks/useAiSettings';
 import { buildAiRequestConfig } from '@/lib/ai/settings';
 import { buildMetaphysicsPrompt } from '@/lib/metaphysics-prompt';
@@ -1574,14 +1575,16 @@ export function ResultPage() {
                     </div>
                   ) : null}
 
-                  <AiChatPanel
-                    contextPrompt={aiContextPrompt}
-                    resetKey={`${promptState.promptSource}-${promptState.baziFortuneScope}-${promptState.ziweiScope}`}
-                    onOpenInspiration={inspiration.open}
-                    externalInput={inspirationText}
-                    onExternalInputConsumed={() => setInspirationText('')}
-                    aiConfig={aiRequestConfig}
-                  />
+                  <PremiumGate quota={5}>
+                    <AiChatPanel
+                      contextPrompt={aiContextPrompt}
+                      resetKey={`${promptState.promptSource}-${promptState.baziFortuneScope}-${promptState.ziweiScope}`}
+                      onOpenInspiration={inspiration.open}
+                      externalInput={inspirationText}
+                      onExternalInputConsumed={() => setInspirationText('')}
+                      aiConfig={aiRequestConfig}
+                    />
+                  </PremiumGate>
                 </div>
               ) : (
                 /* ── AI 桌面端：左栏设置+快捷，右栏对话 ── */
@@ -1726,14 +1729,16 @@ export function ResultPage() {
                     </div>
                   </section>
 
-                  <AiChatPanel
-                    contextPrompt={aiContextPrompt}
-                    resetKey={`${promptState.promptSource}-${promptState.baziFortuneScope}-${promptState.ziweiScope}`}
-                    onOpenInspiration={inspiration.open}
-                    externalInput={inspirationText}
-                    onExternalInputConsumed={() => setInspirationText('')}
-                    aiConfig={aiRequestConfig}
-                  />
+                  <PremiumGate quota={5}>
+                    <AiChatPanel
+                      contextPrompt={aiContextPrompt}
+                      resetKey={`${promptState.promptSource}-${promptState.baziFortuneScope}-${promptState.ziweiScope}`}
+                      onOpenInspiration={inspiration.open}
+                      externalInput={inspirationText}
+                      onExternalInputConsumed={() => setInspirationText('')}
+                      aiConfig={aiRequestConfig}
+                    />
+                  </PremiumGate>
                 </div>
               )
             ) : (

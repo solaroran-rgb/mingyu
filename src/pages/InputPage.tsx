@@ -26,6 +26,7 @@ import { PersonForm } from './InputPage.PersonForm';
 import { getFieldKey, type SELF_FIELD_MAP } from './InputPage.field-helpers';
 import { AiSettingsModal } from '@/components/AiSettingsModal';
 import { useAiSettings } from '@/hooks/useAiSettings';
+import { EmailCapture } from '@/components/EmailCapture';
 
 type InputEntryMode = 'single' | 'compatibility' | 'divination' | 'almanac';
 
@@ -536,6 +537,10 @@ export function InputPage() {
               </button>
             </div>
           </div>
+        </div>
+
+        <div style={{ margin: '28px auto 40px', maxWidth: 420, padding: '0 16px' }}>
+          <EmailCapture source="home" />
         </div>
       </div>
 

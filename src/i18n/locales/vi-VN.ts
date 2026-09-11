@@ -58,6 +58,23 @@ export const viVN: Dict = {
     categoryLabel: 'Danh mục',
     source: 'Nguồn',
   },
+  newsletter: {
+    title: 'Nhận mẫu giải đoán AI chuyên sâu miễn phí',
+    subtitle: 'Mẹo bói toán và cập nhật tính năng hàng tuần.',
+    placeholder: 'Email của bạn',
+    subscribe: 'Đăng ký',
+    success: 'Đăng ký thành công! Cảm ơn bạn đã tin tưởng.',
+    error: 'Email không hợp lệ, vui lòng thử lại.',
+    privacy: 'Chỉ dùng để gửi cập nhật, không bao giờ chia sẻ email của bạn.',
+  },
+  premium: {
+    title: 'TempoSoul Pro',
+    desc: 'Mở khóa giải đoán AI không giới hạn và báo cáo chuyên nghiệp',
+    perks: ['Giải đoán AI không giới hạn', 'Báo cáo hợp bàn·chọn ngày chuyên nghiệp', 'Trải nghiệm tính năng mới trước'],
+    cta: 'Nâng cấp ngay',
+    quotaHint: 'Lượt miễn phí còn lại hôm nay',
+    loginHint: 'Đăng nhập để quản lý gói đăng ký',
+  },
   analytics: {
     notice: 'Trang web này sử dụng phân tích thân thiện với quyền riêng tư, tắt theo mặc định và có thể bật khi triển khai.',
   },

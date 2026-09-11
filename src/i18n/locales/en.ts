@@ -58,6 +58,23 @@ export const en: Dict = {
     categoryLabel: 'Category',
     source: 'Source',
   },
+  newsletter: {
+    title: 'Get free AI deep-reading templates',
+    subtitle: 'Weekly divination tips and feature updates, straight to your inbox.',
+    placeholder: 'Your email',
+    subscribe: 'Subscribe',
+    success: 'Subscribed! Thank you for your trust.',
+    error: 'Invalid email format, please retry.',
+    privacy: 'Used only for updates. We never share your email.',
+  },
+  premium: {
+    title: 'TempoSoul Pro',
+    desc: 'Unlock unlimited AI deep readings and pro-grade reports',
+    perks: ['Unlimited AI deep readings', 'Pro-level synastry & date selection reports', 'Early access to new systems'],
+    cta: 'Upgrade now',
+    quotaHint: 'Free uses left today',
+    loginHint: 'Sign in to manage your subscription',
+  },
   analytics: {
     notice: 'This site uses privacy-friendly analytics, disabled by default and can be enabled at deploy time.',
   },

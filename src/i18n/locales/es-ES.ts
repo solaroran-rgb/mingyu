@@ -58,6 +58,23 @@ export const esES: Dict = {
     categoryLabel: 'Categoría',
     source: 'Fuente',
   },
+  newsletter: {
+    title: 'Obtén plantillas gratuitas de lectura profunda con IA',
+    subtitle: 'Consejos de adivinación y novedades semanales.',
+    placeholder: 'Tu correo electrónico',
+    subscribe: 'Suscribirse',
+    success: '¡Suscripción exitosa! Gracias por tu confianza.',
+    error: 'Formato de correo no válido, inténtalo de nuevo.',
+    privacy: 'Solo lo usamos para enviar novedades, nunca compartimos tu correo.',
+  },
+  premium: {
+    title: 'TempoSoul Pro',
+    desc: 'Desbloquea lecturas de IA ilimitadas e informes en profundidad',
+    perks: ['Lecturas profundas de IA ilimitadas', 'Informes profesionales de sinastría y fechas', 'Acceso anticipado a nuevas funciones'],
+    cta: 'Mejorar ahora',
+    quotaHint: 'Usos gratuitos restantes hoy',
+    loginHint: 'Inicia sesión para gestionar tu suscripción',
+  },
   analytics: {
     notice: 'Este sitio usa analítica respetuosa con la privacidad, desactivada por defecto y activable en el despliegue.',
   },

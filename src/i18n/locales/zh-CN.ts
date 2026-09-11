@@ -56,6 +56,23 @@ export const zhCN = {
     categoryLabel: '分类',
     source: '来源',
   },
+  newsletter: {
+    title: '免费获取 AI 深度解读模板',
+    subtitle: '订阅每周排盘技巧与功能更新，第一时间体验新体系。',
+    placeholder: '你的邮箱',
+    subscribe: '订阅',
+    success: '订阅成功，感谢信任！',
+    error: '邮箱格式不正确，请重试。',
+    privacy: '仅用于发送更新，绝不共享你的邮箱。',
+  },
+  premium: {
+    title: '命律专业版',
+    desc: '解锁无限次 AI 深度解读与专业级报告',
+    perks: ['无限次 AI 深度解读', '专业级合盘与择日报告', '优先体验新体系功能'],
+    cta: '立即升级',
+    quotaHint: '今日剩余免费次数',
+    loginHint: '登录后可管理订阅',
+  },
   analytics: {
     notice: '本站采用隐私友好型分析，默认关闭，部署时可按需开启。',
   },
