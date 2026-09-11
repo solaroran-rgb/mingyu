@@ -270,6 +270,28 @@
   background: linear-gradient(135deg, var(--accent, #de5aa6), var(--secondary, #b8a7ea));
 }
 
+.lexicon-cat-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.lexicon-cat-group-label {
+  flex: 0 0 auto;
+  font-size: 11px;
+  color: var(--text-muted, #877992);
+  white-space: nowrap;
+}
+
+.lexicon-cat-group-chips {
+  display: flex;
+  gap: 6px;
+  flex: 1 1 auto;
+  overflow-x: auto;
+  padding-bottom: 2px;
+}
+
 .lexicon-count {
   margin: 6px 0 12px;
   font-size: 12px;
