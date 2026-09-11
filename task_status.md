@@ -29,3 +29,12 @@
 ## 纪律
 - 进度只走：`python _governance/scripts/update_status.py <base64:项目|任务ID|状态|备注>`（脚本未建，暂由豆包直接维护）
 - 本文件为唯一进度真理源
+
+## 2026-09-11 · 六线程并行执行合并部署（04093010）
+- 线程 A（468 红线映射）✅ commit 42575fb+bf2395d：492 检查点矩阵 + core 测试脚本修复（1506 测试过）
+- 线程 B（词库 800）✅ commit c5fe112：1180 条（超目标），校验 0 重复 0 缺字段
+- 线程 C（性能/PWA）✅ commit 3848045：initial JS gzip 492→74KB（-85%），sw v3 已上线；Lighthouse 正式分待复测
+- 线程 D（法务多语言）✅ commit a0118ff：Privacy/Tutorial 7 语言，134 keys×7 对齐
+- 线程 E（架构治理）✅ commit 758b3dd：四议题决策文档 docs/governance/
+- 线程 F（GSC/Bing）⏳ GSC meta 已上线，待用户在 GSC 点验证 + 提交 sitemap；Bing 待登录
+- 主控收口：HEAD 3b4b197（已推 solaroran-rgb），部署 04093010，www.temposoul.com 生效
