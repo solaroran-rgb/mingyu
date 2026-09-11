@@ -203,3 +203,41 @@ solaroran-rgb 远程分支实测（git ls-remote）：
 - `solaroran-rgb/mingyu` 与 `Brhiza/mingyu` 的 GitHub fork 关系。
 - `README.md` 中 `/mingyu-runtime-config.js` 与代码实际 runtime-config 文件名是否一致（规划文档称已为 `temposoul-runtime-config.js`，需代码层核对后统一）。
 - `mcp/README.md`、`packages/core/README.md` 的 `Brhiza/mingyu` 引用随议题②④收口。
+
+## 8. 执行状态（2026-09-11 第二轮 · 线程 g7 · 架构治理执行）
+
+- 执行线程：线程 g7（分支 thread-g7-gov，基于 cbeb64c 独立 worktree）。
+- 本线程只把已决策项落地为事实；不改任何 Cloudflare 线上配置、不在 GitHub 执行改名、不 wrangler pages deploy、不推 origin。
+
+### 8.1 main 分支同步（议题①第 1 步，已完成）
+- 实测三方指针（Python subprocess 权威核验，规避 PowerShell 中文路径缓冲噪声）：
+  - 同步前：main = solaroran-rgb/main = fc09fdb；codex/website-basic-settings = cbeb64c。
+  - 拓扑：merge-base(main, codex) = fc09fdb = main 当前 tip；main..codex = 52 提交，codex..main = 0；main 是 codex 的直接祖先 → 纯线性快进。
+- 执行：主仓 git fetch . codex/website-basic-settings:main（本地 main 快进）→ git push solaroran-rgb main。
+- 验收（push 后 fetch 复核，rev-parse 全量 hash）：
+  - main                     = cbeb64cd9806c67e985e69a42ec394018bc38f65
+  - solaroran-rgb/main       = cbeb64cd9806c67e985e69a42ec394018bc38f65
+  - codex/website-basic-settings = cbeb64cd9806c67e985e69a42ec394018bc38f65
+  - 三者一致 = True。
+- 含义：议题①第 1 步（main 快进到线上分支 tip）已完成；main 现与 codex/website-basic-settings 同点。
+
+### 8.2 仓改名 mingyu -> temposoul 准备（议题②，gh CLI 不可用 → 网页步骤）
+- gh CLI 实测：shutil.which(gh) = None，gh 不在 PATH（未安装/未入 PATH）。按规则不假装执行，改输出网页步骤。
+- 当前 remote（git remote -v 实测）：
+  - origin        = https://github.com/Brhiza/mingyu.git（禁推）
+  - solaroran-rgb = https://github.com/solaroran-rgb/mingyu.git（推送目标）
+- 改名网页步骤（用户/GitHub 执行）：
+  1. 打开 https://github.com/solaroran-rgb/mingyu -> Settings -> General -> Repository name，把 mingyu 改为 temposoul -> Rename。
+  2. 改名后 GitHub 在旧路径保留 301 重定向，旧 clone/fetch/push/网页链接自动跟随；fork/webhook/API 客户端同理。
+  3. 本地 remote 切到 canonical（主仓与各 worktree/已有 clone 都执行）：
+     - git remote set-url solaroran-rgb https://github.com/solaroran-rgb/temposoul.git
+     - 议题④裁决后：git remote rename origin upstream；若上游也改名再 git remote set-url upstream https://github.com/Brhiza/temposoul.git
+  4. 其他已有 clone 副本：各副本执行同一 set-url，避免长期依赖 301。
+  5. CI：.github/workflows/ci.yml 不硬编码仓名，无需改；如有 badge/仓名 URL 硬编码需随改名同步。
+- 风险/回滚：改名极短一致性窗口；GitHub Settings 再改回 mingyu 即可回滚。
+- 若日后安装 gh CLI，等价命令：gh repo rename temposoul --repo solaroran-rgb/mingyu --yes；本线程未执行。
+
+### 8.3 待主控/用户线上动作（未变）
+- CF Dashboard：Pages 项目 production_branch codex/website-basic-settings -> main（前置 main 已 = cbeb64c，条件已满足，切换时机由主控定）。
+- GitHub：议题② rename solaroran-rgb/mingyu -> solaroran-rgb/temposoul（用户确认后执行）。
+- 议题③裸域、议题④ origin->upstream：维持线程 E 决策，待用户/主控在线上执行。
