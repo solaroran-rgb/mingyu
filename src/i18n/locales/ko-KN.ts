@@ -68,7 +68,7 @@ export const koKN: Dict = {
     privacy: '업데이트 전송에만 사용하며 이메일을 공유하지 않습니다.',
   },
   premium: {
-    title: '명률 프로',
+    title: 'TempoSoul Pro',
     desc: '무제한 AI 해석과 전문가급 보고서 잠금 해제',
     perks: ['무제한 AI 심층 해석', '전문가급 합반·길일 보고서', '새로운 기능 우선 체험'],
     cta: '지금 업그레이드',
