@@ -344,3 +344,20 @@ export function isDistrictBirthPlacePath(
 } {
   return Boolean(path?.city && path.district);
 }
+
+// 全球主要城市（7 语言目标市场，GeoNames cities1000）
+export {
+  getGlobalCities,
+  getGlobalCitiesMeta,
+  getGlobalCitiesByCountry,
+  getGlobalCitiesByLanguage,
+  findGlobalCityById,
+  searchGlobalCities,
+  resolveGlobalCity,
+} from './global-cities';
+export type {
+  GlobalCity,
+  GlobalCitySearchOptions,
+  ResolvedGlobalCity,
+  GlobalCitiesMeta,
+} from './global-cities';
