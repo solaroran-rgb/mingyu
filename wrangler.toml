@@ -26,8 +26,10 @@ id = "4561e72198ea4b9c9582a9826303e3d2"
 [vars]
 # 是否启用账户认证（置 true 前，必须先绑定上面的 AUTH_KV 并设置 AUTH_SECRET）
 AUTH_ENABLED = "true"
-# 隐私友好分析（默认 none；可选 plausible | umami | ga）
-ANALYTICS_PROVIDER = "none"
+# 隐私友好分析（默认 none；可选 plausible | umami | ga | cf）
+# cf = Cloudflare Web Analytics（免费，beacon token 见 ANALYTICS_SITE_ID）
+ANALYTICS_PROVIDER = "cf"
+ANALYTICS_SITE_ID = "2681353fab604a86bcd9995f5a47045b"
 
 # ── 机密：AUTH_SECRET（不要写进本文件 / 不要提交仓库）──
 #   本地预览：写入 .dev.vars（已 gitignore），形如  AUTH_SECRET=xxxx
