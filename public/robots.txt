@@ -1,6 +1,6 @@
-# robots.txt for 命语 (@temposoul/core)
-# TODO: 将下方 Sitemap 的域名替换为真实上线域名
+# robots.txt for 命律 (@temposoul/core)
+# 生产域名：www.temposoul.com（已上线）
 User-agent: *
 Allow: /
 
-Sitemap: https://mingyu.example.com/sitemap.xml
+Sitemap: https://www.temposoul.com/sitemap.xml

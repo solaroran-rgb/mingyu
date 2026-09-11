@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- TODO: 将所有 mingyu.example.com 替换为真实上线域名 -->
+<!-- 生产域名：www.temposoul.com（已上线 2026-09-11） -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://mingyu.example.com/</loc>
+    <loc>https://www.temposoul.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://mingyu.example.com/tutorial</loc>
+    <loc>https://www.temposoul.com/tutorial</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://mingyu.example.com/records</loc>
+    <loc>https://www.temposoul.com/records</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://mingyu.example.com/privacy</loc>
+    <loc>https://www.temposoul.com/privacy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

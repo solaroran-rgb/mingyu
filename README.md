@@ -4,23 +4,23 @@
             src="https://img.shields.io/badge/LINUX-DO-FFB003.svg?logo=data:image/svg%2bxml;base64,DQo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiPjxwYXRoIGQ9Ik00Ni44Mi0uMDU1aDYuMjVxMjMuOTY5IDIuMDYyIDM4IDIxLjQyNmM1LjI1OCA3LjY3NiA4LjIxNSAxNi4xNTYgOC44NzUgMjUuNDV2Ni4yNXEtMi4wNjQgMjMuOTY4LTIxLjQzIDM4LTExLjUxMiA3Ljg4NS0yNS40NDUgOC44NzRoLTYuMjVxLTIzLjk3LTIuMDY0LTM4LjAwNC0yMS40M1EuOTcxIDY3LjA1Ni0uMDU0IDUzLjE4di02LjQ3M0MxLjM2MiAzMC43ODEgOC41MDMgMTguMTQ4IDIxLjM3IDguODE3IDI5LjA0NyAzLjU2MiAzNy41MjcuNjA0IDQ2LjgyMS0uMDU2IiBzdHlsZT0ic3Ryb2tlOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7ZmlsbDojZWNlY2VjO2ZpbGwtb3BhY2l0eToxIi8+PHBhdGggZD0iTTQ3LjI2NiAyLjk1N3EyMi41My0uNjUgMzcuNzc3IDE1LjczOGE0OS43IDQ5LjcgMCAwIDEgNi44NjcgMTAuMTU3cS00MS45NjQuMjIyLTgzLjkzIDAgOS43NS0xOC42MTYgMzAuMDI0LTI0LjM4N2E2MSA2MSAwIDAgMSA5LjI2Mi0xLjUwOCIgc3R5bGU9InN0cm9rZTpub25lO2ZpbGwtcnVsZTpldmVub2RkO2ZpbGw6IzE5MTkxOTtmaWxsLW9wYWNpdHk6MSIvPjxwYXRoIGQ9Ik03Ljk4IDcwLjkyNmMyNy45NzctLjAzNSA1NS45NTQgMCA4My45My4xMTNRODMuNDI2IDg3LjQ3MyA2Ni4xMyA5NC4wODZxLTE4LjgxIDYuNTQ0LTM2LjgzMi0xLjg5OC0xNC4yMDMtNy4wOS0yMS4zMTctMjEuMjYyIiBzdHlsZT0ic3Ryb2tlOm5vbmU7ZmlsbC1ydWxlOmV2ZW5kZDtmaWxsOiNmOWFmMDA7ZmlsbC1vcGFjaXR5OjEiLz48L3N2Zz4=" /></a>
 </p>
 
-# 命语
+# 命律 · TempoSoul
 
-命语是一个算命、占卜、择日的提示词生成项目，目标是把排盘、起卦、抽牌、结构化数据和 AI 提示词连接成一条清晰可复用的流程。让所有人都可以快速的生成专业可靠的排盘信息，而不是依靠模糊的关键词和无脑堆叠专业词汇，让AI占卜相对更加可靠，享受术数的神秘智慧。
+命律（TempoSoul）是一个算命、占卜、择日的提示词生成项目，目标是把排盘、起卦、抽牌、结构化数据和 AI 提示词连接成一条清晰可复用的流程。让所有人都可以快速的生成专业可靠的排盘信息，而不是依靠模糊的关键词和无脑堆叠专业词汇，让AI占卜相对更加可靠，享受术数的神秘智慧。
 
-你可以在网页端快速完成排盘或占卜，时间类占卜支持使用当前时间或自定北京时间，并复制提示词给你常用的所有 AI 工具继续解读；对于移动端用户还可以使用分享功能快速跳转；也可以通过公开 API、MCP Server 或 skill，把命语的排盘与提示词能力接入自己的应用、工作流和智能体系统。
+你可以在网页端快速完成排盘或占卜，时间类占卜支持使用当前时间或自定北京时间，并复制提示词给你常用的所有 AI 工具继续解读；对于移动端用户还可以使用分享功能快速跳转；也可以通过公开 API、MCP Server 或 skill，把命律的排盘与提示词能力接入自己的应用、工作流和智能体系统。
 
 项目网页目前按“排盘、合盘、占卜、择日”组织：排盘包含八字、紫微、星盘、七政四余和住宅风水，占卜包含六爻、梅花易数、奇门遁甲、大六壬、太乙神数、塔罗牌和三山国王灵签。住宅风水为产品统一入口，后台分层计算八宅与玄空飞星后再合参；底层八宅、玄空仍可通过 API / MCP 单独调用。
 
-线上体验：[https://aov.cc](https://aov.cc)
+线上体验：[https://www.temposoul.com](https://www.temposoul.com)
 
-公开 API：[https://aov.cc/api/v1/manifest](https://aov.cc/api/v1/manifest)
+公开 API：[https://www.temposoul.com/api/v1/manifest](https://www.temposoul.com/api/v1/manifest)
 
-OpenAPI：[https://aov.cc/api/v1/openapi.json](https://aov.cc/api/v1/openapi.json)
+OpenAPI：[https://www.temposoul.com/api/v1/openapi.json](https://www.temposoul.com/api/v1/openapi.json)
 
-公开 skill：[https://aov.cc/skills/aov-mingyu-api/SKILL.md](https://aov.cc/skills/aov-mingyu-api/SKILL.md)
+公开 skill：[https://www.temposoul.com/skills/aov-temposoul-api/SKILL.md](https://www.temposoul.com/skills/aov-temposoul-api/SKILL.md)
 
-以上 `aov.cc` 是本项目的官方线上实例；如果你 fork 后部署到自己的 Cloudflare Pages 或其他域名，公开 API 会按实际访问域名生成元数据和 OpenAPI 地址。
+以上 `www.temposoul.com` 是本项目的官方线上实例；如果你 fork 后部署到自己的 Cloudflare Pages 或其他域名，公开 API 会按实际访问域名生成元数据和 OpenAPI 地址。
 
 功德箱：[https://lk.sydf.cc/](https://lk.sydf.cc/)
 
@@ -97,7 +97,7 @@ OpenAPI：[https://aov.cc/api/v1/openapi.json](https://aov.cc/api/v1/openapi.jso
 
 ## 集成方式
 
-命语提供三种集成方式：公开 API、MCP Server、公开 skill。API 和 MCP 都支持一站式返回 `result` 与 `prompt`；六爻、梅花易数、奇门遁甲、大六壬还支持通过 `customDate` 指定起卦或排盘时间。README 只保留快速入口和安装方式，接口参数、客户端配置和调用示例请跳转到对应文档。
+命律提供三种集成方式：公开 API、MCP Server、公开 skill。API 和 MCP 都支持一站式返回 `result` 与 `prompt`；六爻、梅花易数、奇门遁甲、大六壬还支持通过 `customDate` 指定起卦或排盘时间。README 只保留快速入口和安装方式，接口参数、客户端配置和调用示例请跳转到对应文档。
 
 <details>
 <summary>公开 API</summary>
@@ -105,25 +105,25 @@ OpenAPI：[https://aov.cc/api/v1/openapi.json](https://aov.cc/api/v1/openapi.jso
 无需安装，直接调用线上接口：
 
 ```text
-https://aov.cc/api/v1
+https://www.temposoul.com/api/v1
 ```
 
 详细文档：[docs/api.md](docs/api.md)
 
-OpenAPI：[https://aov.cc/api/v1/openapi.json](https://aov.cc/api/v1/openapi.json)
+OpenAPI：[https://www.temposoul.com/api/v1/openapi.json](https://www.temposoul.com/api/v1/openapi.json)
 
 </details>
 
 <details>
 <summary>MCP Server</summary>
 
-命语内置 MCP Server，让支持 MCP 的 AI 客户端直接调用本地排盘引擎，不需要用户手动复制 JSON 或提示词。
+命律内置 MCP Server，让支持 MCP 的 AI 客户端直接调用本地排盘引擎，不需要用户手动复制 JSON 或提示词。
 
 快速安装：
 
 ```bash
-git clone https://github.com/Brhiza/mingyu.git
-cd mingyu
+git clone https://github.com/solaroran-rgb/mingyu.git
+cd temposoul
 npm install
 ```
 
@@ -140,46 +140,46 @@ npm run mcp
 <details>
 <summary>公开 skill</summary>
 
-这个 skill 面向 AI 代理和开发者，说明如何通过 `aov.cc` 公开 API 完成排盘、占卜和提示词生成。
+这个 skill 面向 AI 代理和开发者，说明如何通过 `www.temposoul.com` 公开 API 完成排盘、占卜和提示词生成。
 
 快速安装：
 
 ```bash
-npx skills add Brhiza/mingyu --skill aov-mingyu-api -g -y
+npx skills add solaroran-rgb/mingyu --skill aov-temposoul-api -g -y
 ```
 
 快速读取：
 
 ```text
 让你的 AI 代理读取这个 skill：
-https://aov.cc/skills/aov-mingyu-api/SKILL.md
+https://www.temposoul.com/skills/aov-temposoul-api/SKILL.md
 ```
 
 如果当前环境无法使用 `npx skills`，也可以手动创建目录后保存：
 
 ```bash
-mkdir -p ~/.codex/skills/aov-mingyu-api
-curl -L https://aov.cc/skills/aov-mingyu-api/SKILL.md \
-  -o ~/.codex/skills/aov-mingyu-api/SKILL.md
+mkdir -p ~/.codex/skills/aov-temposoul-api
+curl -L https://www.temposoul.com/skills/aov-temposoul-api/SKILL.md \
+  -o ~/.codex/skills/aov-temposoul-api/SKILL.md
 ```
 
 Windows PowerShell：
 
 ```powershell
-New-Item -ItemType Directory -Force "$env:USERPROFILE\.codex\skills\aov-mingyu-api"
-Invoke-WebRequest "https://aov.cc/skills/aov-mingyu-api/SKILL.md" `
-  -OutFile "$env:USERPROFILE\.codex\skills\aov-mingyu-api\SKILL.md"
+New-Item -ItemType Directory -Force "$env:USERPROFILE\.codex\skills\aov-temposoul-api"
+Invoke-WebRequest "https://www.temposoul.com/skills/aov-temposoul-api/SKILL.md" `
+  -OutFile "$env:USERPROFILE\.codex\skills\aov-temposoul-api\SKILL.md"
 ```
 
-详细文档：[public/skills/aov-mingyu-api/SKILL.md](public/skills/aov-mingyu-api/SKILL.md)
+详细文档：[public/skills/aov-temposoul-api/SKILL.md](public/skills/aov-temposoul-api/SKILL.md)
 
-元数据发现：[https://aov.cc/.well-known/aov-mingyu-api.json](https://aov.cc/.well-known/aov-mingyu-api.json)
+元数据发现：[https://www.temposoul.com/.well-known/aov-temposoul-api.json](https://www.temposoul.com/.well-known/aov-temposoul-api.json)
 
 </details>
 
 ## 核心算法包 `@temposoul/core`
 
-命语的所有命理排盘与占卜算法已抽取为独立 npm 包 [`@temposoul/core`](https://www.npmjs.com/package/@temposoul/core)，本仓库以 pnpm workspace 形式同时维护应用与算法包。
+命律的所有命理排盘与占卜算法已抽取为独立 npm 包 [`@temposoul/core`](https://www.npmjs.com/package/@temposoul/core)，本仓库以 pnpm workspace 形式同时维护应用与算法包。
 
 <details>
 <summary>安装和使用示例</summary>
@@ -364,16 +364,16 @@ PNPM_VERSION=11
 ```text
 https://你的域名/api/v1/manifest
 https://你的域名/api/v1/openapi.json
-https://你的域名/.well-known/aov-mingyu-api.json
+https://你的域名/.well-known/aov-temposoul-api.json
 ```
 
-如果绑定的域名是 `aov.cc`，上线后检查：
+如果绑定的域名是 `www.temposoul.com`，上线后检查：
 
 ```text
-https://aov.cc/api/v1/manifest
-https://aov.cc/api/v1/openapi.json
-https://aov.cc/.well-known/aov-mingyu-api.json
-https://aov.cc/mingyu-runtime-config.js
+https://www.temposoul.com/api/v1/manifest
+https://www.temposoul.com/api/v1/openapi.json
+https://www.temposoul.com/.well-known/aov-temposoul-api.json
+https://www.temposoul.com/mingyu-runtime-config.js
 ```
 
 Cloudflare Pages 的环境变量在 Dashboard → Settings → Environment variables 中配置。密钥不要写进代码仓库。
@@ -461,7 +461,7 @@ VITE_ENABLE_DONATION_BOX=false
 <details>
 <summary>服务端 AI（内置 AI）配置</summary>
 
-命语支持两种 AI 使用方式：
+命律支持两种 AI 使用方式：
 
 - 用户在首页顶部齿轮中自行填写 OpenAI 兼容接口，API Key 只保存在用户自己的浏览器。
 - 站点部署者在服务端配置 AI，前端会显示一个可选服务商。这个能力也可以理解为“内置 AI”。
@@ -545,7 +545,7 @@ npm run contest:evaluate -- --format chat --url https://openrouter.ai/api/v1 --k
 - 补充更多命理、占卜与提示词测试样例。
 - 优化公开 API 的字段文档和返回示例。
 - 增加更多 AI 客户端的 MCP 配置示例。
-- 扩展 skill，使更多代理能自动发现并调用命语。
+- 扩展 skill，使更多代理能自动发现并调用命律。
 - 增强移动端体验、可访问性和教程说明。
 
 ## 关于三山国王
@@ -561,7 +561,7 @@ npm run contest:evaluate -- --format chat --url https://openrouter.ai/api/v1 --k
 
 ## 免责声明
 
-命语提供的是命理、占卜与 AI 提示词辅助工具，结果仅供参考和娱乐学习使用，不应替代医疗、法律、投资、心理咨询等专业建议。
+命律提供的是命理、占卜与 AI 提示词辅助工具，结果仅供参考和娱乐学习使用，不应替代医疗、法律、投资、心理咨询等专业建议。
 
 ## 项目关键词
 

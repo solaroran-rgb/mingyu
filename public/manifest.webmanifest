@@ -1,7 +1,7 @@
 {
-  "name": "命语",
-  "short_name": "命语",
-  "description": "一个可安装的提示词生成与分析工具。",
+  "name": "命律 · TempoSoul",
+  "short_name": "命律",
+  "description": "命律 —— 基于真太阳时的东方智慧排盘与 AI 解读。",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
