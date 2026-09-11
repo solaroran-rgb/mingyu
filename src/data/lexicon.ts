@@ -1,3 +1,5 @@
+import { lexiconExtra } from './lexicon-extra';
+
 export type LexiconCategory =
   | '天干'
   | '地支'
@@ -32,7 +34,10 @@ export type LexiconCategory =
   | '命理典籍'
   | '北斗七星'
   | '十干禄'
-  | '推命体系';
+  | '推命体系'
+  | '紫微四化'
+  | '紫微格局'
+  | '八字格局';
 
 export type LexiconEntry = {
   term: string;
@@ -49,7 +54,7 @@ const SRC = '命律词库（扩充版种子数据）';
  * 六十四卦/十二长生/地支关系/十二宫/奇门遁甲/六壬/风水/择日/节气/三元九运/
  * 二十四山/河洛/七政四余/三才四象/命理流派等，共 777 条真实中华命理词条。
  */
-export const lexicon: LexiconEntry[] = [
+const baseLexicon: LexiconEntry[] = [
   { term: '甲', pinyin: 'jiǎ', category: '天干', definition: '阳木，十干之首，象征生机、开端、参天大树与领导潜质。', source: SRC },
   { term: '乙', pinyin: 'yǐ', category: '天干', definition: '阴木，柔木藤蔓，象征柔韧、生长与依附之力。', source: SRC },
   { term: '丙', pinyin: 'bǐng', category: '天干', definition: '阳火，太阳之火，象征光明、热情与外显能量。', source: SRC },
@@ -828,3 +833,5 @@ export const lexicon: LexiconEntry[] = [
   { term: '命宫', pinyin: 'mìnggōng', category: '推命体系', definition: '生时落点所属宫位，统观一生格局。', source: SRC },
   { term: '身宫', pinyin: 'shēngōng', category: '推命体系', definition: '主后天安身立命之所，辅命宫论断。', source: SRC },
 ];
+
+export const lexicon: LexiconEntry[] = [...baseLexicon, ...lexiconExtra];
