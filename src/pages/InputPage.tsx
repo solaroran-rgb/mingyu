@@ -27,6 +27,7 @@ import { getFieldKey, type SELF_FIELD_MAP } from './InputPage.field-helpers';
 import { AiSettingsModal } from '@/components/AiSettingsModal';
 import { useAiSettings } from '@/hooks/useAiSettings';
 import { EmailCapture } from '@/components/EmailCapture';
+import { trackChartSubmit } from '@/lib/analytics';
 
 type InputEntryMode = 'single' | 'compatibility' | 'divination' | 'almanac';
 
@@ -323,6 +324,9 @@ export function InputPage() {
         return;
       }
     }
+
+    // T0 漏斗：排盘提交（所有校验通过、即将跳转结果页）
+    trackChartSubmit({ mode: form.analysisMode, trueSolarTime: form.useTrueSolarTime });
 
     startSubmitTransition(() => {
       navigate({

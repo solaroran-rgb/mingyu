@@ -1,4 +1,4 @@
-import { Suspense, lazy, useCallback, useDeferredValue, useEffect, useMemo, useState } from 'react';
+import { Suspense, lazy, useCallback, useDeferredValue, useEffect, useMemo, useRef, useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import {
   buildCombinedZiweiCompatibilityPrompt,
@@ -71,6 +71,7 @@ import { FRONTEND_DEFAULT_TIME_ZONE_ID } from '@/lib/time-policy';
 import { usePromptShortcuts } from './hooks/usePromptShortcuts';
 import { AiChatPanel } from '@/components/AiChatPanel';
 import { PremiumGate } from '@/components/PremiumGate';
+import { trackChartResult } from '@/lib/analytics';
 import { useAiSettings } from '@/hooks/useAiSettings';
 import { buildAiRequestConfig } from '@/lib/ai/settings';
 import { buildMetaphysicsPrompt } from '@/lib/metaphysics-prompt';
@@ -334,6 +335,14 @@ export function ResultPage() {
       };
     });
   }, [promptState.tab]);
+
+  // T1 漏斗：结果生成（进入结果页、排盘结果渲染；每次进入只报一次）
+  const chartReportedRef = useRef(false);
+  useEffect(() => {
+    if (chartReportedRef.current) return;
+    chartReportedRef.current = true;
+    trackChartResult({ mode: inputState.analysisMode, promptSource: promptState.promptSource });
+  }, [inputState.analysisMode, promptState.promptSource]);
 
   useEffect(() => {
     if (inputState.analysisMode === 'single' || promptState.promptSource !== 'bazi-ziwei') {

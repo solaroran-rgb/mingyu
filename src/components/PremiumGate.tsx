@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { useI18n } from '@/i18n';
 import { safeStorage } from '@/lib/safe-storage';
+import { trackPaywallView, trackSubscribe } from '@/lib/analytics';
 
 const TOKEN_KEY = 'ts_auth_token';
 const QUOTA_KEY_PREFIX = 'ts_ai_quota_';
@@ -38,6 +39,8 @@ export function PremiumGate({ children, quota = 5 }: { children: ReactNode; quot
   const [tier, setTier] = useState<Tier>('unknown');
   const [remaining, setRemaining] = useState(() => readRemaining(quota));
   const consumedRef = useRef(false);
+  const subscribeReportedRef = useRef(false);
+  const paywallReportedRef = useRef(false);
 
   useEffect(() => {
     let active = true;
@@ -47,7 +50,14 @@ export function PremiumGate({ children, quota = 5 }: { children: ReactNode; quot
     })
       .then((res) => (res.ok ? res.json() : { tier: 'free' }))
       .then((data: { tier?: Tier }) => {
-        if (active) setTier(data.tier === 'premium' ? 'premium' : 'free');
+        if (!active) return;
+        const next = data.tier === 'premium' ? 'premium' : 'free';
+        setTier(next);
+        // T5 漏斗：订阅（观测到 premium 档位；每次挂载只报一次）
+        if (next === 'premium' && !subscribeReportedRef.current) {
+          subscribeReportedRef.current = true;
+          trackSubscribe({ tier: 'premium' });
+        }
       })
       .catch(() => {
         if (active) setTier('free');
@@ -72,6 +82,13 @@ export function PremiumGate({ children, quota = 5 }: { children: ReactNode; quot
     if (remaining > 0) return 'unlocked';
     return 'locked';
   }, [tier, remaining]);
+
+  // T3 漏斗：订阅墙触发（免费额度耗尽、升级卡片可见；每次挂载只报一次）
+  useEffect(() => {
+    if (state !== 'locked' || paywallReportedRef.current) return;
+    paywallReportedRef.current = true;
+    trackPaywallView({ remaining, quota });
+  }, [state, remaining, quota]);
 
   if (state === 'checking') {
     return (

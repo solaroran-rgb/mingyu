@@ -1,6 +1,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from 'react';
 import { safeStorage } from '@/lib/safe-storage';
 import { fetchMe, loginAccount, logoutAccount, registerAccount, type AuthUser } from './api';
+import { trackSignup } from '@/lib/analytics';
 
 const TOKEN_KEY = 'ts_auth_token';
 
@@ -65,6 +66,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     if (r.token && r.user) {
       safeStorage.set(TOKEN_KEY, r.token);
       setUser(r.user);
+      // T4 漏斗：注册成功
+      trackSignup({ method: 'email' });
       return true;
     }
     if (r.error === 'auth_unavailable') setUnavailable(true);
