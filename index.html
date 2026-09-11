@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fbf0f7" />
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#131019" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -18,6 +19,15 @@
       content="命律 —— 基于出生真太阳时的宇宙能量快照，融合东方天文算法与国学智慧，一键生成八字、紫微、星盘排盘与 AI 解读提示词。"
     />
     <link rel="canonical" href="https://www.temposoul.com/" />
+    <!-- 多语言 hreflang（单 URL SPA，客户端语言切换；x-default 指向默认中文） -->
+    <link rel="alternate" hreflang="zh-CN" href="https://www.temposoul.com/" />
+    <link rel="alternate" hreflang="en" href="https://www.temposoul.com/" />
+    <link rel="alternate" hreflang="ja" href="https://www.temposoul.com/" />
+    <link rel="alternate" hreflang="ko" href="https://www.temposoul.com/" />
+    <link rel="alternate" hreflang="th" href="https://www.temposoul.com/" />
+    <link rel="alternate" hreflang="vi" href="https://www.temposoul.com/" />
+    <link rel="alternate" hreflang="es" href="https://www.temposoul.com/" />
+    <link rel="alternate" hreflang="x-default" href="https://www.temposoul.com/" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="zh_CN" />
     <meta property="og:title" content="命律 · 东方智慧排盘与 AI 解读" />
@@ -39,9 +49,15 @@
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "命律",
+        "alternateName": "TempoSoul",
         "url": "https://www.temposoul.com/",
         "description": "基于出生真太阳时的东方智慧排盘与 AI 解读提示词生成工具。",
-        "inLanguage": "zh-CN"
+        "inLanguage": ["zh-CN", "en", "ja", "ko", "th", "vi", "es"],
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.temposoul.com/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
       }
     </script>
   </head>

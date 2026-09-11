@@ -1,4 +1,4 @@
-export type AnalyticsProvider = 'plausible' | 'umami' | 'ga' | 'none';
+export type AnalyticsProvider = 'plausible' | 'umami' | 'ga' | 'cf' | 'none';
 
 export type AnalyticsConfig = {
   provider: AnalyticsProvider;
@@ -48,12 +48,16 @@ function injectScript(cfg: AnalyticsConfig): void {
     s.setAttribute('data-website-id', cfg.siteId);
   } else if (cfg.provider === 'ga') {
     s.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(cfg.siteId)}`;
+  } else if (cfg.provider === 'cf') {
+    // Cloudflare Web Analytics（免费）：beacon.min.js + data-cf-beacon
+    s.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+    s.setAttribute('data-cf-beacon', JSON.stringify({ token: cfg.siteId, spa: true }));
   }
   document.head.appendChild(s);
 }
 
 export function trackPageView(path: string): void {
-  if (current.provider === 'none') return;
+  if (current.provider === 'none' || current.provider === 'cf') return;
   const w = window as unknown as { plausible?: (e: string, o?: unknown) => void; umami?: (e: string, o?: unknown) => void };
   if (current.provider === 'plausible' && w.plausible) {
     w.plausible('pageview', { u: path });
@@ -63,7 +67,7 @@ export function trackPageView(path: string): void {
 }
 
 export function trackEvent(name: string, props?: Record<string, unknown>): void {
-  if (current.provider === 'none') return;
+  if (current.provider === 'none' || current.provider === 'cf') return;
   const w = window as unknown as { plausible?: (e: string, o?: unknown) => void; umami?: (e: string, o?: unknown) => void };
   if (current.provider === 'plausible' && w.plausible) {
     w.plausible(name, props);

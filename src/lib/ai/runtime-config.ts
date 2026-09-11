@@ -17,7 +17,7 @@ export type AiRuntimeConfig = {
   aiBuiltinEnabled: boolean;
   aiDefaultEnabled: boolean;
   aiProviderName: string;
-  analyticsProvider?: 'plausible' | 'umami' | 'ga' | 'none';
+  analyticsProvider?: 'plausible' | 'umami' | 'ga' | 'cf' | 'none';
   analyticsUrl?: string;
   analyticsSiteId?: string;
   authEnabled?: boolean;
@@ -30,7 +30,7 @@ export function getAiRuntimeConfig(env: AiRuntimeEnv = {}): AiRuntimeConfig {
 
   const providerRaw = env.ANALYTICS_PROVIDER;
   const analyticsProvider =
-    providerRaw === 'plausible' || providerRaw === 'umami' || providerRaw === 'ga'
+    providerRaw === 'plausible' || providerRaw === 'umami' || providerRaw === 'ga' || providerRaw === 'cf'
       ? providerRaw
       : 'none';
 
