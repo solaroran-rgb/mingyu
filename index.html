@@ -3,6 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 内联关键底色：在外部 CSS（25.9KB gzip）下载完成前先用与主题一致的背景色绘制视口，
+         避免白屏闪烁、改善 Speed Index 的视觉完整曲线。与 styles.css 的 --surface-page / 暗色主题保持一致。 -->
+    <style>
+      html {
+        background-color: #fffdfd;
+      }
+      @media (prefers-color-scheme: dark) {
+        html {
+          background-color: #131019;
+        }
+      }
+    </style>
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="google-site-verification" content="FZxyawxnnjJc_FyPW_uqfOXntT_HUtUyyASATAYbJXw" />
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fbf0f7" />
