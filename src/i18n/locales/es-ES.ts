@@ -70,13 +70,18 @@ export const esES: Dict = {
   premium: {
     title: 'TempoSoul Pro',
     desc: 'Desbloquea lecturas de IA ilimitadas e informes en profundidad',
-    perks: ['Lecturas profundas de IA ilimitadas', 'Informes profesionales de sinastría y fechas', 'Acceso anticipado a nuevas funciones'],
+    perks: [
+      'Lecturas profundas de IA ilimitadas',
+      'Informes profesionales de sinastría y fechas',
+      'Acceso anticipado a nuevas funciones',
+    ],
     cta: 'Mejorar ahora',
     quotaHint: 'Usos gratuitos restantes hoy',
     loginHint: 'Inicia sesión para gestionar tu suscripción',
   },
   analytics: {
-    notice: 'Este sitio usa analítica respetuosa con la privacidad, desactivada por defecto y activable en el despliegue.',
+    notice:
+      'Este sitio usa analítica respetuosa con la privacidad, desactivada por defecto y activable en el despliegue.',
   },
   lang: {
     label: 'Idioma',
@@ -88,7 +93,84 @@ export const esES: Dict = {
     th: 'ไทย',
     es: 'Español',
   },
-  disclaimer: 'Solo para entretenimiento y reflexión personal. No constituye asesoramiento profesional.',
+  disclaimer:
+    'Solo para entretenimiento y reflexión personal. No constituye asesoramiento profesional.',
+  privacy: {
+    title: 'Política de privacidad',
+    updatedAt:
+      'Última actualización: 2026-08-08. Esta política explica cómo TempoSoul trata tu información y cómo gestionas tus datos.',
+    corePrinciples: 'Principios básicos',
+    principle1:
+      'Tu nombre, fecha de nacimiento y demás datos habituales del trazado se guardan únicamente en tu navegador local de forma predeterminada y no se suben automáticamente.',
+    principle2:
+      'Minimizamos la recogida de datos, no usamos seguimiento entre sitios y nunca vendemos tus datos personales a terceros.',
+    s1Title: 'Qué recogemos',
+    s1B1: 'TempoSoul guarda en tu navegador local la información que introduces por tu cuenta, como tu nombre, fecha de nacimiento, hora y lugar de nacimiento, para generar los trazados y tu historial.',
+    s1B2: 'Si activas la interpretación con IA integrada, la información de nacimiento se envía al servidor que hayas configurado según tus ajustes; consulta los interruptores y la configuración del panel de IA.',
+    s2Title: 'Dónde se guardan tus datos',
+    s2B1: 'El nombre, la fecha de nacimiento y demás datos del trazado habitual se conservan solo en tu navegador local (localStorage / IndexedDB) por defecto y no se suben a ningún servidor automáticamente.',
+    s2B2: 'Puedes borrar los registros locales en la página de inicio o en la página de historial en cualquier momento; una vez borrados, no se pueden recuperar.',
+    s3Title: 'Cómo eliminar tus datos',
+    s3B1: 'Borra el almacenamiento local de este sitio en tu navegador, o usa la acción «Borrar registros» dentro del sitio, para eliminar todos los datos personales guardados en este dispositivo.',
+    s3B2: 'Si has usado la función de IA del servidor, cierra sesión también en ese servicio y contacta con nosotros para borrar los registros de procesamiento relacionados.',
+    s4Title: 'Cookies y almacenamiento local',
+    s4B1: 'Este sitio usa el almacenamiento local del navegador para recordar tus preferencias (avisos cerrados, ajustes de IA). No te rastreamos entre sitios con cookies de terceros.',
+    s5Title: 'Contacto',
+    s5B1: 'Si tienes preguntas sobre esta política o deseas borrar registros de procesamiento del servidor, contáctanos a través del canal de comentarios en los ajustes del sitio.',
+    disclaimerHead: 'Aviso legal',
+    disclaimerNote:
+      'For entertainment and self-reflection purposes only. Not a substitute for professional advice.',
+    disclaimerBody:
+      'Los trazados e interpretaciones de TempoSoul son solo con fines de entretenimiento cultural y reflexión personal, y no constituyen asesoramiento médico, legal, financiero o de decisiones vitales. Consulta a un profesional cualificado para las decisiones importantes.',
+  },
+  tutorial: {
+    title: 'Tutorial',
+    intro:
+      'Introduce tus datos, abre la página de resultados, copia la indicación y envíala a una IA en línea para seguir preguntando.',
+    headWorkflow: 'Flujo recomendado',
+    step1Title: 'Elige un modo e introduce los datos',
+    step1Desc:
+      'Trazado para carta personal o vivienda; sinastría para dos personas; adivinación para una pregunta; selección de fecha para elegir momento.',
+    step2Title: 'Empieza por la indicación',
+    step2Desc:
+      'La página de resultados abre por defecto la pestaña «Indicación»; cambia a Bazi o Ziwei cuando quieras ver la carta.',
+    step3Title: 'Copia y envía',
+    step3Desc:
+      'Envíala a IAs en línea como DeepSeek, Qwen o Doubao; activa antes el modo experto, pensamiento profundo o razonamiento avanzado.',
+    headModes: 'Cómo elegir entre los cuatro modos',
+    mode1Title: 'Modo trazado',
+    mode1Desc: 'Ver la carta personal o el feng shui de la vivienda.',
+    mode1B1: 'Bazi / Ziwei: introduce los datos de nacimiento',
+    mode1B2: 'Feng shui del hogar: introduce año de nacimiento, sexo y orientación de la casa',
+    mode2Title: 'Modo sinastría',
+    mode2Desc: 'Explora la relación y compatibilidad entre dos personas.',
+    mode2B1: 'Introduce los datos de nacimiento de ambas personas',
+    mode2B2: 'Muestra las cartas de las dos personas',
+    mode2B3: 'Usado para amor, colaboración y afinamiento',
+    mode3Title: 'Modo adivinación',
+    mode3Desc: 'Formula una lectura rápida en torno a una pregunta.',
+    mode3B1: 'Haz tu pregunta concreta primero',
+    mode3B2: 'Elige entre Liuyao, Meihua, Taiyi, Tarot y más',
+    mode3B3: 'Copia la indicación desde la página de resultados con un clic',
+    mode4Title: 'Modo selección de fechas',
+    mode4Desc: 'Filtra los días de acción más adecuados dentro del rango de fechas.',
+    mode4B1: 'Elige la actividad que vas a realizar',
+    mode4B2: 'Introduce el rango de fechas candidatas',
+    mode4B3: 'Añade opcionalmente los datos de nacimiento de los participantes',
+    headTips: 'Cómo enviar la indicación',
+    tip1: 'No envíes solo «mírame esto»; envía la indicación completa entera.',
+    tip2: 'Si la herramienta permite búsqueda web, adjuntos o pensamiento ampliado, actívalo antes de enviar.',
+    tip3: 'Este proyecto se centra en generar indicaciones completas; las preguntas de seguimiento van directamente al chat de la IA en línea.',
+    headFaq: 'Preguntas frecuentes',
+    faq1Q: '¿Y si no sé mi hora exacta de nacimiento?',
+    faq1A:
+      'Cuando conoces el shichen (período de dos horas), desactiva el tiempo solar verdadero y elige el shichen directamente; el tiempo solar verdadero solo necesita minutos exactos y lugar de nacimiento. Si ni siquiera el shichen es seguro, no hagas el trazado con una hora aproximada.',
+    faq2Q: '¿Cuándo usar el tiempo solar verdadero?',
+    faq2A: 'Actívalo cuando tengas completos la hora y el lugar de nacimiento.',
+    faq3Q: '¿Puedo revisar mis lecturas anteriores?',
+    faq3A:
+      'Sí. Puedes ver el historial tanto en la página de inicio como en la página de adivinación.',
+  },
   theme: {
     label: 'Tema',
   },

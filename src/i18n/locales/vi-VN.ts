@@ -70,13 +70,18 @@ export const viVN: Dict = {
   premium: {
     title: 'TempoSoul Pro',
     desc: 'Mở khóa giải đoán AI không giới hạn và báo cáo chuyên nghiệp',
-    perks: ['Giải đoán AI không giới hạn', 'Báo cáo hợp bàn·chọn ngày chuyên nghiệp', 'Trải nghiệm tính năng mới trước'],
+    perks: [
+      'Giải đoán AI không giới hạn',
+      'Báo cáo hợp bàn·chọn ngày chuyên nghiệp',
+      'Trải nghiệm tính năng mới trước',
+    ],
     cta: 'Nâng cấp ngay',
     quotaHint: 'Lượt miễn phí còn lại hôm nay',
     loginHint: 'Đăng nhập để quản lý gói đăng ký',
   },
   analytics: {
-    notice: 'Trang web này sử dụng phân tích thân thiện với quyền riêng tư, tắt theo mặc định và có thể bật khi triển khai.',
+    notice:
+      'Trang web này sử dụng phân tích thân thiện với quyền riêng tư, tắt theo mặc định và có thể bật khi triển khai.',
   },
   lang: {
     label: 'Ngôn ngữ',
@@ -88,7 +93,83 @@ export const viVN: Dict = {
     th: 'ไทย',
     es: 'Español',
   },
-  disclaimer: 'Chỉ dành cho mục đích giải trí và tự chiêm nghiệm. Không phải lời khuyên chuyên môn.',
+  disclaimer:
+    'Chỉ dành cho mục đích giải trí và tự chiêm nghiệm. Không phải lời khuyên chuyên môn.',
+  privacy: {
+    title: 'Chính sách quyền riêng tư',
+    updatedAt:
+      'Cập nhật lần cuối: 2026-08-08. Chính sách này mô tả TempoSoul xử lý thông tin của bạn như thế nào và bạn quản lý dữ liệu của mình ra sao.',
+    corePrinciples: 'Nguyên tắc cốt lõi',
+    principle1:
+      'Họ tên, ngày sinh và các thông tin lập bàn thường chỉ được lưu trong trình duyệt cục bộ của bạn theo mặc định, không tự động tải lên.',
+    principle2:
+      'Chúng tôi thu thập dữ liệu ở mức tối thiểu, không theo dõi chéo trên web và không bán dữ liệu cá nhân của bạn cho bên thứ ba.',
+    s1Title: 'Chúng tôi thu thập gì',
+    s1B1: 'TempoSoul lưu trong trình duyệt cục bộ thông tin bạn tự nhập, chẳng hạn họ tên, ngày sinh, giờ sinh và nơi sinh, để tạo lá số và lịch sử.',
+    s1B2: 'Nếu bạn bật tính năng diễn giải AI tích hợp, thông tin khai sinh sẽ được gửi đến máy chủ bạn đã cấu hình theo cài đặt của bạn; chi tiết xem công tắc và cấu hình trong bảng cài đặt AI.',
+    s2Title: 'Dữ liệu được lưu ở đâu',
+    s2B1: 'Họ tên, ngày sinh và các thông tin cần thiết cho lập bàn thông thường chỉ được lưu trong trình duyệt cục bộ (localStorage / IndexedDB), không tự động tải lên bất kỳ máy chủ nào.',
+    s2B2: 'Bạn có thể xóa dữ liệu cục bộ bất cứ lúc nào ở trang chủ hoặc trang Lịch sử; sau khi xóa, dữ liệu không thể khôi phục.',
+    s3Title: 'Cách xóa dữ liệu của bạn',
+    s3B1: 'Xóa bộ nhớ cục bộ của trang này trong trình duyệt, hoặc dùng thao tác 「Xóa lịch sử」 ngay trong trang, để gỡ toàn bộ dữ liệu cá nhân trên thiết bị này.',
+    s3B2: 'Nếu bạn đã dùng tính năng AI phía máy chủ, hãy đăng xuất khỏi dịch vụ đó và liên hệ chúng tôi để xóa các bản ghi xử lý liên quan.',
+    s4Title: 'Cookie và bộ nhớ cục bộ',
+    s4B1: 'Trang này dùng bộ nhớ cục bộ của trình duyệt để ghi nhớ tùy chọn của bạn (như đã đóng thông báo, cài đặt AI). Chúng tôi không theo dõi bạn trên các trang khác bằng cookie bên thứ ba.',
+    s5Title: 'Liên hệ',
+    s5B1: 'Nếu có câu hỏi về chính sách này hoặc muốn xóa bản ghi xử lý phía máy chủ, vui lòng liên hệ qua kênh phản hồi trong cài đặt trang.',
+    disclaimerHead: 'Tuyên bố miễn trừ',
+    disclaimerNote:
+      'For entertainment and self-reflection purposes only. Not a substitute for professional advice.',
+    disclaimerBody:
+      'Các lá số và nội dung diễn giải của TempoSoul chỉ phục vụ giải trí văn hóa và tự chiêm nghiệm, không phải lời khuyên y tế, pháp lý, tài chính hay quyết định cuộc đời. Hãy tham khảo chuyên gia có trình độ cho những quyết định lớn.',
+  },
+  tutorial: {
+    title: 'Hướng dẫn',
+    intro:
+      'Nhập thông tin, mở trang kết quả, sao chép lời nhắc và gửi cho AI trực tuyến để tiếp tục đặt câu hỏi.',
+    headWorkflow: 'Quy trình đề xuất',
+    step1Title: 'Chọn chế độ và nhập liệu',
+    step1Desc:
+      'Lập bàn xem mệnh cá nhân hoặc nhà; hợp bàn xem hai người; bói toán xem một câu hỏi; chọn ngày chọn thời điểm.',
+    step2Title: 'Xem lời nhắc trước',
+    step2Desc:
+      'Trang kết quả mở sẵn tab 「Lời nhắc」; muốn xem bàn thì chuyển qua Tử Bình hoặc Tử Vi.',
+    step3Title: 'Sao chép rồi gửi',
+    step3Desc:
+      'Gửi cho các AI trực tuyến như DeepSeek, Qwen, Doubao; ưu tiên bật chế độ chuyên gia, tư duy sâu, suy luận sâu.',
+    headModes: 'Cách chọn bốn chế độ',
+    mode1Title: 'Chế độ lập bàn',
+    mode1Desc: 'Xem lá số cá nhân hoặc phong thủy nhà ở.',
+    mode1B1: 'Tử Bình / Tử Vi nhập thông tin khai sinh',
+    mode1B2: 'Phong thủy nhà nhập năm sinh, giới tính và hướng nhà',
+    mode2Title: 'Chế độ hợp bàn',
+    mode2Desc: 'Xem mối quan hệ và độ hợp của hai người.',
+    mode2B1: 'Cần nhập thông tin sinh của cả hai',
+    mode2B2: 'Hiển thị bàn của hai người',
+    mode2B3: 'Thường dùng cho tình cảm, hợp tác, hòa hợp',
+    mode3Title: 'Chế độ bói toán',
+    mode3Desc: 'Dự quẻ nhanh quanh một câu hỏi.',
+    mode3B1: 'Viết câu hỏi cho thật cụ thể',
+    mode3B2: 'Chọn Lục Hào, Mai Hoa, Thái Ất, Tarot…',
+    mode3B3: 'Trang kết quả cũng cho sao chép lời nhắc một chạm',
+    mode4Title: 'Chế độ chọn ngày',
+    mode4Desc: 'Lọc ngày hành động phù hợp trong khoảng ngày đã chọn.',
+    mode4B1: 'Chọn việc dự định làm',
+    mode4B2: 'Nhập khoảng ngày ứng viên',
+    mode4B3: 'Có thể bổ sung thông tin sinh của người tham gia',
+    headTips: 'Cách gửi lời nhắc',
+    tip1: 'Đừng chỉ gửi một câu 「xem giúp mình nhé」, hãy gửi nguyên cả đoạn lời nhắc.',
+    tip2: 'Nếu công cụ hỗ trợ mạng, đính kèm hoặc tăng cường tư duy, hãy bật trước rồi gửi.',
+    tip3: 'Dự án tập trung tạo lời nhắc hoàn chỉnh; câu hỏi tiếp theo cứ để AI trực tuyến tự đối thoại.',
+    headFaq: 'Câu hỏi thường gặp',
+    faq1Q: 'Không biết giờ sinh chính xác thì sao?',
+    faq1A:
+      'Khi biết rõ thời thần, tắt giờ mặt trời thật và chọn thẳng thời thần để lập bàn; chỉ khi dùng giờ mặt trời thật mới cần giờ-phút chính xác và nơi sinh. Nếu không chắc cả thời thần, đừng lập bàn theo thời gian đại khái.',
+    faq2Q: 'Khi nào dùng giờ mặt trời thật?',
+    faq2A: 'Khi đã có đủ giờ sinh và nơi sinh thì có thể bật.',
+    faq3Q: 'Nội dung đã làm trước có xem lại được không?',
+    faq3A: 'Được. Cả trang chủ và trang bói đều vào được lịch sử.',
+  },
   theme: {
     label: 'Giao diện',
   },
