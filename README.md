@@ -122,7 +122,7 @@ OpenAPI：[https://www.temposoul.com/api/v1/openapi.json](https://www.temposoul.
 快速安装：
 
 ```bash
-git clone https://github.com/solaroran-rgb/mingyu.git
+git clone https://github.com/solaroran-rgb/temposoul.git
 cd temposoul
 npm install
 ```
@@ -145,7 +145,7 @@ npm run mcp
 快速安装：
 
 ```bash
-npx skills add solaroran-rgb/mingyu --skill aov-temposoul-api -g -y
+npx skills add solaroran-rgb/temposoul --skill aov-temposoul-api -g -y
 ```
 
 快速读取：
@@ -185,7 +185,7 @@ Invoke-WebRequest "https://www.temposoul.com/skills/aov-temposoul-api/SKILL.md" 
 <summary>安装和使用示例</summary>
 
 ```text
-mingyu/
+temposoul/
 ├── packages/
 │   └── core/                  # @temposoul/core 算法包（独立发布到 npm）
 └── src/                       # 应用层（React + Vite + MCP）
@@ -253,7 +253,7 @@ import type { BaziChartResult, QimenData, LiurenData } from '@temposoul/core/typ
 <summary>展开目录结构</summary>
 
 ```text
-mingyu/
+temposoul/
 ├── functions/                 # Cloudflare Pages Functions 公开 API 和公开发现元数据
 ├── mcp/                       # MCP Server
 ├── packages/
@@ -406,13 +406,13 @@ Docker 镜像会构建前端页面，并在容器内启动一个 Node 服务，�
 构建镜像：
 
 ```bash
-docker build -t mingyu .
+docker build -t temposoul .
 ```
 
 启动基础服务：
 
 ```bash
-docker run --rm -p 3000:3000 mingyu
+docker run --rm -p 3000:3000 temposoul
 ```
 
 访问：
@@ -431,7 +431,7 @@ docker run --rm -p 3000:3000 \
   -e AI_PROVIDER_NAME=DeepSeek \
   -e AI_BUILTIN_ENABLED=true \
   -e AI_DEFAULT_ENABLED=false \
-  mingyu
+  temposoul
 ```
 
 也可以使用 Docker Compose：
