@@ -38,3 +38,7 @@
 - 线程 E（架构治理）✅ commit 758b3dd：四议题决策文档 docs/governance/
 - 线程 F（GSC/Bing）⏳ GSC meta 已上线，待用户在 GSC 点验证 + 提交 sitemap；Bing 待登录
 - 主控收口：HEAD 3b4b197（已推 solaroran-rgb），部署 04093010，www.temposoul.com 生效
+
+## 2026-09-12 · 第二轮 8 线程合并部署（59bb9092）
+- g1 Lighthouse 实测 ✅（报告+JSON）｜ g2 468 fail 修复 ✅（UTC→TT/萨摩亚跳日）｜ g3 吠陀排期 ✅ ｜ g4 经纬度库 ✅ ｜ g5 词库按钮+品牌终检 ✅ ｜ g6 tree-shaking（首页省199KB gzip）✅ ｜ g7 治理执行 ✅ ｜ g8 T0-T6 事件+订阅双确认 ✅
+- HEAD 07fb977 已推 solaroran-rgb；线上 sw v4 / meta 完整 / 首页无 prompt-engine 预载
