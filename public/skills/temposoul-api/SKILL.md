@@ -1,18 +1,18 @@
 ---
-name: aov-mingyu-api
-description: 通过 aov.cc 公开 API 调用真太阳时换算、命理、占卜和一站式提示词能力。用于需要真太阳时、八字排盘、紫微斗数排盘、六爻、梅花易数、奇门遁甲、大六壬、塔罗、三山国王灵签、黄历择日、星盘、西占双盘、八宅、太乙神数、五运六气、皇极经世、七政四余，或直接返回可交给 AI 解读的完整提示词的任务。
+name: temposoul-api
+description: 通过 TempoSoul 命律公开 API 调用真太阳时换算、命理、占卜和一站式提示词能力。用于需要真太阳时、八字排盘、紫微斗数排盘、六爻、梅花易数、奇门遁甲、大六壬、塔罗、三山国王灵签、黄历择日、星盘、西占双盘、八宅、太乙神数、五运六气、皇极经世、七政四余，或直接返回可交给 AI 解读的完整提示词的任务。
 ---
 
-# AOV 命理与占卜 API
+# TempoSoul 命律 · 命理与占卜 API
 
-使用 `https://aov.cc/api/v1` 作为基础地址。所有接口返回统一 JSON：
+使用 `https://www.temposoul.com/api/v1` 作为基础地址。所有接口返回统一 JSON：
 
 ```json
 {
   "ok": true,
   "data": {},
   "meta": {
-    "service": "aov.cc",
+    "service": "temposoul",
     "version": "v1"
   }
 }
@@ -28,7 +28,7 @@ description: 通过 aov.cc 公开 API 调用真太阳时换算、命理、占卜
     "message": "错误说明"
   },
   "meta": {
-    "service": "aov.cc",
+    "service": "temposoul",
     "version": "v1"
   }
 }
@@ -141,7 +141,7 @@ description: 通过 aov.cc 公开 API 调用真太阳时换算、命理、占卜
 八字排盘：
 
 ```bash
-curl -X POST https://aov.cc/api/v1/bazi/calculate \
+curl -X POST https://www.temposoul.com/api/v1/bazi/calculate \
   -H "Content-Type: application/json" \
   -d '{"gender":"male","year":1990,"month":5,"day":15,"timeIndex":1,"dateType":"solar"}'
 ```
@@ -149,7 +149,7 @@ curl -X POST https://aov.cc/api/v1/bazi/calculate \
 紫微斗数排盘：
 
 ```bash
-curl -X POST https://aov.cc/api/v1/ziwei/calculate \
+curl -X POST https://www.temposoul.com/api/v1/ziwei/calculate \
   -H "Content-Type: application/json" \
   -d '{"name":"测试","gender":"female","dateType":"solar","year":"1992","month":"8","day":"21","timeIndex":4}'
 ```
@@ -157,7 +157,7 @@ curl -X POST https://aov.cc/api/v1/ziwei/calculate \
 八字排盘并生成提示词：
 
 ```bash
-curl -X POST https://aov.cc/api/v1/bazi/prompt \
+curl -X POST https://www.temposoul.com/api/v1/bazi/prompt \
   -H "Content-Type: application/json" \
   -d '{"gender":"male","year":1990,"month":5,"day":15,"timeIndex":1,"dateType":"solar","question":"我适合创业还是上班？","promptTopic":"career"}'
 ```
@@ -165,7 +165,7 @@ curl -X POST https://aov.cc/api/v1/bazi/prompt \
 紫微斗数排盘并生成提示词：
 
 ```bash
-curl -X POST https://aov.cc/api/v1/ziwei/prompt \
+curl -X POST https://www.temposoul.com/api/v1/ziwei/prompt \
   -H "Content-Type: application/json" \
   -d '{"name":"测试","gender":"female","dateType":"solar","year":"1992","month":"8","day":"21","timeIndex":4,"question":"我的感情关系要注意什么？","promptTopic":"relationship","promptScope":"origin"}'
 ```
@@ -173,7 +173,7 @@ curl -X POST https://aov.cc/api/v1/ziwei/prompt \
 八字紫微合参提示词：
 
 ```bash
-curl -X POST https://aov.cc/api/v1/bazi-ziwei/prompt \
+curl -X POST https://www.temposoul.com/api/v1/bazi-ziwei/prompt \
   -H "Content-Type: application/json" \
   -d '{"name":"测试","gender":"female","dateType":"solar","year":1992,"month":8,"day":21,"timeIndex":4,"question":"我现在适合换工作还是继续等待？","baziPromptTopic":"job-change","ziweiPromptTopic":"job-change","promptScope":"yearly"}'
 ```
@@ -181,7 +181,7 @@ curl -X POST https://aov.cc/api/v1/bazi-ziwei/prompt \
 塔罗抽牌：
 
 ```bash
-curl -X POST https://aov.cc/api/v1/divination/tarot \
+curl -X POST https://www.temposoul.com/api/v1/divination/tarot \
   -H "Content-Type: application/json" \
   -d '{"spreadType":"single"}'
 ```
@@ -189,7 +189,7 @@ curl -X POST https://aov.cc/api/v1/divination/tarot \
 塔罗抽牌并生成提示词：
 
 ```bash
-curl -X POST https://aov.cc/api/v1/divination/tarot/prompt \
+curl -X POST https://www.temposoul.com/api/v1/divination/tarot/prompt \
   -H "Content-Type: application/json" \
   -d '{"spreadType":"single","question":"我近期事业应该注意什么？"}'
 ```
@@ -197,7 +197,7 @@ curl -X POST https://aov.cc/api/v1/divination/tarot/prompt \
 按自定时间起卦并生成提示词：
 
 ```bash
-curl -X POST https://aov.cc/api/v1/divination/liuyao/prompt \
+curl -X POST https://www.temposoul.com/api/v1/divination/liuyao/prompt \
   -H "Content-Type: application/json" \
   -d '{"customDate":"2025-01-01T08:30:00+08:00","question":"这个项目现在适合推进吗？"}'
 ```
@@ -205,7 +205,7 @@ curl -X POST https://aov.cc/api/v1/divination/liuyao/prompt \
 八字盲派流派解读：
 
 ```bash
-curl -X POST https://aov.cc/api/v1/bazi/prompt \
+curl -X POST https://www.temposoul.com/api/v1/bazi/prompt \
   -H "Content-Type: application/json" \
   -d '{"gender":"male","year":1990,"month":5,"day":15,"timeIndex":1,"dateType":"solar","question":"近期工作发展如何？","promptTopic":"career","school":"mangpai"}'
 ```
@@ -213,7 +213,7 @@ curl -X POST https://aov.cc/api/v1/bazi/prompt \
 紫微飞星派流派解读：
 
 ```bash
-curl -X POST https://aov.cc/api/v1/ziwei/prompt \
+curl -X POST https://www.temposoul.com/api/v1/ziwei/prompt \
   -H "Content-Type: application/json" \
   -d '{"gender":"female","dateType":"solar","year":"1992","month":"8","day":"21","timeIndex":4,"question":"2025年事业财运如何？","promptTopic":"career-wealth","promptScope":"yearly","school":"feixing"}'
 ```
@@ -221,7 +221,7 @@ curl -X POST https://aov.cc/api/v1/ziwei/prompt \
 奇门飞盘法排盘：
 
 ```bash
-curl -X POST https://aov.cc/api/v1/divination/qimen/prompt \
+curl -X POST https://www.temposoul.com/api/v1/divination/qimen/prompt \
   -H "Content-Type: application/json" \
   -d '{"qimenMethod":"feipan","question":"项目现在能推进吗？"}'
 ```
@@ -231,7 +231,7 @@ curl -X POST https://aov.cc/api/v1/divination/qimen/prompt \
 如果调用方确实需要完整排盘和提示词同时返回，显式传 `responseMode: "full"`：
 
 ```bash
-curl -X POST https://aov.cc/api/v1/divination/qimen/prompt \
+curl -X POST https://www.temposoul.com/api/v1/divination/qimen/prompt \
   -H "Content-Type: application/json" \
   -d '{"qimenMethod":"feipan","question":"项目现在能推进吗？","responseMode":"full"}'
 ```
@@ -239,7 +239,7 @@ curl -X POST https://aov.cc/api/v1/divination/qimen/prompt \
 黄历安葬择日：
 
 ```bash
-curl -X POST https://aov.cc/api/v1/divination/almanac \
+curl -X POST https://www.temposoul.com/api/v1/divination/almanac \
   -H "Content-Type: application/json" \
   -d '{"topic":"burial","startDate":"2026-07-01","endDate":"2026-07-15"}'
 ```
@@ -247,7 +247,7 @@ curl -X POST https://aov.cc/api/v1/divination/almanac \
 黄历择日：
 
 ```bash
-curl -X POST https://aov.cc/api/v1/divination/almanac \
+curl -X POST https://www.temposoul.com/api/v1/divination/almanac \
   -H "Content-Type: application/json" \
   -d '{"topic":"move","startDate":"2026-06-01","endDate":"2026-06-05","participants":[{"id":"self","name":"本人","gender":"男","year":1990,"month":1,"day":1,"timeIndex":12,"dateType":"solar"}]}'
 ```
@@ -255,7 +255,7 @@ curl -X POST https://aov.cc/api/v1/divination/almanac \
 黄历分页轻量返回：
 
 ```bash
-curl -X POST https://aov.cc/api/v1/divination/almanac \
+curl -X POST https://www.temposoul.com/api/v1/divination/almanac \
   -H "Content-Type: application/json" \
   -d '{"topic":"move","startDate":"2026-06-01","endDate":"2026-06-30","page":1,"pageSize":5,"detailMode":"compact"}'
 ```
@@ -263,7 +263,7 @@ curl -X POST https://aov.cc/api/v1/divination/almanac \
 黄历提示词也可分页，大范围或多参与人时按页多次请求：
 
 ```bash
-curl -X POST https://aov.cc/api/v1/divination/almanac/prompt \
+curl -X POST https://www.temposoul.com/api/v1/divination/almanac/prompt \
   -H "Content-Type: application/json" \
   -d '{"topic":"move","startDate":"2026-06-01","endDate":"2026-06-30","page":1,"pageSize":5}'
 ```
@@ -271,7 +271,7 @@ curl -X POST https://aov.cc/api/v1/divination/almanac/prompt \
 星盘生成：
 
 ```bash
-curl -X POST https://aov.cc/api/v1/divination/astrolabe \
+curl -X POST https://www.temposoul.com/api/v1/divination/astrolabe \
   -H "Content-Type: application/json" \
   -d '{"name":"本人","gender":"女","year":1995,"month":5,"day":20,"hour":12,"minute":30,"latitude":39.9042,"longitude":116.4074,"timezone":8,"locationName":"北京"}'
 ```
@@ -279,7 +279,7 @@ curl -X POST https://aov.cc/api/v1/divination/astrolabe \
 西占双盘提示词：
 
 ```bash
-curl -X POST https://aov.cc/api/v1/divination/astrolabe/synastry/prompt \
+curl -X POST https://www.temposoul.com/api/v1/divination/astrolabe/synastry/prompt \
   -H "Content-Type: application/json" \
   -d '{"person1":{"name":"甲","gender":"女","year":1995,"month":5,"day":20,"hour":12,"minute":30,"latitude":39.9042,"longitude":116.4074,"timezone":8},"person2":{"name":"乙","gender":"男","year":1992,"month":8,"day":21,"hour":8,"minute":15,"latitude":31.2304,"longitude":121.4737,"timezone":8},"question":"我们长期合作时最需要注意什么？","responseMode":"prompt-only"}'
 ```
@@ -287,7 +287,7 @@ curl -X POST https://aov.cc/api/v1/divination/astrolabe/synastry/prompt \
 五运六气提示词：
 
 ```bash
-curl -X POST https://aov.cc/api/v1/metaphysics/wuyun-liuqi/prompt \
+curl -X POST https://www.temposoul.com/api/v1/metaphysics/wuyun-liuqi/prompt \
   -H "Content-Type: application/json" \
   -d '{"year":2026,"question":"请解释本年的运气结构和气候节律。","responseMode":"prompt-only"}'
 ```
@@ -295,7 +295,7 @@ curl -X POST https://aov.cc/api/v1/metaphysics/wuyun-liuqi/prompt \
 皇极经世周期提示词（纪元必须来自用户或明确资料）：
 
 ```bash
-curl -X POST https://aov.cc/api/v1/metaphysics/huangji-jingshi/prompt \
+curl -X POST https://www.temposoul.com/api/v1/metaphysics/huangji-jingshi/prompt \
   -H "Content-Type: application/json" \
   -d '{"epochYear":1000,"year":2026,"question":"请解释目标年所处的元会运世层级。","responseMode":"prompt-only"}'
 ```
@@ -303,7 +303,7 @@ curl -X POST https://aov.cc/api/v1/metaphysics/huangji-jingshi/prompt \
 AI 流式解读：
 
 ```bash
-curl -N -X POST https://aov.cc/api/v1/ai/analyze \
+curl -N -X POST https://www.temposoul.com/api/v1/ai/analyze \
   -H "Content-Type: application/json" \
   -d '{"prompt":"请基于这段排盘资料做简明解读。"}'
 ```
@@ -311,7 +311,7 @@ curl -N -X POST https://aov.cc/api/v1/ai/analyze \
 获取可用模型列表：
 
 ```bash
-curl -X POST https://aov.cc/api/v1/ai/models \
+curl -X POST https://www.temposoul.com/api/v1/ai/models \
   -H "Content-Type: application/json" \
   -d '{"aiConfig":{"mode":"builtin"}}'
 ```

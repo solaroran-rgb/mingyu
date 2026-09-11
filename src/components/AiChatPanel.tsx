@@ -37,7 +37,7 @@ interface AiChatPanelProps {
 }
 
 const PLACEHOLDER = '输入你想询问的问题…';
-const AI_CHAT_HISTORY_STORAGE_PREFIX = 'mingyu:ai-chat-history:v1:';
+const AI_CHAT_HISTORY_STORAGE_PREFIX = 'temposoul:ai-chat-history:v1:';
 const AUTO_SCROLL_BOTTOM_THRESHOLD = 48;
 
 function renderMarkdown(content: string): string {

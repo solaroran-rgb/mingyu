@@ -7,7 +7,7 @@ type PagesContext = {
   };
 };
 
-const WELL_KNOWN_API_FILE = 'aov-mingyu-api.json';
+const WELL_KNOWN_API_FILE = 'temposoul-api.json';
 const JSON_HEADERS = {
   'Content-Type': 'application/json; charset=utf-8',
   'Cache-Control': 'no-store',

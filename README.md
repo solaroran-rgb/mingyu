@@ -372,8 +372,8 @@ https://你的域名/.well-known/aov-temposoul-api.json
 ```text
 https://www.temposoul.com/api/v1/manifest
 https://www.temposoul.com/api/v1/openapi.json
-https://www.temposoul.com/.well-known/aov-temposoul-api.json
-https://www.temposoul.com/mingyu-runtime-config.js
+https://www.temposoul.com/.well-known/temposoul-api.json
+https://www.temposoul.com/temposoul-runtime-config.js
 ```
 
 Cloudflare Pages 的环境变量在 Dashboard → Settings → Environment variables 中配置。密钥不要写进代码仓库。
@@ -389,7 +389,7 @@ AI_MODEL=deepseek-chat
 AI_PROVIDER_NAME=DeepSeek
 ```
 
-如果同时启用了 Preview 部署，也需要在 Preview 环境配置同一组变量。保存环境变量后重新部署一次，`/mingyu-runtime-config.js` 会从 Pages Functions 读取当前环境变量，并返回 `Cache-Control: no-store`，避免旧配置被缓存。
+如果同时启用了 Preview 部署，也需要在 Preview 环境配置同一组变量。保存环境变量后重新部署一次，`/temposoul-runtime-config.js` 会从 Pages Functions 读取当前环境变量，并返回 `Cache-Control: no-store`，避免旧配置被缓存。
 
 </details>
 
