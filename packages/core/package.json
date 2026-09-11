@@ -262,6 +262,10 @@
       "types": "./dist/qi_zheng/index.d.ts",
       "import": "./dist/qi_zheng/index.js"
     },
+    "./vedic": {
+      "types": "./dist/vedic/index.d.ts",
+      "import": "./dist/vedic/index.js"
+    },
     "./xuankong": {
       "types": "./dist/xuan_kong/index.d.ts",
       "import": "./dist/xuan_kong/index.js"
