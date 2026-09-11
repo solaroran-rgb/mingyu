@@ -24,6 +24,46 @@ function parseDevVars(filePath: string): Record<string, string> {
 }
 
 /**
+ * 构建期把落地页路由 chunk（InputPage）注入 <link rel="modulepreload">。
+ *
+ * 背景：InputPage 在 App.tsx 中用 React.lazy 包裹，作为默认路由 "/"。
+ * 未预载时，浏览器必须先下载并执行 entry chunk，才会发起 InputPage 的
+ * 动态 import，形成「entry 完成 → 再拉 InputPage」的二次网络瀑布，
+ * 直接推高 LCP 与 Speed Index（g1 实测 SI=2.3s，FCP=0.8s）。
+ *
+ * 此插件在构建产物里找到 assets/InputPage-*.js，在 index.html 的 entry
+ * <script> 之前插入 modulepreload，使浏览器在下载 entry 的同时并行拉取
+ * 落地页 chunk，消除二次瀑布。不改业务逻辑，不影响其它路由的懒加载。
+ */
+function preloadLandingChunkPlugin(): Plugin {
+  return {
+    name: 'preload-landing-chunk',
+    apply: 'build',
+    transformIndexHtml: {
+      order: 'post',
+      handler(html, ctx) {
+        const bundle = ctx.bundle;
+        if (!bundle) return html;
+        let landingFile = '';
+        for (const file of Object.keys(bundle)) {
+          if (file.startsWith('assets/InputPage-') && file.endsWith('.js')) {
+            landingFile = '/' + file;
+            break;
+          }
+        }
+        if (!landingFile) return html;
+        const hint = `<link rel="modulepreload" crossorigin href="${landingFile}">`;
+        // 插在 entry module script 之前，让浏览器尽早并行发起请求。
+        return html.replace(
+          '<script type="module" crossorigin',
+          `${hint}<script type="module" crossorigin`,
+        );
+      },
+    },
+  };
+}
+
+/**
  * Vite 开发服务器中间件：在本地开发时处理 /api/v1/ai/* 请求。
  * 生产环境由 Cloudflare Pages Functions 处理，此插件不生效。
  */
@@ -138,7 +178,7 @@ export default defineConfig({
       isDonationBoxEnabled ? 'true' : 'false',
     ),
   },
-  plugins: [react(), aiProxyDevPlugin()],
+  plugins: [react(), aiProxyDevPlugin(), preloadLandingChunkPlugin()],
   worker: {
     format: 'es',
     rollupOptions: {
