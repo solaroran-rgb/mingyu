@@ -1,5 +1,5 @@
-const STATIC_CACHE = 'mingyu-static-v2';
-const RUNTIME_CACHE = 'mingyu-runtime-v2';
+const STATIC_CACHE = 'temposoul-static-v3';
+const RUNTIME_CACHE = 'temposoul-runtime-v3';
 const APP_SHELL = [
   '/',
   '/index.html',
