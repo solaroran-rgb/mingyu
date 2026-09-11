@@ -70,13 +70,18 @@ export const en: Dict = {
   premium: {
     title: 'TempoSoul Pro',
     desc: 'Unlock unlimited AI deep readings and pro-grade reports',
-    perks: ['Unlimited AI deep readings', 'Pro-level synastry & date selection reports', 'Early access to new systems'],
+    perks: [
+      'Unlimited AI deep readings',
+      'Pro-level synastry & date selection reports',
+      'Early access to new systems',
+    ],
     cta: 'Upgrade now',
     quotaHint: 'Free uses left today',
     loginHint: 'Sign in to manage your subscription',
   },
   analytics: {
-    notice: 'This site uses privacy-friendly analytics, disabled by default and can be enabled at deploy time.',
+    notice:
+      'This site uses privacy-friendly analytics, disabled by default and can be enabled at deploy time.',
   },
   lang: {
     label: 'Language',
@@ -89,6 +94,81 @@ export const en: Dict = {
     es: 'Español',
   },
   disclaimer: 'For entertainment and self-reflection only. Not professional advice.',
+  privacy: {
+    title: 'Privacy Policy',
+    updatedAt:
+      'Last updated: 2026-08-08. This policy explains how TempoSoul handles your information and how you manage your data.',
+    corePrinciples: 'Core Principles',
+    principle1:
+      'Charting inputs such as your name and birth date are stored only in your local browser by default and are not uploaded automatically.',
+    principle2:
+      'We minimize data collection, do not use cross-site tracking, and never sell your personal data to third parties.',
+    s1Title: 'What we collect',
+    s1B1: 'TempoSoul stores the information you actively enter in your local browser — such as your name, birth date, birth time and birthplace — to generate charts and history records.',
+    s1B2: 'If you enable the built-in AI interpretation, your birth information may be sent to the configured server according to your settings; refer to the toggles and configuration in the AI settings panel.',
+    s2Title: 'Where your data is stored',
+    s2B1: 'Standard charting data such as your name and birth date is kept only in your local browser (localStorage / IndexedDB) by default and is not uploaded to any server automatically.',
+    s2B2: 'You can clear local records on the home page or the records page at any time; once cleared, the data cannot be recovered.',
+    s3Title: 'How to delete your data',
+    s3B1: "Clear this site's local storage in your browser, or use the “Clear records” action in the site, to remove all personal data stored on this device.",
+    s3B2: 'If you have used the server-side AI feature, please also sign out of that service and contact us to delete the related processing records.',
+    s4Title: 'Cookies and local storage',
+    s4B1: 'This site uses browser local storage to remember your preferences (such as dismissed notices and AI settings). We do not track you across sites with third-party cookies.',
+    s5Title: 'Contact',
+    s5B1: 'If you have questions about this privacy policy, or wish to delete server-side processing records, please contact us through the feedback entry in the site settings.',
+    disclaimerHead: 'Disclaimer',
+    disclaimerNote:
+      'For entertainment and self-reflection purposes only. Not a substitute for professional advice.',
+    disclaimerBody:
+      'The charts and interpretations provided by TempoSoul are for cultural entertainment and self-reflection only and do not constitute medical, legal, financial or life-decision advice. Please consult a qualified professional for major life decisions.',
+  },
+  tutorial: {
+    title: 'Tutorial',
+    intro:
+      'Enter your information, open the result page, copy the prompt, and send it to an online AI assistant to continue asking.',
+    headWorkflow: 'Recommended workflow',
+    step1Title: 'Choose a mode and enter details',
+    step1Desc:
+      'Charting for a personal chart or home; synastry for two people; divination for a question; date selection for timing.',
+    step2Title: 'Start with the prompt',
+    step2Desc:
+      'The result page opens on the “Prompt” tab by default; switch to Bazi or Ziwei when you want to view the chart.',
+    step3Title: 'Copy and send',
+    step3Desc:
+      'Send it to online AI tools such as DeepSeek, Qwen or Doubao; prefer expert mode, deep thinking or deep reasoning when available.',
+    headModes: 'Choosing among the four modes',
+    mode1Title: 'Charting',
+    mode1Desc: 'View a personal chart or home feng shui.',
+    mode1B1: 'Bazi / Ziwei: enter birth information',
+    mode1B2: 'Home feng shui: enter birth year, gender and house orientation',
+    mode2Title: 'Synastry',
+    mode2Desc: 'Explore the relationship and compatibility between two people.',
+    mode2B1: "Enter both people's birth information",
+    mode2B2: "Shows both people's charts",
+    mode2B3: 'Often used for romance, partnership and compromise',
+    mode3Title: 'Divination',
+    mode3Desc: 'Cast a quick reading around a single question.',
+    mode3B1: 'Make your question specific first',
+    mode3B2: 'Choose from Liuyao, Meihua, Taiyi, Tarot and more',
+    mode3B3: 'Copy the prompt from the result page in one tap',
+    mode4Title: 'Date selection',
+    mode4Desc: 'Filter candidate dates for the best day to act.',
+    mode4B1: 'Choose the activity you plan to do',
+    mode4B2: 'Enter your candidate date range',
+    mode4B3: "Optionally add participants' birth information",
+    headTips: 'How to send the prompt',
+    tip1: "Don't just send “look into this for me” — send the whole prompt in full.",
+    tip2: 'If the tool supports web search, attachments or extended thinking, enable them first, then send.',
+    tip3: "This project focuses on generating complete prompts; follow-up questions can go directly to the online AI's own chat.",
+    headFaq: 'FAQ',
+    faq1Q: "What if I don't know my exact birth time?",
+    faq1A:
+      'When you know the shichen (two-hour period), turn off true solar time and pick the shichen directly; true solar time only needs precise minutes and birthplace. If even the shichen is uncertain, do not chart on an approximate time.',
+    faq2Q: 'When should I use true solar time?',
+    faq2A: 'Enable it when your birth time and birthplace information are complete.',
+    faq3Q: 'Can I revisit my earlier readings?',
+    faq3A: 'Yes. You can find history records on both the home page and the divination page.',
+  },
   theme: {
     label: 'Theme',
   },
