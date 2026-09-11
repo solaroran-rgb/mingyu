@@ -1,0 +1,26 @@
+{
+  "_comment": "TempoSoul 根域 apex→www 301 · 备选 Redirect Rule（线程 h7 落盘，未在 CF 创建）。与 public/_redirects 二选一；推荐以 public/_redirects 为准，本文件作仪表盘/Terraform 对照。文档: docs/governance/2026-09-12-root-domain-301.md",
+  "ruleset_kind": "redirect",
+  "ruleset_phase": "http_request_dynamic_redirect",
+  "description": "temposoul.com apex -> www.temposoul.com (301 permanent)",
+  "rules": [
+    {
+      "description": "Redirect bare domain to www",
+      "expression": "(http.host eq \"temposoul.com\")",
+      "action": "redirect",
+      "action_parameters": {
+        "status_code": 301,
+        "from_value": {
+          "status_code": 301,
+          "preserve_query_string": true,
+          "subdomain": "www",
+          "target_url": {
+            "value": "https://www.temposoul.com${http.request.uri.path}"
+          }
+        }
+      },
+      "enabled": true
+    }
+  ],
+  "_terraform_example": "resource \"cloudflare_ruleset\" \"apex_to_www\" { name = \"apex-to-www\"; kind = \"zone\"; phase = \"http_request_dynamic_redirect\"; rules { action = \"redirect\"; action_parameters { status_code = 301; from_value { preserve_query_string = true; target_url { value = concat(\"https://www.temposoul.com\", http.request.uri.path) } } }; expression = \"(http.host eq \\\"temposoul.com\\\")\" } }"
+}

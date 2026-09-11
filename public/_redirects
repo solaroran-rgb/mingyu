@@ -1,0 +1,7 @@
+# TempoSoul · 根域 301 规则（线程 h7 落盘，未部署）
+# 语法: https://developers.cloudflare.com/pages/configuration/redirects/
+# 作用: temposoul.com（裸域）全站 301 → www.temposoul.com，保留路径与 query。
+# 前提: 方案 A 上线（NS 迁到 Cloudflare + Pages 项目已绑定 temposoul.com 自定义域）。
+# 本线程不执行 wrangler pages deploy；随下次 Pages 构建自动上线。
+
+https://temposoul.com/*  https://www.temposoul.com/:splat  301!
