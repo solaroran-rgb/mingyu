@@ -2,8 +2,13 @@
  * 邮件订阅 API（Cloudflare Pages Functions，边缘运行）
  * 路由：POST /api/v1/newsletter
  * 存储：newsletter_emails（Cloudflare KV）
- * 说明：免费订阅邮件捕获（P3 商业化 · 邮件捕获首刀）
+ * 说明：P3 商业化 · 邮件捕获（双确认框架）
+ *   - 新订阅写入 status:pending 记录，并签发确认 token、调用 sendConfirmationEmail 预留 hook；
+ *   - 用户点击邮件链接后由 /api/v1/newsletter-confirm 完成 pending→confirmed。
+ *   - 邮件通道未接入前，hook 为空操作，记录保持 pending（不实际发信）。
  */
+
+import { CONFIRM_TOKEN_TTL_SEC, createConfirmToken, sendConfirmationEmail } from './newsletter-confirm';
 
 interface KVNamespace {
   get(key: string): Promise<string | null>;
@@ -12,6 +17,7 @@ interface KVNamespace {
 
 interface NewsletterEnv {
   newsletter_emails?: KVNamespace;
+  AUTH_SECRET?: string;
 }
 
 type PagesContext = {
@@ -82,9 +88,18 @@ export async function onRequest(ctx: PagesContext): Promise<Response> {
     email: raw,
     source: typeof body.source === 'string' && body.source.length <= 64 ? body.source : 'website',
     ts: new Date().toISOString(),
-    subscribed: true,
+    status: 'pending',
+    subscribed: false,
   };
   await kv.put(key, JSON.stringify(record));
 
-  return json({ ok: true });
+  // 双确认：签发确认 token 并预留邮件发送 hook（无邮件通道，hook 当前为空操作）
+  const secret = ctx.env?.AUTH_SECRET;
+  if (secret) {
+    const exp = Math.floor(Date.now() / 1000) + CONFIRM_TOKEN_TTL_SEC;
+    const token = await createConfirmToken(raw, exp, secret);
+    await sendConfirmationEmail(raw, token);
+  }
+
+  return json({ ok: true, status: 'pending', pendingConfirmation: true });
 }

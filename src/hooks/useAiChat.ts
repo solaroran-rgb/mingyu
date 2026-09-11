@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { streamAiChat, type ChatMessage } from '@/lib/ai/stream-client';
 import type { AiRequestConfig } from '@/lib/ai/settings';
+import { trackAiInterpret } from '@/lib/analytics';
 
 export type AiChatStatus = 'idle' | 'loading' | 'streaming' | 'done' | 'error';
 
@@ -158,6 +159,8 @@ export function useAiChat(aiConfig?: AiRequestConfig): UseAiChat {
   const analyze = useCallback(
     (prompt: string) => {
       if (!prompt.trim()) return;
+      // T2 漏斗：AI 解读（初次解读）
+      trackAiInterpret({ source: 'initial' });
       initialPromptRef.current = prompt;
       turnsRef.current = [];
       setTurns([]);
@@ -172,6 +175,8 @@ export function useAiChat(aiConfig?: AiRequestConfig): UseAiChat {
       const trimmed = question.trim();
       if (!trimmed) return;
 
+      // T2 漏斗：AI 解读（追问）
+      trackAiInterpret({ source: 'followup' });
       // 从 ref 读取最新的 turns，避免在 state updater 内部产生副作用
       const nextTurns = [...turnsRef.current, { role: 'user' as const, content: trimmed }];
       turnsRef.current = nextTurns;
