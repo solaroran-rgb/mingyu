@@ -5,7 +5,6 @@ import {
   type ShenShaVariantConfig,
 } from '@temposoul/core/bazi';
 import { baziCalculator } from '@core/bazi/baziCalculator';
-import { analyzeZiweiCompatibility } from '@temposoul/core/ziwei';
 import { buildFortuneSelectionContext, type BaziFortuneSelectionValue } from '@temposoul/core/bazi';
 import {
   buildAstronomicalTimeEvidence,
@@ -16,24 +15,12 @@ import {
   getTimeIndexFromClock,
   resolveTrueSolarBirthTime,
 } from '@temposoul/core/calendar';
-import { buildZiweiChartInput, calculatePublicZiweiChartForScopes } from '@temposoul/core/ziwei';
-import { buildCombinedZiweiCompatibilityPrompt } from '@temposoul/core/ziwei/prompt';
 import {
   daysInSolarMonth,
   getBirthDateValidationMessage,
   isValidIsoDateTime,
 } from '../date-validation';
-import { generateLiuyao, type LiuyaoGenerationOptions } from '@temposoul/core/divination/liuyao';
-import { generateMeihua } from '@temposoul/core/divination/meihua';
-import { generateXiaoliuren } from '@temposoul/core/divination/xiaoliuren';
-import { generateJinkoujue } from '@temposoul/core/divination/jinkoujue';
-import { generateQimen } from '@temposoul/core/divination/qimen';
-import { generateLiuren } from '@temposoul/core/divination/liuren';
-import { analyzeAlmanacEvidence, generateAlmanacSelection } from '@temposoul/core/divination/almanac';
-import { drawLenormandSpread } from '@temposoul/core/divination/lenormand';
-import { generateAstrolabe } from '@temposoul/core/divination/astrolabe';
-import { analyzeAstrolabeSynastry } from '@temposoul/core/divination/astrolabe-synastry';
-import { drawRandomSign } from '@temposoul/core/divination/ssgw';
+import type { LiuyaoGenerationOptions } from '@temposoul/core/divination/liuyao';
 // ponytail: 1102 修复——重型子系统改为端点内动态 import，冷启动不再评估全量模块图。
 // 常量与错误类保持静态（体积小且近乎所有端点共用）。
 import { MingyuCoreError } from '@temposoul/core/result';
@@ -73,7 +60,6 @@ import type {
   SupplementaryInfo,
   XiaoliurenDivinationMethod,
 } from '../../types/divination';
-import { drawTarotSpread } from '@temposoul/core/divination/tarot';
 import type { DivinationMethodId } from '@temposoul/core/divination/config';
 import type { ScopeType } from '../../types/analysis';
 import {
@@ -2689,6 +2675,9 @@ export async function calculateZiweiRuntime(input: JsonRecord, scopes: ScopeType
         birthMinute: readString(input, 'birthMinute', ''),
         birthLongitude: readString(input, 'birthLongitude', ''),
       };
+  const { buildZiweiChartInput, calculatePublicZiweiChartForScopes } = await import(
+    '@temposoul/core/ziwei'
+  );
   return calculatePublicZiweiChartForScopes(
     buildZiweiChartInput({
       name: readString(input, 'name', ''),
@@ -2773,6 +2762,7 @@ async function readZiweiCompatibilityCharts(input: JsonRecord) {
 
 async function calculateZiweiCompatibilityApi(input: JsonRecord) {
   assertNoRandomOptions(input, '紫微双盘是确定性计算，不接受 seed 或 replay。');
+  const { analyzeZiweiCompatibility } = await import('@temposoul/core/ziwei');
   const charts = await readZiweiCompatibilityCharts(input);
   const compatibility = analyzeZiweiCompatibility(
     charts.person1.payloadByScope.origin,
@@ -2795,6 +2785,8 @@ async function calculateZiweiCompatibilityApi(input: JsonRecord) {
 
 async function buildZiweiCompatibilityPromptApi(input: JsonRecord) {
   assertNoRandomOptions(input, '紫微双盘是确定性计算，不接受 seed 或 replay。');
+  const { analyzeZiweiCompatibility } = await import('@temposoul/core/ziwei');
+  const { buildCombinedZiweiCompatibilityPrompt } = await import('@temposoul/core/ziwei/prompt');
   const charts = await readZiweiCompatibilityCharts(input);
   const compatibility = analyzeZiweiCompatibility(
     charts.person1.payloadByScope.origin,
@@ -2901,7 +2893,7 @@ async function buildBaziZiweiPrompt(input: JsonRecord) {
   });
 }
 
-function calculateLiuyao(input: JsonRecord) {
+async function calculateLiuyao(input: JsonRecord) {
   const method = readOptionalEnum(input, 'liuyaoMethod', ['time', 'manual', 'coins'] as const);
   const yaos = readOptionalIntegerArray(input, 'yaos', 6, 6, 9);
   const randomOptions = readRandomOptions(input);
@@ -2913,13 +2905,15 @@ function calculateLiuyao(input: JsonRecord) {
           ...randomOptions,
         }
       : undefined;
+  const { generateLiuyao } = await import('@temposoul/core/divination/liuyao');
   return generateLiuyao(readCustomDate(input), options);
 }
 
-function calculateQimen(input: JsonRecord) {
+async function calculateQimen(input: JsonRecord) {
   assertNoRandomOptions(input, '奇门遁甲是确定性排盘，不接受 seed 或 replay。');
   const method = readEnum(input, 'qimenMethod', ['zhuanpan', 'feipan'], 'zhuanpan');
   const juMethod = readEnum(input, 'qimenJuMethod', ['chaibu', 'zhirun'], 'chaibu');
+  const { generateQimen } = await import('@temposoul/core/divination/qimen');
   return generateQimen(
     readCustomDate(input),
     method as 'zhuanpan' | 'feipan',
@@ -2928,12 +2922,12 @@ function calculateQimen(input: JsonRecord) {
   );
 }
 
-function calculateQimenApi(input: JsonRecord) {
-  const result = calculateQimen(input);
+async function calculateQimenApi(input: JsonRecord) {
+  const result = await calculateQimen(input);
   return readDetailMode(input) === 'compact' ? buildCompactQimenResult(result) : result;
 }
 
-function calculateMeihua(input: JsonRecord) {
+async function calculateMeihua(input: JsonRecord) {
   const method = readEnum(input, 'method', ['time', 'number', 'random', 'timeTrigram'], 'time');
   const settings: MeihuaSettings = {
     method,
@@ -2942,10 +2936,11 @@ function calculateMeihua(input: JsonRecord) {
   };
   if (method !== 'random') assertNoRandomOptions(input, '梅花易数仅随机起卦接受 seed 或 replay。');
 
+  const { generateMeihua } = await import('@temposoul/core/divination/meihua');
   return generateMeihua(readCustomDate(input), settings);
 }
 
-function calculateLiuren(input: JsonRecord) {
+async function calculateLiuren(input: JsonRecord) {
   assertNoRandomOptions(input, '大六壬是确定性排盘，不接受 seed 或 replay。');
   const template = readEnum(
     input,
@@ -2953,13 +2948,14 @@ function calculateLiuren(input: JsonRecord) {
     ['general', 'ganqing', 'shiye', 'caifu'],
     'general',
   );
+  const { generateLiuren } = await import('@temposoul/core/divination/liuren');
   return {
     ...generateLiuren(readCustomDate(input)),
     template,
   };
 }
 
-function calculateXiaoliuren(input: JsonRecord) {
+async function calculateXiaoliuren(input: JsonRecord) {
   assertNoRandomOptions(input, '小六壬是确定性时间起课，不接受 seed 或 replay。');
   const method = readEnum(
     input,
@@ -2974,18 +2970,20 @@ function calculateXiaoliuren(input: JsonRecord) {
       '小六壬已移除无可靠来源的流派和数字起课参数，当前仅接受时间起课。',
     );
   }
+  const { generateXiaoliuren } = await import('@temposoul/core/divination/xiaoliuren');
   return generateXiaoliuren({
     method,
     customDate: readCustomDate(input),
   });
 }
 
-function calculateJinkoujue(input: JsonRecord) {
+async function calculateJinkoujue(input: JsonRecord) {
   const method = readEnum(input, 'jinkoujueMethod', ['time', 'number', 'random'], 'time') as
     'time' | 'number' | 'random';
   if (method !== 'random') {
     assertNoRandomOptions(input, '金口诀仅随机起课接受 seed 或 replay。');
   }
+  const { generateJinkoujue } = await import('@temposoul/core/divination/jinkoujue');
   return generateJinkoujue({
     method,
     customDate: readCustomDate(input),
@@ -2994,7 +2992,7 @@ function calculateJinkoujue(input: JsonRecord) {
   });
 }
 
-function calculateTarot(input: JsonRecord) {
+async function calculateTarot(input: JsonRecord) {
   const randomOptions = readRandomOptions(input);
   const spreadType = readEnum(
     input,
@@ -3013,20 +3011,23 @@ function calculateTarot(input: JsonRecord) {
     ],
     'single',
   );
+  const { drawTarotSpread } = await import('@temposoul/core/divination/tarot');
   return drawTarotSpread(spreadType, randomOptions);
 }
 
-function drawSsgw(input: JsonRecord) {
+async function drawSsgw(input: JsonRecord) {
+  const { drawRandomSign } = await import('@temposoul/core/divination/ssgw');
   return drawRandomSign(readCustomDate(input), readRandomOptions(input));
 }
 
-function calculateSsgw(input: JsonRecord) {
+async function calculateSsgw(input: JsonRecord) {
   return drawSsgw(input);
 }
 
-function calculateAlmanac(input: JsonRecord) {
+async function calculateAlmanac(input: JsonRecord) {
   assertNoRandomOptions(input, '黄历择日是确定性计算，不接受 seed 或 replay。');
   const { startDate, endDate } = readAlmanacDateRange(input);
+  const { generateAlmanacSelection } = await import('@temposoul/core/divination/almanac');
   return generateAlmanacSelection({
     topic: readEnum(
       input,
@@ -3051,12 +3052,13 @@ function calculateAlmanac(input: JsonRecord) {
   });
 }
 
-function calculateAlmanacApi(input: JsonRecord) {
-  const result = calculateAlmanac(input);
+async function calculateAlmanacApi(input: JsonRecord) {
+  const result = await calculateAlmanac(input);
   return shapeAlmanacResult(result, input);
 }
 
-function calculateLenormand(input: JsonRecord) {
+async function calculateLenormand(input: JsonRecord) {
+  const { drawLenormandSpread } = await import('@temposoul/core/divination/lenormand');
   return drawLenormandSpread(
     readEnum(
       input,
@@ -3068,7 +3070,7 @@ function calculateLenormand(input: JsonRecord) {
   );
 }
 
-function calculateAstrolabe(input: JsonRecord) {
+async function calculateAstrolabe(input: JsonRecord) {
   assertNoRandomOptions(input, '星盘是确定性排盘，不接受 seed 或 replay。');
   const birthDate = readBirthDate(input, { dateType: 'solar' });
   const timezone = optNumber(input, 'timezone', -12, 14);
@@ -3094,27 +3096,29 @@ function calculateAstrolabe(input: JsonRecord) {
     locationName: readString(input, 'locationName', ''),
     useTrueSolarTime: readBoolean(input, 'useTrueSolarTime', false),
   };
+  const { generateAstrolabe } = await import('@temposoul/core/divination/astrolabe');
   return generateAstrolabe(astrolabeInput);
 }
 
-function readAstrolabeSynastryCharts(input: JsonRecord) {
+async function readAstrolabeSynastryCharts(input: JsonRecord) {
   if (!isRecord(input.person1) || !isRecord(input.person2)) {
     throw new ApiError(400, 'BAD_REQUEST', 'person1 和 person2 必须是完整的星盘出生资料。');
   }
-  const chart1 = calculateAstrolabe(input.person1);
-  const chart2 = calculateAstrolabe(input.person2);
+  const chart1 = await calculateAstrolabe(input.person1);
+  const chart2 = await calculateAstrolabe(input.person2);
   return { chart1, chart2 };
 }
 
-function calculateAstrolabeSynastryApi(input: JsonRecord) {
+async function calculateAstrolabeSynastryApi(input: JsonRecord) {
   assertNoRandomOptions(input, '西占双盘是确定性计算，不接受 seed 或 replay。');
-  const { chart1, chart2 } = readAstrolabeSynastryCharts(input);
+  const { chart1, chart2 } = await readAstrolabeSynastryCharts(input);
+  const { analyzeAstrolabeSynastry } = await import('@temposoul/core/divination/astrolabe-synastry');
   const synastry = analyzeAstrolabeSynastry(chart1, chart2);
   return { charts: { person1: chart1, person2: chart2 }, synastry };
 }
 
-function buildAstrolabeSynastryPromptApi(input: JsonRecord) {
-  const result = calculateAstrolabeSynastryApi(input);
+async function buildAstrolabeSynastryPromptApi(input: JsonRecord) {
+  const result = await calculateAstrolabeSynastryApi(input);
   const prompt = buildAstrolabeSynastryPrompt({
     chart1: result.charts.person1,
     chart2: result.charts.person2,
@@ -3216,7 +3220,7 @@ function buildAstrolabeScopeEvidence(input: JsonRecord, data: AstrolabeData) {
   }
 }
 
-function buildDivinationPromptResult(
+async function buildDivinationPromptResult(
   method: Exclude<DivinationMethodId, 'random'>,
   input: JsonRecord,
 ) {
@@ -3224,12 +3228,14 @@ function buildDivinationPromptResult(
     method === 'almanac'
       ? readString(input, 'question', '')
       : readRequiredString(input, 'question');
-  const rawData = calculateDivinationData(method, input);
+  const rawData = await calculateDivinationData(method, input);
   const promptData =
-    method === 'almanac' ? shapeAlmanacPromptData(rawData as AlmanacData, input) : rawData;
+    method === 'almanac'
+      ? await shapeAlmanacPromptData(rawData as AlmanacData, input)
+      : rawData;
   const fullResult =
     method === 'almanac'
-      ? shapeAlmanacResult(rawData as AlmanacData, input)
+      ? await shapeAlmanacResult(rawData as AlmanacData, input)
       : method === 'ssgw'
         ? rawData
         : method === 'astrolabe'
@@ -3249,10 +3255,10 @@ function buildDivinationPromptResult(
   });
 }
 
-function calculateDivinationData(
+async function calculateDivinationData(
   method: Exclude<DivinationMethodId, 'random'>,
   input: JsonRecord,
-): DivinationData {
+): Promise<DivinationData> {
   switch (method) {
     case 'liuyao':
       return calculateLiuyao(input);
@@ -3560,7 +3566,10 @@ function buildCompactZiweiResult(result: ReturnType<typeof buildSerializableZiwe
   };
 }
 
-function buildCompactQimenResult(result: ReturnType<typeof generateQimen>) {
+type QimenChartModule = typeof import('@temposoul/core/divination/qimen');
+type QimenChartResult = ReturnType<QimenChartModule['generateQimen']>;
+
+function buildCompactQimenResult(result: QimenChartResult) {
   const classicPatterns = (result.classicPatterns ?? []).slice(
     0,
     MAX_COMPACT_QIMEN_CLASSIC_PATTERNS,
@@ -3681,18 +3690,20 @@ function readAlmanacPageSelection(result: AlmanacData, input: JsonRecord) {
   };
 }
 
-function shapeAlmanacPromptData(result: AlmanacData, input: JsonRecord): AlmanacData {
+async function shapeAlmanacPromptData(result: AlmanacData, input: JsonRecord): Promise<AlmanacData> {
   const { shouldPaginate, selectedDays } = readAlmanacPageSelection(result, input);
   if (!shouldPaginate) return result;
   const shaped = { ...result, days: selectedDays };
+  const { analyzeAlmanacEvidence } = await import('@temposoul/core/divination/almanac');
   shaped.evidenceAnalysis = analyzeAlmanacEvidence(shaped);
   return shaped;
 }
 
-function shapeAlmanacResult(result: AlmanacData, input: JsonRecord): AlmanacApiResult {
+async function shapeAlmanacResult(result: AlmanacData, input: JsonRecord): Promise<AlmanacApiResult> {
   const detailMode = readDetailMode(input);
   const { shouldPaginate, selectedDays, pagination } = readAlmanacPageSelection(result, input);
   const days = detailMode === 'compact' ? selectedDays.map(compactAlmanacDay) : selectedDays;
+  const { analyzeAlmanacEvidence } = await import('@temposoul/core/divination/almanac');
 
   return {
     ...result,
