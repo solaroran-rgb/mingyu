@@ -84,6 +84,7 @@ export default function App() {
       <TrustBanner />
       <Suspense fallback={<RouteFallback />}>
         <ErrorBoundary>
+          <main>
           <Routes>
             <Route path="/" element={<InputPage />} />
             <Route path="/tutorial" element={<TutorialPage />} />
@@ -95,6 +96,7 @@ export default function App() {
             <Route path="/lexicon" element={<LexiconPage />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
+          </main>
         </ErrorBoundary>
         <footer
           className="global-disclaimer"
