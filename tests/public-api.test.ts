@@ -5259,3 +5259,51 @@ test('公开 API 住宅风水缺建造或起运年时不得静默生成玄空盘
   assert.equal(orientationOnly.body.ok, false);
   assert.match(orientationOnly.body.error.message, /必须提供住宅建造年或起运年/);
 });
+
+test('公开 API 时区冲突与夏令时跳时应返回 400 而非 500', async () => {
+  // 回归：曾因 core 抛原生 Error 被 handleError 兜底成 500 INTERNAL_ERROR（线上 100% 复现）。
+  const conflict = await callApi('bazi/calculate', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      gender: 'male',
+      year: 1991,
+      month: 7,
+      day: 4,
+      dateType: 'solar',
+      birthHour: 9,
+      birthMinute: 15,
+      birthPlace: 'New York',
+      birthLongitude: -74.006,
+      timezone: 8,
+      timeZoneId: 'America/New_York',
+      useTrueSolarTime: true,
+    }),
+  });
+  assert.equal(conflict.response.status, 400);
+  assert.equal(conflict.body.ok, false);
+  assert.equal(conflict.body.error.code, 'TIMEZONE_OFFSET_CONFLICT');
+  assert.match(conflict.body.error.message, /历史偏移不一致/);
+
+  const gap = await callApi('bazi/calculate', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      gender: 'male',
+      year: 2024,
+      month: 3,
+      day: 10,
+      dateType: 'solar',
+      birthHour: 2,
+      birthMinute: 30,
+      birthPlace: 'New York',
+      birthLongitude: -74.006,
+      timeZoneId: 'America/New_York',
+      useTrueSolarTime: true,
+    }),
+  });
+  assert.equal(gap.response.status, 400);
+  assert.equal(gap.body.ok, false);
+  assert.equal(gap.body.error.code, 'NONEXISTENT_LOCAL_TIME');
+  assert.match(gap.body.error.message, /不存在/);
+});

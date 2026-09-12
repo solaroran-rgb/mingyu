@@ -4,6 +4,7 @@
  */
 
 import { diagnoseSamoaSkipDay } from './samoa-skip-day';
+import { MingyuCoreError } from '../shared/result';
 
 export interface HistoricalTimezoneInput {
   year: number;
@@ -131,7 +132,12 @@ function getFormatter(timeZoneId: string) {
       second: '2-digit',
     });
   } catch {
-    throw new Error(`无法识别 IANA 时区 ${timeZoneId}。`);
+    throw new MingyuCoreError({
+      code: 'INVALID_TIMEZONE_ID',
+      category: 'validation',
+      field: 'timeZoneId',
+      message: `无法识别 IANA 时区 ${timeZoneId}。`,
+    });
   }
 }
 
@@ -183,7 +189,14 @@ function toIso(timestamp: number) {
 export function resolveHistoricalTimezone(
   input: HistoricalTimezoneInput,
 ): HistoricalTimezoneEvidence {
-  if (!input.timeZoneId?.trim()) throw new Error('IANA 时区名不能为空。');
+  if (!input.timeZoneId?.trim()) {
+    throw new MingyuCoreError({
+      code: 'INVALID_TIMEZONE_ID',
+      category: 'validation',
+      field: 'timeZoneId',
+      message: 'IANA 时区名不能为空。',
+    });
+  }
   const timeZoneId = input.timeZoneId.trim();
   const formatter = getFormatter(timeZoneId);
   const target: WallClockParts = {
@@ -217,11 +230,19 @@ export function resolveHistoricalTimezone(
   if (!matches.length) {
     const samoa = diagnoseSamoaSkipDay(timeZoneId, target.year, target.month, target.day);
     if (samoa.isSkipDay) {
-      throw new Error(samoa.message!);
+      throw new MingyuCoreError({
+        code: 'NONEXISTENT_LOCAL_TIME',
+        category: 'validation',
+        field: 'day',
+        message: samoa.message!,
+      });
     }
-    throw new Error(
-      `${timeZoneId} 的当地钟表时间 ${wallClockDateTime} 不存在，通常由夏令时跳时造成。`,
-    );
+    throw new MingyuCoreError({
+      code: 'NONEXISTENT_LOCAL_TIME',
+      category: 'validation',
+      field: 'hour',
+      message: `${timeZoneId} 的当地钟表时间 ${wallClockDateTime} 不存在，通常由夏令时跳时造成。`,
+    });
   }
 
   const fixedOffsetHours = input.fixedOffsetHours;

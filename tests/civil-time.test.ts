@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 
 import { formatFixedTimezoneOffset, resolveCivilTime } from '@temposoul/core/calendar';
+import { MingyuCoreError } from '@temposoul/core/result';
 
 test('民用时间统一入口应正确处理固定偏移与边界', () => {
   const fixed = resolveCivilTime({
@@ -126,6 +127,67 @@ test('民用时间统一入口应拒绝跳时缺口、未消歧回拨和固定�
       }),
     /固定偏移.*历史偏移不一致/,
   );
+
+  const conflictError = (() => {
+    try {
+      resolveCivilTime({
+        year: 2024,
+        month: 7,
+        day: 1,
+        hour: 12,
+        minute: 0,
+        second: 0,
+        timezone: -5,
+        timeZoneId: 'America/New_York',
+      });
+    } catch (error) {
+      return error;
+    }
+    return null;
+  })();
+  assert.ok(conflictError instanceof MingyuCoreError);
+  assert.equal(conflictError!.category, 'validation');
+  assert.equal(conflictError!.code, 'TIMEZONE_OFFSET_CONFLICT');
+
+  const ambiguousError = (() => {
+    try {
+      resolveCivilTime({
+        year: 2024,
+        month: 11,
+        day: 3,
+        hour: 1,
+        minute: 30,
+        second: 0,
+        timeZoneId: 'America/New_York',
+      });
+    } catch (error) {
+      return error;
+    }
+    return null;
+  })();
+  assert.ok(ambiguousError instanceof MingyuCoreError);
+  assert.equal(ambiguousError!.category, 'validation');
+  assert.equal(ambiguousError!.code, 'AMBIGUOUS_LOCAL_TIME');
+
+  const gapError = (() => {
+    try {
+      resolveCivilTime({
+        year: 2024,
+        month: 3,
+        day: 10,
+        hour: 2,
+        minute: 30,
+        second: 0,
+        timeZoneId: 'America/New_York',
+      });
+    } catch (error) {
+      return error;
+    }
+    return null;
+  })();
+  assert.ok(gapError instanceof MingyuCoreError);
+  assert.equal(gapError!.category, 'validation');
+  assert.equal(gapError!.code, 'NONEXISTENT_LOCAL_TIME');
 
   const resolved = resolveCivilTime({
     year: 2024,

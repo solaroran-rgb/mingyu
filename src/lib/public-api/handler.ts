@@ -118,6 +118,17 @@ type ApiMeta = {
   version: typeof API_VERSION;
 };
 
+/**
+ * 跨副本识别 core 错误：测试环境 @core/* 走 src、barrel 走 dist，
+ * `instanceof` 会因双份类定义失效，故补 name 哨兵判断。
+ */
+function isMingyuCoreError(error: unknown): error is MingyuCoreError {
+  return (
+    error instanceof MingyuCoreError ||
+    (error instanceof Error && error.name === 'MingyuCoreError')
+  );
+}
+
 type ApiSuccess<T> = {
   ok: true;
   data: T;
@@ -1830,7 +1841,7 @@ function calculateSolarIlluminationApi(input: JsonRecord) {
   } catch (error) {
     if (error instanceof ApiError) throw error;
     // 501 墙不能被下面的 400 兜底吞掉，必须原样上抛给 handleError 映射。
-    if (error instanceof MingyuCoreError) throw error;
+    if (isMingyuCoreError(error)) throw error;
     throw new ApiError(
       400,
       'BAD_REQUEST',
@@ -4113,7 +4124,7 @@ export function handleError(error: unknown, runtime: PublicApiRuntime) {
     return json(failure(error.code, error.message, runtime), error.status);
   }
 
-  if (error instanceof MingyuCoreError) {
+  if (isMingyuCoreError(error)) {
     const status =
       error.category === 'validation'
         ? 400
