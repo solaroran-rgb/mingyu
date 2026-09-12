@@ -18,14 +18,16 @@ export interface LexiconTranslatorEntry {
   licenseTier: 'public_domain' | 'internal_only' | 'unknown';
   version: string;
   termGroup?: string;
+  l1_status?: 'verified' | 'draft' | 'pending_manual';
 }
 
-export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: string; generated: string; count: number }; entries: LexiconTranslatorEntry[] } = {
+export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: string; generated: string; count: number; l1_status_note: string }; entries: LexiconTranslatorEntry[] } = {
  "meta": {
-  "dict_version": "1.0.0",
+  "dict_version": "1.1.0",
   "source": "国学出海 __资产基础设施__ lexicon-schema v1（审计 A11 静态冻结 / P1 单键 / P5 L1-L4 静态化）",
   "generated": "2026-09-13",
-  "count": 318
+  "count": 318,
+  "l1_status_note": "verified=人工核验 | draft=AI依通行本起草待核验 | pending_manual=待补"
  },
  "entries": [
   {
@@ -50,7 +52,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "negativeKeywords": [],
    "licenseTier": "public_domain",
    "version": "0.1.0",
-   "termGroup": "changsheng"
+   "termGroup": "changsheng",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.changsheng.changsheng",
@@ -77,7 +80,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "negativeKeywords": [],
    "licenseTier": "public_domain",
    "version": "0.1.0",
-   "termGroup": "changsheng"
+   "termGroup": "changsheng",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.changsheng.diwang",
@@ -104,7 +108,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "negativeKeywords": [],
    "licenseTier": "public_domain",
    "version": "0.1.0",
-   "termGroup": "changsheng"
+   "termGroup": "changsheng",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.changsheng.guandai",
@@ -130,7 +135,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "negativeKeywords": [],
    "licenseTier": "public_domain",
    "version": "0.1.0",
-   "termGroup": "changsheng"
+   "termGroup": "changsheng",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.changsheng.jue",
@@ -155,7 +161,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "negativeKeywords": [],
    "licenseTier": "public_domain",
    "version": "0.1.0",
-   "termGroup": "changsheng"
+   "termGroup": "changsheng",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.changsheng.linguan",
@@ -179,7 +186,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "negativeKeywords": [],
    "licenseTier": "public_domain",
    "version": "0.1.0",
-   "termGroup": "changsheng"
+   "termGroup": "changsheng",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.changsheng.mu",
@@ -203,7 +211,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "negativeKeywords": [],
    "licenseTier": "public_domain",
    "version": "0.1.0",
-   "termGroup": "changsheng"
+   "termGroup": "changsheng",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.changsheng.muyu",
@@ -231,7 +240,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "negativeKeywords": [],
    "licenseTier": "public_domain",
    "version": "0.1.0",
-   "termGroup": "changsheng"
+   "termGroup": "changsheng",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.changsheng.shuai",
@@ -256,7 +266,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "negativeKeywords": [],
    "licenseTier": "public_domain",
    "version": "0.1.0",
-   "termGroup": "changsheng"
+   "termGroup": "changsheng",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.changsheng.si",
@@ -282,7 +293,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "negativeKeywords": [],
    "licenseTier": "public_domain",
    "version": "0.1.0",
-   "termGroup": "changsheng"
+   "termGroup": "changsheng",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.changsheng.tai",
@@ -308,7 +320,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "negativeKeywords": [],
    "licenseTier": "public_domain",
    "version": "0.1.0",
-   "termGroup": "changsheng"
+   "termGroup": "changsheng",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.changsheng.yang",
@@ -332,7 +345,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "negativeKeywords": [],
    "licenseTier": "public_domain",
    "version": "0.1.0",
-   "termGroup": "changsheng"
+   "termGroup": "changsheng",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.dizhi.chen",
@@ -370,7 +384,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "生肖优劣论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.dizhi.chou",
@@ -409,7 +424,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "生肖优劣论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.dizhi.hai",
@@ -446,7 +462,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "生肖优劣论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.dizhi.mao",
@@ -482,7 +499,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "生肖优劣论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.dizhi.shen",
@@ -520,7 +538,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "生肖优劣论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.dizhi.si",
@@ -558,7 +577,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "生肖优劣论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.dizhi.wei",
@@ -596,7 +616,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "生肖优劣论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.dizhi.wu",
@@ -633,7 +654,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "生肖优劣论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.dizhi.xu",
@@ -671,7 +693,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "生肖优劣论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.dizhi.yin",
@@ -709,7 +732,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "生肖优劣论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.dizhi.you",
@@ -746,7 +770,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "生肖优劣论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.dizhi.zi",
@@ -782,7 +807,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "生肖优劣论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.shensha.guasu",
@@ -815,7 +841,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "绝对化结论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.shensha.guchen",
@@ -849,7 +876,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "绝对化结论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.shensha.hongluan",
@@ -882,7 +910,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "绝对化结论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.shensha.huagai",
@@ -918,7 +947,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "绝对化结论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.shensha.jiangxing",
@@ -952,7 +982,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "绝对化结论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.shensha.jiesha",
@@ -986,7 +1017,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "绝对化结论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.shensha.jinshen",
@@ -1020,7 +1052,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "绝对化结论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.shensha.jinyu",
@@ -1054,7 +1087,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "绝对化结论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.shensha.kongwang",
@@ -1089,7 +1123,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "绝对化结论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.shensha.kuigang",
@@ -1125,7 +1160,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "绝对化结论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.shensha.liuxia",
@@ -1157,7 +1193,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "绝对化结论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.shensha.lushen",
@@ -1190,7 +1227,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "绝对化结论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.shensha.taohua",
@@ -1225,7 +1263,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "绝对化结论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.shensha.tiande_guiren",
@@ -1258,7 +1297,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "绝对化结论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.shensha.tianxi",
@@ -1291,7 +1331,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "绝对化结论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.shensha.tianyi_guiren",
@@ -1325,7 +1366,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "绝对化结论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.shensha.wangshen",
@@ -1358,7 +1400,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "绝对化结论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.shensha.wenchang",
@@ -1392,7 +1435,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "绝对化结论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.shensha.xuetang_yima",
@@ -1426,7 +1470,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "绝对化结论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.shensha.xueyan",
@@ -1459,7 +1504,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "绝对化结论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.shensha.yangren",
@@ -1495,7 +1541,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "绝对化结论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.shensha.yima",
@@ -1530,7 +1577,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "绝对化结论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.shensha.yuede_guiren",
@@ -1563,7 +1611,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "绝对化结论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.shensha.zaisha",
@@ -1596,7 +1645,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "绝对化结论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.shishen.bijian",
@@ -1627,7 +1677,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "0.1.0",
-   "termGroup": "shishen"
+   "termGroup": "shishen",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.shishen.jiecai",
@@ -1658,7 +1709,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "0.1.0",
-   "termGroup": "shishen"
+   "termGroup": "shishen",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.shishen.piancai",
@@ -1689,7 +1741,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "0.1.0",
-   "termGroup": "shishen"
+   "termGroup": "shishen",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.shishen.pianyin",
@@ -1719,7 +1772,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "0.1.0",
-   "termGroup": "shishen"
+   "termGroup": "shishen",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.shishen.qisha",
@@ -1750,7 +1804,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "0.1.0",
-   "termGroup": "shishen"
+   "termGroup": "shishen",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.shishen.shangguan",
@@ -1782,7 +1837,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "0.1.0",
-   "termGroup": "shishen"
+   "termGroup": "shishen",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.shishen.shishen",
@@ -1813,7 +1869,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "0.1.0",
-   "termGroup": "shishen"
+   "termGroup": "shishen",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.shishen.zhengcai",
@@ -1843,7 +1900,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "0.1.0",
-   "termGroup": "shishen"
+   "termGroup": "shishen",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.shishen.zhengguan",
@@ -1873,7 +1931,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "0.1.0",
-   "termGroup": "shishen"
+   "termGroup": "shishen",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.shishen.zhengyin",
@@ -1904,7 +1963,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "0.1.0",
-   "termGroup": "shishen"
+   "termGroup": "shishen",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.tiangan.bing",
@@ -1940,7 +2000,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "绝对化结论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.tiangan.ding",
@@ -1976,7 +2037,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "绝对化结论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.tiangan.geng",
@@ -2012,7 +2074,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "绝对化结论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.tiangan.gui",
@@ -2048,7 +2111,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "绝对化结论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.tiangan.ji",
@@ -2084,7 +2148,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "绝对化结论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.tiangan.jia",
@@ -2120,7 +2185,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "绝对化结论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.tiangan.ren",
@@ -2156,7 +2222,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "绝对化结论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.tiangan.wu",
@@ -2192,7 +2259,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "绝对化结论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.tiangan.xin",
@@ -2228,7 +2296,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "绝对化结论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "bazi.tiangan.yi",
@@ -2263,7 +2332,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "绝对化结论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "chenggu.deng.baliang",
@@ -2277,7 +2347,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "这一档古诀说“到顶了”。纯属古人的最高赞词。现实中把它当上限想象就好：它提醒你人生有天花板，但天花板从来不是出生数字定的，而是你每一步撑起来的。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "chenggu.deng.erliang",
@@ -2291,7 +2362,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "这一档在古诀里常被说成“起步辛苦、要靠自己闯”。把它当作提醒：你这路可能早年不顺、少靠山，得早早练独立。真要改，靠的是现在多学本事、攒人脉，不是认命。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "chenggu.deng.liuliang",
@@ -2305,7 +2377,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "这一档古诀说“有贵人、有资源、名声能传开”。底子好，但越是顺越要稳：别因有人扶就松懈，也别挥霍人情。你可以做的是：把好运转化成长期资产，而不是一时风光。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "chenggu.deng.qiliang",
@@ -2319,7 +2392,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "这一档古诀说“极好、大富大贵”。当趣味看就好——现实中没有人靠一个数字就赢一生。若你恰在这一档，更该提醒自己：运气牌再好，也得有脑子配上，否则来得快去得也快。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "chenggu.deng.sanliang",
@@ -2333,7 +2407,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "这一档古诀说“得忙活才能稳”。类比现实：你大概不是躺赢型，收入靠持续出力换来，安逸少一点。可以做的是：把努力变成可积累的东西（技能、资产），别让辛苦白白流走。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "chenggu.deng.siliang",
@@ -2347,7 +2422,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "这一档古诀说“温饱不愁、中年立得住”。算是比较稳的命。你可以把它当成：你的人生大概率是平稳线，少大起大落——想突破上限，得主动去拼一把，光稳着不会自动变好。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "chenggu.deng.wuliang",
@@ -2361,7 +2437,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "这一档古诀说“能成事、得名声、晚年安稳”。算不错的底子。你可以做的是：别浪费这股势能，把才华放到能出成果的地方，中年前后容易见收获；但也别飘，踏实才能接住。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "chenggu.jie.fu",
@@ -2375,7 +2452,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "福泽指“古诀里说你比较被眷顾、做事多有人帮”的那类说法。真要它有，靠的是你平时攒下的好人缘和好口碑——人对你好，机会才容易轮到你。可以主动经营，别坐等。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "chenggu.jie.lao",
@@ -2389,7 +2467,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "劳碌指“古诀说你这型得自己多干活”。如果认了这说法，就别等天上掉馅饼，早点把“靠自己”当成默认设置。可以把辛苦导向能积累的方向，让忙有意义，而不是瞎忙。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "chenggu.jie.mingge",
@@ -2403,7 +2482,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "命格就是“你这串数字归到哪类说法”。它给的是古人对人生大势的一种归类标签。你可以把它当性格/处境的自检：看看自己更像“稳”还是“拼”那一型，借此想清楚该往哪使劲。别被标签绑住。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "chenggu.jie.wen",
@@ -2417,7 +2497,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "安稳指“古诀说你这型少大起大落、守得住”。这是好事也是提醒：安稳容易变成停滞。你可以做的是：在稳的基础上，每年主动冒一次小险、学一样新东西，别让“稳”退化成“停”。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "chenggu.method.fa",
@@ -2431,7 +2512,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "称骨法是把你的出生年、月、日、时各换成一个数，加总成一个“骨重”，再对照古诀看属于哪类说法。它就是古人一种把人生阶段浓缩成数字的小游戏，图个趣味和反思，别当真命。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "daliuren.struct.fayong",
@@ -2445,7 +2527,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "发用是整件事的“第一颗扣子”，定调。它吉利，事容易启动；它凶，开头就磕绊。你可以做的是：启动新事之前先看第一反应顺不顺——如果一上手就处处卡，可能是时机 or 方向不对，先调再进。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "daliuren.struct.sanchuan",
@@ -2459,7 +2542,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "三传是这件事的“开头—中间—结尾”一条线。它帮你判断一件事是越走越顺还是开头好结尾烂。你可以做的是：别只盯眼前第一步，顺着想清楚中后段会怎样；如果末传明显走下坡，趁早设止损。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "daliuren.struct.sike",
@@ -2473,7 +2557,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "四课是把“你、对方、明面、暗面”四个角度摆出来对照。它帮你看出谁主动、谁藏心思、问题在表面还是底下。你可以做的是：遇到拿不准的事，分四栏写——我表面要什么、我藏着什么、对方明说啥、对方没说啥，往往就看清了。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "daliuren.struct.yuanshou",
@@ -2487,7 +2572,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "这一卦象代表“正正当当、从上往下好推进”。它出现，说明事由正当渠道、靠正常流程就能成，不用走歪门。你可以做的是：走正规申请、正式汇报、公开透明的路径，比私下运作更稳。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "daliuren.tianjiang.baihu",
@@ -2501,7 +2587,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "这一位提醒“注意安全和身体”。它出现时，容易有磕碰、病痛或强硬的压力。你可以做的是：这几天少冒险、开车慢点、体检别拖；遇到强势的人或规矩，先配合别硬顶，把伤害降到最低。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "daliuren.tianjiang.guiren",
@@ -2515,7 +2602,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "这一位代表“能帮你的关键人物”。它出现，说明事情有转圜余地，可能遇到肯拉你一把的长辈、上级或贵人。你可以做的是：遇到困难别硬扛，主动去请教、求助那些有分量的人；但别把希望全押在别人身上，对方也得旺才行。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "daliuren.tianjiang.liuhe",
@@ -2529,7 +2617,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "这一位代表“谈成、撮合”。它出现时，合作、签合同、撮合关系都顺，是谈和的好信号。你可以做的是：把想达成的协议趁这时候推进，找中间人牵线也有效；但对方若落空，口头承诺可能不算数，得落字据。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "daliuren.tianjiang.qinglong",
@@ -2543,7 +2632,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "这一位代表“好事和进账”。它出现时，容易有喜事、加薪、成交或受人赏识。你可以做的是：把能展示成果、争取资源的事往前推；有才艺或作品就趁这时候亮出来，容易被看见。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "daliuren.tianjiang.taiyin",
@@ -2557,7 +2647,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "这一位代表“暗中的筹谋和女性助力”。它出现时，适合私下准备、悄悄布局，不宜张扬。你可以做的是：把计划先捂着打磨，必要时找信任的女性长辈或伙伴商量；公开场合少表态，等时机成熟再亮。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "daliuren.tianjiang.tengshe",
@@ -2571,7 +2662,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "这一位代表“自己吓自己”和剪不断理还乱。它出现时，容易疑神疑鬼、被小事缠住、越想越怕。你可以做的是：把担心的事写下来逐条核实，多半是虚惊；别在焦虑时做重大决定，先让情绪落地。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "daliuren.tianjiang.xuanwu",
@@ -2585,7 +2677,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "这一位代表“看不清的坑”。它出现时，容易丢东西、遇骗、或被蒙在鼓里。你可以做的是：贵重物品收好，转账前核实对方身份，听起来太好的事先打问号；感情里含糊的事，别自欺。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "daliuren.tianjiang.zhuque",
@@ -2599,7 +2692,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "这一位管“信息和嘴”。它出现时，消息、邮件、文字往来会变多，也容易因话说不清而起争执。你可以做的是：重要的事落到书面，反复确认对方真听懂了；发火前先核实，别凭一条消息就下结论。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "fengshui.liqi.bagua",
@@ -2613,7 +2707,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "八卦方位是把“八个方向”对应不同生活主题（比如东边管行动、南边管名声）。它给你一个整理空间的思路：想加强哪块生活，就在对应方位多花点心思布置。当作收纳和分区参考就好，别当成铁律。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "fengshui.liqi.caiwei",
@@ -2627,7 +2722,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "财位泛指“家里那个该收拾干净、显得有生机”的角落。把它保持明亮、整洁、不堆杂物、摆盆绿植，心理上你会更看重资源和机会。你可以做的是：每周顺手打理那个角，比摆什么吉祥物更实在。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "fengshui.liqi.wuxing",
@@ -2641,7 +2737,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "五行生克是套“互相助长或互相制约”的关系，用来解释为什么某些搭配顺、某些别扭。你可以把它当配色和材质的协调原则：想要某处更有活力，就加相生的元素；某处太燥，就用相克的元素中和。图个协调舒服。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "fengshui.qiju.chuang",
@@ -2655,7 +2752,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "床的摆法直接影响睡眠质量。最稳的放法是床头贴实墙、不悬空、不正对门、不被横梁压着。你可以做的是：把床调成“躺下能看见门、但门不对着脚”的位置，安全感一下就上来了。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "fengshui.qiju.men",
@@ -2669,7 +2767,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "门是“家的嘴巴”，进出的气口。它最忌正对着直冲来的路、电梯或另一道门，那样人进出都慌。你可以做的是：门口留缓冲、加个玄关或地垫柔化；门别正对厕所厨房，保持入口干净明亮。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "fengshui.qiju.zhen",
@@ -2683,7 +2782,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "镇煞就是“用东西把不舒服的冲射柔化掉”，比如用屏风挡住直冲的走道、用绿植化解尖角视线。原则是先避开再化解，别硬碰。你可以做的是：发现哪处看着别扭、视线被刺，先用屏障或植物隔开，舒服了就行，不必求复杂。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "fengshui.xingfa.long",
@@ -2697,7 +2797,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "来龙可以理解为“这片地方的气场来路”。它讲的是背后有没有靠山、地势是不是连贯有生气。你可以类比挑住处：背后有稳固依托（高楼或山形）、视野不被切断，人住着更踏实。这只是环境感受，别当成定命。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "fengshui.xingfa.mingtang",
@@ -2711,7 +2812,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "明堂是“你面前的开阔地”。办公桌或进门处前面留一片空，人会觉得有空间、有奔头；前面被堵死，容易胸闷心窄。你可以做的是：座位正前方保持空净、不堆杂物，视野开阔一点，思路和心情都松。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "fengshui.xingfa.sha",
@@ -2725,7 +2827,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "砂是“周围围着你的人或物”。左右有对称、不压迫的楼房或家具，像有人护着；如果一侧空、一侧逼，就容易觉得不稳。你可以做的是：把高大家具放两侧而非正对坐卧处，留出左右平衡的格局。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "fengshui.xingfa.shui",
@@ -2739,7 +2842,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "水代表“流动的资源和生活节奏”。门前路、过道、气流像水——弯弯绕绕、不冲直撞最舒服；直冲而来的通道容易让人心不安。你可以做的是：让主要动线缓和、不直顶座位，摆点绿植柔化冲来的视线。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "fengshui.xingfa.xiang",
@@ -2753,7 +2857,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "朝向是“房子脸朝哪边”。简单说，主要采光和视野朝南或朝开阔面，白天亮堂、通风好，人住着舒服。你可以做的是：挑房或摆床，优先让主要活动面迎自然光，少对着又暗又闷的墙角。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "fengshui.xingfa.xue",
@@ -2767,7 +2872,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "穴就是“气聚拢的那个点”，好比房间里最舒服、最聚气的那块地。挑书桌或床的位置时，可以找那种背后有靠、左右不空、前面开阔的角落——待着不飘、能沉下心，就是好的“穴”。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "liuyao.bagua.dui",
@@ -2776,10 +2882,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "bagua",
    "displayZh": "兑",
-   "classicalTerm": "",
+   "classicalTerm": "兑卦",
    "professionalDef": "经卦之一，上缺之象，象泽，性喜悦。为少女、为口舌、为羊、为金刃、为娱乐宴饮，属金居西。于人事取象言谈欢愉、交际游乐，亦取象口角损伤、毁折缺损。",
-   "evidenceQuote": "",
-   "semanticLibrary": "",
+   "evidenceQuote": "《说卦传》：兑，说也。",
+   "semanticLibrary": "上缺之象象泽，性喜悦：为少女为口舌为羊，属金居西，主言谈娱乐与口舌。",
    "translations": {
     "zh": "这一象代表张嘴和高兴：说话、唱歌、社交、吃喝玩乐，也对应年轻女性、湖泊水塘、缺了一角的东西。它出现，说明这件事的关键在于怎么说，谈得开心就成，气氛僵了就黄。好处是气氛轻松、容易拉近距离；坏处是话多失言、只顾着热闹忘了正事，或者被几句甜话哄住。可以做的事：把要谈的三个要点写进手机备忘录，聊得再开心也回头对一遍；对方说得越好听，越要追一句具体怎么落实。"
    },
@@ -2797,7 +2903,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "缺损"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "liuyao.bagua.gen",
@@ -2806,10 +2913,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "bagua",
    "displayZh": "艮",
-   "classicalTerm": "",
+   "classicalTerm": "艮卦",
    "professionalDef": "经卦之一，一阳止于上，象山，性止。为少男、为手、为狗、为门阙、为山石坟墓，属土居东北。于人事取象静止阻隔、稳重守成、知止不进；亦取象闭塞不通、进退维谷。",
-   "evidenceQuote": "",
-   "semanticLibrary": "",
+   "evidenceQuote": "《说卦传》：艮，止也。",
+   "semanticLibrary": "一阳止于上象山，性止：为少男为手为狗，属土居东北，主静止坚守与阻隔。",
    "translations": {
     "zh": "这一象代表停住：山、墙、门槛、挡在前面走不过去的东西，也对应年轻男性和一双手。它出现，说明这件事现在推不动，不是你不努力，是时候没到、路被挡住了。好处是适合守成、沉淀、把手上已有的东西整理好；坏处是憋屈、原地打转、越急越出不去。可以做的事：把这件事先放下三到七天，期间转去做另一件能出成果的小事；同时找出挡路的那一块具体是什么，是钱、是人、还是缺一个批复。挡路的东西一说清楚，往往就有绕法。"
    },
@@ -2827,7 +2934,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "推不动"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "liuyao.bagua.kan",
@@ -2836,10 +2944,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "bagua",
    "displayZh": "坎",
-   "classicalTerm": "",
+   "classicalTerm": "坎卦",
    "professionalDef": "经卦之一，一阳陷二阴，象水，性陷。为中男、为耳、为豕、为江河沟渎、为险难盗寇，属水居北。于人事取象险中求通、劳心费力、外柔内刚；亦取象沉溺陷落、暗昧不明。",
-   "evidenceQuote": "",
-   "semanticLibrary": "",
+   "evidenceQuote": "《说卦传》：坎，陷也。",
+   "semanticLibrary": "一阳陷二阴象水，性陷：为中男为耳为豕，属水居北，主险难忧患与智慧。",
    "translations": {
     "zh": "这一象代表往下陷：水、坑、夜路、看不清的处境，也对应耳朵和腰肾。它出现，说明眼前这件事里有坑，而且不是绕一下就完事，得蹚过去才行。好处是能磨出真本事，别人不敢接的活你能接下来；坏处是耗神、孤单、越陷越深还看不到头。可以做的事：先把最坏会怎样写出来，如果最坏你也扛得住，就往前走；扛不住就现在退。同时找一个能说真话的人定期跟你对一次进展，别一个人闷着熬。"
    },
@@ -2857,7 +2965,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "看不清"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "liuyao.bagua.kun",
@@ -2866,10 +2975,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "bagua",
    "displayZh": "坤",
-   "classicalTerm": "",
+   "classicalTerm": "坤卦",
    "professionalDef": "经卦之一，三阴爻，象地，性顺。为母、为腹、为牛、为布帛舆釜、为众为田野，属土居西南。于人事取象承载包容、厚积柔顺、以众成事；亦取象迟缓因循、依赖无断。",
-   "evidenceQuote": "",
-   "semanticLibrary": "",
+   "evidenceQuote": "《说卦传》：坤，顺也。",
+   "semanticLibrary": "三阴爻象地，性顺：为母为腹为牛，属土居西南，主承载包容与众人。",
    "translations": {
     "zh": "这一象代表托着：像大地一样承载，对应母亲、一群人、后勤保障，还有布料、粮食、田地这类实在东西。它出现，说明这件事靠一个人冲不成，得靠人多、靠积累、靠慢慢铺开，适合做服务、做基础、做支持性的工作。好处是稳、能容人、越做越厚；坏处是太被动、什么都顺着别人、该说不的时候说不出口。可以做的事：把要做的事拆成很多小份分给能帮上忙的人，自己做统筹；同时给自己划一条底线，越过这条线就明确拒绝，别一味迁就。"
    },
@@ -2887,7 +2996,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "一味迁就"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "liuyao.bagua.li",
@@ -2896,10 +3006,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "bagua",
    "displayZh": "离",
-   "classicalTerm": "",
+   "classicalTerm": "离卦",
    "professionalDef": "经卦之一，中虚之象，象火，性丽明。为中女、为目、为文书、为炉灶甲胄，属火居南。于人事取象光明显达、文明礼乐、名声外扬；性急易燥，外实中虚，热极而衰。",
-   "evidenceQuote": "",
-   "semanticLibrary": "",
+   "evidenceQuote": "《说卦传》：离，丽也。",
+   "semanticLibrary": "中虚之象象火，性丽明：为中女为目为文书，属火居南，主光明文采。",
    "translations": {
     "zh": "这一象代表亮出来：光、火、屏幕、眼睛、证书文凭，还有那些需要被人看见的场合。它出现，说明这件事藏不住也不该藏，要往台面上放，展示、发布、面试、上台讲都算对路。好处是显眼、来得快、容易被认可；坏处是外表光鲜里面空，热度一过就凉，人的脾气也容易上来。可以做的事：先把最拿得出手的那一件成果打磨到能公开的程度，再去争取曝光；同时留意用眼和用火用电的安全，别整夜盯着屏幕。"
    },
@@ -2917,7 +3027,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "虚有其表"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "liuyao.bagua.qian",
@@ -2926,10 +3037,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "bagua",
    "displayZh": "乾",
-   "classicalTerm": "",
+   "classicalTerm": "乾卦",
    "professionalDef": "经卦之一，三阳爻，象天，性刚健。为君为父、为首为马、为金玉圆物，属金居西北。于人事取象领导决断、开创统御、刚强不屈；过刚则亢而无辅，独断寡助。",
-   "evidenceQuote": "",
-   "semanticLibrary": "",
+   "evidenceQuote": "《说卦传》：乾，健也。",
+   "semanticLibrary": "三阳爻象天，性刚健：为君为父为首为马，属金居西北，主领导决断与开创。",
    "translations": {
     "zh": "这一象代表往前顶的那股劲：像天一样不停歇，对应当家拿方向的那个角色、父亲、老板，以及圆的、硬的、贵重的东西。它出现，说明这件事需要有人站出来定方向、扛责任，靠一圈人商量到底商量不出结果。好处是推得动、有魄力；坏处是容易一个人扛太多、听不进劝、把身边人使唤狠了。可以做的事：该拍板就痛快拍板，别拖着；但每做一个决定，留一个人在旁边专门给你挑毛病。"
    },
@@ -2947,7 +3058,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "孤立无援"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "liuyao.bagua.xun",
@@ -2956,10 +3068,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "bagua",
    "displayZh": "巽",
-   "classicalTerm": "",
+   "classicalTerm": "巽卦",
    "professionalDef": "经卦之一，一阴伏于下，象风，性入。为长女、为股、为鸡、为绳直、为草木香气，属木居东南。于人事取象柔顺渗透、往来交易、传播消息；亦取象进退不果、随风摇摆。",
-   "evidenceQuote": "",
-   "semanticLibrary": "",
+   "evidenceQuote": "《说卦传》：巽，入也。",
+   "semanticLibrary": "一阴伏于下象风，性入：为长女为股为鸡，属木居东南，主柔顺进退与传闻。",
    "translations": {
     "zh": "这一象代表钻进去：像风一样无孔不入，对应打听消息、跑关系、做买卖、来回沟通协调这类活，也对应家里的大女儿、绳子电线、来来回回的路。它出现，说明这件事硬闯不行，得慢慢渗、多方打点、找对缝隙进去。好处是柔和、不树敌、消息灵通；坏处是心里摇摆、来回反复、被人牵着走。可以做的事：找三个能说上话的人分别聊一次，把信息拼起来再决定；给自己定一个截止时间，到点必须选一个，不许再改。"
    },
@@ -2977,7 +3089,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "下不了决心"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "liuyao.bagua.zhen",
@@ -2986,10 +3099,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "bagua",
    "displayZh": "震",
-   "classicalTerm": "",
+   "classicalTerm": "震卦",
    "professionalDef": "经卦之一，一阳动于下，象雷，性动。为长男、为足、为龙、为大涂、为惊惧鼓乐，属木居东。于人事取象奋发振作、动而有声、事起突然；亦取象虚惊躁动、有始无终。",
-   "evidenceQuote": "",
-   "semanticLibrary": "",
+   "evidenceQuote": "《说卦传》：震，动也。",
+   "semanticLibrary": "一阳动于下象雷，性动：为长男为足为龙，属木居东，主奋发惊惧与鼓乐。",
    "translations": {
     "zh": "这一象代表突然一下：打雷、开机、发动、一个电话把你从座位上叫起来。它对应家里的大儿子、脚和腿、大马路，也对应那种吓一跳但没造成实际损失的动静。它出现，说明事情会动起来，而且来得比你预期快，需要马上反应。好处是有冲劲、能把僵局撞开；坏处是慌里慌张、雷声大雨点小、动完了没有下文。可以做的事：机会来的时候先应下来再补细节，别因为没准备好就错过；但三天之内要给它一个具体安排，不然这股劲很快就散了。"
    },
@@ -3007,7 +3120,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "雷声大雨点小"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "liuyao.liuqin.fumu",
@@ -3016,10 +3130,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "liuqin",
    "displayZh": "父母",
-   "classicalTerm": "",
+   "classicalTerm": "父母爻",
    "professionalDef": "六亲之一，生我者为父母。取象长辈师长、文书契约、房屋车马、庇荫与劳心之事。占文书、考试、房产、行舟车皆以父母爻为凭；旺相则事有依托，休囚则文书迟滞、尊长少助。父母爻能克子孙，故占子嗣、求医时须防其制。",
-   "evidenceQuote": "",
-   "semanticLibrary": "",
+   "evidenceQuote": "《卜筮正宗》六亲章：生我者，为父母。",
+   "semanticLibrary": "生我者父母：主庇荫、文书、长辈；占文书考试房屋以父母爻为用神。",
    "translations": {
     "zh": "这一格代表罩着你的人和纸面上的凭据：长辈、老师、前辈，还有合同、证书、房本、执照、保单这类东西。它有力的时候，说明你办事有人兜底、材料齐全，签约、考证、买房搬家都比较顺；它弱的时候，往往卡在手续没齐、批复没下来，或者想找人搭把手却找不到合适的人。可以做的事：把该盖的章、该补的材料、该问的长辈电话理成一张清单，一样样落实，比反复催进度有用得多。"
    },
@@ -3037,7 +3151,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "手续受阻"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "liuyao.liuqin.guagui",
@@ -3046,10 +3161,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "liuqin",
    "displayZh": "官鬼",
-   "classicalTerm": "",
+   "classicalTerm": "官鬼爻",
    "professionalDef": "六亲之一，克我者为官鬼。取象官职上司、法度规章、词讼考核、忧疑病患，女占婚姻则以官鬼为夫。占功名、求职、诉讼以官鬼为凭，旺相有制则职位可期；过旺无制则压力沉重、是非缠身。官鬼能克兄弟，为忌之时须以子孙制之。",
-   "evidenceQuote": "",
-   "semanticLibrary": "",
+   "evidenceQuote": "《卜筮正宗》六亲章：克我者，为官鬼。",
+   "semanticLibrary": "克我者官鬼：主官禄、法度、忧疑病患；女占婚以官鬼为夫，占疾病忌官鬼旺动。",
    "translations": {
     "zh": "这一格代表管着你的那股力量：上级、规章制度、考核标准、审批流程，也包括让你睡不好的那点压力和身体上的不舒服；女性问感情时，它常常指对方那个人。它清晰有力，说明你待在一个有规矩、有晋升通道的地方，评审、立项、升职这类事有指望。它太重，就是被截止日期追着、被检查盯着、被闲话围着，喘不过气。可以做的事：把压力拆成谁在要求、要什么、什么时候要三栏写下来，能谈的去谈，谈不了的按最低标准先交付，别一个人硬扛。"
    },
@@ -3067,7 +3182,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "纠纷缠身"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "liuyao.liuqin.qicai",
@@ -3076,10 +3192,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "liuqin",
    "displayZh": "妻财",
-   "classicalTerm": "",
+   "classicalTerm": "妻财爻",
    "professionalDef": "六亲之一，我克者为妻财。取象钱财货物、薪俸利息、器用资产，男占婚姻则以妻财为妻。占求财、买卖、讨债以妻财为凭，旺相则进项可期；被兄弟爻夺则耗散，逢空破则财到手而复失。妻财能克父母，故占文书时忌其独旺。",
-   "evidenceQuote": "",
-   "semanticLibrary": "",
+   "evidenceQuote": "《卜筮正宗》六亲章：我克者，为妻财。",
+   "semanticLibrary": "我克者妻财：主钱财货物薪俸；占求财买卖以妻财为用神，男占婚以妻财为妻。",
    "translations": {
     "zh": "这一格代表你能拿到手、能支配的东西：工资、货款、存款、可以变现的资源；男性问感情时，它也指对方那个人。它有力，说明近期进账、回款、成交比较顺，谈价钱底气足。它弱，或者旁边有人来分，就容易出现钱到不了账、被人借走不还、预算被砍掉一半。可以做的事：把确定能进的钱和只是口头答应的钱分成两栏记，别拿后者做开销计划；同时看看是不是有好几个人在抢同一份预算，早点把自己那份定死。"
    },
@@ -3097,7 +3213,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "空欢喜"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "liuyao.liuqin.wo",
@@ -3106,10 +3223,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "liuqin",
    "displayZh": "我",
-   "classicalTerm": "",
+   "classicalTerm": "我/立极",
    "professionalDef": "六亲取象的参照原点，即卦宫五行本身，或所占之事的立极处。生我者为父母，克我者为官鬼，我克者为妻财，我生者为子孙，比和者为兄弟。定我即定坐标，五类六亲方能各归其位；参照点若立错，全卦六亲皆错。",
-   "evidenceQuote": "",
-   "semanticLibrary": "",
+   "evidenceQuote": "《增删卜易》六亲取法：以本宫卦所属五行立为我，与他爻论生克而定六亲。",
+   "semanticLibrary": "卦宫五行为立极原点：生克比和关系定出六亲，为六爻取象的坐标系。",
    "translations": {
     "zh": "这是整张卦的原点：先确定这件事到底是谁的事，其他五类关系才有意义。就像看一张家庭合影，得先指出照片里哪个是你，才能说清谁是长辈、谁是伴侣、谁是孩子。占卜也一样，问自己的事，原点就是你；替公司问，原点就是这家公司；替孩子问，原点就是孩子。可以做的事：开口之前先想清楚我这一问站的是哪个位置，一次只站一个位置。站错了位置，后面所有解读都会跟着跑偏。"
    },
@@ -3127,7 +3244,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "参照错位"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "liuyao.liuqin.xiongdi",
@@ -3136,10 +3254,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "liuqin",
    "displayZh": "兄弟",
-   "classicalTerm": "",
+   "classicalTerm": "兄弟爻",
    "professionalDef": "六亲之一，同我者为兄弟。取象兄弟姐妹、同僚同学、朋辈竞争者。兄弟能克妻财，占财、占婚、占竞标皆忌其旺动，主分夺阻隔；占谋事得同辈之助、占合伙则可赖其力。兄弟爻动多主破耗、争执、劫夺。",
-   "evidenceQuote": "",
-   "semanticLibrary": "",
+   "evidenceQuote": "《卜筮正宗》六亲章：比和者，为兄弟。",
+   "semanticLibrary": "比和者兄弟：主同辈竞争、分夺；兄弟能克妻财，占财占婚皆忌兄弟持世旺动。",
    "translations": {
     "zh": "这一格代表和你站在同一层的人：兄弟姐妹、同事、同学、同行对手。它有力，说明你身边有人可以搭伙、有人愿意帮你抬事，做合作、拼团、找搭档比较容易谈成。但同一份钱、同一个名额也会被这些人分掉，问收入、问竞标、问追求对象的时候，它越旺越要留神被截胡。可以做的事：合作之前先把出资比例、分成方式、谁拍板写清楚；如果在抢同一个机会，别只顾埋头做，先去把关键那个人的态度问明白。"
    },
@@ -3157,7 +3275,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "被截胡"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "liuyao.liuqin.zisun",
@@ -3166,10 +3285,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "liuqin",
    "displayZh": "子孙",
-   "classicalTerm": "",
+   "classicalTerm": "子孙爻",
    "professionalDef": "六亲之一，我生者为子孙。取象子女门徒、下属僧道、医药娱乐、六畜财源，为解忧之神。子孙能克官鬼，占疾病、避祸、脱讼喜其旺相；占功名求官则子孙为碍，旺则职位难成。子孙又能生妻财，为财之源。",
-   "evidenceQuote": "",
-   "semanticLibrary": "",
+   "evidenceQuote": "《卜筮正宗》六亲章：我生者，为子孙。",
+   "semanticLibrary": "我生者子孙：为解忧喜悦之神，能克官鬼；占疾病药医、占平安以子孙为福神。",
    "translations": {
     "zh": "这一格代表能让你松一口气的东西：孩子、学生、下属、宠物，也包括医生、药、假期、爱好和玩乐。它有力，说明烦心事有出口，病痛能缓、纠纷能消、心情能松下来，做内容、做服务、带团队都容易出成绩，还能顺带把钱生出来。但它旺的时候会顶掉升官那条线，想求职位、求名分的人反而不占便宜。可以做的事：最近焦虑或者身体不舒服，就优先安排休息、检查和一件让自己高兴的小事；正在谋求晋升，就要收一收玩心，把精力放回正事上。"
    },
@@ -3187,7 +3306,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "名分难成"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "liuyao.liushen.baihu",
@@ -3196,10 +3316,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "liushen",
    "displayZh": "白虎",
-   "classicalTerm": "",
+   "classicalTerm": "白虎",
    "professionalDef": "属金居西。取象刚猛争斗、跌撞伤损、丧服疾患、迅疾果决。临吉爻则威令得行、果断建功、宜决断裁汰之事；临凶爻则纠纷激烈、意外磕碰、家中长者有事相扰。",
-   "evidenceQuote": "",
-   "semanticLibrary": "",
+   "evidenceQuote": "《卜筮正宗》六神章：白虎，西方之金神，主凶丧伤损疾患。",
+   "semanticLibrary": "六神之一属金：主刚猛争斗、跌打伤损、丧服疾患；宜决断裁汰，忌临病爻。",
    "translations": {
     "zh": "这个标记代表硬碰硬：动作大、速度快、有冲击力，也容易磕碰或者把关系撕破。它落得好，是雷厉风行、敢下狠手做取舍，适合处理那种拖了很久必须一刀切的事。落得不好，就是话说重了、手上磕着了、和人当场闹僵。这里只讲倾向，不对任何人的身体状况下判断。可以做的事：这段时间开车、运动、用刀具都慢一点；和人起冲突先离开现场十分钟再回来说话；家里长辈的事多问一句，别等消息找上门。"
    },
@@ -3217,7 +3337,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "关系撕破"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "liuyao.liushen.gouchen",
@@ -3226,10 +3347,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "liushen",
    "displayZh": "勾陈",
-   "classicalTerm": "",
+   "classicalTerm": "勾陈",
    "professionalDef": "属土居中。取象田土房产、迟滞牵连、旧事积案、勾连不清。临吉爻则田宅可得、根基稳固、积久成功；临凶爻则事久不决、旧债缠身、一事牵出一事。",
-   "evidenceQuote": "",
-   "semanticLibrary": "",
+   "evidenceQuote": "《卜筮正宗》六神章：勾陈，中央之土神，主田土迟滞牵连。",
+   "semanticLibrary": "六神之一属土：主田土房产、迟滞牵连；临世则事缓，临用神则根基稳固或积案纠缠。",
    "translations": {
     "zh": "这个标记代表慢和粘：跟土地、房子、老物件、陈年旧账有关，也代表事情推不动、一件事拖出另一件事。它落得好，是根基扎实、稳扎稳打能攒下东西，适合置业、修缮、做那种需要熬时间的活。落得不好，就是被卡在流程里，审批不下来、旧账被翻出来、说好的事一拖再拖。可以做的事：把手上拖着的事按卡在谁那里分类，能自己解决的今天做完，卡在别人那里的定个时间点当面催一次，不要只发消息干等回复。"
    },
@@ -3247,7 +3368,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "久拖不决"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "liuyao.liushen.qinglong",
@@ -3256,10 +3378,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "liushen",
    "displayZh": "青龙",
-   "classicalTerm": "",
+   "classicalTerm": "青龙",
    "professionalDef": "六神之首，属木居东。取象喜庆婚娶、酒食宴乐、贵人提携、文采风流。临吉爻则事有喜色、得体面之助；临凶爻则乐极生忧、酒色伤身、虚耗于交际排场。",
-   "evidenceQuote": "",
-   "semanticLibrary": "",
+   "evidenceQuote": "《卜筮正宗》六神章：青龙，东方之木神，主喜庆喜事。",
+   "semanticLibrary": "六神之一属木：主喜庆婚娶、贵人提携；临吉爻添喜色，临凶爻亦减其凶。",
    "translations": {
     "zh": "这个标记代表体面和喜气：办喜事、请客吃饭、遇到愿意提携你的人，做事有派头、有人缘。它落在好位置上，说明这段时间适合谈婚论嫁、公开露面、请人吃饭把关系走近一步。落在不好的位置上，就是喝多了误事、场面撑得太大、为面子花了不该花的钱。可以做的事：把预算里的人情开销单独列一栏，该花的大方花，超出的坚决停；重要的事尽量约在饭桌之外谈，酒后不做决定。"
    },
@@ -3277,7 +3399,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "虚耗"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "liuyao.liushen.tengshe",
@@ -3286,10 +3409,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "liushen",
    "displayZh": "螣蛇",
-   "classicalTerm": "",
+   "classicalTerm": "螣蛇",
    "professionalDef": "属土居中。取象虚惊怪异、缠绕反复、梦寐心神、疑虑不宁。临吉爻则虚惊而无实害、事有奇遇；临凶爻则疑云丛生、事态盘曲反复、心绪难安。",
-   "evidenceQuote": "",
-   "semanticLibrary": "",
+   "evidenceQuote": "《卜筮正宗》六神章：螣蛇，中央之土神，主虚惊怪异缠绕。",
+   "semanticLibrary": "六神之一属土：主虚惊怪异、梦寐疑虑；临之多为缠绕不宁，然虚惊多无实害。",
    "translations": {
     "zh": "这个标记代表心里发毛：说不清缘由的不安、反复做的怪梦、总觉得哪里不对劲，还有那种绕来绕去、变来变去、抓不住实底的事。它出现，多半不是真出了大事，而是信息不全把人吓着了，或者对方话说得含糊。可以做的事：把让你不安的那件事写下来，分成我确切知道的和我只是猜的两栏，你会发现多数恐慌都落在第二栏。然后只针对第一栏去核实一次，睡前少刷手机，情绪会稳很多。"
    },
@@ -3307,7 +3430,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "自己吓自己"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "liuyao.liushen.xuanwu",
@@ -3316,10 +3440,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "liushen",
    "displayZh": "玄武",
-   "classicalTerm": "",
+   "classicalTerm": "玄武",
    "professionalDef": "属水居北。取象盗贼暗昧、私情隐匿、欺瞒诈伪、暗中损耗。临吉爻则谋略深沉、暗处得利、宜密而不宜张；临凶爻则失窃受骗、隐私外泄、暗有第三方牵扯。",
-   "evidenceQuote": "",
-   "semanticLibrary": "",
+   "evidenceQuote": "《卜筮正宗》六神章：玄武，北方之水神，主盗贼暗昧私情。",
+   "semanticLibrary": "六神之一属水：主盗贼暗昧、欺瞒隐匿；临财爻防失窃，临世爻谋事宜密。",
    "translations": {
     "zh": "这个标记代表看不见的那一面：私下进行的事、没摆到台面上的关系、悄悄流走的钱，也包括别人对你有所隐瞒。它落得好，是你懂得低调行事、在暗处布局，适合谈那些还不宜公开的合作。落得不好，就是被骗、被顺走东西、隐私被人知道，或者感情里冒出第三方的影子。可以做的事：这段时间把账户密码换一遍，扫码付款和陌生链接多看两眼；重要的口头承诺补一份书面记录；有疑问直接摊开问，别靠猜。"
    },
@@ -3337,7 +3461,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "受骗"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "liuyao.liushen.zhuque",
@@ -3346,10 +3471,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "liushen",
    "displayZh": "朱雀",
-   "classicalTerm": "",
+   "classicalTerm": "朱雀",
    "professionalDef": "属火居南。取象口舌言语、文书信息、词讼是非、文章消息。临吉爻则喜讯传来、文章得意、辩才见用；临凶爻则争吵诽谤、书契生瑕、词讼缠身。",
-   "evidenceQuote": "",
-   "semanticLibrary": "",
+   "evidenceQuote": "《卜筮正宗》六神章：朱雀，南方之火神，主口舌文书信息。",
+   "semanticLibrary": "六神之一属火：主口舌言语、文书消息；旺则文章得意，动则多口舌是非。",
    "translations": {
     "zh": "这个标记代表话和字：消息、通知、评论、合同上的条款、聊天框里的一段话。它落得好，说明会有好消息传来，写材料、做宣传、面试答辩容易出彩。落得不好，就是嘴上惹祸，一句话被截图、一条评论引来争吵、一份文件漏了个字惹出纠纷。可以做的事：这几天说话慢半拍，重要的话先打字存成草稿再发；合同和邮件发出去之前，逐条核对数字和日期。能不争的先不争，争赢了也是亏。"
    },
@@ -3367,7 +3492,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "流言"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "liuyao.quyong.yongshen",
@@ -3376,10 +3502,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "quyong",
    "displayZh": "用神",
-   "classicalTerm": "",
+   "classicalTerm": "用神",
    "professionalDef": "所占之事在卦中的取象核心，即一卦之太极点。占父母尊长取父母爻，占钱财买卖取妻财爻，占功名词讼取官鬼爻，占子女疾患取子孙爻，占同辈竞争取兄弟爻。取定之后，观其旺衰、动静、空破、生克，方能定成败缓急；取错则全盘皆错。",
-   "evidenceQuote": "",
-   "semanticLibrary": "",
+   "evidenceQuote": "《增删卜易》用神章：占何事，先取何爻为用神，而后观其旺衰动静。",
+   "semanticLibrary": "用神为一卦太极点：占父母取父母爻、占财取妻财爻、占功名取官鬼爻，用神定而后断卦有主。",
    "translations": {
     "zh": "这是问卦最要紧的第一步：先确定这一次到底该盯着哪一处看。就像去医院要先挂对科室，问的是钱，就盯着代表钱的那一格；问的是考试，就盯着代表证书文书的那一格；问孩子，就盯着代表孩子的那一格。盯错了地方，后面推得再细也是白推。可以做的事：开口之前把问题写成一句完整的话，比如我想知道下个月这笔尾款能不能收到，这比问我最近运气怎么样强一百倍。问题越具体，答案越有用。"
    },
@@ -3397,7 +3523,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "全盘跑偏"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "liuyao.shiying.shi",
@@ -3406,10 +3533,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "shiying",
    "displayZh": "世爻",
-   "classicalTerm": "",
+   "classicalTerm": "世爻",
    "professionalDef": "卦中所立之爻，为问卜者自身或己方一造的立足处。观其旺衰、动静、空破，以断己方的处境、意愿与能力。世旺相则己方有力可为，世休囚则力有不逮，世空则心意未定或本无诚心，世动则己方先有变意。",
-   "evidenceQuote": "",
-   "semanticLibrary": "",
+   "evidenceQuote": "《卜筮正宗》世应章：世者，自己也；应者，他人也。",
+   "semanticLibrary": "世为己方立足处：观世爻旺衰动静空破断己方处境与能力，世应生合则事易成。",
    "translations": {
     "zh": "这一爻代表你这一边：你的处境、你的意愿、你手上有多少牌。它稳，说明你心里有数、进退自如，可以按自己的节奏推进；它虚，说明你其实还没想好，或者手上资源不够，这时候急着表态、急着签字容易吃亏。可以做的事：先诚实回答三个问题，我真的想要吗、我现在能拿出什么、如果对方不答应我怎么办。三个都答得上来再去谈；答不上来，就先别开口。"
    },
@@ -3427,7 +3554,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "虚张声势"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "liuyao.shiying.ying",
@@ -3436,10 +3564,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "shiying",
    "displayZh": "应爻",
-   "classicalTerm": "",
+   "classicalTerm": "应爻",
    "professionalDef": "与世爻相对之爻，代表对方、他人、外部环境与所求之事的外缘。世应相生相合则彼此有意、易于成交；相克相冲则各怀异心、勉强难合。应爻空破则对方无心或事无着落，应动则外境先变。",
-   "evidenceQuote": "",
-   "semanticLibrary": "",
+   "evidenceQuote": "《卜筮正宗》世应章：应者，他人也；世应相合则人和。",
+   "semanticLibrary": "应为对方与外缘：世应相生相合彼此有意，相克相冲彼此相左，事之成败可由世应关系察之。",
    "translations": {
     "zh": "这一爻代表对面那一边：谈判对手、客户、面试官、你想追的那个人，或者你控制不了的大环境。它和你这边关系融洽，说明对方也有意愿，事情谈得拢；两边顶着来，说明各打各的算盘，勉强凑合也长不了。可以做的事：别只盘算自己想要什么，花十分钟站到对方位置上想一遍，他图什么、他怕什么、他有没有权限拍板。想不出来就直接问；问不出来，说明时机还没到，不如先等。"
    },
@@ -3457,7 +3585,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "无心应付"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "meihua.bagua.dui",
@@ -3466,10 +3595,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "bagua",
    "displayZh": "兑",
-   "classicalTerm": "",
+   "classicalTerm": "兑卦",
    "professionalDef": "先天卦数二，属金，居西，象泽。万物类象为少女、口舌、羊、金刃、缺损破口之物、沼泽井泉、乐器食物，其色白，其时秋。于体用生克中为悦、为毁折，断事宜取言语、饮食、损缺之象。",
-   "evidenceQuote": "",
-   "semanticLibrary": "",
+   "evidenceQuote": "《梅花易数》八卦数：兑二；《说卦传》：兑，说也。",
+   "semanticLibrary": "先天卦数二，属金居西象泽：类象少女、口舌、羊、金刃，主喜悦言谈。",
    "translations": {
     "zh": "兑这一页写的是缺了一块、跟嘴有关：豁口的杯子、坏了一角的东西、水塘水井、羊、刀具、乐器和吃食，人物上对应年轻女孩和话多的人。占到它，答案常常和说出来的话或者某处缺口连着，找东西往西边和水边找，事情多半是谁一句话引起的，时间往秋天和傍晚算。可以做的事：现场先扫一眼有没有破口、裂缝、水池这类东西，有就往那儿追；同时把最近谁跟你说过什么反常的话回想一遍。"
    },
@@ -3487,7 +3616,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "言语伤人"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "meihua.bagua.gen",
@@ -3496,10 +3626,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "bagua",
    "displayZh": "艮",
-   "classicalTerm": "",
+   "classicalTerm": "艮卦",
    "professionalDef": "先天卦数七，属土，居东北，象山。万物类象为少男、手指、狗、山石土丘、门阙墙垣、果蓏、坟墓，其色黄，其时冬春之交。于体用生克中为止、为阻，断事宜取阻隔、静止、山土之象。",
-   "evidenceQuote": "",
-   "semanticLibrary": "",
+   "evidenceQuote": "《梅花易数》八卦数：艮七；《说卦传》：艮，止也。",
+   "semanticLibrary": "先天卦数七，属土居东北象山：类象少男、手指、山石、门阙，主静止阻守。",
    "translations": {
     "zh": "艮这一页写的是不动、挡着、堆起来的：山、石头、墙、门、台阶、坟地、摆着的水果，人物上对应小儿子和守店看门的人，身上对应手和后背。占到它，多半是卡住了，找东西往东北方、墙角、柜子边和高处堆放的地方找，时间往冬末春初算。可以做的事：别急着推，先确认挡路的是什么、是谁；很多时候只要一个签字、一把钥匙、一句准话，堵点就通了。"
    },
@@ -3517,7 +3647,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "卡死"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "meihua.bagua.kan",
@@ -3526,10 +3657,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "bagua",
    "displayZh": "坎",
-   "classicalTerm": "",
+   "classicalTerm": "坎卦",
    "professionalDef": "先天卦数六，属水，居北，象水。万物类象为中男、耳、豕、江河沟渎、酒醋盐水、带核之物、弓轮、隐伏之处，其色黑，其时冬。于体用生克中为陷、为险，断事宜取水事、隐伏、险难之象。",
-   "evidenceQuote": "",
-   "semanticLibrary": "",
+   "evidenceQuote": "《梅花易数》八卦数：坎六；《说卦传》：坎，陷也。",
+   "semanticLibrary": "先天卦数六，属水居北象水：类象中男、耳、江河、隐伏，主险难智谋。",
    "translations": {
     "zh": "坎这一页写的是跟水有关、带黑色、藏在里面：河沟、下水道、酒瓶饮料、带核的果子、轮子、耳朵，人物上对应中间那个儿子和做水产、做酒水的人。占到它，事情常常藏着一层看不见的部分，找东西往北边、低处、有水的地方找，时间往冬天和深夜算。可以做的事：先假设还有一层情况没人告诉你，把已知的和听说的分开列；涉及水边、酒局、夜路的安排都放慢一点，别赶。"
    },
@@ -3547,7 +3678,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "陷落"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "meihua.bagua.kun",
@@ -3556,10 +3688,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "bagua",
    "displayZh": "坤",
-   "classicalTerm": "",
+   "classicalTerm": "坤卦",
    "professionalDef": "先天卦数八，属土，居西南，象地。万物类象为母、腹、牛、布帛舆釜、五谷田野、众多之物、方形柔顺之器，其色黄黑，其时夏秋之交。于体用生克中为顺、为众，断事宜取土地、群众、承载之象。",
-   "evidenceQuote": "",
-   "semanticLibrary": "",
+   "evidenceQuote": "《梅花易数》八卦数：坤八；《说卦传》：坤，顺也。",
+   "semanticLibrary": "先天卦数八，属土居西南象地：类象母、腹、牛、田野，主承载柔顺。",
    "translations": {
     "zh": "坤这一页写的是平的、多的、能装东西的：土地、田野、布料、袋子、锅、粮食、一大群人，人物上对应母亲、上了年纪的女性和做后勤的人，身上对应肚子。占到它，事情多半跟数量多和承接有关，找东西往西南方、平地、储物间和布袋里找，时间往夏末秋初和下午算。可以做的事：这类事一个人办不成，先想清楚要把哪一部分交给谁；同时清点一下手上囤着没用的东西，答案往往就在里面。"
    },
@@ -3577,7 +3709,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "无人拍板"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "meihua.bagua.li",
@@ -3586,10 +3719,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "bagua",
    "displayZh": "离",
-   "classicalTerm": "",
+   "classicalTerm": "离卦",
    "professionalDef": "先天卦数三，属火，居南，象火。万物类象为中女、目、雉、甲胄戈兵、炉灶窑冶、文书图籍、干燥中空之物，其色赤，其时夏。于体用生克中为丽、为明，断事宜取光明、文书、炉火之象。",
-   "evidenceQuote": "",
-   "semanticLibrary": "",
+   "evidenceQuote": "《梅花易数》八卦数：离三；《说卦传》：离，丽也。",
+   "semanticLibrary": "先天卦数三，属火居南象火：类象中女、目、文书、炉灶，主光明文明。",
    "translations": {
     "zh": "离这一页写的是发光发热、中间是空的：灯、火、炉子、屏幕、证件文书、眼睛、红色的东西。占到它，线索就往这几样上找，丢的东西可能在南边、靠近电器或者灶台的地方，问人往中年女性或者做文字、做设计的人身上想，时间往夏天和正午算。可以做的事：在现场先找亮的那一处和热的那一处；如果问的是事情能不能成，就看它有没有摆到明面上，藏着掖着的通常成不了。"
    },
@@ -3607,7 +3740,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "虚火"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "meihua.bagua.qian",
@@ -3616,10 +3750,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "bagua",
    "displayZh": "乾",
-   "classicalTerm": "",
+   "classicalTerm": "乾卦",
    "professionalDef": "先天卦数一，属金，居西北，象天。万物类象为君父尊长、首、马、金玉圆物、寒冰、镜镜之属，其色白，其时秋冬之交。于体用生克中为刚健之气，断事宜取尊贵、开创、圆器、高远之象。",
-   "evidenceQuote": "",
-   "semanticLibrary": "",
+   "evidenceQuote": "《梅花易数》八卦数：乾一；《说卦传》：乾，健也。",
+   "semanticLibrary": "先天卦数一，属金居西北象天：类象君父尊长、首、马、金玉，主刚健决断。",
    "translations": {
     "zh": "在这一派里，每个卦都是一本看图识物的小册子，乾这一页写的是又硬又圆又贵重：天空、金属、玉器、车轮、钟表、单位里说了算的那位、父亲、脑袋。占到它，就顺着这几样去找答案，丢东西往西北方向和高处找，问人往年长男性身上想，问时间往秋冬和下午偏晚算。可以做的事：把卦象当线索用，先在现场找出对应得上的实物或人，再回头验证判断准不准，这比背一堆吉凶断语管用得多。"
    },
@@ -3637,7 +3771,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "孤高"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "meihua.bagua.xun",
@@ -3646,10 +3781,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "bagua",
    "displayZh": "巽",
-   "classicalTerm": "",
+   "classicalTerm": "巽卦",
    "professionalDef": "先天卦数五，属木，居东南，象风。万物类象为长女、股、鸡、绳直、草木花卉、香气、往来舟车、长而柔之物，其色青白，其时春夏之交。于体用生克中为入、为不果，断事宜取风声、往来、交易之象。",
-   "evidenceQuote": "",
-   "semanticLibrary": "",
+   "evidenceQuote": "《梅花易数》八卦数：巽五；《说卦传》：巽，入也。",
+   "semanticLibrary": "先天卦数五，属木居东南象风：类象长女、股、鸡、草木，主柔顺渗透。",
    "translations": {
     "zh": "巽这一页写的是细长、能钻缝、会飘：风、绳子、电线、草木花卉、香味、来回跑的快递和车，人物上对应家里的大女儿和做中介、跑业务的人。占到它，事情多半跟传有关，消息是传过来的、东西是被风吹走的、路是中间人牵的。找东西往东南方、缝隙里和高处找，时间往春末夏初和上午算。可以做的事：顺着是谁传给你的这条线往回查一层，源头常常就在那里；同时留意有没有说好了又反悔的情况。"
    },
@@ -3667,7 +3802,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "无定见"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "meihua.bagua.zhen",
@@ -3676,10 +3812,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "bagua",
    "displayZh": "震",
-   "classicalTerm": "",
+   "classicalTerm": "震卦",
    "professionalDef": "先天卦数四，属木，居东，象雷。万物类象为长男、足、龙、竹木、大涂、鼓乐钟铃、蕃鲜之物，其色青碧，其时春。于体用生克中为动、为决躁，断事宜取惊动、声响、突发之象。",
-   "evidenceQuote": "",
-   "semanticLibrary": "",
+   "evidenceQuote": "《梅花易数》八卦数：震四；《说卦传》：震，动也。",
+   "semanticLibrary": "先天卦数四，属木居东象雷：类象长男、足、龙、鼓乐，主奋发行动。",
    "translations": {
     "zh": "震这一页写的是会响、会动、细细长长的：雷声、音响、乐器、竹子树木、大马路、脚和腿，人物上对应家里的大儿子和年轻好动的人。占到它，多半有个突发的动静，找东西往东边、路边、有声音的地方找，事情往往由一个电话或者一次意外触发，时间往春天和清晨算。可以做的事：回想最近三天有什么突然响起来、突然动起来的事，起因常常就在那儿；判断成败时看它有没有真的动起来，只在嘴上说的不算。"
    },
@@ -3697,7 +3833,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "虚惊"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "meihua.qigua.fangfa",
@@ -3706,10 +3843,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "qigua",
    "displayZh": "起卦法",
-   "classicalTerm": "",
+   "classicalTerm": "起卦法",
    "professionalDef": "不拘蓍龟钱币，凡耳目所触之数皆可成卦。以数起卦者，先得之数除八取余为上卦，后得之数除八取余为下卦，两数相加除六取余为动爻，余零则取满数。以时起卦者，年月日数相加除八为上卦，再加时辰数除八为下卦，总数除六定动爻。要在心念专一，一事一占。",
-   "evidenceQuote": "",
-   "semanticLibrary": "",
+   "evidenceQuote": "《梅花易数》：以数起卦，先得之数除八取余为上卦，后得之数为下卦。",
+   "semanticLibrary": "耳目所触之数皆可成卦：数除八取余定上下卦，加时数取动爻，凡动皆可占。",
    "translations": {
     "zh": "这一派最大的特点是随手就能问：不用铜钱不用蓍草，眼前碰到的任何数字都能拿来用，电话号码、车牌、门牌、几点几分、报纸上一行有几个字都行。做法很简单，拿一个数按八来除看余几，就对上其中一象；再拿一个数同样处理，配成上下两半；两数相加按八改按六来除，就知道哪一处会变动。关键不在算得多快，而在起念那一刻要专心，一件事只问一次。可以做的事：问之前先把问题在心里说完整，随手取一次数就定下来，别嫌结果不合心意反复重取，重取出来的答案没有参考价值。"
    },
@@ -3727,7 +3864,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "一事多占"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "meihua.tiyong.biangua",
@@ -3736,10 +3874,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "tiyong",
    "displayZh": "变卦",
-   "classicalTerm": "",
+   "classicalTerm": "变卦",
    "professionalDef": "由动爻阴阳互易所成之卦，表事情的最终趋向与结局。变卦生体则终得善果，克体则收尾不利；亦可据变卦所属之象与其数，推断应期迟速与最终情状。断卦须以体为主轴，合观用、互、变三者，取多数生克定吉凶。",
-   "evidenceQuote": "",
-   "semanticLibrary": "",
+   "evidenceQuote": "《梅花易数》：变卦者，以动爻变而得之，以占事之终应。",
+   "semanticLibrary": "动爻阴阳互易所成，表最终趋向：变卦生体终得善果，克体收尾不利。",
    "translations": {
     "zh": "这一层看的是最后会走到哪：事情兜兜转转之后的落点。它对你有利，说明现在再难，收尾是好的，值得咬牙撑过去；它对你不利，说明眼下看着顺，后面会翻盘，不如早点调整方向或者见好就收。可以做的事：把现在的感觉和最后的落点分开看，别被开头的顺利或者挫折带着走。给自己设一个复盘的日子，到那天用事实核对一次，而不是凭当时的情绪下判断。"
    },
@@ -3757,7 +3895,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "虎头蛇尾"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "meihua.tiyong.hugua",
@@ -3766,10 +3905,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "tiyong",
    "displayZh": "互卦",
-   "classicalTerm": "",
+   "classicalTerm": "互卦",
    "professionalDef": "取本卦第二、三、四爻组成下互，第三、四、五爻组成上互，合成互卦，表事情发展的中段过程与内里隐情。互卦生体则中途得助、暗有转机；互卦克体则过程生变、有人从中作梗或另有未明之情。",
-   "evidenceQuote": "",
-   "semanticLibrary": "",
+   "evidenceQuote": "《梅花易数》互卦法：取本卦二三四爻为下互，三四五爻为上互。",
+   "semanticLibrary": "互卦表事情发展的中段与内里隐情：与体用参看，可察过程之吉凶转折。",
    "translations": {
     "zh": "这一层看的是中间那一段：事情从开头走到结果之间会经历什么，以及有没有还没摆到台面上的内情。它对你有利，说明过程中会冒出帮手、会有转机，撑一撑就过去了；它对你不利，说明中途要出岔子，可能是有人从中作梗，也可能是你自己没料到的麻烦。可以做的事：别只盯着结果，把这件事的中间环节列成三到五步，逐步想一遍这一步最可能卡在哪，再给最危险的那一步准备一个备选方案。"
    },
@@ -3787,7 +3926,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "半途生阻"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "meihua.tiyong.ti",
@@ -3796,10 +3936,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "tiyong",
    "displayZh": "体卦",
-   "classicalTerm": "",
+   "classicalTerm": "体卦",
    "professionalDef": "一卦分上下二经卦，无动爻之一卦为体，代表求测者自身或所问之事的本体。断法以体为我，观其旺衰及与用卦、互卦、变卦之间的生克：体受生比则事顺，体被克泄则事难。体宜旺，宜得生扶，忌重重受克。",
-   "evidenceQuote": "",
-   "semanticLibrary": "",
+   "evidenceQuote": "《梅花易数》体用总诀：以体卦为其自己，以用卦为应事。",
+   "semanticLibrary": "无动爻之经卦为体，代表求测者本体：断法以体为我，观其旺衰与用卦生克。",
    "translations": {
     "zh": "每一卦拆成上下两半，其中不动的那一半代表你自己这一边：你的身体、你的处境、你手上的本钱。判断好坏的办法很直白，看另外几半是在给你添力气，还是在抽你的力气。添力气的多，事情往好走；抽力气的多，就算场面热闹，最后也是你吃亏。可以做的事：先老实评估自己现在有多少精力、多少钱、多少时间，再看这件事是让你越做越有劲，还是越做越掏空。掏空的那种，再诱人也要减量。"
    },
@@ -3817,7 +3957,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "透支"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "meihua.tiyong.yong",
@@ -3826,10 +3967,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "tiyong",
    "displayZh": "用卦",
-   "classicalTerm": "",
+   "classicalTerm": "用卦",
    "professionalDef": "含动爻之一卦为用，代表所求之事、所对之人或外部情境。用生体则事来就我，用克体则外来相逼，体克用则我能制彼、事在掌握，体生用则耗己以成人，体用比和则彼此相安、其事易谐。",
-   "evidenceQuote": "",
-   "semanticLibrary": "",
+   "evidenceQuote": "《梅花易数》体用总诀：以用卦为应事；用生体则事吉，用克体则事艰。",
+   "semanticLibrary": "含动爻之经卦为用，代表所求之事与外境：用生体事来就我，体克用我能制事。",
    "translations": {
     "zh": "另外那一半会动的，代表事情本身和对面的人：客户、对手、你想办成的那件事。它和你这边的关系无非四种，它给你送好处，也就是事情自己找上门；它压着你，也就是对方强势、条件苛刻；你压得住它，也就是你说了算、事情办得成；你倒贴它，也就是成全了别人累坏了自己。可以做的事：把这四种对号入座一次，如果发现自己长期落在倒贴那一格，就该重新谈条件或者收手，别用勤奋掩盖亏损。"
    },
@@ -3847,7 +3988,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "得不偿失"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "qimen.men.du",
@@ -3861,7 +4003,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "这一格代表“适合关起门来做事”的时期。它出现时，保密、沉淀、打磨方案比抛头露面更对路，公开露脸或贸然推进容易卡住。你可以做的是：把想法的细节先捂一阵，埋头把东西做扎实；需要躲开是非就低调一点，等这阵子过了再亮相。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "qimen.men.jing",
@@ -3875,7 +4018,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "这一格代表“适合写和说”的窗口。它强的时候，写方案、做汇报、发内容、考试都比较顺，靠表达拿分。你可以做的是：把要讲清楚的稿子、PPT、文案趁这时候定稿；但别把它当成行动信号，它偏“说得好听”，落地的事要另找时机。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "qimen.men.jingx",
@@ -3889,7 +4033,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "这一格代表“容易受惊、被吵、起口舌”的时段。它出现时，突发消息和人际摩擦会变多，也容易自己吓自己。你可以做的是：重要消息先核实再反应，别在群里秒回情绪；把合同和承诺看两遍再签；睡前少刷容易让你焦虑的信息。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "qimen.men.kai",
@@ -3903,7 +4048,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "这一格代表“适合开门红”的时机。它强的时候，启动项目、公开亮相、跑手续、找领导签字都顺，是少有的“只管冲”的窗口。你可以做的是：把最重要的启动动作排到这几天——发产品、见关键人、交材料；趁势头在，别犹豫。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "qimen.men.shang",
@@ -3917,7 +4063,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "这一格提醒你“容易磕碰吵架”的阶段。它出现时，开车、签字、与人较劲都要格外小心，也容易为钱或面子起冲突。你可以做的是：把重要的合同留到别的时段签；这几天少开快车、少在气头上做决定；真有纠纷，走正规渠道解决比硬刚更稳。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "qimen.men.sheng",
@@ -3931,7 +4078,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "这一格代表“适合搞钱和开张”的窗口。它强的时候，谈生意、开店、买房、推进能带来收入的事都比较顺。你可以做的是：把压了很久的报价、合作、签约提到这几天落地；想换工作或找新机会，也趁这股劲去推，别等它过去。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "qimen.men.si",
@@ -3945,7 +4093,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "这一格代表“适合画句号”的阶段。它出现时不适合开新局，但很适合把拖着的不了了之的事彻底了结——清账、断舍离、结束一段关系或项目。你可以做的是：列一张“该收尾”的清单，趁这时候一件件关掉；新计划先压住，别在此时启动。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "qimen.men.xiu",
@@ -3959,7 +4108,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "这一格代表“可以歇口气”的时机。它出现时适合把节奏放慢：养精神、陪家人、把悬着的事缓和地处理，不适合硬冲或挑起冲突。你可以做的是：把本周最耗神的一件事往后排，先处理能让你回血的小事；和人聊僵了就先冷一冷，过两天再谈往往更顺。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "qimen.shen.bashen",
@@ -3973,7 +4123,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "这八位是“背后的气氛和人心”。有的代表贵人撑腰、合作顺溜，有的代表藏着的小人、欺骗或突发凶险。你可以做的是：谈合作前感受下对方是不是真心；遇到“九地”类信号就别张扬，闷声做事；遇到“白虎”类信号，重大决定多留个心眼。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "qimen.star.jiuxing",
@@ -3987,7 +4138,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "这九颗是“大环境的气候”。有的气候适合读书静心，有的适合冲劲干事，有的容易带来小病小灾或冒险冲动。你可以做的是：看当前气候对你要做的事是助力还是添乱，顺势安排——气候不对就别硬上，把节奏错开。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "qimen.yiji.liuyi",
@@ -4001,7 +4153,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "这六个是“底盘条件”。它们告诉你这件事的地基稳不稳：有的代表钱和本钱，有的代表坑和阻碍，有的代表变动和说不清的麻烦。你可以做的是：推进前先看清哪一个是当前的“地雷”——比如遇到阻隔就别硬闯，遇到变动就留好退路。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "qimen.yiji.sanqi",
@@ -4015,7 +4168,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "这三样代表“手里好使的牌”。简单说，它们出现说明你有巧妙的办法把事办成：乙适合以柔克刚、走文书和人际；丙适合快速亮出来、占场面；丁适合悄悄把细节搞定。你可以做的是：遇到卡点，别硬碰，看看能不能换种更巧的方式绕过去。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "qizheng.grid.gong",
@@ -4029,7 +4183,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "十二宫是“人生的十二个房间”：命、财、家、子女、健康、事业、关系等等。每颗星住进不同房间，管的事就不同。你可以把它当成：同一股能量，放在“事业房”还是“家庭房”，含义完全两样——看宫位才懂星怎么用。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "qizheng.yu.jidu",
@@ -4043,7 +4198,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "计都代表“消散和看破”。它强，你对名利没那么执着，容易通哲理，但也可能疏离、身体小耗。你可以做的是：适合断舍离、收尾旧账、做减法；别在它旺时强求黏人的结果。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "qizheng.yu.luohou",
@@ -4057,7 +4213,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "罗睺代表“上头和偏门”。它强，你容易对冷门、刺激、一夜成的事上头，也可能突然走运；但也容易迷失、成瘾。你可以做的是：新鲜机会先小注试水，凡让你“停不下来”的东西，先设限度。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "qizheng.yu.yuebi",
@@ -4071,7 +4228,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "月孛代表“暗昧的情和麻烦”。它出现，容易有说不清的桃花、隐私纠纷或心里发腻的事。你可以做的是：感情和金钱往来留清楚痕迹，含糊的承诺先打问号；别让暗线把正事拖垮。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "qizheng.yu.ziqi",
@@ -4085,7 +4243,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "紫气代表“清静的贵气”。它好，你心思干净、容易得暗中助力、适合修心和文化类的事。你可以做的是：把需要沉淀、创作、提升气质的事排到它旺时；少掺和喧嚣的争斗。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "qizheng.zheng.huoxing",
@@ -4099,7 +4258,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "火星是“火气和冲劲”。它强，你行动猛、不怕硬，但也容易发火、磕碰、起冲突。你可以做的是：把这股劲引到健身、赶工、解决硬茬上；跟人对话先压三秒，别让脾气替你拍板。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "qizheng.zheng.jinxing",
@@ -4113,7 +4273,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "金星代表“魄力和锋芒”。它强，你敢争、有威、办事利落；过旺，容易刚硬伤人、起冲突。你可以做的是：把需要强势推进、谈判、定规矩的事交给它；但留意语气，别把人怼翻。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "qizheng.zheng.muxing",
@@ -4127,7 +4288,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "木星是“温和的福星”。它好，你包容、人缘好、做事有后劲，也利学习和养生。你可以做的是：把需要长期经营的关系、学业、健康习惯放到它旺时启动，细水长流最受益。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "qizheng.zheng.ri",
@@ -4141,7 +4303,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "太阳代表“你的名号和被看见的程度”。它强，你容易有身份感、被认可、走正道出头；它弱，容易没存在感、被埋没。你可以做的是：把要露脸、要争名分的事往前推，别躲在后面。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "qizheng.zheng.shuixing",
@@ -4155,7 +4318,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "水星管“机灵和表达”。它好，你点子多、嘴皮子利、适合做需要脑子和沟通的事；它乱，容易小聪明、说话不实、算漏。你可以做的是：它旺时谈方案、做交易；但重要数字多核对，别被自己的嘴带偏。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "qizheng.zheng.tuxing",
@@ -4169,7 +4333,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "土星是“慢和压实”。它过境，事情常卡、来得晚，但根基能打牢。你可以做的是：别求快，把目标拆成每天能做的一小步，咬牙坚持；它最奖励“熬得住、做得实”的人。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "qizheng.zheng.yue",
@@ -4183,7 +4348,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "月亮管“情绪和内在安全感”。它顺，你温和、招人亲近、直觉准；它乱，容易敏感起伏、夜里多思。你可以做的是：它弱时别做情绪化决定，先睡好、先独处，等心定再议事。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "taiyi.ju.dingju",
@@ -4197,7 +4363,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "定局就是“先把盘摆对”。就像下棋前先把棋子按规则摆好，摆错了后面全错。你可以理解成：做任何推演或计划，第一步是把前提和条件理清，别跳步。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "taiyi.ju.yinyang",
@@ -4211,7 +4378,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "阴阳遁是两套不同的排列方向，随节气切换，代表“气机在升还是在降”。简单说，它区分现在是扩张期还是收敛期。你可以借此判断：当下适合往前冲（阳），还是先收着养（阴）。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "taiyi.li.bamen",
@@ -4225,7 +4393,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "八门是八种“行动建议”，有的门说适合开创，有的说适合休息，有的说别动。你可以把它当成一张行动宜忌表：今天这扇门开了，就做对应那类事，别逆着来。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "taiyi.li.sancai",
@@ -4239,7 +4408,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "三才指“天、地、人”三个层面。古人认为不同术数各管一层：有的看大环境时机，有的看空间地利，有的看人和事。你可以借鉴：做大事同时看趋势（天）、条件（地）、关系（人），别只看一面。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "taiyi.shen.jishen",
@@ -4253,7 +4423,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "计神管“算计和谋略”。它旺，你做计划、算账、布策略特别清楚，适合下棋式地想三步。你可以做的是：把需要精密盘算的大事（报价、布局、排兵）放到它旺时，少出昏招。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "taiyi.shen.shiji",
@@ -4267,7 +4438,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "始击代表“冲击和突发”。它出现，事情容易被外部力量撞一下——突发变动、冲突、不得不反击。你可以做的是：预留缓冲，别把日程排太满；真撞上了，快速反应比犹豫强。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "taiyi.shen.taiyi",
@@ -4281,7 +4453,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "太乙是一种古老的推演术，把“太乙”当成核心的那颗星，用来排布一整套格局看大趋势。你可以把它理解为：它关心的是“大势和时机”，不是算你今天丢没丢钥匙。看个宏观走向就好，别拿它微观算命。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "taiyi.shen.wenchang",
@@ -4295,7 +4468,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "文昌管“文字和谋略”。它旺的时候，写材料、考试、出主意、谈判都顺，靠脑子拿分。你可以做的是：把要动笔、要答辩、要出方案的事排到它旺时，效率明显高。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "taiyi.shen.wujiang",
@@ -4309,7 +4483,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "五将是这套推演里的五个关键角色，分别管“我方、对方、文书、发动、结果”这类面向。看它们落在哪边，就能大概判断一件事谁占上风。你可以类比谈判：看清桌上几股力量各自站哪边。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "taiyi.suan.ke",
@@ -4323,7 +4498,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "客算代表“对方、外部、动态”那面的数字。把它和主算对照，就能看出是该主动出击还是防守。你可以当成：先看外面风向，再决定自己是冲还是等。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "taiyi.suan.zhu",
@@ -4337,7 +4513,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "主算代表“我方、内部、静态”这一面的数字走向。它吉，说明你按兵不动、守住基本盘更稳；它凶，说明内部有虚，先稳住自己再谈别的。可以当成：先盘点自家底牌。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "taiyi.xian.duke",
@@ -4351,7 +4528,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "杜塞是“前后都堵死”的局。它出现，说明这事暂时没有顺畅的出口，硬闯只会撞墙。你可以做的是：先停下来，别在死胡同里耗；等时机松动（换个窗口、换个路径）再动，比硬顶明智。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "tarot.major.emperor",
@@ -4365,7 +4543,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "这张牌代表“该立规矩了”。它出现，说明事情需要从散乱变成有结构——定目标、排流程、划边界。你可以做的是：把一团乱的事拆成清单和截止日，该拍板就拍板；但别变成控制狂，给别人留点余地。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "tarot.major.empress",
@@ -4379,7 +4558,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "这张牌是“滋养和结果”。它出现，代表你播下的东西开始长，关系、项目、身体都适合好好养。你可以做的是：对自己和在意的人温柔点，给计划浇浇水、施施肥；也别光付出，记得收下别人的好意。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "tarot.major.fool",
@@ -4393,7 +4573,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "这张牌是“说走就走的新起点”。它出现，代表一段还没谱但充满可能的新旅程要开始了。你可以做的是：别等万事俱备才迈步，先容许自己笨拙地开头；但出发前至少想清楚“最坏能怎样”，免去真鲁莽。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "tarot.major.lovers",
@@ -4407,7 +4588,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "这张牌是“做选择、定关系”。它出现，往往逼你在两条路里挑一条，尤其是关乎心和价值观的。你可以做的是：别拖，把选项写清楚，问自己“哪个更靠近真正想要的”；选了就别反复回头比。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "tarot.major.magician",
@@ -4421,7 +4603,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "这张牌告诉你“手里牌其实够用了”。它出现，说明你现有的资源、技能、人脉足够把事做成，差的是去整合和行动。你可以做的是：把散着的本事和关系列一张表，挑一个目标，今天就开始拼，别再等“更好的条件”。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "tarot.major.priestess",
@@ -4435,7 +4618,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "这张牌提醒你“答案在心里，不在外面”。它出现，适合暂停、内省、相信直觉，而不是到处问人。你可以做的是：给自己一段不被打扰的时间，把纠结的事放空，往往答案会自己浮上来；别被表面热闹带偏。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "tarot.major.star",
@@ -4449,7 +4633,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "这张牌是“撑过去就有光”。它出现，说明最难那段快过去了，希望和复原正在回来。你可以做的是：给自己一点温柔的期待，做件能让你心静的小事；别因为前面黑过就怀疑前面会亮。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "tarot.major.strength",
@@ -4463,7 +4648,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "这张牌说“真正的强是稳住自己”。它出现，代表你能用耐心和分寸搞定难搞的人或事，而不是比谁声音大。你可以做的是：遇到挑衅先不急着赢，用温和但坚定的方式把局面收住；对自己也别太狠。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "tarot.major.wheel",
@@ -4477,7 +4663,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "这张牌提醒你“潮起潮落很正常”。它出现，代表一段运势在转，可能向上也可能向下，关键在于接住变化。你可以做的是：好运时趁势收成果，坏运时别硬顶、先保底；记住没有一种状态会一直不变。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "tarot.major.world",
@@ -4491,7 +4678,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "这张牌是“这一程圆满了”。它出现，代表一个阶段真正收尾、可以毕业了。你可以做的是：认真给自己一个句号——复盘、庆祝、归档，然后轻装走向下一程；别老赖在已完成的事上。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "tarot.suit.cups",
@@ -4505,7 +4693,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "圣杯这组牌讲“心和感受”。它出现多，说明你近况被关系、情绪、爱恨牵动。你可以做的是：认真照顾重要的人，也诚实面对自己的感受；杯空了就别硬撑，找人聊聊或给自己一点温柔。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "tarot.suit.wands",
@@ -4519,7 +4708,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "权杖这组牌讲“行动和热情”。它出现多，说明你最近的能量在“做”上——点火、冲、搞创作、拼事业。你可以做的是：把想法赶紧变成动作，别光想；但火太旺时也记得收一收，免得烧过头。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "vedic.angsha.lagna",
@@ -4533,7 +4723,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "上升点相当于“你给外界的第一印象和这辈子的底色”。它定调你这盘棋怎么摆。你可以把它理解为：别人初见你时的感觉，以及你习惯性的应对方式——了解它，比盯单颗星更能看清自己。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "vedic.angsha.rashi",
@@ -4547,7 +4738,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "十二宫是“十二种场景和性格底色”。每颗星落到不同宫，就像演员进了不同布景，表现不一样。你可以把它当成：同一股能量，放在“事业场”和“家庭场”里，呈现完全不同——理解宫位才懂星怎么用。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "vedic.graha.budha",
@@ -4561,7 +4753,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "这一颗管“脑子转得快不快”。它好，你表达、算账、谈合同都灵；它乱，容易说错话、算漏账、被小谎绕进去。你可以做的是：把要动脑和动嘴的事排到它旺时；签数字相关的东西多看两遍，别信太顺的嘴。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "vedic.graha.chandra",
@@ -4575,7 +4768,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "这一颗管“心情和直觉”。它顺的时候你更稳、更招人亲近；它乱的时候容易敏感、想太多、夜里睡不踏实。你可以做的是：情绪上来的事别急着定，先照顾好身体和睡眠；想不清就放一放，过两天直觉会清楚些。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "vedic.graha.guru",
@@ -4589,7 +4783,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "这一颗是“福气和贵人运”。它强，容易遇到好老师、好机会，小孩和钱财也顺。你可以做的是：想学东西、找导师、做长期投资，趁这时候下手；也多帮带后辈，木星讲究“给出去才回来”。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "vedic.graha.ketu",
@@ -4603,7 +4798,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "这一颗代表“放下和看破”。它强，你对名利没那么执着，反而容易通灵性、想通透，但也可能疏离、孤独、身体小伤不断。你可以做的是：适合做断舍离、冥想、收尾旧账；别在它旺时强求黏人的关系。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "vedic.graha.mangala",
@@ -4617,7 +4813,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "这一颗是“冲劲和脾气”。它强，你干活猛、敢拼，但也容易上火动手；它过旺，容易跟人起冲突、磕碰受伤。你可以做的是：把这股劲用到健身、赶工期、解决硬骨头上；跟人交谈时先数三秒，别让火气替你说话。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "vedic.graha.rahu",
@@ -4631,7 +4828,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "这一颗代表“越界和上头”。它强，你容易对冷门、刺激、一夜爆红的事上头，也可能突然走运；但也容易迷失、成瘾、被虚妄带跑。你可以做的是：新鲜机会先小注试，别 all in；凡让你“停不下来”的东西，先设个限度。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "vedic.graha.shani",
@@ -4645,7 +4843,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "这一颗是“慢和考”。它过境时，事情常卡、来得晚、要靠硬扛，但也逼你长结实。你可以做的是：别跟它较劲求快，把大目标拆成每天能做的一小步，咬牙坚持；它最奖励“熬得住”的人。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "vedic.graha.shukra",
@@ -4659,7 +4858,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "这一颗管“魅力和关系”。它好，你更招人喜欢，谈恋爱、搞审美、做需要人缘的事都顺。你可以做的是：把约会、社交、展示审美（穿搭、设计、作品）排到它旺时；但也别为面子乱花钱。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "vedic.graha.surya",
@@ -4673,7 +4873,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "这一颗代表“你是谁、你说了算不算”。它强的时候，你更有主见、敢担当，也容易被看见；它弱的时候，容易没底气、被上级压着。你可以做的是：把要拿主意的事往前推，主动担一桩能体现你能力的事，比等别人安排更提气。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "vedic.time.dasha",
@@ -4687,7 +4888,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "达沙是“你这几年归哪颗星管”的时间表。就像换班主任，不同的星当家，几年的主题完全不同——有的年头旺事业，有的年头适合沉淀。你可以做的是：先看清当下归谁管，顺势安排大事的节奏，别在“休养期”硬冲、在“行动期”躺平。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "western.aspect.conjunction",
@@ -4714,7 +4916,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "过犹不及"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "western.aspect.opposition",
@@ -4742,7 +4945,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "两极摇摆"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "western.aspect.sextile",
@@ -4770,7 +4974,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "错过"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "western.aspect.square",
@@ -4798,7 +5003,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "钻牛角尖"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "western.aspect.trine",
@@ -4826,7 +5032,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "坐享其成"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "western.axis.asc",
@@ -4854,7 +5061,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "表里不一"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "western.axis.east_point",
@@ -4882,7 +5090,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "冒进"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "western.axis.mc",
@@ -4910,7 +5119,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "唯名是图"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "western.axis.vertex",
@@ -4938,7 +5148,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "宿命论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "western.body.chiron",
@@ -4966,7 +5177,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "沉溺伤痛"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "western.body.jupiter",
@@ -4994,7 +5206,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "盲目乐观"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "western.body.mars",
@@ -5022,7 +5235,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "攻击"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "western.body.mean_node",
@@ -5050,7 +5264,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "宿命论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "western.body.mercury",
@@ -5078,7 +5293,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "碎嘴"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "western.body.moon",
@@ -5106,7 +5322,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "逃避"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "western.body.neptune",
@@ -5134,7 +5351,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "逃避现实"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "western.body.pluto",
@@ -5162,7 +5380,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "控制"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "western.body.saturn",
@@ -5190,7 +5409,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "固步"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "western.body.sun",
@@ -5218,7 +5438,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "独断"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "western.body.true_node",
@@ -5246,7 +5467,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "宿命论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "western.body.uranus",
@@ -5274,7 +5496,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "善变"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "western.body.venus",
@@ -5302,7 +5525,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "虚荣"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "western.house.1",
@@ -5330,7 +5554,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "以貌取人"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "western.house.10",
@@ -5359,7 +5584,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "唯名是图"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "western.house.11",
@@ -5388,7 +5614,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "孤军"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "western.house.12",
@@ -5417,7 +5644,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "自我封闭"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "western.house.2",
@@ -5446,7 +5674,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "唯利是图"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "western.house.3",
@@ -5475,7 +5704,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "沟通碎"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "western.house.4",
@@ -5504,7 +5734,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "无根"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "western.house.5",
@@ -5533,7 +5764,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "滥情"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "western.house.6",
@@ -5562,7 +5794,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "过劳"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "western.house.7",
@@ -5591,7 +5824,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "关系失衡"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "western.house.8",
@@ -5620,7 +5854,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "沉溺"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "western.house.9",
@@ -5649,7 +5884,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "眼高手低"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "western.sign.aquarius",
@@ -5678,7 +5914,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "不接地气"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "western.sign.aries",
@@ -5707,7 +5944,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "鲁莽"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "western.sign.cancer",
@@ -5736,7 +5974,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "缩在壳里"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "western.sign.capricorn",
@@ -5765,7 +6004,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "苦劳命"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "western.sign.gemini",
@@ -5794,7 +6034,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "三心二意"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "western.sign.leo",
@@ -5823,7 +6064,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "死撑"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "western.sign.libra",
@@ -5852,7 +6094,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "两头摇摆"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "western.sign.pisces",
@@ -5881,7 +6124,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "边界不清"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "western.sign.sagittarius",
@@ -5910,7 +6154,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "画饼"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "western.sign.scorpio",
@@ -5939,7 +6184,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "猜忌"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "western.sign.taurus",
@@ -5968,7 +6214,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "抗拒变化"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "western.sign.virgo",
@@ -5997,7 +6244,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "钻牛角尖"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "zeri.jianchu.bi",
@@ -6011,7 +6259,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "闭日适合“关门修养”。修墙、补漏洞、养精神、做收尾整理都顺；但不适合开业、远行、看病。记：闭=收工歇着，别往外冲。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "zeri.jianchu.cheng",
@@ -6025,7 +6274,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "成日是“黄道好日子”。结婚、开业、入学、合作、签约，基本啥正事都适合。记：成=成事，重要的事优先排这天。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "zeri.jianchu.chu",
@@ -6039,7 +6289,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "除日适合“清掉”。大扫除、断舍离、跟人解开误会、处理陈年旧账，这天做最对路。不适合求官或办喜事。记：除=扔旧的、和解的。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "zeri.jianchu.ding",
@@ -6053,7 +6304,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "定日适合“定下来”。定亲、安床、添人进口、存钱落袋，这天稳。但不适合打官司、远行、看病。记：定=落定、守成。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "zeri.jianchu.jian",
@@ -6067,7 +6319,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "建日适合“开头”。想启动项目、出门、定计划，挑这天挺顺。但不适合收尾、拆改、动土这类事。简单记：建=开新，别干收摊的活。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "zeri.jianchu.kai",
@@ -6081,7 +6334,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "开日适合“打开局面”。开业、出门、看病、办喜事都顺，有开启的势头。但不适合下葬、砍树这类“收尾/破坏”的活。记：开=开局、出门。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "zeri.jianchu.man",
@@ -6095,7 +6349,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "满日适合“办成事的喜事”。开业、结婚、签约、收货，挑这天有“圆满”的意味。但不适合动土或下葬。记：满=成事、喜庆。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "zeri.jianchu.ping",
@@ -6109,7 +6364,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "平日就是“普普通通的一天”。没大吉也没大凶，适合做日常、常规的事，不适合赌一把或办大事。记：平=平常心，按部就班。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "zeri.jianchu.po",
@@ -6123,7 +6379,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "破日就是“别折腾重要的事”。签约、结婚、开工、远行都别排这天，容易破功。唯一适合的是拆旧、破墙这类“本来就要弄坏”的活。记：破=宜破不宜立。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "zeri.jianchu.shou",
@@ -6137,7 +6394,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "收日适合“往里收”。存钱、收款、娶进、学习充电都顺；但不适合借钱出去、开业、远行。记：收=进账、内收，别外放。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "zeri.jianchu.wei",
@@ -6151,7 +6409,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "危日提醒“这天容易出岔子”。登高、冒险、办喜事、搬家都先缓。适合的是守着、把现有事做细。记：危=谨慎，别冒头。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "zeri.jianchu.zhi",
@@ -6165,7 +6424,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "zh": "执日适合“抓在手里的执行”。落实决定、抓进度、修缮、办婚礼都顺。但不适合搬家、远行。记：执=动手做、抓住。"
    },
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.aux.dijie",
@@ -6194,7 +6454,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "意外破财"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.aux.dikong",
@@ -6223,7 +6484,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "计划落空"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.aux.enguang",
@@ -6252,7 +6514,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "名不副实"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.aux.fenggao",
@@ -6281,7 +6544,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "怀才不遇"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.aux.fengge",
@@ -6310,7 +6574,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "华而不实"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.aux.guasu",
@@ -6339,7 +6604,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "情感隔离"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.aux.guchen",
@@ -6368,7 +6634,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "六亲缘薄"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.aux.hongluan",
@@ -6397,7 +6664,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "情迷"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.aux.huagai",
@@ -6426,7 +6694,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "不合群"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.aux.huoxing",
@@ -6455,7 +6724,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "引火烧身"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.aux.lingxing",
@@ -6484,7 +6754,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "心结难解"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.aux.longchi",
@@ -6513,7 +6784,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "曲高和寡"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.aux.lucun",
@@ -6542,7 +6814,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "不敢流动"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.aux.qingyang",
@@ -6571,7 +6844,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "惹是非"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.aux.taifu",
@@ -6600,7 +6874,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "埋没"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.aux.tiancai",
@@ -6629,7 +6904,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "恃才"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.aux.tiangui",
@@ -6658,7 +6934,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "失信任"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.aux.tiankui",
@@ -6687,7 +6964,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "错失机遇"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.aux.tianma",
@@ -6716,7 +6994,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "定不下来"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.aux.tianshou",
@@ -6745,7 +7024,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "暮气"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.aux.tianxi",
@@ -6774,7 +7054,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "乐极生悲"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.aux.tianxing",
@@ -6803,7 +7084,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "惹讼"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.aux.tianyao",
@@ -6832,7 +7114,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "招谣"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.aux.tianyue",
@@ -6861,7 +7144,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "忘恩"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.aux.tuoluo",
@@ -6890,7 +7174,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "拖泥带水"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.aux.wenchang",
@@ -6919,7 +7204,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "疏于实践"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.aux.wenqu",
@@ -6948,7 +7234,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "华而不实"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.aux.xianchi",
@@ -6977,7 +7264,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "桃花劫"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.aux.youbi",
@@ -7006,7 +7294,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "不被看见"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.aux.zuofu",
@@ -7035,7 +7324,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "缺乏主见"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.palace.caibo",
@@ -7063,7 +7353,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "投机"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.palace.fude",
@@ -7091,7 +7382,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "虚耗"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.palace.fumu",
@@ -7119,7 +7411,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "推诿"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.palace.fuqi",
@@ -7147,7 +7440,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "宿命论"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.palace.guanlu",
@@ -7175,7 +7469,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "一根筋"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.palace.jiaoyou",
@@ -7203,7 +7498,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "滥交"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.palace.jie",
@@ -7232,7 +7528,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "自我诊断"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.palace.mingong",
@@ -7260,7 +7557,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "以偏概全"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.palace.qianyi",
@@ -7288,7 +7586,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "盲动"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.palace.tianzhai",
@@ -7316,7 +7615,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "漂泊无根"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.palace.xiongdi",
@@ -7344,7 +7644,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "比较计较"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.palace.zinv",
@@ -7372,7 +7673,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "强求"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.sihua.huaji",
@@ -7401,7 +7703,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "钻死胡同"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.sihua.huake",
@@ -7429,7 +7732,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "沽名钓誉"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.sihua.hualu",
@@ -7457,7 +7761,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "坐享其成"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.sihua.huaquan",
@@ -7485,7 +7790,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "强压于人"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.star.jumen",
@@ -7514,7 +7820,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "口无遮拦"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.star.lianzhen",
@@ -7543,7 +7850,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "钻牛角尖"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.star.pojun",
@@ -7572,7 +7880,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "根基不稳"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.star.qisha",
@@ -7601,7 +7910,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "不留余地"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.star.taiyang",
@@ -7630,7 +7940,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "透支"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.star.taiyin",
@@ -7659,7 +7970,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "闷在心里"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.star.tanlang",
@@ -7688,7 +8000,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "三心二意"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.star.tianfu",
@@ -7717,7 +8030,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "不敢放手"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.star.tianji",
@@ -7746,7 +8060,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "优柔寡断"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.star.tianliang",
@@ -7775,7 +8090,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "越俎代庖"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.star.tiantong",
@@ -7804,7 +8120,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "得过且过"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.star.tianxiang",
@@ -7833,7 +8150,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "缺乏主见"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.star.wuqu",
@@ -7862,7 +8180,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "不通情理"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   },
   {
    "archetypeKey": "ziwei.star.ziwei",
@@ -7891,7 +8210,8 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
     "颐指气使"
    ],
    "licenseTier": "public_domain",
-   "version": "1.0.0"
+   "version": "1.0.0",
+   "l1_status": "pending_manual"
   }
  ]
 };
