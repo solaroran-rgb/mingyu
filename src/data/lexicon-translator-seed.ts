@@ -546,7 +546,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "system": "bazi",
    "category": "term",
    "termGroup": "dizhi",
-   "displayZh": "si_snake",
+   "displayZh": "巳",
    "classicalTerm": "si_snake",
    "attributes": {
     "cangGan": [
