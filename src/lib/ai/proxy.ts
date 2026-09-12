@@ -36,6 +36,8 @@ export type AiEnv = {
   AI_PROVIDER_NAME?: string;
   AI_BUILTIN_ENABLED?: string;
   AI_DEFAULT_ENABLED?: string;
+  /** 内容语言启用集（CSV）；缺省全部启用。未启用语言显式 400，不静默降级（口径 G5） */
+  I18N_ENABLED_LOCALES?: string;
 };
 
 type ChatMessage = { role: 'user' | 'assistant'; content: string };
@@ -72,6 +74,38 @@ const SYSTEM_PROMPT_TRANSLATE_BASE =
   '1) 数值、干支、星曜名、宫位名、卦名与吉凶方向一律不得改变；' +
   '2) 术语译法必须与资料中已有译法一致，不得自行发明；' +
   '3) 只输出译文正文，不附加解释。';
+
+// I18N 内容语言门控：env.I18N_ENABLED_LOCALES 配置启用集（CSV），缺省全开
+function parseEnabledLocales(env?: AiEnv): Set<string> {
+  const raw = env?.I18N_ENABLED_LOCALES?.trim();
+  if (!raw) return new Set(SUPPORTED_AI_LOCALES as readonly string[]);
+  const list = raw
+    .split(',')
+    .map((item) => item.trim())
+    .filter(Boolean);
+  return new Set(list.length > 0 ? list : (SUPPORTED_AI_LOCALES as readonly string[]));
+}
+
+// 术语注入（决策 A）：扫描输入中出现的 tier1 术语，注入「zh→目标语言」对照表（动态 import 控包体）
+async function buildTermInjection(
+  inputText: string,
+  locale: SupportedAiLocale,
+): Promise<string> {
+  if (locale === 'zh-CN') return '';
+  const { TERMS_7LANG } = await import('../../data/terms-7lang');
+  const matched: Array<{ term: string; key: string; target: string }> = [];
+  for (const entry of TERMS_7LANG) {
+    if (matched.length >= 40) break;
+    const zh = entry.i18n['zh-CN'];
+    if (!zh || !inputText.includes(zh)) continue;
+    const target = entry.i18n[locale];
+    if (target && target !== '—') {
+      matched.push({ term: zh, key: entry.key, target });
+    }
+  }
+  if (matched.length === 0) return '';
+  return `\n术语对照表（译文必须采用以下译法，key 为 archetype_key）：${JSON.stringify(matched)}`;
+}
 
 /**
  * 处理 AI 解析请求，返回 SSE Response。
@@ -114,6 +148,13 @@ export async function handleAiAnalyze(request: Request, env?: AiEnv): Promise<Re
     : 'zh-CN';
   // 受限翻译档（决策 A）：mode=translate 时 temperature 固定 0（BP4）
   const translationMode = body.mode === 'translate';
+
+  const enabledLocales = parseEnabledLocales(env);
+  if (!enabledLocales.has(locale)) {
+    return aiJsonError(400, 'LANG_NOT_ENABLED', `语言 ${locale} 尚未开放内容输出。`, {
+      enabled: [...enabledLocales],
+    });
+  }
 
   const provider = resolveAiProvider(body.aiConfig, env);
   if ('error' in provider) {
@@ -169,8 +210,14 @@ export async function handleAiAnalyze(request: Request, env?: AiEnv): Promise<Re
     locale !== 'zh-CN' && !translationMode
       ? ` 请全程使用${AI_LOCALE_LABELS[locale]}撰写解读。`
       : '';
+  const termInjection = translationMode
+    ? await buildTermInjection(
+        chatMessages.map((message) => message.content).join('\n'),
+        locale,
+      )
+    : '';
   const systemPrompt = translationMode
-    ? `${SYSTEM_PROMPT_TRANSLATE_BASE}目标语言：${AI_LOCALE_LABELS[locale]}（${locale}）。`
+    ? `${SYSTEM_PROMPT_TRANSLATE_BASE}目标语言：${AI_LOCALE_LABELS[locale]}（${locale}）。${termInjection}`
     : `${baseSystemPrompt}${languageDirective}`;
 
   const endpoint = `${provider.baseUrl}/chat/completions`;

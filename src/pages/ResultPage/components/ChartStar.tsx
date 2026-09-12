@@ -1,4 +1,5 @@
 import type { PalaceFact } from '@/types/analysis';
+import { TermText } from '@/lib/i18n/terms-shim';
 
 type ChartStarTone = 'major' | 'minor' | 'other' | 'scope';
 
@@ -18,7 +19,9 @@ export function ChartStar(props: { star: PalaceFact['major_stars'][number]; tone
         star.birth_mutagen ? 'has-birth-mutagen' : ''
       } ${star.active_scope_mutagen ? 'has-active-mutagen' : ''}`}
     >
-      <span className="chart-star-name">{star.name}</span>
+      <span className="chart-star-name">
+        <TermText zh={star.name} />
+      </span>
       {star.brightness ? (
         <span className="chart-star-brightness" aria-label={`亮度${star.brightness}`}>
           {star.brightness}

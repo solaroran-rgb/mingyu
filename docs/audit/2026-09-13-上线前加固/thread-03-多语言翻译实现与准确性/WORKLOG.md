@@ -67,3 +67,14 @@
 - 踩坑记录（生成器两连）：①头注释写 `thread-03-*/output` 通配符 `*/` 提前终止块注释 → TS1121；②locale 键 `zh-CN:` 未加引号 → TS1005。均已修复并重生成。
 - 下一步：M2 续（其余 4 个 Board + 引擎输出键化 BP1，与 T2 词库锚定共用键）→ M3 受限翻译调用 + 术语表服务端注入（动态 import 防包体回弹）+ G2/G3 门禁预检 + untranslated UI → M4 回译入 CI（05 脚本工程化）。
 - 阻塞项：同前（母语者后置；T2 M1 协同需主控排期）。registry 缺口：TempoSoul 网站未登记 _registry 组件表（impact.py 查无），建议主控补登记。
+
+## 2026-09-13 07:50 · M2续 + M3 + M4 收官 ✅（老板指令「继续完成剩余待办」）
+
+- 做了什么：
+  1. **M2 续**：抽公共 shim `src/lib/i18n/terms-shim.tsx`（`useTermLabel` + `TermText`），八字板改为复用；**ChartStar 单点接入**（星曜名全盘生效，ZiweiTraditionalBoard 主星/辅星/杂曜线全走此组件）；ZiweiTraditionalBoard 接入宫名（选中宫/对宫/网格 title/命宫·身宫前缀）、干支角落、命主·身主星。**AstrolabeBoard/QizhengBoard 有意不接**：西洋占星/七政四余语境与紫微星曜同名不同义（太阳=planet vs 星曜），盲套 shim 会语境错译——正解是引擎键化（BP1，四线程会签）或 astrology 域术语表；ZiweiBoard 独立渲染留 M2 尾。
+  2. **M3**：`proxy.ts`——①`env.I18N_ENABLED_LOCALES` 内容语言门控（CSV 配置启用集，未启用语言显式 400 `LANG_NOT_ENABLED`，禁静默降级，口径 G5 配套）；②受限翻译档**术语注入**：扫描输入中命中的 tier1 术语（≤40 条），注入「zh→目标语」对照表（含 archetype_key），动态 import 控包体（对齐 T4 端点内动态加载模式）。
+  3. **M4**：`tests/terms-7lang.test.ts`（G1-lite 入仓库测试套件）：355 行数锁定、键格式三段式、键唯一性、filled/supplement 六语言齐全、partial 至少 en 可用、translateTerm 确定性抽查、多键/待定诚实降级（null 不兜底）。
+- 关键结论/数据：新增测试 **10/10**（lang 6 + terms 4）；回归 **api 108/108、prompt 229/229**；tsc 改动文件 0 错误；build 13.9s 通过。
+- 测试修正记录：断言口径三轮校正——①键是 pinyin 连写（bijian 非 bi_jian）；②命宫按 zh 跨 3 域是多键，须按 archetype_key 查（正体现「键即契约」设计）；③丁/鼎是 en 译文值撞车（各自键各自语境渲染，非 zh 多键）。
+- 下一步（余量）：M2 尾——ZiweiBoard/AstrolabeBoard/QizhengBoard（后者需 astrology 域术语或引擎键化）；BP1 引擎输出键化（四线程会签）；L1/L3/L5 结构化模板语言分支×7（M3 模板件）；05 回译脚本 nightly 化；母语复核表待人员。
+- 阻塞项：同前。

@@ -126,3 +126,53 @@ test('未传 lang：默认 zh-CN，system prompt 保持原样', async () => {
     restore();
   }
 });
+
+test('translate 模式：输入中的 tier1 术语自动注入对照表', async () => {
+  const capture: { current: Captured | null } = { current: null };
+  const restore = stubUpstream(capture);
+  try {
+    const response = await handleAiAnalyze(
+      makeRequest({
+        prompt: '命盘中比肩林立，日柱甲子，请翻译本段',
+        lang: 'en',
+        mode: 'translate',
+        aiConfig: AI_CONFIG,
+      }),
+    );
+    assert.equal(response.status, 200);
+    await response.text();
+    assert.ok(capture.current);
+    const system = capture.current.body.messages?.[0]?.content ?? '';
+    assert.ok(system.includes('术语对照表'), '应注入术语对照表');
+    assert.ok(system.includes('Friend'), '比肩应注入英译');
+    assert.ok(system.includes('Jia Zi'), '甲子应注入英译');
+    assert.ok(system.includes('"key":"bazi:shishen:bijian"'), '应带 archetype_key');
+  } finally {
+    restore();
+  }
+});
+
+test('env 限定启用语言：未启用 lang 显式 400 LANG_NOT_ENABLED', async () => {
+  const env = { I18N_ENABLED_LOCALES: 'zh-CN,en' };
+  const capture: { current: Captured | null } = { current: null };
+  const restore = stubUpstream(capture);
+  try {
+    const response = await handleAiAnalyze(
+      makeRequest({ prompt: '解读', lang: 'ja', aiConfig: AI_CONFIG }),
+      env,
+    );
+    assert.equal(response.status, 400);
+    const data = await response.json();
+    assert.equal(data.error.code, 'LANG_NOT_ENABLED');
+    assert.equal(capture.current, null, '不应有上游请求');
+
+    const ok = await handleAiAnalyze(
+      makeRequest({ prompt: '解读', lang: 'en', aiConfig: AI_CONFIG }),
+      env,
+    );
+    assert.equal(ok.status, 200, '启用语言应放行');
+    await ok.text();
+  } finally {
+    restore();
+  }
+});
