@@ -34,17 +34,9 @@ import { drawLenormandSpread } from '@temposoul/core/divination/lenormand';
 import { generateAstrolabe } from '@temposoul/core/divination/astrolabe';
 import { analyzeAstrolabeSynastry } from '@temposoul/core/divination/astrolabe-synastry';
 import { drawRandomSign } from '@temposoul/core/divination/ssgw';
-import {
-  bazhai,
-  zodiac,
-  taiyi,
-  wuyunLiuqi,
-  huangjiJingshi,
-  qizheng,
-  xuankong,
-  residentialFengshui,
-  MingyuCoreError,
-} from '@temposoul/core';
+// ponytail: 1102 修复——重型子系统改为端点内动态 import，冷启动不再评估全量模块图。
+// 常量与错误类保持静态（体积小且近乎所有端点共用）。
+import { MingyuCoreError } from '@temposoul/core/result';
 import { isValidGanZhi } from '@temposoul/core/ganzhi';
 import { BAGUA, TWENTY_FOUR_MOUNTAINS } from '@temposoul/core/direction';
 import {
@@ -2064,7 +2056,7 @@ function buildMetaphysicsPrompt(
   return buildSharedMetaphysicsPrompt(basePrompt, question, { method });
 }
 
-function calculateBaZhaiApi(input: JsonRecord) {
+async function calculateBaZhaiApi(input: JsonRecord) {
   const gender =
     input.gender === 'female' ? 'female' : input.gender === 'male' ? 'male' : undefined;
   const birthYear = optInt(input, 'birthYear', 1900, 2100);
@@ -2104,19 +2096,20 @@ function calculateBaZhaiApi(input: JsonRecord) {
     ...(birthYear !== undefined ? { birthYear, gender, birthMonth, birthDay } : {}),
     mingGua: mingGua || undefined,
   };
+  const { analyzeBaZhai, analyzeBaZhaiByDoorDegree } = await import('@temposoul/core/bazhai');
   return doorToInteriorDegree !== undefined
-    ? bazhai.analyzeBaZhaiByDoorDegree({
+    ? analyzeBaZhaiByDoorDegree({
         ...baseInput,
         doorToInteriorDegree,
         northReference: northReference as 'unspecified' | 'magnetic' | 'true' | undefined,
         magneticDeclinationDegrees,
         measurementUncertaintyDegrees,
       })
-    : bazhai.analyzeBaZhai({ ...baseInput, sitMountain: sitMountain || undefined });
+    : analyzeBaZhai({ ...baseInput, sitMountain: sitMountain || undefined });
 }
 
-function buildBaZhaiPrompt(input: JsonRecord) {
-  const result = calculateBaZhaiApi(input);
+async function buildBaZhaiPrompt(input: JsonRecord) {
+  const result = await calculateBaZhaiApi(input);
   return buildPromptApiResult({
     responseMode: readPromptResponseMode(input),
     prompt: buildSharedMetaphysicsPrompt(
@@ -2132,7 +2125,7 @@ function buildBaZhaiPrompt(input: JsonRecord) {
   });
 }
 
-function calculateZodiacApi(input: JsonRecord) {
+async function calculateZodiacApi(input: JsonRecord) {
   const zodiacName = readString(input, 'zodiac', '');
   if (!zodiacName) throw new ApiError(400, 'BAD_REQUEST', 'zodiac 必须是生肖或地支。');
   const yearGanZhi = readString(input, 'yearGanZhi', '');
@@ -2143,8 +2136,9 @@ function calculateZodiacApi(input: JsonRecord) {
   if (year === undefined && !yearGanZhi) {
     throw new ApiError(400, 'BAD_REQUEST', 'year 与 yearGanZhi 至少提供一个。');
   }
+  const { calculateZodiacYearFortune } = await import('@temposoul/core/zodiac');
   try {
-    return zodiac.calculateZodiacYearFortune({
+    return calculateZodiacYearFortune({
       zodiac: zodiacName,
       ...(year !== undefined ? { year } : {}),
       ...(yearGanZhi ? { yearGanZhi } : {}),
@@ -2158,8 +2152,8 @@ function calculateZodiacApi(input: JsonRecord) {
   }
 }
 
-function buildZodiacPrompt(input: JsonRecord) {
-  const result = calculateZodiacApi(input);
+async function buildZodiacPrompt(input: JsonRecord) {
+  const result = await calculateZodiacApi(input);
   return buildPromptApiResult({
     responseMode: readPromptResponseMode(input),
     prompt: buildMetaphysicsPrompt(result.prompt, input, 'zodiac'),
@@ -2167,15 +2161,16 @@ function buildZodiacPrompt(input: JsonRecord) {
   });
 }
 
-function calculateTaiyiApi(input: JsonRecord) {
+async function calculateTaiyiApi(input: JsonRecord) {
   const scope = readEnum(input, 'scope', ['year'], 'year');
   const year = readInteger(input, 'year', 1900, 2200);
   const ganZhi = readString(input, 'ganZhi', '');
   if (ganZhi && !isValidGanZhi(ganZhi)) {
     throw new ApiError(400, 'BAD_REQUEST', `ganZhi 不是有效的六十甲子：${ganZhi}。`);
   }
+  const { generateTaiyi } = await import('@temposoul/core/taiyi');
   try {
-    return taiyi.generateTaiyi({
+    return generateTaiyi({
       scope,
       year,
       ...(ganZhi ? { ganZhi } : {}),
@@ -2189,8 +2184,8 @@ function calculateTaiyiApi(input: JsonRecord) {
   }
 }
 
-function buildTaiyiPrompt(input: JsonRecord) {
-  const result = calculateTaiyiApi(input);
+async function buildTaiyiPrompt(input: JsonRecord) {
+  const result = await calculateTaiyiApi(input);
   return buildPromptApiResult({
     responseMode: readPromptResponseMode(input),
     prompt: buildMetaphysicsPrompt(result.prompt, input, 'taiyi'),
@@ -2198,7 +2193,7 @@ function buildTaiyiPrompt(input: JsonRecord) {
   });
 }
 
-function calculateWuyunLiuqiApi(input: JsonRecord) {
+async function calculateWuyunLiuqiApi(input: JsonRecord) {
   const year = optInt(input, 'year', 1, 9999);
   const yearGanZhi = readString(input, 'yearGanZhi', '').trim();
   const question = readString(input, 'question', '').trim();
@@ -2208,8 +2203,9 @@ function calculateWuyunLiuqiApi(input: JsonRecord) {
   if (yearGanZhi && !isValidGanZhi(yearGanZhi)) {
     throw new ApiError(400, 'BAD_REQUEST', `yearGanZhi 不是有效的六十甲子：${yearGanZhi}。`);
   }
+  const { calculateWuyunLiuqi } = await import('@temposoul/core/wuyun-liuqi');
   try {
-    return wuyunLiuqi.calculateWuyunLiuqi({
+    return calculateWuyunLiuqi({
       ...(year !== undefined ? { year } : {}),
       ...(yearGanZhi ? { yearGanZhi } : {}),
       ...(question ? { question } : {}),
@@ -2223,8 +2219,8 @@ function calculateWuyunLiuqiApi(input: JsonRecord) {
   }
 }
 
-function buildWuyunLiuqiPromptApi(input: JsonRecord) {
-  const result = calculateWuyunLiuqiApi(input);
+async function buildWuyunLiuqiPromptApi(input: JsonRecord) {
+  const result = await calculateWuyunLiuqiApi(input);
   return buildPromptApiResult({
     responseMode: readPromptResponseMode(input),
     prompt: result.prompt,
@@ -2242,7 +2238,7 @@ function buildWuyunLiuqiPromptApi(input: JsonRecord) {
   });
 }
 
-function calculateHuangjiJingshiApi(input: JsonRecord) {
+async function calculateHuangjiJingshiApi(input: JsonRecord) {
   const epochYear = readInteger(input, 'epochYear');
   const year = optInt(input, 'year');
   const elapsedYears = optInt(input, 'elapsedYears', 0);
@@ -2250,8 +2246,9 @@ function calculateHuangjiJingshiApi(input: JsonRecord) {
   if ((year === undefined) === (elapsedYears === undefined)) {
     throw new ApiError(400, 'BAD_REQUEST', 'year 与 elapsedYears 必须且只能提供一个。');
   }
+  const { calculateHuangjiJingshi } = await import('@temposoul/core/huangji-jingshi');
   try {
-    return huangjiJingshi.calculateHuangjiJingshi({
+    return calculateHuangjiJingshi({
       epochYear,
       ...(year !== undefined ? { year } : {}),
       ...(elapsedYears !== undefined ? { elapsedYears } : {}),
@@ -2266,8 +2263,8 @@ function calculateHuangjiJingshiApi(input: JsonRecord) {
   }
 }
 
-function buildHuangjiJingshiPromptApi(input: JsonRecord) {
-  const result = calculateHuangjiJingshiApi(input);
+async function buildHuangjiJingshiPromptApi(input: JsonRecord) {
+  const result = await calculateHuangjiJingshiApi(input);
   return buildPromptApiResult({
     responseMode: readPromptResponseMode(input),
     prompt: result.prompt,
@@ -2281,7 +2278,7 @@ function buildHuangjiJingshiPromptApi(input: JsonRecord) {
   });
 }
 
-function calculateQizhengApi(input: JsonRecord) {
+async function calculateQizhengApi(input: JsonRecord) {
   const year = readInteger(input, 'year', 1900, 2200);
   const month = readInteger(input, 'month', 1, 12);
   const day = readInteger(input, 'day', 1, 31);
@@ -2296,8 +2293,9 @@ function calculateQizhengApi(input: JsonRecord) {
   const timeZoneId =
     input.timeZoneId === undefined ? undefined : readString(input, 'timeZoneId', '');
   const useTrueSolarTime = readBoolean(input, 'useTrueSolarTime', false);
+  const { generateQizheng } = await import('@temposoul/core/qizheng');
   try {
-    return qizheng.generateQizheng({
+    return generateQizheng({
       year,
       month,
       day,
@@ -2318,7 +2316,7 @@ function calculateQizhengApi(input: JsonRecord) {
   }
 }
 
-function calculateXuanKongApi(input: JsonRecord) {
+async function calculateXuanKongApi(input: JsonRecord) {
   const year = readInteger(input, 'year', 1, 9999);
   const sitMountain =
     input.sitMountain === undefined ? undefined : readString(input, 'sitMountain', '');
@@ -2336,8 +2334,9 @@ function calculateXuanKongApi(input: JsonRecord) {
     input.guaType === undefined
       ? undefined
       : (readEnum(input, 'guaType', ['下卦', '替卦']) as '下卦' | '替卦');
+  const { generateXuanKong } = await import('@temposoul/core/xuankong');
   try {
-    return xuankong.generateXuanKong({
+    return generateXuanKong({
       year,
       ...(sitMountain ? { sitMountain } : {}),
       ...(facingMountain ? { facingMountain } : {}),
@@ -2355,7 +2354,7 @@ function calculateXuanKongApi(input: JsonRecord) {
   }
 }
 
-function calculateResidentialApi(input: JsonRecord) {
+async function calculateResidentialApi(input: JsonRecord) {
   const year = input.year === undefined ? undefined : readInteger(input, 'year', 1, 9999);
   const birthYear = optInt(input, 'birthYear', 1900, 2100);
   const birthMonth = optInt(input, 'birthMonth', 1, 12);
@@ -2402,7 +2401,8 @@ function calculateResidentialApi(input: JsonRecord) {
   }
 
   try {
-    return residentialFengshui.generateResidentialFengshui({
+    const { generateResidentialFengshui } = await import('@temposoul/core/residential-fengshui');
+  return generateResidentialFengshui({
       ...(year !== undefined ? { year } : {}),
       ...(birthYear !== undefined ? { birthYear } : {}),
       ...(birthMonth !== undefined ? { birthMonth } : {}),
@@ -2430,8 +2430,8 @@ function calculateResidentialApi(input: JsonRecord) {
   }
 }
 
-function buildResidentialPrompt(input: JsonRecord) {
-  const result = calculateResidentialApi(input);
+async function buildResidentialPrompt(input: JsonRecord) {
+  const result = await calculateResidentialApi(input);
   return buildPromptApiResult({
     responseMode: readPromptResponseMode(input),
     prompt: buildMetaphysicsPrompt(result.prompt, input, 'residential'),
@@ -2439,8 +2439,8 @@ function buildResidentialPrompt(input: JsonRecord) {
   });
 }
 
-function buildXuanKongPrompt(input: JsonRecord) {
-  const result = calculateXuanKongApi(input);
+async function buildXuanKongPrompt(input: JsonRecord) {
+  const result = await calculateXuanKongApi(input);
   return buildPromptApiResult({
     responseMode: readPromptResponseMode(input),
     prompt: buildMetaphysicsPrompt(result.prompt, input, 'xuankong'),
@@ -2448,8 +2448,8 @@ function buildXuanKongPrompt(input: JsonRecord) {
   });
 }
 
-function buildQizhengPrompt(input: JsonRecord) {
-  const result = calculateQizhengApi(input);
+async function buildQizhengPrompt(input: JsonRecord) {
+  const result = await calculateQizhengApi(input);
   return buildPromptApiResult({
     responseMode: readPromptResponseMode(input),
     prompt: buildMetaphysicsPrompt(result.prompt, input, 'qizheng'),
