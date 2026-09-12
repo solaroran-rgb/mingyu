@@ -46,4 +46,19 @@
 - git：随 branch thread/t2-translation-audit 追加提交
 - 阻塞项：无
 
+## 2026-09-13 · ZCode（M1 运行时约束落地——老板批示「按最完美方案执行下一步」后启动）
+
+- 做了什么：执行 05 方案 M1（运行时约束先行，468 红线 2.1-03/05/06/15/16/18/19、2.2-01 服务端落地第一步）：
+  1. `src/data/lexicon-translator-seed.ts`（新增）：国学资产线 lexicon 统一 Schema 318 条合并种子（dict_version 1.0.0，license 全 public_domain），evidenceQuote/语义库/L3 释义/多语言白话全量保留
+  2. `src/lib/ai/compliance.ts`（新增）：确定性合规逻辑集中——解读铁律（COMPLIANCE_RULES）、敏感领域注入（健康/法律/财务/生死 4 域检测，不改写用户问题零误杀）、术语口径查表（buildTermHints，≥2 字术语子串匹配，注入 professionalDef+白话，上限 12 条）、输出流内熔断（OutputFuse，5 组高危正则：生死/医疗/金融指令/法律指令/宿命论）、FUSED_NOTICE 安全收尾
+  3. `src/lib/ai/proxy.ts`（改造）：temperature 0.7→**0**（确定性锁）；合规约束全部并入 system message（**user 内容零改动**，不破坏调用方契约与既有测试断言）；SSE 流首 meta 事件（compliance/dict_version/model_version 三元组）；转发循环接入熔断（截断+安全收尾+meta.fused 标记+上游 reader.cancel）
+  4. `tests/ai-proxy-compliance.test.ts`（新增 7 用例）：temperature=0/铁律/user 原样/敏感注入正反例/术语注入/meta 事件/熔断行为/正常转发回归——**7/7 全绿**
+- 回归：core 1539/1539 ✅（与基线一致）；主仓 tests 1777/1777 ✅（基线 1770+新增 7）
+- 产物路径：上述 4 个代码文件（分支 thread/t2-translation-audit @ 4b9e4d2，已推 solaroran-rgb）；worktree .temposoul-wt\thread-t2-audit
+- ⚠️ 部署边界：**代码仅就绪未部署未合并**——部署/合并/bump sw 权在主控；改动面仅 src/lib/ai/* + src/data + 新测试，无线上环境变量需求
+- 已知边界（诚实声明）：①SSE 已转发内容无法撤回，熔断为「截断+安全收尾」形态；②报告级三元组完整落盘待报告存储功能存在时补齐（当前以 meta 事件形式送达）；③术语单字（干支）不注入避免误命中
+- 下一步（等待主控）：①合并/部署 M1（本分支可 review）；②M2 词库升级（68 条 L1/L2 迁移校验 + 15 体系 L1 补齐）；③M3 引擎 archetype_key 对接（依赖 T1）
+- 阻塞项：无
+
+
 
