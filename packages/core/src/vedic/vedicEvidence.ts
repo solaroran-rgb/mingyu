@@ -139,6 +139,74 @@ export function buildVedicEvidenceTrail(result: VedicData): EvidenceTrail {
     depth: 1,
   });
 
+  // 5. Vimshottari Dasha（depth 1 辅证）
+  if (result.vimshottari && result.vimshottari.mahadashas.length > 0) {
+    const first = result.vimshottari.mahadashas[0];
+    items.push({
+      title: 'Vimshottari Dasha 起算',
+      system: 'vedic',
+      computationChain: [
+        {
+          name: '出生大运主星',
+          reference: 'vimshottari.birthLord',
+          output: `${result.vimshottari.birthLord}（balance=${result.vimshottari.balance.toFixed(4)}）`,
+        },
+        {
+          name: '首个大运',
+          reference: 'vimshottari.mahadashas[0]',
+          output: `${first.lordSanskrit} ${first.durationYears} 年`,
+        },
+        {
+          name: 'Antardasha 切分',
+          reference: 'vimshottari.mahadashas[0].antardashas',
+          formula: '段长 = 大运年限 × 段主星年限 / 120',
+        },
+      ],
+      source: { type: 'classical', name: 'Vimshottari / BPHS（7·20·6·10·7·18·16·19·17 = 120 年）' },
+      boundary: {
+        applicableWhen: ['以 Chandra 宿宿主星起运', '日历年取 365.25 日/年'],
+        cautionWhen: ['只做 Mahadasha + Antardasha 两级，Pratyantar 及以后未展开'],
+      },
+      counterEvidence: [
+        { description: 'Dasha 体系（Vimshottari 与 Yogini/Chara）流派不同', severity: 'alternative' },
+      ],
+      confidence: 'medium',
+      depth: 1,
+    });
+  }
+
+  // 6. D9 Navamsa（depth 1 辅证）
+  if (result.vargas && result.vargas.D9) {
+    items.push({
+      title: 'D9 Navamsa 分盘',
+      system: 'vedic',
+      computationChain: [
+        {
+          name: '分盘规则',
+          reference: 'vargas.D9',
+          formula: '每 Rashi 9 等分（3°20′），Chara/自宫·固定+8·双元+4 起算',
+        },
+        {
+          name: 'Lagna 分盘落位',
+          reference: 'vargas.D9.placements[0]',
+          output: result.vargas.D9.placements[0]
+            ? `${result.vargas.D9.placements[0].label}: ${result.vargas.D9.placements[0].rashi}`
+            : '',
+        },
+      ],
+      source: { type: 'classical', name: 'Parashari Chara Navamsa（BPHS）' },
+      boundary: {
+        applicableWhen: ['恒星黄经直接映射，不重新求上升点'],
+        cautionWhen: ['Navamsa 起始规则存在 Parashari/Jaimini 流派差异'],
+      },
+      counterEvidence: [
+        { description: 'D9 起算规则在少数典籍中略有出入', severity: 'minor' },
+      ],
+      confidence: 'medium',
+      depth: 1,
+    });
+  }
+
   return buildEvidenceTrail(
     items,
     `吠陀占星证据链（${result.birth.dateTime} · Lahiri）`,
