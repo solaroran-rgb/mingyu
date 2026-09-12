@@ -54,8 +54,8 @@ AI_MODEL=deepseek-chat
 #
 # ── Lemon Squeezy（主实现）──
 # LEMONSQUEEZY_API_KEY=...            # 机密，Dashboard → API 新建 token
-# LEMONSQUEEZY_STORE_ID=12345        # 数字 store id
-# LEMONSQUEEZY_VARIANT_ID=67890      # 数字 variant id（订阅 recurring 产品）
+# LEMONSQUEEZY_STORE_ID=你的数字store_id   # 非机密，LS Dashboard → Settings → Stores 顶部 ID
+# LEMONSQUEEZY_VARIANT_ID=1356751     # 非机密：TempoSoul Pro（当前 Draft，CN¥9.99/年，定价待定）
 # LEMONSQUEEZY_WEBHOOK_SECRET=...    # 机密，Webhook 端点 https://<域名>/api/v1/ls-webhook 创建后下发
 # LEMONSQUEEZY_API_URL=https://api.lemonsqueezy.com/v1   # 可选
 #

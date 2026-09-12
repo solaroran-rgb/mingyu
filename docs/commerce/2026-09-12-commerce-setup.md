@@ -75,8 +75,8 @@ docs/commerce/
 | --- | --- | --- | --- |
 | `PAYMENT_PROVIDER` | vars | `lemonsqueezy` | 是（空=关闭支付） |
 | `LEMONSQUEEZY_API_KEY` | secret | `...` | 是 |
-| `LEMONSQUEEZY_STORE_ID` | vars | `12345` | 是（数字） |
-| `LEMONSQUEEZY_VARIANT_ID` | vars | `67890` | 是（订阅 recurring 产品 variant） |
+| `LEMONSQUEEZY_STORE_ID` | vars | 数字 store id（LS Dashboard → Settings → Stores） | 是 |
+| `LEMONSQUEEZY_VARIANT_ID` | vars | `1356751`（TempoSoul Pro，**已定，非保密**；当前 Draft，定价待定） | 是（已在 wrangler.toml 写为默认值） |
 | `LEMONSQUEEZY_WEBHOOK_SECRET` | secret | `...` | 是（webhook 回写 premium） |
 | `LEMONSQUEEZY_API_URL` | vars | `https://api.lemonsqueezy.com/v1` | 否 |
 
@@ -121,13 +121,21 @@ POST /api/v1/newsletter → KV pending → createConfirmToken(HMAC) → Resend �
 4. 本地 `.dev.vars` 填同值 → `pnpm dev` → 提交 newsletter 订阅 → 收信 → 点链接确认 KV 翻 `confirmed`。
 
 ### B. 支付（Lemon Squeezy，主）
+
+> **⚠️ 提现前置条件（中国大陆区用户必读）**：Lemon Squeezy 对中国大陆区 **不支持 Stripe payouts，也不支持银行 payouts**，
+> 唯一提现通道是**连接一个 PayPal 账户**。在 live 正式收款之前，**必须**由你本人在 LS 后台
+>（Dashboard → Settings → Payments → Payouts）连接 PayPal 并完成 KYC / 账户激活——这一步只能你本人操作，
+> 代码与部署都无法代办。未连 PayPal 时即便能收款，资金也无法提现。建议在首次 live 收款前完成。
+
 1. 注册 Lemon Squeezy（个人即可，无需公司）→ Dashboard 设置店铺。
-2. Dashboard → Products → 新建**订阅 recurring** 产品，记下其 **store id** 与 **variant id**（数字）。
+2. Dashboard → Products → 新建**订阅 recurring** 产品，记下其 **store id**；
+   订阅变体 **TempoSoul Pro = `1356751`（已定，非保密）**，当前 Draft、CN¥9.99/年（定价待对齐，见 §7）。
 3. Dashboard → Settings → API → Create API token，复制 `LEMONSQUEEZY_API_KEY`。
 4. 配变量：
    - `wrangler pages secret put LEMONSQUEEZY_API_KEY`
    - `wrangler pages secret put LEMONSQUEEZY_WEBHOOK_SECRET`（步骤 5 创建 webhook 后拿）
-   - `wrangler.toml [vars]`：`PAYMENT_PROVIDER="lemonsqueezy"`、`LEMONSQUEEZY_STORE_ID`、`LEMONSQUEEZY_VARIANT_ID`。
+   - `wrangler.toml [vars]`：`PAYMENT_PROVIDER="lemonsqueezy"`、`LEMONSQUEEZY_STORE_ID`；
+     `LEMONSQUEEZY_VARIANT_ID="1356751"` 已在本文件写为默认值，无需再改。
 5. Dashboard → Settings → Webhooks → Add endpoint：
    - URL：`https://<域名>/api/v1/ls-webhook`
    - 订阅事件：`subscription_created`、`subscription_payment_success`、`order_created`
@@ -154,3 +162,26 @@ POST /api/v1/newsletter → KV pending → createConfirmToken(HMAC) → Resend �
 - 确认邮件只含收件人本人邮箱与确认链接；支付 webhook 常量时间验签。
 - 未登录下单（anonymous）不回写账户档位。
 - 本线程不部署、不合 main、不 bump sw；push 仅到 `solaroran-rgb` 的 `thread/commerce`。
+
+---
+
+## 7. 定价建议（仅结论，不改线上定价）
+
+**解锁内容**（`src/components/PremiumGate.tsx` perks）：① 无限次 AI 深度解读；② 专业级合盘 / 择日报告；
+③ 新体系优先体验。本质是**取消每日 5 次免费 AI 额度、无限 AI 对话**——核心可变成本是 AI 推理 token。
+
+**为什么 ¥9.99/年 过低**：
+- ¥9.99/年 ≈ **US$1.4/年**。LS 抽成 5% + $0.50/笔 ≈ $0.57，年净收入仅 ~$0.83。
+- 一次 AI 深度解读的 token 成本约 US$0.02–0.10（视模型/长度），重度用户一周内（20+ 次）就会烧掉全年收入；
+  「无限」在这个价位上是**成本套利漏洞**，而非福利。
+- 此外未覆盖任何支持 / 客服 / 退款 / 拒付成本，也远低于同类占星订阅锚点（Co-Star / Sanctuary 等多在 $10–30/年或 $5–15/月）。
+
+**建议锚点（美元锚定、LS 作为 MoR 代扣全球税）**：
+| 档 | 建议价 | 说明 |
+| --- | --- | --- |
+| **年付锚点** | **US$29/年**（≈ ¥210） | 折合约 $2.4/月，对标行业 $30/年档略低获客；扣费后年净 ~$27，可覆盖合理 AI token 与支持成本 |
+| **月付锚点** | **US$9.99/月**（≈ ¥72） | 给犹豫用户低门槛试用；年付相当于月付的 ~29%，强引导年付 |
+
+**落地动作（账号/运营侧，非代码）**：live 前在 LS Dashboard 把 variant `1356751` 从 Draft 的 ¥9.99/年
+改为上述 USD 价（或新建一个 US$9.99/月的月付 variant，`LEMONSQUEEZY_VARIANT_ID` 换为该月付 variant 即可切档；
+代码与 webhook 无需改动）。当前 ¥9.99/年仅作占位，**不建议以此价格 live**。

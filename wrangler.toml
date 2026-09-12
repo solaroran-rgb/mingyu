@@ -52,6 +52,7 @@ ANALYTICS_SITE_ID = "2681353fab604a86bcd9995f5a47045b"
 # MAIL_FROM_NAME = "TempoSoul"
 # PUBLIC_SITE_URL = "https://your-domain.com"
 # PAYMENT_PROVIDER = "lemonsqueezy"
-# LEMONSQUEEZY_STORE_ID = "12345"
-# LEMONSQUEEZY_VARIANT_ID = "67890"
+# LEMONSQUEEZY_STORE_ID = "你的数字store_id"   # 非机密，LS Dashboard → Settings → Stores 顶部 ID
+# VARIANT_ID 已定（TempoSoul Pro，非保密）；默认值，创建 checkout 时直接使用：
+LEMONSQUEEZY_VARIANT_ID = "1356751"
 # 激活手册见 docs/commerce/2026-09-12-commerce-setup.md
