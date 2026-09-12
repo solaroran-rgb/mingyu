@@ -37,3 +37,13 @@
 - 下一步：主控裁决决策 A/B → 若 A：M1 运行时约束可立即开工（不依赖 T1）；输出端 LLM 实测（需 AI key）可补跑
 - 阻塞项：无（输出端动态抽测依赖 AI_API_KEY，已列为可选补跑项）
 
+## 2026-09-13 · ZCode（追加检索：E 盘 L1/L2 部署存在性排查，应老板问）
+
+- 做了什么：定向排查 5 落点——旗舰引擎 temposoul-core（0.2.0 线上）、前身副本 mingyu-core（E:\Agent OS\projects）、PoC 三合一、国学资产线 `__资产基础设施__`、主仓 packages/core 复核。
+- 关键发现：**国学资产线有 L1/L2 性质的真实数据部署**——`_meta\contracts\lexicon-schema.ts`（archetypeKey/evidenceQuote 古籍引文/semanticLibrary 语义库/professionalDef L3/translations 多语言白话；manifest 原则 P5_l1l4_static「L1-L4 静态化、运行期只查表零 LLM」）；19 个词库 JSON 共 318 条，其中八字 3 文件 68 条 100% 填 evidenceQuote（真实原文如「《渊海子平》：比肩者，兄弟也，同我者也。」）+ classicalTerm + semanticLibrary；318/318 填 professionalDef + translations + version。**但消费方为零**——无任何程序读取，数据已建程序未接。
+- 对主审计的修订：①2.1-01 判定 ❌ 不变但证据细化（主仓另有 10 处 @古籍依据 卷次级注释；资产线 68 条为数据级雏形）；②外围替身由 2 项扩为 3 项；③**M2 词库升级不必从零**——schema 与 PrototypeEntry 同构，68 条可迁移，工作量重心转为对齐 schema + 补 15 体系 L1 + 建消费程序。
+- 产物路径：output\06_补充检索_E盘L1L2部署排查.md
+- git：随 branch thread/t2-translation-audit 追加提交
+- 阻塞项：无
+
+
