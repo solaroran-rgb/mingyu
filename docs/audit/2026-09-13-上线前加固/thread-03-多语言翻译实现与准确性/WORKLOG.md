@@ -53,3 +53,17 @@
 - 关键结论/数据：术语表终态 **1201 行 = filled 258 + partial 76 + supplement 21 + tier2 846**；试运行 en/es/ja/ko 6/6、th 4/6、vi 5/6（91.7% exact，非验收数据）；M0–M4 ≈8.5 人日。
 - 下一步（实施阶段，非本审计线程）：M0 术语表代码生成+lang 字段 → M1 语言分支（与 T2 协同）→ M2 引擎键化+L0 渲染 → M3 受限翻译+门禁 → M4 回译入 CI。母语复核表已交付，待老板安排 6 语言复核人。
 - 阻塞项：①母语复核人员（用户拍板后置）；②≥98% 验收数据需 M4 后按整段文案实测（当前仅有术语级试运行）；③M1 与 T2 在 proxy.ts 同点位施工，需主控合并排期。
+
+## 2026-09-13 07:20 · M0+M1+M2首片 实施落地 ✅（老板指令「继续执行后续任务」）
+
+- 做了什么：
+  1. **M0**：新增 `scripts/i18n/gen-terms-7lang.py`（幂等生成器）→ 产出 `src/data/terms-7lang.ts`（tier1 355 行查找表，含 `translateTerm`/`termKeyByZh`；tier2 不入前端包控体积）+ `shared/cases/_keys_snapshot.json`（1201 键快照 + CSV sha256，对齐 T4 规范）。
+  2. **M1 服务端**：`src/lib/ai/proxy.ts`——请求体新增 `lang`（7 locale 白名单，非法→结构化 400 `INVALID_LANG`）与 `mode:'translate'`（受限翻译档：temperature 固定 0 + 禁改数值/干支/方向的 system prompt）；普通解读带 lang 时注入「请全程使用{语言}撰写解读」指令；`packages/core/src/prompt/types.ts` 的 `PromptBuildOptions` 新增 `language?: string`（M3 模板分支接口就绪）。
+  3. **M1 前端**：`stream-client.ts`（StreamOptions.lang → 请求体）→ `useAiChat(aiConfig, lang)` → `AiChatPanel`（useI18n 注入 locale）——前端 lang 全链贯通。
+  4. **M2 首片**：`BaziChartBoard.tsx`——新增 `useTermLabel` shim（zh→key→locale 查表，动态 import 控包体），八字干支符号与五行标签已按 locale 渲染；其余 Board 组件接入与引擎输出键化（BP1）留待 M2 续。
+  5. 测试：新增 `tests/ai-analyze-lang.test.ts` 4 例（非法 lang 400 / translate 档 temp=0 / en 指令注入 / 默认 zh 不变）。
+- 产物路径：上述代码 + 生成物；分支 `thread/t3-i18n-accuracy` 提交推送（见部署日志 commit 号）。
+- 关键结论/数据：回归 **api 108/108、prompt 229/229 全绿 ≥ 基线**；`tsc --noEmit` 本次改动文件 0 错误（存量错误在 functions/*、StarfieldBackground 等与本改动无关）；`pnpm build` 通过 11.5s。
+- 踩坑记录（生成器两连）：①头注释写 `thread-03-*/output` 通配符 `*/` 提前终止块注释 → TS1121；②locale 键 `zh-CN:` 未加引号 → TS1005。均已修复并重生成。
+- 下一步：M2 续（其余 4 个 Board + 引擎输出键化 BP1，与 T2 词库锚定共用键）→ M3 受限翻译调用 + 术语表服务端注入（动态 import 防包体回弹）+ G2/G3 门禁预检 + untranslated UI → M4 回译入 CI（05 脚本工程化）。
+- 阻塞项：同前（母语者后置；T2 M1 协同需主控排期）。registry 缺口：TempoSoul 网站未登记 _registry 组件表（impact.py 查无），建议主控补登记。

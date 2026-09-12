@@ -12,4 +12,6 @@ export interface PromptBuildOptions {
   currentTime?: Date;
   /** 用户问题。 */
   question?: string;
+  /** 输出语言（BCP-47 风格 locale，如 en / ja / vi-VN）；缺省 zh-CN。M3 起由模板语言分支消费。 */
+  language?: string;
 }

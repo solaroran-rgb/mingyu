@@ -52,6 +52,27 @@ const SYSTEM_PROMPT_SINGLE = '请根据用户提供的排盘资料和问题直�
 
 const SYSTEM_PROMPT_CHAT = '用户的第一条消息是本次排盘资料和问题。请继续围绕这份资料解读。';
 
+// T3 多语言（M1）：AI 链路语言控制。口径见 docs/audit/2026-09-13-上线前加固/thread-03-*/output/02
+const SUPPORTED_AI_LOCALES = ['zh-CN', 'en', 'es-ES', 'ja', 'ko-KN', 'th-TH', 'vi-VN'] as const;
+type SupportedAiLocale = (typeof SUPPORTED_AI_LOCALES)[number];
+
+const AI_LOCALE_LABELS: Record<SupportedAiLocale, string> = {
+  'zh-CN': '中文',
+  en: 'English',
+  'es-ES': 'Español',
+  ja: '日本語',
+  'ko-KN': '한국어',
+  'th-TH': 'ไทย',
+  'vi-VN': 'Tiếng Việt',
+};
+
+// 受限翻译档（决策 A）：temperature=0、数值/干支/吉凶方向禁改；术语表注入在 M3 接入。
+const SYSTEM_PROMPT_TRANSLATE_BASE =
+  '你是中华命理内容的专业译者。逐句翻译用户提供的资料，遵守：' +
+  '1) 数值、干支、星曜名、宫位名、卦名与吉凶方向一律不得改变；' +
+  '2) 术语译法必须与资料中已有译法一致，不得自行发明；' +
+  '3) 只输出译文正文，不附加解释。';
+
 /**
  * 处理 AI 解析请求，返回 SSE Response。
  * 如果出错则返回 JSON error Response。
@@ -61,7 +82,13 @@ const SYSTEM_PROMPT_CHAT = '用户的第一条消息是本次排盘资料和问�
  * 2. { messages: Array<{role, content}> } — 多轮对话
  */
 export async function handleAiAnalyze(request: Request, env?: AiEnv): Promise<Response> {
-  let body: { prompt?: unknown; messages?: unknown; aiConfig?: AiProviderConfig };
+  let body: {
+    prompt?: unknown;
+    messages?: unknown;
+    aiConfig?: AiProviderConfig;
+    lang?: unknown;
+    mode?: unknown;
+  };
   try {
     body = parseJsonObject(await readLimitedRequestText(request, DEFAULT_MAX_REQUEST_BODY_BYTES));
   } catch (error) {
@@ -74,6 +101,19 @@ export async function handleAiAnalyze(request: Request, env?: AiEnv): Promise<Re
     }
     return aiJsonError(400, 'BAD_REQUEST', '请求体必须是合法 JSON。');
   }
+
+  // 语言白名单（BP3）：非法 lang 结构化 400，不进入上游
+  const rawLang = typeof body.lang === 'string' ? body.lang.trim() : '';
+  if (rawLang && !(SUPPORTED_AI_LOCALES as readonly string[]).includes(rawLang)) {
+    return aiJsonError(400, 'INVALID_LANG', `不支持的语言代码：${rawLang}。`, {
+      supported: SUPPORTED_AI_LOCALES as readonly string[],
+    });
+  }
+  const locale: SupportedAiLocale = rawLang
+    ? (rawLang as SupportedAiLocale)
+    : 'zh-CN';
+  // 受限翻译档（决策 A）：mode=translate 时 temperature 固定 0（BP4）
+  const translationMode = body.mode === 'translate';
 
   const provider = resolveAiProvider(body.aiConfig, env);
   if ('error' in provider) {
@@ -124,7 +164,14 @@ export async function handleAiAnalyze(request: Request, env?: AiEnv): Promise<Re
     return aiJsonError(400, 'PROMPT_TOO_LONG', `提示词不能超过 ${MAX_PROMPT_LENGTH} 字符。`);
   }
 
-  const systemPrompt = isMultiTurn ? SYSTEM_PROMPT_CHAT : SYSTEM_PROMPT_SINGLE;
+  const baseSystemPrompt = isMultiTurn ? SYSTEM_PROMPT_CHAT : SYSTEM_PROMPT_SINGLE;
+  const languageDirective =
+    locale !== 'zh-CN' && !translationMode
+      ? ` 请全程使用${AI_LOCALE_LABELS[locale]}撰写解读。`
+      : '';
+  const systemPrompt = translationMode
+    ? `${SYSTEM_PROMPT_TRANSLATE_BASE}目标语言：${AI_LOCALE_LABELS[locale]}（${locale}）。`
+    : `${baseSystemPrompt}${languageDirective}`;
 
   const endpoint = `${provider.baseUrl}/chat/completions`;
   const upstreamResult = await fetchUpstreamWithRetry(endpoint, {
@@ -137,7 +184,7 @@ export async function handleAiAnalyze(request: Request, env?: AiEnv): Promise<Re
       model: provider.model,
       stream: true,
       max_tokens: 4096,
-      temperature: 0.7,
+      temperature: translationMode ? 0 : 0.7,
       messages: [
         {
           role: 'system',

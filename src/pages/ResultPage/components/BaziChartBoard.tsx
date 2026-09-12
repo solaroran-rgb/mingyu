@@ -1,4 +1,4 @@
-import { Suspense, lazy, memo, type ReactNode } from 'react';
+import { Suspense, lazy, memo, useEffect, useState, type ReactNode } from 'react';
 import {
   getShenShaType,
   getTenGodForBranch,
@@ -6,6 +6,7 @@ import {
   type BaziChartResult,
 } from '@temposoul/core/bazi';
 import { uniqueNonEmptyStrings } from '@/lib/array-utils';
+import { useI18n } from '@/i18n';
 import {
   formatAvoidGodPrioritySummary,
   formatBaziDate,
@@ -73,14 +74,42 @@ function filterBaziBoardShensha(items: string[]) {
   return uniqueNonEmptyStrings(items).filter((item) => BAZI_BOARD_COMMON_SHENSHA.has(item));
 }
 
+let terms7langModule: Promise<typeof import('@/data/terms-7lang')> | null = null;
+
+function loadTerms7lang() {
+  terms7langModule ??= import('@/data/terms-7lang');
+  return terms7langModule;
+}
+
+/** L0 查表 shim（T3·M2 首片）：中文源术语 → 当前语言标签；查不到返回 null，渲染层保留原文。 */
+function useTermLabel(zh: string): string | null {
+  const { locale } = useI18n();
+  const [label, setLabel] = useState<string | null>(null);
+  useEffect(() => {
+    if (locale === 'zh-CN') return;
+    let active = true;
+    loadTerms7lang().then((mod) => {
+      if (active) setLabel(mod.translateTerm(zh, locale));
+    });
+    return () => {
+      active = false;
+    };
+  }, [zh, locale]);
+  return label;
+}
+
 function BaziGanZhiValue(props: { value: string }) {
   const wuxing = getWuxing(props.value);
+  const label = useTermLabel(props.value);
+  const wuxingLabel = useTermLabel(wuxing);
 
   return (
     <span className="bazi-ganzhi-value">
-      <strong className="bazi-ganzhi-symbol">{props.value}</strong>
+      <strong className="bazi-ganzhi-symbol" title={props.value}>
+        {label ?? props.value}
+      </strong>
       <small className="bazi-wuxing-label" data-wuxing={wuxing}>
-        {wuxing}
+        {wuxingLabel ?? wuxing}
       </small>
     </span>
   );
