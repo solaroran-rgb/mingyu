@@ -21,3 +21,19 @@
 - 关键结论：三级转译（L1→L3→L5）**无确定性实现实体**，词库是术语词典非分支转译库，AI 链路是「盘面 prompt + temperature 0.7 透传」，468 矩阵 2.1 节证据映射张冠李戴（24 partial 实质多为 fail/na）。
 - 下一步：S3 部署阶段判定 → S4 抽测 50 条 → S5 方案 → S6 报告
 - 阻塞项：无
+
+## 2026-09-13 · ZCode（S1-S6 全部完成，线程交付）
+
+- 做了什么：S1-S6 全部完成并入库。
+  - output\01_三级转译定义与计划口径.md（24 项原计划口径提炼）
+  - output\02_24项红线实证矩阵.md（逐项三态判定：❌13 / 🟡6 / 建议改判 na 5；现行矩阵证据映射勘误——prompt-evidence/prompt-page-rules 测试与转译无关，1.4-05/1.4-12 pass 建议降级）
+  - output\03_部署阶段判定.md（三问作答：L0-L5 本体 0%；09-11 线程 B「词库 800 转译库→1180 词典」口径静默漂移已记录）
+  - output\04_转译质量抽测.md（53 条真实 prompt 静态审计：盘面证据 53/53、古籍锚定达标 0/53、合规约束 2/53；失败模式 A-E 归类；附带发现 ziwei prompt 空值 undefined 泄漏缺陷）
+  - output\05_执行方案.md（推荐决策 A 混合管线：确定性原型词库 + LLM 受限生成；五里程碑 ≈40 人日；M1 运行时约束 6 人日可立即启动；T3 接口 = archetype_key + L3 白话源文本）
+  - output\审计报告_三级转译现状与方案.md（汇总）+ output\_samples_53.json（黄金样例初始资产，可复现脚本路径已注明）
+- 产物路径：上述 7 件 + WORKLOG
+- git：worktree `.temposoul-wt\thread-t2-audit`，分支 `thread/t2-translation-audit`，commit 8601a0b（任务卡+WORKLOG）+ fb9b899（output 7 件，-f 绕过 .gitignore `output/` 规则误伤），已推 solaroran-rgb
+- 关键结论：转译不是做得差而是没被做；内容合规是当前最大风险敞口；A/B 路线决策（转译体系要不要存在）待主控+用户裁决
+- 下一步：主控裁决决策 A/B → 若 A：M1 运行时约束可立即开工（不依赖 T1）；输出端 LLM 实测（需 AI key）可补跑
+- 阻塞项：无（输出端动态抽测依赖 AI_API_KEY，已列为可选补跑项）
+
