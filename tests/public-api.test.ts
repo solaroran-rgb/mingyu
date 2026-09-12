@@ -134,6 +134,8 @@ test('公开 API manifest 应暴露 OpenAPI 和 skill 地址', async () => {
   assert.ok(body.data.endpoints.includes('POST /api/v1/divination/astrolabe/prompt'));
   assert.ok(body.data.endpoints.includes('POST /api/v1/metaphysics/wuyun-liuqi/calculate'));
   assert.ok(body.data.endpoints.includes('POST /api/v1/metaphysics/wuyun-liuqi/prompt'));
+  assert.ok(body.data.endpoints.includes('POST /api/v1/divination/jinkoujue'));
+  assert.ok(body.data.endpoints.includes('POST /api/v1/divination/jinkoujue/prompt'));
   assert.ok(body.data.endpoints.includes('POST /api/v1/metaphysics/huangji-jingshi/calculate'));
   assert.ok(body.data.endpoints.includes('POST /api/v1/metaphysics/huangji-jingshi/prompt'));
   assert.ok(body.data.endpoints.includes('POST /api/v1/ai/analyze'));
