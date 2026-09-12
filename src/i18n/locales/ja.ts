@@ -72,6 +72,7 @@ export const ja: Dict = {
     desc: '無制限の AI 解釈と専門級レポートを解放',
     perks: ['無制限の AI 深読み', '専門級の合盤・吉日レポート', '新機能の優先体験'],
     cta: '今すぐアップグレード',
+    checkoutCta: 'チェックアウト',
     quotaHint: '本日の無料利用回数（残り）',
     loginHint: 'ログインしてサブスクリプションを管理',
   },
@@ -111,7 +112,7 @@ export const ja: Dict = {
     s4Title: 'Cookie とローカルストレージ',
     s4B1: '当サイトは、ブラウザのローカルストレージを使用して設定（通知の非表示や AI 設定など）を記憶します。第三者 Cookie によるクロスサイトトラッキングは行いません。',
     s5Title: 'お問い合わせ',
-    s5B1: '本ポリシーに関するご質問、またはサーバー側の処理記録の削除をご希望の場合は、サイト設定内のフィードバック窓口よりご連絡ください。',
+    s5B1: '本ポリシーに関するご質問、またはサーバー側の処理記録の削除をご希望の場合は、サイト設定内のフィードバック窓口よりご連絡いただくか、ferryoran@outlook.com までメールをお送りください。',
     disclaimerHead: '免責事項',
     disclaimerNote:
       'For entertainment and self-reflection purposes only. Not a substitute for professional advice.',

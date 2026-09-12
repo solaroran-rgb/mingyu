@@ -70,6 +70,7 @@ export const zhCN = {
     desc: '解锁无限次 AI 深度解读与专业级报告',
     perks: ['无限次 AI 深度解读', '专业级合盘与择日报告', '优先体验新体系功能'],
     cta: '立即升级',
+    checkoutCta: '立即支付',
     quotaHint: '今日剩余免费次数',
     loginHint: '登录后可管理订阅',
   },
@@ -105,7 +106,7 @@ export const zhCN = {
     s4Title: 'Cookie 与本地存储',
     s4B1: '本站使用浏览器本地存储来记住你的偏好（如关闭提示、AI 设置）。我们不通过第三方 Cookie 跨站追踪你。',
     s5Title: '联系方式',
-    s5B1: '如对本隐私政策有任何疑问，或希望删除服务端处理记录，请通过站点设置中的反馈入口联系我们。',
+    s5B1: '如对本隐私政策有任何疑问，或希望删除服务端处理记录，请通过站点设置中的反馈入口联系我们，或发送邮件至 ferryoran@outlook.com。',
     disclaimerHead: '免责声明',
     disclaimerNote:
       'For entertainment and self-reflection purposes only. Not a substitute for professional advice.',

@@ -76,6 +76,7 @@ export const en: Dict = {
       'Early access to new systems',
     ],
     cta: 'Upgrade now',
+    checkoutCta: 'Checkout',
     quotaHint: 'Free uses left today',
     loginHint: 'Sign in to manage your subscription',
   },
@@ -115,7 +116,7 @@ export const en: Dict = {
     s4Title: 'Cookies and local storage',
     s4B1: 'This site uses browser local storage to remember your preferences (such as dismissed notices and AI settings). We do not track you across sites with third-party cookies.',
     s5Title: 'Contact',
-    s5B1: 'If you have questions about this privacy policy, or wish to delete server-side processing records, please contact us through the feedback entry in the site settings.',
+    s5B1: 'If you have questions about this privacy policy, or wish to delete server-side processing records, please contact us through the feedback entry in the site settings, or email ferryoran@outlook.com.',
     disclaimerHead: 'Disclaimer',
     disclaimerNote:
       'For entertainment and self-reflection purposes only. Not a substitute for professional advice.',

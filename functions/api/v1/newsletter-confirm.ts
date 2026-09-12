@@ -16,8 +16,12 @@
  *   - token 合法但 KV 无对应记录        → 404 unknown_subscriber
  *
  * 安全：AUTH_SECRET 必须从环境变量读取（wrangler secret / Pages 环境变量），禁止硬编码。
- * 邮件发送：暂无邮件通道，sendConfirmationEmail 仅预留函数签名（TODO），不实际发信。
+ * 邮件发送：已接入 Resend（见 src/lib/server/mailer.ts）。sendConfirmationEmail 由
+ *   POST /api/v1/newsletter 调用，env 未配置时静默 no-op（不发信）；账号填
+ *   RESEND_API_KEY / MAIL_FROM 后即真实发信。
  */
+
+import { sendMail, type MailerEnv } from '../../../src/lib/server/mailer';
 
 interface KVNamespace {
   get(key: string): Promise<string | null>;
@@ -28,9 +32,11 @@ interface KVNamespace {
   ): Promise<void>;
 }
 
-interface ConfirmEnv {
+interface ConfirmEnv extends MailerEnv {
   newsletter_emails?: KVNamespace;
   AUTH_SECRET?: string;
+  /** 可选：用于拼接确认链接的站点根 URL；缺省取请求 origin */
+  PUBLIC_SITE_URL?: string;
 }
 
 type PagesContext = {
@@ -128,16 +134,56 @@ export async function verifyConfirmToken(
 }
 
 /**
- * 邮件发送 hook（预留）。
- * TODO(邮件通道): 接入真实邮件服务（Resend / SendGrid / 腾讯云 SES 等）后在此发送确认邮件，
- *   链接形如 https://<域名>/api/v1/newsletter-confirm?token=<token>。
- * 当前无邮件通道，仅为函数签名占位，绝不实际发信。
+ * 发送订阅确认邮件（双确认第一步：发信）。
+ * 由 POST /api/v1/newsletter 在写入 pending 记录后调用。
+ *
+ * 链路：本函数 → sendMail(Resend) → 收件人点邮件内链接 → 本文件 onRequest 完成
+ *   pending→confirmed。
+ *
+ * 降级：env 未配置（RESEND_API_KEY / MAIL_FROM 缺失）或发信失败时静默返回，
+ *   不影响订阅主流程、不向终端用户暴露错误。
+ *
+ * @param env     运行时环境（含 Resend 发件配置）
+ * @param email   已归一化收件人邮箱
+ * @param token   已签发确认 token
+ * @param baseUrl 本次请求 origin（env.PUBLIC_SITE_URL 优先）
  */
 export async function sendConfirmationEmail(
-  _email: string,
-  _token: string,
+  env: ConfirmEnv,
+  email: string,
+  token: string,
+  baseUrl: string,
 ): Promise<void> {
-  // TODO: 接入邮件通道后实现发送；当前故意为空。
+  const origin = (env.PUBLIC_SITE_URL || baseUrl || '').replace(/\/+$/, '');
+  if (!origin) return;
+  const confirmUrl = `${origin}/api/v1/newsletter-confirm?token=${encodeURIComponent(token)}`;
+  const brand = env.MAIL_FROM_NAME?.trim() || 'TempoSoul';
+
+  await sendMail(env, {
+    to: email,
+    subject: `[${brand}] 请确认订阅 / Confirm your subscription`,
+    html: [
+      `<div style="font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.7;color:#1a1230;max-width:520px;margin:0 auto;padding:24px;">`,
+      `<h2 style="margin:0 0 12px;font-size:18px;">${brand} · 邮件订阅确认</h2>`,
+      `<p style="margin:0 0 12px;font-size:14px;">你好，</p>`,
+      `<p style="margin:0 0 12px;font-size:14px;">感谢订阅 ${brand}。请点击下面的按钮完成邮箱确认（双确认，7 天内有效）：</p>`,
+      `<p style="margin:0 0 18px;text-align:center;">`,
+      `<a href="${confirmUrl}" style="display:inline-block;padding:10px 26px;border-radius:10px;background:linear-gradient(135deg,#ffd166,#b48cff);color:#1a1230;font-weight:700;text-decoration:none;">确认订阅 / Confirm</a>`,
+      `</p>`,
+      `<p style="margin:0 0 8px;font-size:12px;color:#6b7280;">如果按钮无法点击，复制此链接到浏览器：</p>`,
+      `<p style="margin:0 0 18px;font-size:12px;word-break:break-all;"><a href="${confirmUrl}" style="color:#7c5cff;">${confirmUrl}</a></p>`,
+      `<p style="margin:0;font-size:12px;color:#8b93a7;">若非本人订阅可忽略本邮件，无需退订。</p>`,
+      `</div>`,
+    ].join(''),
+    text: [
+      `${brand} · 邮件订阅确认`,
+      '',
+      `感谢订阅 ${brand}。请访问以下链接完成邮箱确认（双确认，7 天内有效）：`,
+      confirmUrl,
+      '',
+      '若非本人订阅可忽略本邮件。',
+    ].join('\n'),
+  });
 }
 
 function json(data: unknown, status = 200): Response {
