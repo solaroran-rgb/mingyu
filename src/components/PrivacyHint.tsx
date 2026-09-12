@@ -24,12 +24,7 @@ export function PrivacyHint() {
           查看隐私政策
         </Link>
       </span>
-      <button
-        type="button"
-        className="privacy-hint-close"
-        onClick={handleDismiss}
-        aria-label="不再显示"
-      >
+      <button type="button" className="privacy-hint-close" onClick={handleDismiss}>
         知道了
       </button>
     </div>
