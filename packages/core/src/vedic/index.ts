@@ -33,8 +33,10 @@ import {
   wholeSignBhava,
   GRAHA_LORD_LABELS,
 } from './tables';
+import { longitudeToNavamsa } from './varga';
+import { computeVimshottari } from './vimshottari';
 import { buildVedicEvidenceTrail } from './vedicEvidence';
-import type { VedicBirthInput, VedicData, VedicPoint } from './types';
+import type { VedicBirthInput, VedicData, VedicPoint, VedicVargaPlacement } from './types';
 
 const GRAHA_LABELS: Record<
   'Sun' | 'Moon' | 'Mars' | 'Mercury' | 'Jupiter' | 'Venus' | 'Saturn' | 'Rahu' | 'Ketu',
@@ -253,6 +255,39 @@ export function generateVedicChart(input: VedicBirthInput): VedicData {
   );
   const moonLord = GRAHA_LORD_LABELS[moonNak.nakshatra.lord];
 
+  // Phase2：D1 / D9 分盘落位（Lagna + 九曜）
+  const allPoints: VedicPoint[] = [lagna, ...grahas];
+  const d1Placements: VedicVargaPlacement[] = allPoints.map((p) => ({
+    name: p.name,
+    label: p.label,
+    sanskrit: p.sanskrit,
+    rashi: p.rashi,
+    rashiIndex: p.rashiIndex,
+    navamsaInSign: Math.min(8, Math.floor(p.degreeInRashi / (30 / 9))),
+  }));
+  const d9Placements: VedicVargaPlacement[] = allPoints.map((p) => {
+    const nav = longitudeToNavamsa(p.siderealLongitude);
+    return {
+      name: p.name,
+      label: p.label,
+      sanskrit: p.sanskrit,
+      rashi: `${nav.rashi.sanskrit} / ${nav.rashi.chinese}`,
+      rashiIndex: nav.rashiIndex,
+      navamsaInSign: nav.navamsaInSign,
+    };
+  });
+  const vargas: VedicData['vargas'] = {
+    D1: { name: 'D1', label: 'Rasi（本命盘）', placements: d1Placements },
+    D9: { name: 'D9', label: 'Navamsa（九分盘）', placements: d9Placements },
+  };
+
+  // Phase2：Vimshottari 大运起算（月亮宿主星 + 已过比例 balance）
+  const vimshottari = computeVimshottari({
+    birthMs: utcMs,
+    birthLord: moonNak.nakshatra.lord,
+    balance: moonNak.elapsedRatio,
+  });
+
   const locationName = readOptionalText(input.locationName, '');
   const standardBirth = { year, month, day, hour, minute };
   const result: VedicData = {
@@ -287,8 +322,8 @@ export function generateVedicChart(input: VedicBirthInput): VedicData {
       style: input.chartStyle ?? 'north',
       lagnaRashi: lagna.rashi,
     },
-    vimshottari: undefined,
-    vargas: {},
+    vimshottari,
+    vargas,
     yogas: [],
     doshas: [],
     timestamp: Date.now(),
@@ -306,6 +341,15 @@ export {
   GRAHA_LORD_LABELS,
 } from './tables';
 export { lahiriAyanamsa, tropicalToSidereal } from './ayanamsa';
+export { longitudeToNavamsa, navamsaStartSign, NAVAMSA_SPAN_DEG } from './varga';
+export {
+  computeVimshottari,
+  locateVimshottariAt,
+  formatVimshottariDate,
+  VIMSHOTTARI_YEARS,
+  VIMSHOTTARI_ORDER,
+  VIMSHOTTARI_LORD_LABELS,
+} from './vimshottari';
 export {
   meanNodeLongitude,
   trueNodeLongitude,
@@ -317,6 +361,8 @@ export type {
   VedicBirthInput,
   VedicData,
   VedicPoint,
+  VedicVarga,
+  VedicVargaPlacement,
   VedicNodeMode,
   VedicChartStyle,
   VedicGender,

@@ -3,6 +3,7 @@
  */
 import type { EvidenceTrail } from '../shared/evidence';
 import type { VedicAyanamsaInfo } from './ayanamsa';
+import type { VimshottariResult } from './vimshottari';
 
 export type VedicGender = '男' | '女' | '不确定';
 export type VedicNodeMode = 'mean' | 'true';
@@ -83,7 +84,27 @@ export interface VedicBirthBlock {
   astronomicalTime?: unknown;
 }
 
-/** 吠陀排盘输出（Phase1：D1 本命骨架；Dasha/Varga/Yoga/Dosha 留后续 Phase） */
+/** 分盘中单个点的落位（D9 等） */
+export interface VedicVargaPlacement {
+  /** Sun/Moon/…/Rahu/Ketu/Lagna */
+  name: string;
+  label: string;
+  sanskrit: string;
+  /** 如 "Mesha / 白羊" */
+  rashi: string;
+  rashiIndex: number;
+  /** 本分盘星座内第几个 Navamsa（0..8） */
+  navamsaInSign: number;
+}
+
+/** 一张分盘（D1/D9） */
+export interface VedicVarga {
+  name: 'D1' | 'D9';
+  label: string;
+  placements: VedicVargaPlacement[];
+}
+
+/** 吠陀排盘输出（Phase2：D1 骨架 + D9 Navamsa + Vimshottari 起算；Yoga·Dosha 留后续） */
 export interface VedicData {
   birth: VedicBirthBlock;
   ayanamsa: VedicAyanamsaInfo;
@@ -98,9 +119,13 @@ export interface VedicData {
     /** P2 预留：北印/南印方格格位坐标 */
     cells?: unknown[];
   };
-  /** 占位：P1 Vimshottari Dasha / P2 Varga / P3 Yoga·Dosha */
-  vimshottari?: unknown;
-  vargas?: Record<string, unknown>;
+  /** Phase2：Vimshottari 大运起算（Mahadasha + Antardasha） */
+  vimshottari?: VimshottariResult;
+  /** Phase2：D1 本命 + D9 Navamsa 分盘 */
+  vargas?: {
+    D1: VedicVarga;
+    D9?: VedicVarga;
+  };
   yogas?: unknown[];
   doshas?: unknown[];
   evidenceTrail?: EvidenceTrail;
