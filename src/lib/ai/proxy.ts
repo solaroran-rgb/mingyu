@@ -11,6 +11,15 @@ import {
   readLimitedRequestText,
   RequestBodyTooLargeError,
 } from '../http/request-body';
+import {
+  buildTermHints,
+  COMPLIANCE_RULES,
+  COMPLIANCE_VERSION,
+  detectSensitiveGuidance,
+  DICT_VERSION,
+  FUSED_NOTICE,
+  OutputFuse,
+} from './compliance';
 
 const DEFAULT_BASE_URL = 'https://api.deepseek.com/v1';
 const DEFAULT_MODEL = 'deepseek-chat';
@@ -124,7 +133,16 @@ export async function handleAiAnalyze(request: Request, env?: AiEnv): Promise<Re
     return aiJsonError(400, 'PROMPT_TOO_LONG', `提示词不能超过 ${MAX_PROMPT_LENGTH} 字符。`);
   }
 
-  const systemPrompt = isMultiTurn ? SYSTEM_PROMPT_CHAT : SYSTEM_PROMPT_SINGLE;
+  // 合规约束全部并入 system（M1）：user 内容保持原样转发，避免破坏调用方契约。
+  const userText = chatMessages.map((m) => m.content).join('\n');
+  const systemPrompt = [
+    isMultiTurn ? SYSTEM_PROMPT_CHAT : SYSTEM_PROMPT_SINGLE,
+    COMPLIANCE_RULES,
+    detectSensitiveGuidance(userText),
+    buildTermHints(userText),
+  ]
+    .filter(Boolean)
+    .join('\n\n');
 
   const endpoint = `${provider.baseUrl}/chat/completions`;
   const upstreamResult = await fetchUpstreamWithRetry(endpoint, {
@@ -137,7 +155,8 @@ export async function handleAiAnalyze(request: Request, env?: AiEnv): Promise<Re
       model: provider.model,
       stream: true,
       max_tokens: 4096,
-      temperature: 0.7,
+      // 468 红线 2.1-06/2.2-01：解读确定性锁。禁止上调——上调即释放模型随机改写吉凶定论。
+      temperature: 0,
       messages: [
         {
           role: 'system',
@@ -168,14 +187,42 @@ export async function handleAiAnalyze(request: Request, env?: AiEnv): Promise<Re
   const { readable, writable } = new TransformStream();
   const writer = writable.getWriter();
   const encoder = new TextEncoder();
+  const fuse = new OutputFuse();
 
   (async () => {
     const reader = upstream.body!.getReader();
     const decoder = new TextDecoder();
     let buffer = '';
+    let fusedOut = false;
+
+    // 流首 meta：三元组版本与合规版本（前端只识别 content/error，本事件向后兼容地被忽略）
+    const metaPayload = JSON.stringify({
+      meta: { compliance: COMPLIANCE_VERSION, dict_version: DICT_VERSION, model_version: provider.model },
+    });
+    try {
+      await writer.write(encoder.encode(`data: ${metaPayload}\n\n`));
+    } catch {
+      // writer 已关闭或出错，静默忽略
+    }
+
+    const writeDelta = async (delta: string): Promise<boolean> => {
+      const verdict = fuse.check(delta);
+      if (verdict.fused) {
+        if (!fusedOut) {
+          fusedOut = true;
+          const fuseMeta = JSON.stringify({ meta: { fused: true, fused_reason: verdict.reason } });
+          await writer.write(encoder.encode(`data: ${fuseMeta}\n\n`));
+          await writer.write(encoder.encode(`data: ${JSON.stringify({ content: FUSED_NOTICE })}\n\n`));
+        }
+        return false;
+      }
+      const payload = JSON.stringify({ content: delta });
+      await writer.write(encoder.encode(`data: ${payload}\n\n`));
+      return true;
+    };
 
     try {
-      while (true) {
+      while (!fusedOut) {
         const { done, value } = await reader.read();
         if (done) break;
 
@@ -198,8 +245,10 @@ export async function handleAiAnalyze(request: Request, env?: AiEnv): Promise<Re
             const parsed = JSON.parse(data);
             const delta = parsed?.choices?.[0]?.delta?.content;
             if (typeof delta === 'string' && delta) {
-              const payload = JSON.stringify({ content: delta });
-              await writer.write(encoder.encode(`data: ${payload}\n\n`));
+              if (!(await writeDelta(delta))) {
+                fusedOut = true;
+                break;
+              }
             }
           } catch {
             // 忽略无法解析的行
@@ -209,7 +258,7 @@ export async function handleAiAnalyze(request: Request, env?: AiEnv): Promise<Re
 
       // 流结束，flush decoder 并处理残留 buffer
       buffer += decoder.decode();
-      if (buffer.trim()) {
+      if (buffer.trim() && !fusedOut) {
         const trimmed = buffer.trim();
         if (trimmed.startsWith('data:')) {
           const data = trimmed.slice(5).trim();
@@ -218,14 +267,17 @@ export async function handleAiAnalyze(request: Request, env?: AiEnv): Promise<Re
               const parsed = JSON.parse(data);
               const delta = parsed?.choices?.[0]?.delta?.content;
               if (typeof delta === 'string' && delta) {
-                const payload = JSON.stringify({ content: delta });
-                await writer.write(encoder.encode(`data: ${payload}\n\n`));
+                await writeDelta(delta);
               }
             } catch {
               // 忽略
             }
           }
         }
+      }
+      if (fusedOut) {
+        await writer.write(encoder.encode('data: [DONE]\n\n'));
+        await reader.cancel().catch(() => undefined);
       }
     } catch (err) {
       const payload = JSON.stringify({
