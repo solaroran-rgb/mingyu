@@ -42,6 +42,10 @@ export interface PaymentEnv {
   LEMONSQUEEZY_API_URL?: string;
   PAYPAL_CLIENT_ID?: string;
   PAYPAL_CLIENT_SECRET?: string;
+  PAYPAL_WEBHOOK_ID?: string;
+  PAYPAL_PLAN_ID?: string;
+  /** sandbox | live；默认 sandbox（安全值，避免 live 误收款） */
+  PAYPAL_MODE?: string;
   PUBLIC_SITE_URL?: string;
   AUTH_KV?: KVNamespace;
 }
@@ -120,10 +124,108 @@ async function createLemonSqueezyCheckout(env: PaymentEnv, params: CheckoutParam
   }
 }
 
-/** PayPal 备选实现：接口预留。切换 PAYMENT_PROVIDER=paypal 后在此接入 PayPal Orders API。
- *  现阶段返回未配置错误，保持类型/调用面一致，便于后续挂入。 */
-async function createPayPalCheckout(_env: PaymentEnv, _params: CheckoutParams): Promise<CheckoutResult> {
-  return { ok: false, error: 'paypal_not_implemented', detail: 'PayPal 备选实现待接入：POST /v2/checkout/orders → HATEOAS approve link' };
+function paypalBase(env: PaymentEnv): string {
+  return (env.PAYPAL_MODE || 'sandbox').trim().toLowerCase() === 'live'
+    ? 'https://api-m.paypal.com'
+    : 'https://api-m.sandbox.paypal.com';
+}
+
+function paypalConfigured(env: PaymentEnv): boolean {
+  return Boolean(env.PAYPAL_CLIENT_ID && env.PAYPAL_CLIENT_SECRET && env.PAYPAL_PLAN_ID);
+}
+
+/** PayPal OAuth2 client_credentials → access token（200/5min 级，每次调用自取） */
+async function getPayPalAccessToken(env: PaymentEnv): Promise<string | null> {
+  try {
+    const basic = btoa(`${env.PAYPAL_CLIENT_ID}:${env.PAYPAL_CLIENT_SECRET}`);
+    const res = await fetch(`${paypalBase(env)}/v1/oauth2/token`, {
+      method: 'POST',
+      headers: {
+        Authorization: `Basic ${basic}`,
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: 'grant_type=client_credentials',
+    });
+    if (!res.ok) return null;
+    const data = (await res.json()) as { access_token?: string };
+    return data.access_token ?? null;
+  } catch {
+    return null;
+  }
+}
+
+/** PayPal Subscriptions：创建订阅，返回 HATEOAS approve 链接供前端跳转 */
+async function createPayPalCheckout(env: PaymentEnv, params: CheckoutParams): Promise<CheckoutResult> {
+  if (!paypalConfigured(env)) return { ok: false, error: 'commerce_unavailable' };
+  const origin = (env.PUBLIC_SITE_URL || params.baseUrl || '').replace(/\/+$/, '');
+  const token = await getPayPalAccessToken(env);
+  if (!token) return { ok: false, error: 'paypal_auth_failed' };
+
+  try {
+    const res = await fetch(`${paypalBase(env)}/v1/billing/subscriptions`, {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${token}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        plan_id: env.PAYPAL_PLAN_ID,
+        custom_id: params.userId,
+        subscriber: params.email ? { email_address: params.email } : undefined,
+        application_context: {
+          brand_name: 'TempoSoul',
+          user_action: 'SUBSCRIBE_NOW',
+          payment_method: { payer_preference: 'PAYPAL' },
+          return_url: `${origin}/account?checkout=success`,
+          cancel_url: `${origin}/?checkout=canceled`,
+        },
+      }),
+    });
+    const data = (await res.json().catch(() => ({}))) as {
+      links?: Array<{ href: string; rel: string }>;
+      name?: string;
+      message?: string;
+    };
+    const approve = (data.links ?? []).find((l) => l.rel === 'approve')?.href;
+    if (!res.ok || !approve) {
+      return { ok: false, error: 'paypal_error', detail: (data.message || data.name || '').slice(0, 200) };
+    }
+    return { ok: true, url: approve };
+  } catch (e) {
+    return { ok: false, error: 'paypal_unreachable', detail: e instanceof Error ? e.message : '' };
+  }
+}
+
+/** PayPal webhook 服务端验签（调 PayPal /v1/notifications/verify-webhook-signature）。
+ *  按 PayPal transmission-id/cert 官方推荐方式；返回 verification_status === 'SUCCESS'。 */
+export async function verifyPaypalWebhook(
+  env: PaymentEnv,
+  headers: { authAlgo?: string; certUrl?: string; transmissionId?: string; transmissionSig?: string; transmissionTime?: string },
+  rawBody: string,
+): Promise<boolean> {
+  if (!env.PAYPAL_WEBHOOK_ID) return false;
+  try {
+    const token = await getPayPalAccessToken(env);
+    if (!token) return false;
+    const event = JSON.parse(rawBody) as unknown;
+    const res = await fetch(`${paypalBase(env)}/v1/notifications/verify-webhook-signature`, {
+      method: 'POST',
+      headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        auth_algo: headers.authAlgo,
+        cert_url: headers.certUrl,
+        transmission_id: headers.transmissionId,
+        transmission_sig: headers.transmissionSig,
+        transmission_time: headers.transmissionTime,
+        webhook_id: env.PAYPAL_WEBHOOK_ID,
+        webhook_event: event,
+      }),
+    });
+    const data = (await res.json().catch(() => ({}))) as { verification_status?: string };
+    return res.ok && data.verification_status === 'SUCCESS';
+  } catch {
+    return false;
+  }
 }
 
 /** 统一创建 checkout：按 PAYMENT_PROVIDER 分发 */

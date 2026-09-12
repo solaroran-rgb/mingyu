@@ -14,21 +14,21 @@
 - 否决 Mailchimp：偏营销 CRM，事务能力（Mandrill）需付费附加，对象模型过重。
 - 实现：`src/lib/server/mailer.ts`；未配 `RESEND_API_KEY`/`MAIL_FROM` 时静默 no-op。
 
-### 1b. 支付通道 → 主 **Lemon Squeezy**，备选 **PayPal**（接口已抽象）
+### 1b. 支付通道 → 主 **Lemon Squeezy**，**PayPal** 为 live 兜底（均已实现）
 2026-09 MainAgent 核实政策后拍板：
 
 | 候选 | 结论 | 理由 |
 | --- | --- | --- |
-| **Lemon Squeezy** | ✅ **主实现** | 个人可注册、无公司要求；MoR（Merchant of Record）代管全球税务/拒付/订阅；5%+$0.50/笔全包无月费；同天可上线。风险：2024-07 被 Stripe 收购，2026 仍接受新注册、短期稳定，长期可迁 Stripe Managed Payments |
-| **PayPal** | 🟡 **备选（接口预留）** | 个人必可注册、支持订阅；但费率实际约 7–10%、新号风控严（冻结 ~21 天）。仅当 LS 不可用时挂入 |
+| **Lemon Squeezy** | ✅ 主实现 | 个人可注册、无公司要求；MoR 代管全球税务/拒付/订阅；5%+$0.50/笔全包无月费。**实测中国区受限**：Stripe Tax 表单无法设置、激活/KYC 页被重定向回 payouts、商店卡测试模式（见 §5 路径说明）。2024-07 被 Stripe 收购，2026 仍接受新注册 |
+| **PayPal** | 🟢 live 兜底（已实现） | 个人必可注册、支持订阅；用户已有可用 PayPal（ferryoran@outlook.com）。费率实际约 7–10%、新号风控严（冻结 ~21 天），但为中国区可收款的现实通道 |
 | Stripe 直连 | ❌ 排除 | 中国大陆个人不可注册 |
 | Paddle | ❌ 排除 | 资格不确定 |
 | 支付宝 | ❌ 排除 | 需企业资质，面向境内，不匹配海外订阅 |
 
 **抽象层**：`src/lib/server/payment.ts` 定义 `PaymentProvider`（`lemonsqueezy|paypal|none`）与
-`createCheckoutSession()` / `activatePremium()`；切换通道只改 env `PAYMENT_PROVIDER`，
-不改前端、不动组件。`/api/v1/checkout` 与 `/api/v1/ls-webhook` 已接 LS；
-`createPayPalCheckout()` 为类型一致的预留骨架，后续补 PayPal Orders API 即可。
+`createCheckoutSession()` / `activatePremium()` / `verifyPaypalWebhook()`；切换通道只改 env `PAYMENT_PROVIDER`，
+不改前端、不动组件。端点：`/api/v1/checkout` 统一分发；`/api/v1/ls-webhook`（LS）与
+`/api/v1/paypal-webhook`（PayPal）各自验签，共用 `activatePremium` 落库。
 
 ---
 
@@ -40,9 +40,10 @@ functions/api/v1/
   newsletter-confirm.ts    [改]  GET：HMAC+KV 状态机 pending→confirmed；sendConfirmationEmail 走 Resend
   checkout.ts              [改]  POST：按 PAYMENT_PROVIDER 创建 checkout，返回 { url }
   ls-webhook.ts            [新]  POST：Lemon Squeezy 签名验签 → 成功事件回写 AUTH_KV premium
+  paypal-webhook.ts        [新]  POST：PayPal transmission 验签 → 订阅/付款成功回写 premium
 src/lib/server/
   mailer.ts                [新]  Resend 发送封装（零依赖 fetch）+ 降级 no-op
-  payment.ts               [新]  支付抽象层：Lemon Squeezy 主实现 + PayPal 接口预留
+  payment.ts               [新]  支付抽象层：Lemon Squeezy 主实现 + PayPal Subscriptions 实现 + webhook 验签
 src/components/
   PremiumGate.tsx          [改]  订阅墙 CTA →「Checkout」按钮 → /api/v1/checkout（未配则降级 /login）
 src/i18n/locales/*.ts      [改]  7 语种：新增 premium.checkoutCta；privacy.s5B1 填入联系邮箱
@@ -80,10 +81,17 @@ docs/commerce/
 | `LEMONSQUEEZY_WEBHOOK_SECRET` | secret | `...` | 是（webhook 回写 premium） |
 | `LEMONSQUEEZY_API_URL` | vars | `https://api.lemonsqueezy.com/v1` | 否 |
 
-### 3.4 PayPal 备选（预留，暂未实现）
-`PAYPAL_CLIENT_ID` / `PAYPAL_CLIENT_SECRET`（secret）。切换 `PAYMENT_PROVIDER=paypal` 后，
-在 `src/lib/server/payment.ts` 的 `createPayPalCheckout()` 补 Orders API（拿 access token →
-POST `/v2/checkout/orders` → 取 HATEOAS approve 链接），并新增 `paypal-webhook.ts` 验签端点。
+### 3.4 PayPal（live 兜底，已实现）
+| 变量 | 类型 | 示例 | 必填 |
+| --- | --- | --- | --- |
+| `PAYPAL_MODE` | vars | `sandbox`（**默认安全值**）\| `live` | 否（默认 sandbox） |
+| `PAYPAL_CLIENT_ID` | secret | REST app client id | 是 |
+| `PAYPAL_CLIENT_SECRET` | secret | REST app secret | 是 |
+| `PAYPAL_WEBHOOK_ID` | vars | webhook 注册 ID | 是（验签用） |
+| `PAYPAL_PLAN_ID` | vars | `P-XXXX`（billing plan，月/年订阅计划） | 是（checkout 用） |
+
+> 切到 PayPal：`PAYMENT_PROVIDER=paypal`。代码已实现 OAuth token → `/v1/billing/subscriptions`
+> 创建订阅 → 返回 approve 链接；webhook 走 PayPal `/v1/notifications/verify-webhook-signature` 服务端验签。
 
 > 机密：本地写 `.dev.vars`（已 gitignore）；生产 `wrangler pages secret put <NAME>` 或 CF Pages Dashboard。
 > 非机密可写 `wrangler.toml [vars]`。
@@ -143,13 +151,29 @@ POST /api/v1/newsletter → KV pending → createConfirmToken(HMAC) → Resend �
 6. 走一笔测试：Checkout → 付款成功 → 回访 `/api/v1/subscription` 应返回 `tier=premium`。
 7. 长期：若 LS 迁到 Stripe Managed Payments，仅替换 `src/lib/server/payment.ts` 内实现，前端与 webhook 契约不变。
 
-### C. PayPal 备选（仅当 LS 不可用时）
-1. PayPal 个人/商家账号 → Developer Dashboard 建 REST app，拿 `CLIENT_ID` / `SECRET`。
-2. 本仓库：在 `src/lib/server/payment.ts` 实现 `createPayPalCheckout()`（OAuth 取 token →
-   POST `/v2/checkout/orders` → 返回 approve HATEOAS 链接），并新增 `functions/api/v1/paypal-webhook.ts`
-   验签（PayPal 使用 `PAYPAL-TRANSMISSION-SIG` 头 + cert 链，或简化为 webhook id 调 API 校验）。
-3. 切 `PAYMENT_PROVIDER=paypal`、填 `PAYPAL_CLIENT_ID` / `PAYPAL_CLIENT_SECRET`。
-4. 注意：PayPal 费率高（~7–10%）、新号冻结期，仅作 fallback。
+### C. 两条 live 路径（中国区现状）
+
+> **LS 中国区实测受限**：Stripe Tax 表单无法设置；账户激活 / KYC 页被重定向回 payouts；
+> 商店卡在测试模式。提现见 §B 前置条件（中国区只能连 PayPal）。
+
+**路径 A — 联系 Lemon Squeezy 支持开中国区激活**
+1. 用 LS 测试 key（`LEMONSQUEEZY_*` sandbox/test）先把链路联调通（步骤 B 全流程）。
+2. 邮件 LS support（reply 工单 / chat）申请人工审核中国区激活、开启 live 收款；
+   提供 PayPal 作为提现账户。
+3. 审核通过后 `PAYMENT_PROVIDER=lemonsqueezy` 直接 live，享 MoR 5%+$0.50 低费率。
+4. env：同 §3.3（`LEMONSQUEEZY_API_KEY/STORE_ID/VARIANT_ID/WEBHOOK_SECRET`）。
+
+**路径 B — PayPal 直连收款（当前推荐的 live 兜底，代码已就绪）**
+1. 用已有 PayPal（ferryoran@outlook.com）→ Developer Dashboard 建 REST app，拿 `CLIENT_ID`/`SECRET`。
+2. 建 billing plan（月付 / 年付各一个 plan），记下 `PAYPAL_PLAN_ID`。
+3. 建 Webhook：URL `https://<域名>/api/v1/paypal-webhook`，订阅
+   `BILLING.SUBSCRIPTION.ACTIVATED` / `BILLING.SUBSCRIPTION.RENEWED` / `PAYMENT.SALE.COMPLETED`，记 `PAYPAL_WEBHOOK_ID`。
+4. 配变量：`PAYMENT_PROVIDER=paypal`、`PAYPAL_MODE=sandbox`（先测）→ 测通改 `live`；
+   `wrangler pages secret put PAYPAL_CLIENT_SECRET`；其余非机密写 `[vars]`。
+5. 注意：PayPal 费率 ~7–10%、新号有冻结/风控期，先 sandbox 跑通再切 live。
+
+> **当前推荐**：先用 **LS 测试模式**（test key）联调 Checkout→webhook→premium 全链路；
+> live 阶段若 LS 中国区激活仍被卡，直接切 **路径 B PayPal 直连** 兜底收款。两条路同一套前端与落库逻辑。
 
 ### D. 隐私联系邮箱（已落地）
 - 已在 7 个语种 `privacy.s5B1` 写入 `ferryoran@outlook.com`，见

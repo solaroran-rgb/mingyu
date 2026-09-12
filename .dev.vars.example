@@ -59,6 +59,10 @@ AI_MODEL=deepseek-chat
 # LEMONSQUEEZY_WEBHOOK_SECRET=...    # 机密，Webhook 端点 https://<域名>/api/v1/ls-webhook 创建后下发
 # LEMONSQUEEZY_API_URL=https://api.lemonsqueezy.com/v1   # 可选
 #
-# ── PayPal（备选预留，暂未实现）──
+# ── PayPal（live 兜底，PayPal Subscriptions）──
+# LS 中国区激活受限时用；PAYMENT_PROVIDER=paypal 启用。默认 sandbox，live 前改 PAYPAL_MODE=live。
+# PAYPAL_MODE=sandbox                 # sandbox(默认,安全) | live
 # PAYPAL_CLIENT_ID=...
 # PAYPAL_CLIENT_SECRET=...            # 机密
+# PAYPAL_WEBHOOK_ID=...               # Developer Dashboard → Webhooks 注册 ID
+# PAYPAL_PLAN_ID=P-XXXXXX             # billing plan id（月/年订阅计划，checkout 用）

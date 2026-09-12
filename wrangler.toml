@@ -42,17 +42,22 @@ ANALYTICS_SITE_ID = "2681353fab604a86bcd9995f5a47045b"
 #   或 CLI：   wrangler secret put AUTH_SECRET
 #   生成强随机密钥：  openssl rand -hex 32
 
-# ── 商业化（邮件 Resend + 支付 Lemon Squeezy）──
+# ── 商业化（邮件 Resend + 支付 Lemon Squeezy 主 / PayPal 兜底）──
 # 机密一律走 secret / Pages env，不写进本文件：
 #   wrangler pages secret put RESEND_API_KEY
 #   wrangler pages secret put LEMONSQUEEZY_API_KEY
 #   wrangler pages secret put LEMONSQUEEZY_WEBHOOK_SECRET
+#   wrangler pages secret put PAYPAL_CLIENT_SECRET
 # 非机密运行时变量（按需打开注释）：
 # MAIL_FROM = "TempoSoul <noreply@your-domain.com>"
 # MAIL_FROM_NAME = "TempoSoul"
 # PUBLIC_SITE_URL = "https://your-domain.com"
-# PAYMENT_PROVIDER = "lemonsqueezy"
+# PAYMENT_PROVIDER = "lemonsqueezy"   # lemonsqueezy | paypal | 空(关闭)
 # LEMONSQUEEZY_STORE_ID = "你的数字store_id"   # 非机密，LS Dashboard → Settings → Stores 顶部 ID
 # VARIANT_ID 已定（TempoSoul Pro，非保密）；默认值，创建 checkout 时直接使用：
 LEMONSQUEEZY_VARIANT_ID = "1356751"
+# PayPal 兜底（live）：PAYMENT_PROVIDER 切 "paypal" 后填下列
+# PAYPAL_MODE = "sandbox"             # sandbox(默认) | live
+# PAYPAL_PLAN_ID = "P-XXXXXX"
+# PAYPAL_WEBHOOK_ID = "..."
 # 激活手册见 docs/commerce/2026-09-12-commerce-setup.md
