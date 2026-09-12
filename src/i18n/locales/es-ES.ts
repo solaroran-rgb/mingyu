@@ -76,6 +76,7 @@ export const esES: Dict = {
       'Acceso anticipado a nuevas funciones',
     ],
     cta: 'Mejorar ahora',
+    checkoutCta: 'Pagar',
     quotaHint: 'Usos gratuitos restantes hoy',
     loginHint: 'Inicia sesión para gestionar tu suscripción',
   },
@@ -116,7 +117,7 @@ export const esES: Dict = {
     s4Title: 'Cookies y almacenamiento local',
     s4B1: 'Este sitio usa el almacenamiento local del navegador para recordar tus preferencias (avisos cerrados, ajustes de IA). No te rastreamos entre sitios con cookies de terceros.',
     s5Title: 'Contacto',
-    s5B1: 'Si tienes preguntas sobre esta política o deseas borrar registros de procesamiento del servidor, contáctanos a través del canal de comentarios en los ajustes del sitio.',
+    s5B1: 'Si tienes preguntas sobre esta política o deseas borrar registros de procesamiento del servidor, contáctanos a través del canal de comentarios en los ajustes del sitio, o escríbenos a ferryoran@outlook.com.',
     disclaimerHead: 'Aviso legal',
     disclaimerNote:
       'For entertainment and self-reflection purposes only. Not a substitute for professional advice.',

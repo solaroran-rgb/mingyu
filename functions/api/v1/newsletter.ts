@@ -8,14 +8,14 @@
  *   - 邮件通道未接入前，hook 为空操作，记录保持 pending（不实际发信）。
  */
 
-import { CONFIRM_TOKEN_TTL_SEC, createConfirmToken, sendConfirmationEmail } from './newsletter-confirm';
+import { CONFIRM_TOKEN_TTL_SEC, createConfirmToken, sendConfirmationEmail, type ConfirmEnv } from './newsletter-confirm';
 
 interface KVNamespace {
   get(key: string): Promise<string | null>;
   put(key: string, value: string, opts?: { expirationTtl?: number }): Promise<void>;
 }
 
-interface NewsletterEnv {
+interface NewsletterEnv extends ConfirmEnv {
   newsletter_emails?: KVNamespace;
   AUTH_SECRET?: string;
 }
@@ -93,12 +93,13 @@ export async function onRequest(ctx: PagesContext): Promise<Response> {
   };
   await kv.put(key, JSON.stringify(record));
 
-  // 双确认：签发确认 token 并预留邮件发送 hook（无邮件通道，hook 当前为空操作）
+  // 双确认：签发确认 token 并经 Resend 发送确认邮件（env 未配置时静默 no-op）
   const secret = ctx.env?.AUTH_SECRET;
   if (secret) {
     const exp = Math.floor(Date.now() / 1000) + CONFIRM_TOKEN_TTL_SEC;
     const token = await createConfirmToken(raw, exp, secret);
-    await sendConfirmationEmail(raw, token);
+    const baseUrl = new URL(ctx.request.url).origin;
+    await sendConfirmationEmail(ctx.env ?? {}, raw, token, baseUrl);
   }
 
   return json({ ok: true, status: 'pending', pendingConfirmation: true });

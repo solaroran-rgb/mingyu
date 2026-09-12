@@ -72,6 +72,7 @@ export const koKN: Dict = {
     desc: '무제한 AI 해석과 전문가급 보고서 잠금 해제',
     perks: ['무제한 AI 심층 해석', '전문가급 합반·길일 보고서', '새로운 기능 우선 체험'],
     cta: '지금 업그레이드',
+    checkoutCta: '결제하기',
     quotaHint: '오늘 남은 무료 사용 횟수',
     loginHint: '로그인하여 구독 관리',
   },
@@ -111,7 +112,7 @@ export const koKN: Dict = {
     s4Title: '쿠키와 로컬 저장소',
     s4B1: '이 사이트는 브라우저 로컬 저장소를 사용하여 환경설정(알림 닫기, AI 설정 등)을 기억합니다. 제3자 쿠키로 귀하를 크로스사이트 추적하지 않습니다.',
     s5Title: '문의처',
-    s5B1: '본 개인정보 처리방침에 대해 궁금한 점이 있거나 서버 측 처리 기록 삭제를 원하시면 사이트 설정의 피드백 창구로 문의해 주세요.',
+    s5B1: '본 개인정보 처리방침에 대해 궁금한 점이 있거나 서버 측 처리 기록 삭제를 원하시면 사이트 설정의 피드백 창구로 문의해 주세요. 또는 ferryoran@outlook.com 으로 이메일을 보내 주세요.',
     disclaimerHead: '면책 조항',
     disclaimerNote:
       'For entertainment and self-reflection purposes only. Not a substitute for professional advice.',

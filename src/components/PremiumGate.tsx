@@ -1,5 +1,4 @@
-import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
-import { Link } from 'react-router-dom';
+import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { useI18n } from '@/i18n';
 import { safeStorage } from '@/lib/safe-storage';
 import { trackPaywallView, trackSubscribe } from '@/lib/analytics';
@@ -38,6 +37,7 @@ export function PremiumGate({ children, quota = 5 }: { children: ReactNode; quot
   const { t } = useI18n();
   const [tier, setTier] = useState<Tier>('unknown');
   const [remaining, setRemaining] = useState(() => readRemaining(quota));
+  const [checkoutLoading, setCheckoutLoading] = useState(false);
   const consumedRef = useRef(false);
   const subscribeReportedRef = useRef(false);
   const paywallReportedRef = useRef(false);
@@ -90,6 +90,34 @@ export function PremiumGate({ children, quota = 5 }: { children: ReactNode; quot
     trackPaywallView({ remaining, quota });
   }, [state, remaining, quota]);
 
+  // Checkout：向 /api/v1/checkout 取托管收银台 URL（Lemon Squeezy，PayPal 备选）并跳转。
+  // 未配置支付（503）或网络失败 → 优雅降级到登录/注册页（与仓库现有降级风格一致）。
+  const startCheckout = useCallback(async () => {
+    if (checkoutLoading) return;
+    setCheckoutLoading(true);
+    try {
+      const token = safeStorage.get(TOKEN_KEY);
+      const res = await fetch('/api/v1/checkout', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          ...(token ? { Authorization: `Bearer ${token}` } : {}),
+        },
+        body: '{}',
+      });
+      if (res.ok) {
+        const data = (await res.json()) as { url?: string };
+        if (data.url) {
+          window.location.href = data.url;
+          return;
+        }
+      }
+      window.location.href = '/login';
+    } catch {
+      window.location.href = '/login';
+    }
+  }, [checkoutLoading]);
+
   if (state === 'checking') {
     return (
       <div style={{ textAlign: 'center', padding: '24px 0', color: '#8b93a7', fontSize: 13 }}>
@@ -139,8 +167,10 @@ export function PremiumGate({ children, quota = 5 }: { children: ReactNode; quot
           </li>
         ))}
       </ul>
-      <Link
-        to="/login"
+      <button
+        type="button"
+        onClick={startCheckout}
+        disabled={checkoutLoading}
         style={{
           display: 'inline-block',
           padding: '10px 28px',
@@ -149,11 +179,13 @@ export function PremiumGate({ children, quota = 5 }: { children: ReactNode; quot
           color: '#1a1230',
           fontWeight: 700,
           fontSize: 14,
-          textDecoration: 'none',
+          border: 'none',
+          cursor: checkoutLoading ? 'wait' : 'pointer',
+          opacity: checkoutLoading ? 0.7 : 1,
         }}
       >
-        {t('premium.cta')}
-      </Link>
+        {checkoutLoading ? t('common.loading') : t('premium.checkoutCta')}
+      </button>
       <div style={{ fontSize: 11, color: '#8b93a7', marginTop: 12 }}>
         {t('premium.loginHint')}
       </div>

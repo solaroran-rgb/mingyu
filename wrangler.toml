@@ -41,3 +41,17 @@ ANALYTICS_SITE_ID = "2681353fab604a86bcd9995f5a47045b"
 #   Pages 生产：Cloudflare 控制台 → Pages 项目 → Settings → Environment variables → 添加 AUTH_SECRET
 #   或 CLI：   wrangler secret put AUTH_SECRET
 #   生成强随机密钥：  openssl rand -hex 32
+
+# ── 商业化（邮件 Resend + 支付 Lemon Squeezy）──
+# 机密一律走 secret / Pages env，不写进本文件：
+#   wrangler pages secret put RESEND_API_KEY
+#   wrangler pages secret put LEMONSQUEEZY_API_KEY
+#   wrangler pages secret put LEMONSQUEEZY_WEBHOOK_SECRET
+# 非机密运行时变量（按需打开注释）：
+# MAIL_FROM = "TempoSoul <noreply@your-domain.com>"
+# MAIL_FROM_NAME = "TempoSoul"
+# PUBLIC_SITE_URL = "https://your-domain.com"
+# PAYMENT_PROVIDER = "lemonsqueezy"
+# LEMONSQUEEZY_STORE_ID = "12345"
+# LEMONSQUEEZY_VARIANT_ID = "67890"
+# 激活手册见 docs/commerce/2026-09-12-commerce-setup.md

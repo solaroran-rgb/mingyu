@@ -39,3 +39,26 @@ AI_MODEL=deepseek-chat
 # AUTH_ENABLED=true
 # AUTH_SECRET=请生成强随机密钥（如 openssl rand -hex 32）
 # 同时在 Cloudflare 控制台创建 KV 命名空间并命名为 AUTH_KV 后绑定到本 Pages 项目。
+
+# ── 邮件发送（Resend，事务邮件）──
+# 账号到位后填这些变量即激活 newsletter 双确认发信；留空则静默不发（只收集）。
+# RESEND_API_KEY=re_xxxxxxxxxxxx        # 机密，wrangler secret put RESEND_API_KEY
+# MAIL_FROM=TempoSoul <noreply@your-domain.com>   # 须已在 Resend 验证发信域名
+# MAIL_FROM_NAME=TempoSoul 命律
+# PUBLIC_SITE_URL=https://your-domain.com         # 可选，用于拼接确认链接；缺省取请求 origin
+
+# ── 支付（主 Lemon Squeezy / 备选 PayPal 接口预留）──
+# 选型：Lemon Squeezy 为主（MoR，个人可注册、无公司要求），PayPal 备选接口已抽象预留。
+# 开关：PAYMENT_PROVIDER=lemonsqueezy | paypal | 空(=关闭)。账号到位填下列变量即激活。
+# PAYMENT_PROVIDER=lemonsqueezy
+#
+# ── Lemon Squeezy（主实现）──
+# LEMONSQUEEZY_API_KEY=...            # 机密，Dashboard → API 新建 token
+# LEMONSQUEEZY_STORE_ID=12345        # 数字 store id
+# LEMONSQUEEZY_VARIANT_ID=67890      # 数字 variant id（订阅 recurring 产品）
+# LEMONSQUEEZY_WEBHOOK_SECRET=...    # 机密，Webhook 端点 https://<域名>/api/v1/ls-webhook 创建后下发
+# LEMONSQUEEZY_API_URL=https://api.lemonsqueezy.com/v1   # 可选
+#
+# ── PayPal（备选预留，暂未实现）──
+# PAYPAL_CLIENT_ID=...
+# PAYPAL_CLIENT_SECRET=...            # 机密

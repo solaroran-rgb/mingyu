@@ -76,6 +76,7 @@ export const viVN: Dict = {
       'Trải nghiệm tính năng mới trước',
     ],
     cta: 'Nâng cấp ngay',
+    checkoutCta: 'Thanh toán',
     quotaHint: 'Lượt miễn phí còn lại hôm nay',
     loginHint: 'Đăng nhập để quản lý gói đăng ký',
   },
@@ -116,7 +117,7 @@ export const viVN: Dict = {
     s4Title: 'Cookie và bộ nhớ cục bộ',
     s4B1: 'Trang này dùng bộ nhớ cục bộ của trình duyệt để ghi nhớ tùy chọn của bạn (như đã đóng thông báo, cài đặt AI). Chúng tôi không theo dõi bạn trên các trang khác bằng cookie bên thứ ba.',
     s5Title: 'Liên hệ',
-    s5B1: 'Nếu có câu hỏi về chính sách này hoặc muốn xóa bản ghi xử lý phía máy chủ, vui lòng liên hệ qua kênh phản hồi trong cài đặt trang.',
+    s5B1: 'Nếu có câu hỏi về chính sách này hoặc muốn xóa bản ghi xử lý phía máy chủ, vui lòng liên hệ qua kênh phản hồi trong cài đặt trang, hoặc gửi email đến ferryoran@outlook.com.',
     disclaimerHead: 'Tuyên bố miễn trừ',
     disclaimerNote:
       'For entertainment and self-reflection purposes only. Not a substitute for professional advice.',
