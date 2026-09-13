@@ -23,7 +23,7 @@ export interface LexiconTranslatorEntry {
 
 export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: string; generated: string; count: number; l1_status_note: string }; entries: LexiconTranslatorEntry[] } = {
  "meta": {
-  "dict_version": "1.2.0",
+  "dict_version": "1.3.1",
   "source": "国学出海 __资产基础设施__ lexicon-schema v1（审计 A11 静态冻结 / P1 单键 / P5 L1-L4 静态化）",
   "generated": "2026-09-13",
   "count": 318,
@@ -1439,7 +1439,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "l1_status": "draft"
   },
   {
-   "archetypeKey": "bazi.shensha.xuetang_yima",
+   "archetypeKey": "bazi.shensha.tianluodiwang",
    "system": "bazi",
    "category": "term",
    "termGroup": "shensha",
@@ -2540,8 +2540,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    },
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual",
-   "semanticLibrary": "发用作为三传之首，往往揭示事态启动的源头与机括，其吉凶属性倾向于决定事件发展的初始走向与难易程度。"
+   "l1_status": "draft",
+   "semanticLibrary": "发用作为三传之首，往往揭示事态启动的源头与机括，其吉凶属性倾向于决定事件发展的初始走向与难易程度。",
+   "evidenceQuote": "《大六壬大全》课经义（意引）：发用为初传，由四课取克贼涉害等法而得，为事之机括。",
+   "classicalTerm": "发用"
   },
   {
    "archetypeKey": "daliuren.struct.sanchuan",
@@ -2556,8 +2558,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    },
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual",
-   "semanticLibrary": "三传结构依序推演事态始末，初传定端、中传示程、末传见果，传序顺逆往往倾向于反映事态发展的顺畅或阻滞趋势。"
+   "l1_status": "draft",
+   "semanticLibrary": "三传结构依序推演事态始末，初传定端、中传示程、末传见果，传序顺逆往往倾向于反映事态发展的顺畅或阻滞趋势。",
+   "evidenceQuote": "《大六壬大全》课经义（意引）：三传者初传中传末传，象事之初中末三际，传定而事之脉络明。",
+   "classicalTerm": "三传"
   },
   {
    "archetypeKey": "daliuren.struct.sike",
@@ -2572,8 +2576,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    },
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual",
-   "semanticLibrary": "四课通过干支上下神排列，呈现宾主内外格局，往往作为推演事态发展脉络与潜在趋势的基础结构。"
+   "l1_status": "draft",
+   "semanticLibrary": "四课通过干支上下神排列，呈现宾主内外格局，往往作为推演事态发展脉络与潜在趋势的基础结构。",
+   "evidenceQuote": "《大六壬大全》课经义（意引）：以日干支上下神布列四课，干上神为首课，支上神为三课，课定而后取传。",
+   "classicalTerm": "四课"
   },
   {
    "archetypeKey": "daliuren.struct.yuanshou",
@@ -2588,8 +2594,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    },
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual",
-   "semanticLibrary": "元首卦象征事物从正面发端，往往呈现自上而下的顺畅趋势，倾向于在政务或常事中展现顺遂与得位的积极征象。"
+   "l1_status": "draft",
+   "semanticLibrary": "元首卦象征事物从正面发端，往往呈现自上而下的顺畅趋势，倾向于在政务或常事中展现顺遂与得位的积极征象。",
+   "evidenceQuote": "《大六壬大全》课经义（意引）：元首课，上克下取传，主自上而下，事从正面发端而易成。",
+   "classicalTerm": "元首课"
   },
   {
    "archetypeKey": "daliuren.tianjiang.baihu",
@@ -2604,8 +2612,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    },
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual",
-   "semanticLibrary": "白虎属金，往往象征肃杀与威权，旺相时倾向于展现强势决断，衰弱时则可能引发刑伤或健康波动，需结合整体局势客观研判。"
+   "l1_status": "draft",
+   "semanticLibrary": "白虎属金，往往象征肃杀与威权，旺相时倾向于展现强势决断，衰弱时则可能引发刑伤或健康波动，需结合整体局势客观研判。",
+   "evidenceQuote": "《大六壬大全》天将义（意引）：白虎属金，主凶丧刑伤疾病，旺相主威权，休囚主灾疾。",
+   "classicalTerm": "白虎（天将）"
   },
   {
    "archetypeKey": "daliuren.tianjiang.guiren",
@@ -2620,8 +2630,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    },
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual",
-   "semanticLibrary": "贵人主爵禄与助力，旺相时往往得尊长扶持，空陷则易生虚望，占事遇之多呈转机之象。"
+   "l1_status": "draft",
+   "semanticLibrary": "贵人主爵禄与助力，旺相时往往得尊长扶持，空陷则易生虚望，占事遇之多呈转机之象。",
+   "evidenceQuote": "《大六壬大全》天将义（意引）：贵人为十二天将之首，主爵禄解救，昼夜贵人随干支分治。",
+   "classicalTerm": "贵人（天将）"
   },
   {
    "archetypeKey": "daliuren.tianjiang.liuhe",
@@ -2636,8 +2648,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    },
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual",
-   "semanticLibrary": "六合属木，主和合与文书交易，旺相时往往利于人际协调与合约达成，落空则可能预示约定虚浮或合作难以落实。"
+   "l1_status": "draft",
+   "semanticLibrary": "六合属木，主和合与文书交易，旺相时往往利于人际协调与合约达成，落空则可能预示约定虚浮或合作难以落实。",
+   "evidenceQuote": "《大六壬大全》天将义（意引）：六合属木，主和合婚姻交易，占婚主媒妁，占交易主成合。",
+   "classicalTerm": "六合（天将）"
   },
   {
    "archetypeKey": "daliuren.tianjiang.qinglong",
@@ -2652,8 +2666,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    },
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual",
-   "semanticLibrary": "青龙属木，主官贵财喜与喜庆之事，旺相时往往倾向于福泽临门，若处囚死状态则可能呈现虚花之象。"
+   "l1_status": "draft",
+   "semanticLibrary": "青龙属木，主官贵财喜与喜庆之事，旺相时往往倾向于福泽临门，若处囚死状态则可能呈现虚花之象。",
+   "evidenceQuote": "《大六壬大全》天将义（意引）：青龙属木，主官贵财喜喜庆，临财主进益，临官主升迁。",
+   "classicalTerm": "青龙（天将）"
   },
   {
    "archetypeKey": "daliuren.tianjiang.taiyin",
@@ -2668,8 +2684,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    },
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual",
-   "semanticLibrary": "太阴属金主阴私与策划，旺相时倾向于展现隐秀特质并获阴人助力，落空则可能暗示谋事虚浮或健康呈虚寒趋势。"
+   "l1_status": "draft",
+   "semanticLibrary": "太阴属金主阴私与策划，旺相时倾向于展现隐秀特质并获阴人助力，落空则可能暗示谋事虚浮或健康呈虚寒趋势。",
+   "evidenceQuote": "《大六壬大全》天将义（意引）：太阴属金，主阴私女人暗昧，临干主密谋渐成，阴人助力。",
+   "classicalTerm": "太阴（天将）"
   },
   {
    "archetypeKey": "daliuren.tianjiang.tengshe",
@@ -2684,8 +2702,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    },
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual",
-   "semanticLibrary": "螣蛇属火，往往象征虚惊、缠绕与阴私之事，临身时倾向于引发疑惧多梦，旺相则显灵变，衰弱则易生妖妄。"
+   "l1_status": "draft",
+   "semanticLibrary": "螣蛇属火，往往象征虚惊、缠绕与阴私之事，临身时倾向于引发疑惧多梦，旺相则显灵变，衰弱则易生妖妄。",
+   "evidenceQuote": "《大六壬大全》天将义（意引）：螣蛇属火，主虚惊怪异缠绕，临身主疑惧多梦。",
+   "classicalTerm": "螣蛇（天将）"
   },
   {
    "archetypeKey": "daliuren.tianjiang.xuanwu",
@@ -2700,8 +2720,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    },
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual",
-   "semanticLibrary": "玄武属水，常关联隐秘或人际纠葛，旺相时倾向于展现智巧与谋略，衰弱时则可能暗示沟通中的模糊或误解。"
+   "l1_status": "draft",
+   "semanticLibrary": "玄武属水，常关联隐秘或人际纠葛，旺相时倾向于展现智巧与谋略，衰弱时则可能暗示沟通中的模糊或误解。",
+   "evidenceQuote": "《大六壬大全》天将义（意引）：玄武属水，主盗贼阴私遗失，占失主被盗，临财主失脱。",
+   "classicalTerm": "玄武（天将）"
   },
   {
    "archetypeKey": "daliuren.tianjiang.zhuque",
@@ -2716,8 +2738,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    },
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual",
-   "semanticLibrary": "朱雀属火，主文书音信与口舌讼非，旺相时倾向于文章显达，衰弱时往往伴随口舌纷争，需结合旺衰判断事态走向。"
+   "l1_status": "draft",
+   "semanticLibrary": "朱雀属火，主文书音信与口舌讼非，旺相时倾向于文章显达，衰弱时往往伴随口舌纷争，需结合旺衰判断事态走向。",
+   "evidenceQuote": "《大六壬大全》天将义（意引）：朱雀属火，主文书音信口舌，占信主信至，空亡则信虚。",
+   "classicalTerm": "朱雀（天将）"
   },
   {
    "archetypeKey": "fengshui.liqi.bagua",
@@ -4040,8 +4064,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    },
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual",
-   "semanticLibrary": "杜门属木居东南，为平门偏凶，主闭塞隐藏与滞留，利于潜藏防守及研发，忌出行求见，旺时密谋易成，衰时则易感阻滞。"
+   "l1_status": "draft",
+   "semanticLibrary": "杜门属木居东南，为平门偏凶，主闭塞隐藏与滞留，利于潜藏防守及研发，忌出行求见，旺时密谋易成，衰时则易感阻滞。",
+   "evidenceQuote": "《遁甲演义》八门义（意引）：杜门属木居东南，主闭塞潜藏，利避祸防守隐匿。",
+   "classicalTerm": "杜门"
   },
   {
    "archetypeKey": "qimen.men.jing",
@@ -4056,8 +4082,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    },
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual",
-   "semanticLibrary": "景门属火主文书与计划，旺相时利于信息传递与展示，衰弱时则易显虚浮不实，宜关注表达与规划层面的趋势。"
+   "l1_status": "draft",
+   "semanticLibrary": "景门属火主文书与计划，旺相时利于信息传递与展示，衰弱时则易显虚浮不实，宜关注表达与规划层面的趋势。",
+   "evidenceQuote": "《遁甲演义》八门义（意引）：景门属火居南，中平之门，主文书信息，利献策考试。",
+   "classicalTerm": "景门"
   },
   {
    "archetypeKey": "qimen.men.jingx",
@@ -4072,8 +4100,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    },
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual",
-   "semanticLibrary": "惊门属金居西，往往象征惊恐、口舌或词讼等波动，倾向于引发心理不安或人际摩擦，但衰时多属虚惊，宜以静制动。"
+   "l1_status": "draft",
+   "semanticLibrary": "惊门属金居西，往往象征惊恐、口舌或词讼等波动，倾向于引发心理不安或人际摩擦，但衰时多属虚惊，宜以静制动。",
+   "evidenceQuote": "《遁甲演义》八门义（意引）：惊门属金居西，凶门也，主惊恐词讼，利捕捉诉讼。",
+   "classicalTerm": "惊门"
   },
   {
    "archetypeKey": "qimen.men.kai",
@@ -4088,8 +4118,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    },
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual",
-   "semanticLibrary": "开门属金居西北，象征开创与通达，往往利于事业谋为及公开事务，旺相时倾向于百事亨通，衰弱时则可能流于虚张声势。"
+   "l1_status": "draft",
+   "semanticLibrary": "开门属金居西北，象征开创与通达，往往利于事业谋为及公开事务，旺相时倾向于百事亨通，衰弱时则可能流于虚张声势。",
+   "evidenceQuote": "《烟波钓叟歌》义（意引）：开门属金居西北，大吉之门，主开创通达，利求官出行。",
+   "classicalTerm": "开门"
   },
   {
    "archetypeKey": "qimen.men.shang",
@@ -4104,8 +4136,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    },
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual",
-   "semanticLibrary": "伤门属木居东，往往象征竞争与损耗，倾向于引发争执或意外，解读时多关注变动趋势及潜在压力。"
+   "l1_status": "draft",
+   "semanticLibrary": "伤门属木居东，往往象征竞争与损耗，倾向于引发争执或意外，解读时多关注变动趋势及潜在压力。",
+   "evidenceQuote": "《遁甲演义》八门义（意引）：伤门属木居东，凶门也，主伤害争斗，利渔猎索债。",
+   "classicalTerm": "伤门"
   },
   {
    "archetypeKey": "qimen.men.sheng",
@@ -4120,8 +4154,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    },
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual",
-   "semanticLibrary": "生门属土居东北，主生发与财利，旺相时往往利于求财置产，失陷则可能呈现虚花不实之象。"
+   "l1_status": "draft",
+   "semanticLibrary": "生门属土居东北，主生发与财利，旺相时往往利于求财置产，失陷则可能呈现虚花不实之象。",
+   "evidenceQuote": "《烟波钓叟歌》义（意引）：生门属土居东北，大吉之门，主生发财利，利求财营建。",
+   "classicalTerm": "生门"
   },
   {
    "archetypeKey": "qimen.men.si",
@@ -4136,8 +4172,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    },
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual",
-   "semanticLibrary": "死门属土，往往象征事物进入停滞或终结阶段，倾向于旧事了结与沉淀，在求财或出行时可能面临困顿，宜静守不宜妄动。"
+   "l1_status": "draft",
+   "semanticLibrary": "死门属土，往往象征事物进入停滞或终结阶段，倾向于旧事了结与沉淀，在求财或出行时可能面临困顿，宜静守不宜妄动。",
+   "evidenceQuote": "《遁甲演义》八门义（意引）：死门属土居西南，大凶之门，主终结停滞，惟利吊丧安葬。",
+   "classicalTerm": "死门"
   },
   {
    "archetypeKey": "qimen.men.xiu",
@@ -4152,8 +4190,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    },
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual",
-   "semanticLibrary": "休门属水居北，主安养退守与人事和合，旺相时利于疗养缓和，失陷则易显虚浮，宜静不宜急进。"
+   "l1_status": "draft",
+   "semanticLibrary": "休门属水居北，主安养退守与人事和合，旺相时利于疗养缓和，失陷则易显虚浮，宜静不宜急进。",
+   "evidenceQuote": "《遁甲演义》八门义（意引）：休门属水居北，吉门也，主休养安和，利面君见贵、和合事。",
+   "classicalTerm": "休门"
   },
   {
    "archetypeKey": "qimen.shen.bashen",
@@ -4168,8 +4208,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    },
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual",
-   "semanticLibrary": "八神随遁盘游走，揭示隐微情态，如值符显尊贵、六合主和合，往往倾向于辅助判断事态发展的潜在趋势与吉凶倾向。"
+   "l1_status": "draft",
+   "semanticLibrary": "八神随遁盘游走，揭示隐微情态，如值符显尊贵、六合主和合，往往倾向于辅助判断事态发展的潜在趋势与吉凶倾向。",
+   "evidenceQuote": "《遁甲演义》义（意引）：值符螣蛇太阴六合白虎玄武九地九天八神随盘游走，主隐微情态。",
+   "classicalTerm": "八神"
   },
   {
    "archetypeKey": "qimen.star.jiuxing",
@@ -4184,8 +4226,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    },
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual",
-   "semanticLibrary": "九星代表天时气运，如天辅主文雅、天英显燥烈，其吉凶往往取决于与门盘的相生关系，倾向于反映事物发展的宏观趋势。"
+   "l1_status": "draft",
+   "semanticLibrary": "九星代表天时气运，如天辅主文雅、天英显燥烈，其吉凶往往取决于与门盘的相生关系，倾向于反映事物发展的宏观趋势。",
+   "evidenceQuote": "《遁甲演义》义（意引）：天蓬至天英九星随局飞布，星主天时气运，各司文武吉凶。",
+   "classicalTerm": "九星"
   },
   {
    "archetypeKey": "qimen.yiji.liuyi",
@@ -4200,8 +4244,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    },
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual",
-   "semanticLibrary": "六仪作为奇门阵体骨干，戊主财库而己藏私欲，庚辛多显阻隔与纠偏，壬癸则倾向流动与隐匿，整体呈现复杂态势。"
+   "l1_status": "draft",
+   "semanticLibrary": "六仪作为奇门阵体骨干，戊主财库而己藏私欲，庚辛多显阻隔与纠偏，壬癸则倾向流动与隐匿，整体呈现复杂态势。",
+   "evidenceQuote": "《烟波钓叟歌》义（意引）：戊己庚辛壬癸为六仪，为六甲之仪仗，布阵之骨干。",
+   "classicalTerm": "六仪"
   },
   {
    "archetypeKey": "qimen.yiji.sanqi",
@@ -4216,8 +4262,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    },
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual",
-   "semanticLibrary": "三奇指乙丙丁三干，往往象征文书、光明与敏捷，得使时倾向于谋事顺利，利于展现柔进与迅速之象。"
+   "l1_status": "draft",
+   "semanticLibrary": "三奇指乙丙丁三干，往往象征文书、光明与敏捷，得使时倾向于谋事顺利，利于展现柔进与迅速之象。",
+   "evidenceQuote": "《烟波钓叟歌》（意引）：乙丙丁为三奇——乙为日奇，丙为月奇，丁为星奇，主通达之助。",
+   "classicalTerm": "三奇"
   },
   {
    "archetypeKey": "qizheng.grid.gong",
@@ -6356,8 +6404,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    },
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual",
-   "semanticLibrary": "闭日象征能量收敛与积蓄，倾向于休整与内部建设，往往不宜对外扩张或开启新事务，利于稳固根基。"
+   "l1_status": "draft",
+   "semanticLibrary": "闭日象征能量收敛与积蓄，倾向于休整与内部建设，往往不宜对外扩张或开启新事务，利于稳固根基。",
+   "evidenceQuote": "《协纪辨方书》建除义例（意引）：闭者，藏也，主闭塞收敛，宜筑堤补垣，忌开市出行。",
+   "classicalTerm": "闭日"
   },
   {
    "archetypeKey": "zeri.jianchu.cheng",
@@ -6372,8 +6422,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    },
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual",
-   "semanticLibrary": "成日象征事物趋于圆满与和合，往往利于嫁娶、开市及入学等事宜，呈现出诸事顺遂、易于达成目标的积极趋势。"
+   "l1_status": "draft",
+   "semanticLibrary": "成日象征事物趋于圆满与和合，往往利于嫁娶、开市及入学等事宜，呈现出诸事顺遂、易于达成目标的积极趋势。",
+   "evidenceQuote": "《协纪辨方书》建除义例（意引）：成者，就也，百事可成，宜嫁娶开市入学，大吉之辰。",
+   "classicalTerm": "成日"
   },
   {
    "archetypeKey": "zeri.jianchu.chu",
@@ -6388,8 +6440,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    },
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual",
-   "semanticLibrary": "除日象征吐故纳新，往往利于扫除旧弊、解除困局或调理身心，但求官娶妇等事宜则可能进展受阻，宜顺势而为。"
+   "l1_status": "draft",
+   "semanticLibrary": "除日象征吐故纳新，往往利于扫除旧弊、解除困局或调理身心，但求官娶妇等事宜则可能进展受阻，宜顺势而为。",
+   "evidenceQuote": "《协纪辨方书》建除义例（意引）：除者，去也，主除旧布新，宜扫舍疗病，忌求官娶妇。",
+   "classicalTerm": "除日"
   },
   {
    "archetypeKey": "zeri.jianchu.ding",
@@ -6404,8 +6458,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    },
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual",
-   "semanticLibrary": "定日主静守，倾向于利于进人口、嫁娶及纳财等安定事务，往往不宜官讼、出行或医疗，解读视角宜固守现状。"
+   "l1_status": "draft",
+   "semanticLibrary": "定日主静守，倾向于利于进人口、嫁娶及纳财等安定事务，往往不宜官讼、出行或医疗，解读视角宜固守现状。",
+   "evidenceQuote": "《协纪辨方书》建除义例（意引）：定者，静也，主安定，宜纳财嫁娶，忌官讼出行。",
+   "classicalTerm": "定日"
   },
   {
    "archetypeKey": "zeri.jianchu.jian",
@@ -6420,8 +6476,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    },
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual",
-   "semanticLibrary": "建为十二神之首，象征气运初生与开创，往往利于启动新计划或确立目标，但倾向于不宜变动旧局或进行拆除类事务。"
+   "l1_status": "draft",
+   "semanticLibrary": "建为十二神之首，象征气运初生与开创，往往利于启动新计划或确立目标，但倾向于不宜变动旧局或进行拆除类事务。",
+   "evidenceQuote": "《协纪辨方书》建除义例（意引）：建者，健也，气方生而未定，宜立新出行，忌动土开仓。",
+   "classicalTerm": "建日"
   },
   {
    "archetypeKey": "zeri.jianchu.kai",
@@ -6436,8 +6494,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    },
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual",
-   "semanticLibrary": "开日象征开启与启动，往往利于开业、出行及求医等开创性事务，但倾向于不宜安葬或伐木，解读时宜侧重其启新之意。"
+   "l1_status": "draft",
+   "semanticLibrary": "开日象征开启与启动，往往利于开业、出行及求医等开创性事务，但倾向于不宜安葬或伐木，解读时宜侧重其启新之意。",
+   "evidenceQuote": "《协纪辨方书》建除义例（意引）：开者，启也，宜开业出行求医，忌安葬伐木。",
+   "classicalTerm": "开日"
   },
   {
    "archetypeKey": "zeri.jianchu.man",
@@ -6452,8 +6512,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    },
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual",
-   "semanticLibrary": "满日象征物盛丰盈，往往利于嫁娶开市等成就之事，但动土葬埋等事宜则可能因气机过实而受阻。"
+   "l1_status": "draft",
+   "semanticLibrary": "满日象征物盛丰盈，往往利于嫁娶开市等成就之事，但动土葬埋等事宜则可能因气机过实而受阻。",
+   "evidenceQuote": "《协纪辨方书》建除义例（意引）：满者，实也，物盛之时，宜嫁娶开市，忌动土葬埋。",
+   "classicalTerm": "满日"
   },
   {
    "archetypeKey": "zeri.jianchu.ping",
@@ -6468,8 +6530,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    },
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual",
-   "semanticLibrary": "平日象征运势平稳，宜守常安分，无显著吉凶波动，倾向于维持现状，适合处理日常事务。"
+   "l1_status": "draft",
+   "semanticLibrary": "平日象征运势平稳，宜守常安分，无显著吉凶波动，倾向于维持现状，适合处理日常事务。",
+   "evidenceQuote": "《协纪辨方书》建除义例（意引）：平者，和也，百事平平，宜修造安床，宜守常。",
+   "classicalTerm": "平日"
   },
   {
    "archetypeKey": "zeri.jianchu.po",
@@ -6484,8 +6548,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    },
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual",
-   "semanticLibrary": "破日象征冲破与损耗，往往预示变动或计划受阻，倾向于在拆除旧物或清理事务时展现其能量，需以调整心态应对潜在的不稳定趋势。"
+   "l1_status": "draft",
+   "semanticLibrary": "破日象征冲破与损耗，往往预示变动或计划受阻，倾向于在拆除旧物或清理事务时展现其能量，需以调整心态应对潜在的不稳定趋势。",
+   "evidenceQuote": "《协纪辨方书》建除义例（意引）：破者，裂也，冲破之辰，诸事不宜，惟宜破屋坏垣。",
+   "classicalTerm": "破日"
   },
   {
    "archetypeKey": "zeri.jianchu.shou",
@@ -6500,8 +6566,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    },
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual",
-   "semanticLibrary": "收日主收敛纳财，倾向于利于娶妇入学等进取之事，往往不宜放债开市，解读视角宜进不宜出。"
+   "l1_status": "draft",
+   "semanticLibrary": "收日主收敛纳财，倾向于利于娶妇入学等进取之事，往往不宜放债开市，解读视角宜进不宜出。",
+   "evidenceQuote": "《协纪辨方书》建除义例（意引）：收者，敛也，宜纳财娶妇入学，忌放债出行。",
+   "classicalTerm": "收日"
   },
   {
    "archetypeKey": "zeri.jianchu.wei",
@@ -6516,8 +6584,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    },
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual",
-   "semanticLibrary": "危日象征高峻与不安，往往提示环境存在潜在风险，倾向于采取安守策略，可能需对行动保持谨慎。"
+   "l1_status": "draft",
+   "semanticLibrary": "危日象征高峻与不安，往往提示环境存在潜在风险，倾向于采取安守策略，可能需对行动保持谨慎。",
+   "evidenceQuote": "《协纪辨方书》建除义例（意引）：危者，险也，主危殆不安，宜安守，忌登高嫁娶。",
+   "classicalTerm": "危日"
   },
   {
    "archetypeKey": "zeri.jianchu.zhi",
@@ -6532,8 +6602,10 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    },
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual",
-   "semanticLibrary": "执日主执行与修造，宜把持事务，往往利于捕捉与嫁娶，但倾向于不宜移徙或出行，解读时侧重稳固与掌控。"
+   "l1_status": "draft",
+   "semanticLibrary": "执日主执行与修造，宜把持事务，往往利于捕捉与嫁娶，但倾向于不宜移徙或出行，解读时侧重稳固与掌控。",
+   "evidenceQuote": "《协纪辨方书》建除义例（意引）：执者，持也，主执行把持，宜捕捉修造，忌移徙。",
+   "classicalTerm": "执日"
   },
   {
    "archetypeKey": "ziwei.aux.dijie",
@@ -6542,9 +6614,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "aux",
    "displayZh": "地劫",
-   "classicalTerm": "",
+   "classicalTerm": "地劫星",
    "professionalDef": "劫耗之星，主波折、损耗与意外破财，庙旺则应变，陷地则雪上加霜。",
-   "evidenceQuote": "",
+   "evidenceQuote": "紫微通行星情（意引）：地劫为劫耗之曜，主波折损耗，庙旺则临危应变。",
    "semanticLibrary": "地劫星往往象征资源损耗与突发波折，庙旺时倾向于激发应变韧性，陷地则可能加剧意外破财风险。",
    "translations": {
     "zh": "你路上容易遇计划外的坑——钱、事说没就没。留点备用、别 all in，摔了也能爬起来。"
@@ -6563,7 +6635,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.aux.dikong",
@@ -6572,9 +6644,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "aux",
    "displayZh": "地空",
-   "classicalTerm": "",
+   "classicalTerm": "地空星",
    "professionalDef": "空亡之星，主虚耗、想法飘忽与计划落空，庙旺则创意，陷地则虚无。",
-   "evidenceQuote": "",
+   "evidenceQuote": "紫微通行星情（意引）：地空为空亡之曜，主虚耗悬想，庙旺则创意不群。",
    "semanticLibrary": "地空星主虚耗与飘忽，庙旺时倾向于激发创意与想象力，陷地时则可能表现为计划落空或精神虚无，解读需结合整体格局。",
    "translations": {
     "zh": "你念头多但落地难，钱和计划容易空欢喜。适合搞创意点子，但重要的事要有人帮你收口执行。"
@@ -6593,7 +6665,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.aux.enguang",
@@ -6602,9 +6674,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "aux",
    "displayZh": "恩光",
-   "classicalTerm": "",
+   "classicalTerm": "恩光星",
    "professionalDef": "德庆之星，主恩荣、名声与受人称许，多主因德得誉。",
-   "evidenceQuote": "",
+   "evidenceQuote": "紫微通行星情（意引）：恩光主恩荣受许，多因德得誉之象。",
    "semanticLibrary": "恩光星倾向于带来名声与口碑，往往因德行或表现获得外界称许，但也可能伴随对虚名的过度追求。",
    "translations": {
     "zh": "你做好事容易被看见被夸，口碑帮你。待人实在点，名声会回头成你的助力。"
@@ -6623,7 +6695,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.aux.fenggao",
@@ -6632,9 +6704,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "aux",
    "displayZh": "封诰",
-   "classicalTerm": "",
+   "classicalTerm": "封诰星",
    "professionalDef": "封赏之星，主嘉奖、名位与事成有果，多主努力得认可。",
-   "evidenceQuote": "",
+   "evidenceQuote": "紫微通行星情（意引）：封诰主嘉奖封赏，多努力得认可之象。",
    "semanticLibrary": "封诰星倾向于象征努力获得认可与名位提升，往往预示在追求功利或成果时易得嘉奖，利于事业稳固。",
    "translations": {
     "zh": "你的付出容易「被盖章认可」——奖、名、果实在你身上落得住。认准的事做到底，回报会来。"
@@ -6653,7 +6725,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.aux.fengge",
@@ -6662,9 +6734,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "aux",
    "displayZh": "凤阁",
-   "classicalTerm": "",
+   "classicalTerm": "凤阁星",
    "professionalDef": "修饰之星，主外貌、品味与装饰之才，多主仪表与审美。",
-   "evidenceQuote": "",
+   "evidenceQuote": "紫微通行星情（意引）：凤阁主仪表品味，多修饰审美之才。",
    "semanticLibrary": "凤阁星倾向于展现个人对外在仪表与审美品味的追求，往往暗示注重形象修饰，可能带来外在形象的提升或虚荣倾向。",
    "translations": {
     "zh": "你对好看有要求，自己也收拾得利落，审美在线。靠品味吃饭、靠形象加分，是你隐藏的王牌。"
@@ -6683,7 +6755,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.aux.guasu",
@@ -6692,9 +6764,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "aux",
    "displayZh": "寡宿",
-   "classicalTerm": "",
+   "classicalTerm": "寡宿星",
    "professionalDef": "寡宿之星，主淡漠、清冷与情感疏离，多主内心疏离。",
-   "evidenceQuote": "",
+   "evidenceQuote": "紫微通行星情（意引）：寡宿主清冷淡漠，情感疏离，宜自立自安。",
    "semanticLibrary": "寡宿星倾向于呈现清冷自持的特质，往往暗示情感表达较为疏离，解读时多指向内心独立与慢热倾向。",
    "translations": {
     "zh": "你对外在热闹不太热络，心里有一层距离感。不是没感情，是慢热。找几个真正合拍的，重质不重量。"
@@ -6713,7 +6785,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.aux.guchen",
@@ -6722,9 +6794,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "aux",
    "displayZh": "孤辰",
-   "classicalTerm": "",
+   "classicalTerm": "孤辰星",
    "professionalDef": "孤克之星，主孤独、独立与六亲缘薄，多主性格孤高。",
-   "evidenceQuote": "",
+   "evidenceQuote": "紫微通行星情（意引）：孤辰主孤独自立，六亲缘薄，性喜独处。",
    "semanticLibrary": "孤辰星倾向于强化独立清醒的特质，可能表现为性格疏离自在，往往暗示六亲缘分较薄，宜从自我空间角度解读。",
    "translations": {
     "zh": "你骨子里有点独，喜欢自己待着不凑热闹，也少依赖人。独处是充电，但也别忘了偶尔主动靠近在乎的人。"
@@ -6743,7 +6815,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.aux.hongluan",
@@ -6752,9 +6824,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "aux",
    "displayZh": "红鸾",
-   "classicalTerm": "",
+   "classicalTerm": "红鸾星",
    "professionalDef": "喜庆之星，主姻缘、桃花与喜事，多用于婚姻之期与情感升温。",
-   "evidenceQuote": "",
+   "evidenceQuote": "紫微通行星情（意引）：红鸾主婚姻喜庆，流年逢之常主情感姻缘之喜。",
    "semanticLibrary": "红鸾星动往往预示情感升温或喜庆契机，倾向于促成姻缘，但也可能伴随冲动选择，需理性看待桃花机遇。",
    "translations": {
     "zh": "你是「有喜事体质」——谈恋爱、办喜事、人气旺的时候最顺。想脱单或升温，挑你状态好的节点出手。"
@@ -6773,7 +6845,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.aux.huagai",
@@ -6782,9 +6854,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "aux",
    "displayZh": "华盖",
-   "classicalTerm": "",
+   "classicalTerm": "华盖星",
    "professionalDef": "孤高之星，主才艺、宗教与玄学缘，多主超脱与艺术气质。",
-   "evidenceQuote": "",
+   "evidenceQuote": "紫微通行星情（意引）：华盖主孤高才艺，与宗教玄学有缘，多艺术气质。",
    "semanticLibrary": "华盖星倾向于赋予命主独特的艺术气质与玄学缘分，往往表现出孤高避世的倾向，可能更倾向于精神层面的超脱与内省。",
    "translations": {
     "zh": "你有股仙气——爱独处、好玄的、搞艺术的，跟大众口味有点距离。这种清高是你特色，别硬融圈子。"
@@ -6803,7 +6875,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.aux.huoxing",
@@ -6812,9 +6884,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "aux",
    "displayZh": "火星",
-   "classicalTerm": "",
+   "classicalTerm": "火星",
    "professionalDef": "刚烈之星，主突发、暴躁与破坏，庙旺则果敢，陷地则急性招灾。",
-   "evidenceQuote": "",
+   "evidenceQuote": "《紫微斗数全书》论火星（意引）：火星属火，为刚烈之曜，主突发暴躁，庙旺则果敢。",
    "semanticLibrary": "火星象征刚烈与突发，庙旺时倾向于展现果敢与爆发力，陷地时则可能因急躁而引发波动，宜以冷静视角审视其能量走向。",
    "translations": {
     "zh": "你点火快、脾气说来就来，事情也容易突然炸锅。好处是冲劲猛，坏处是烧着自己。发火先数三下，大事别当场拍板。"
@@ -6833,7 +6905,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.aux.lingxing",
@@ -6842,9 +6914,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "aux",
    "displayZh": "铃星",
-   "classicalTerm": "",
+   "classicalTerm": "铃星",
    "professionalDef": "暗毒之星，主隐忍、阴狠与持久困扰，庙旺则蓄势，陷地则暗中生非。",
-   "evidenceQuote": "",
+   "evidenceQuote": "《紫微斗数全书》论铃星（意引）：铃星属火，为暗毒之曜，主隐忍阴执，庙旺则蓄势。",
    "semanticLibrary": "铃星象征深沉隐忍的暗火，庙旺时倾向于蓄势待发，陷地时则可能引发持久困扰，解读需关注其压抑后的爆发趋势。",
    "translations": {
     "zh": "你生气不爱当场爆，闷在心里慢慢磨——这种暗火更伤人。有疙瘩早点说出来，别攒成心结。"
@@ -6863,7 +6935,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.aux.longchi",
@@ -6872,9 +6944,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "aux",
    "displayZh": "龙池",
-   "classicalTerm": "",
+   "classicalTerm": "龙池星",
    "professionalDef": "才艺之星，主声誉、技艺与高雅情趣，多主艺术天赋。",
-   "evidenceQuote": "",
+   "evidenceQuote": "紫微通行星情（意引）：龙池主技艺声誉，多艺术巧艺之天赋。",
    "semanticLibrary": "龙池星倾向于展现艺术天赋与高雅格调，往往带来小众声誉，可能使个人在技艺领域获得独特认可。",
    "translations": {
     "zh": "你在雅事上有天赋——音乐书画手工这类，做出来有格调。把爱好练精，它能成为你的标签。"
@@ -6893,7 +6965,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.aux.lucun",
@@ -6902,9 +6974,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "aux",
    "displayZh": "禄存",
-   "classicalTerm": "",
+   "classicalTerm": "禄存星",
    "professionalDef": "俸禄之星，主财富、积聚与安稳，性保守，主财库丰盈但吝于流动。",
-   "evidenceQuote": "",
+   "evidenceQuote": "《紫微斗数全书》论禄存（意引）：禄存属土，北斗，司禄，主财库积聚，性保守。",
    "semanticLibrary": "禄存象征俸禄与积聚，倾向于财库丰盈且生活安稳，但往往因性格保守而吝于流动，解读时宜关注其守财特质。",
    "translations": {
     "zh": "你是存钱型，钱袋子捂得紧、攒得住，日子安稳。别抠到啥都自己扛，该花的地方花，财气才转得动。"
@@ -6923,7 +6995,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.aux.qingyang",
@@ -6932,9 +7004,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "aux",
    "displayZh": "擎羊",
-   "classicalTerm": "",
+   "classicalTerm": "擎羊星",
    "professionalDef": "刑伤之星，主刚烈、争执与血光，庙旺则勇武，陷地则招是非。",
-   "evidenceQuote": "",
+   "evidenceQuote": "《紫微斗数全书》论擎羊（意引）：擎羊属金，北斗浮星，化为刑，主刚烈争斗，庙旺则武职威权。",
    "semanticLibrary": "擎羊象征刚烈冲劲，庙旺时倾向于展现果决勇武，陷地时则可能引发急躁争执，往往需留意人际摩擦。",
    "translations": {
     "zh": "你性子冲、说话直，容易跟人起摩擦、小磕碰也多。动手前压三秒、嘴上留点余地，能少惹一半麻烦。"
@@ -6953,7 +7025,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.aux.taifu",
@@ -6962,9 +7034,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "aux",
    "displayZh": "台辅",
-   "classicalTerm": "",
+   "classicalTerm": "台辅星",
    "professionalDef": "佐贰之星，主辅佐、幕僚与职位之助，多主得副手之益。",
-   "evidenceQuote": "",
+   "evidenceQuote": "紫微通行星情（意引）：台辅主辅佐幕僚之益，多得副手之力。",
    "semanticLibrary": "台辅星倾向于体现辅佐与补位的特质，往往暗示在团队中甘当配角，可能通过幕后支持或幕僚角色获得职位上的助力。",
    "translations": {
     "zh": "你适合当关键副手——领导离不开的二把手，补位精准。把辅助做成专业，位置就稳。"
@@ -6983,7 +7055,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.aux.tiancai",
@@ -6992,9 +7064,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "aux",
    "displayZh": "天才",
-   "classicalTerm": "",
+   "classicalTerm": "天才星",
    "professionalDef": "聪敏之星，主禀赋、机智与专精，多主某方面过人天赋。",
-   "evidenceQuote": "",
+   "evidenceQuote": "紫微通行星情（意引）：天才主聪敏禀赋，多专精过人之能。",
    "semanticLibrary": "天才星倾向于展现某领域的过人禀赋与机智，往往利于专精发展，但也可能伴随偏才特质或自负倾向。",
    "translations": {
     "zh": "你脑子有专项特长——某件事一学就透、比别人灵。找到那块深耕下去，就是你的壁垒。"
@@ -7013,7 +7085,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.aux.tiangui",
@@ -7022,9 +7094,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "aux",
    "displayZh": "天贵",
-   "classicalTerm": "",
+   "classicalTerm": "天贵星",
    "professionalDef": "贵显之星，主地位、信用与受人敬重，多主因信得贵。",
-   "evidenceQuote": "",
+   "evidenceQuote": "紫微通行星情（意引）：天贵主贵显信用，多受人敬重。",
    "semanticLibrary": "天贵星倾向于提升个人社会地位与信用，往往因言行端正而获得他人敬重，利于求名与稳定发展。",
    "translations": {
     "zh": "你说话算数、靠谱，别人愿意信你给你位子。守住信用这金字招牌，贵人自然来。"
@@ -7043,7 +7115,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.aux.tiankui",
@@ -7052,9 +7124,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "aux",
    "displayZh": "天魁",
-   "classicalTerm": "",
+   "classicalTerm": "天魁星",
    "professionalDef": "昼贵之星，主科名、显达与贵人提携，多主长辈、男性贵人之助，利于功名。",
-   "evidenceQuote": "",
+   "evidenceQuote": "《紫微斗数全书》论天魁（意引）：天魁属火，南斗，为昼贵之星，主科名显达。",
    "semanticLibrary": "天魁星倾向于带来长辈或男性贵人的提携，利于功名显达，但往往伴随被动依赖的特质，需警惕恃宠而骄。",
    "translations": {
     "zh": "你容易碰到「上面有人拉你」的运气——领导、长辈、前辈看中你、给你机会。关键时刻别怯场，接住机会就上。"
@@ -7073,7 +7145,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.aux.tianma",
@@ -7082,9 +7154,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "aux",
    "displayZh": "天马",
-   "classicalTerm": "",
+   "classicalTerm": "天马星",
    "professionalDef": "奔驰之星，主动荡、远行与变动，喜与禄存或吉星同宫，主迁动得财。",
-   "evidenceQuote": "",
+   "evidenceQuote": "紫微通行星情（意引）：天马主动迁移奔驰，与禄存同宫为禄马交驰，主迁动得财。",
    "semanticLibrary": "天马星象征奔波与变动，往往预示远行或环境迁移，若与吉星同宫，倾向于在动态中获取机遇与财富。",
    "translations": {
     "zh": "你待不住——换环境、出差、跑动反而来财来机会。别在一处闷死，动起来往外走，运气更活。"
@@ -7103,7 +7175,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.aux.tianshou",
@@ -7112,9 +7184,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "aux",
    "displayZh": "天寿",
-   "classicalTerm": "",
+   "classicalTerm": "天寿星",
    "professionalDef": "延寿之星，主康宁、稳健与长久，多主平安耐久。",
-   "evidenceQuote": "",
+   "evidenceQuote": "紫微通行星情（意引）：天寿主康宁稳健，多平安耐久之福。",
    "semanticLibrary": "天寿星倾向于赋予命局稳健与康宁的特质，往往预示生活节奏平缓且具备较强的耐久力，但也可能因过于保守而显得行事拖沓。",
    "translations": {
     "zh": "你底子稳、活得久、不慌不忙，是慢热但长线型。保重身子别透支，日子越往后越见你的稳。"
@@ -7133,7 +7205,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.aux.tianxi",
@@ -7142,9 +7214,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "aux",
    "displayZh": "天喜",
-   "classicalTerm": "",
+   "classicalTerm": "天喜星",
    "professionalDef": "欢悦之星，主喜庆、和乐与添丁之喜，常随红鸾同论。",
-   "evidenceQuote": "",
+   "evidenceQuote": "紫微通行星情（意引）：天喜主喜庆和乐，常随红鸾对坐同论，主添丁之喜。",
    "semanticLibrary": "天喜星倾向于带来和乐喜庆的氛围，往往利于人际互动与情感交流，但也可能因玩乐分心而稍显散漫。",
    "translations": {
     "zh": "你身边喜气重，聚会添人开心事容易落你头上。多制造轻松快乐的场合，关系自然升温。"
@@ -7163,7 +7235,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.aux.tianxing",
@@ -7172,9 +7244,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "aux",
    "displayZh": "天刑",
-   "classicalTerm": "",
+   "classicalTerm": "天刑星",
    "professionalDef": "刑罚之星，主规则、是非与官非，庙旺则自律，陷地则招讼。",
-   "evidenceQuote": "",
+   "evidenceQuote": "紫微通行星情（意引）：天刑主规则自律，亦主是非官非，庙旺则纪律严明。",
    "semanticLibrary": "天刑星倾向于强化规则意识与自律精神，庙旺时往往体现为原则分明，陷地时则可能因过于较真而引发是非或官非纠纷。",
    "translations": {
     "zh": "你对规矩又爱又怕，容易碰上讲原则的事或小人官司。做事留痕守契约，别踩灰色地带，最稳。"
@@ -7193,7 +7265,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.aux.tianyao",
@@ -7202,9 +7274,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "aux",
    "displayZh": "天姚",
-   "classicalTerm": "",
+   "classicalTerm": "天姚星",
    "professionalDef": "媚惑之星，主风情、机智与是非口舌，庙旺则灵巧，陷地则招谣。",
-   "evidenceQuote": "",
+   "evidenceQuote": "紫微通行星情（意引）：天姚主风情机智，亦主是非口舌，庙旺则灵巧动人。",
    "semanticLibrary": "天姚星倾向于展现风情与机智，庙旺时往往体现灵巧，陷地时则可能引发是非口舌，需结合整体格局客观解读。",
    "translations": {
     "zh": "你灵俏会来事儿，招人也会招闲话。靠机灵吃饭可以，但别让风流韵事变成别人的谈资。"
@@ -7223,7 +7295,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.aux.tianyue",
@@ -7232,9 +7304,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "aux",
    "displayZh": "天钺",
-   "classicalTerm": "",
+   "classicalTerm": "天钺星",
    "professionalDef": "夜贵之星，主荫庇、化解与女性贵人之助，多主意外之助与危机化解。",
-   "evidenceQuote": "",
+   "evidenceQuote": "《紫微斗数全书》论天钺（意引）：天钺属火（金），南斗，为夜贵之星，主荫庇化解。",
    "semanticLibrary": "天钺象征被动获得的荫庇与化解之力，往往在危机时刻倾向于出现女性贵人相助，虽能缓解困境但常伴随人情牵绊。",
    "translations": {
     "zh": "你常在卡住时被一位女性长辈或贵人拉一把，也能逢凶化吉。多谢恩记情，这份缘会回头帮你。"
@@ -7253,7 +7325,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.aux.tuoluo",
@@ -7262,9 +7334,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "aux",
    "displayZh": "陀罗",
-   "classicalTerm": "",
+   "classicalTerm": "陀罗星",
    "professionalDef": "纠缆之星，主纠缠、拖延与反复，庙旺则坚韧，陷地则拖泥带水。",
-   "evidenceQuote": "",
+   "evidenceQuote": "《紫微斗数全书》论陀罗（意引）：陀罗属金，北斗浮星，化为忌，主纠缠拖延，庙旺则坚韧。",
    "semanticLibrary": "陀罗星象征纠缠与拖延，庙旺时体现坚韧持久的耐性，陷地则易致事务反复，解读时宜关注其带来的时间延展效应。",
    "translations": {
     "zh": "你遇事容易绕、放不下、反复拉扯——好处是能磨，坏处是耗。定好的事设个截止线，别总再想想。"
@@ -7283,7 +7355,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.aux.wenchang",
@@ -7292,9 +7364,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "aux",
    "displayZh": "文昌",
-   "classicalTerm": "",
+   "classicalTerm": "文昌星",
    "professionalDef": "文魁之星，主文采、学识与功名，喜入命身宫及官禄宫，主聪明好学、利考试文书。",
-   "evidenceQuote": "",
+   "evidenceQuote": "《紫微斗数全书》论文昌（意引）：文昌属金，南北斗，司科甲，为文魁之星，主学识功名。",
    "semanticLibrary": "文昌星倾向于赋予命主聪慧与文采，利于考试及文书事务，但往往伴随眼高手低的倾向，需结合格局判断功名成就。",
    "translations": {
     "zh": "你是吃「笔头饭」的料——写、学、考、表达这些事比旁人顺。备考、写方案、做文案时状态最好，把脑子用在文字和知识上最出彩。"
@@ -7313,7 +7385,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.aux.wenqu",
@@ -7322,9 +7394,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "aux",
    "displayZh": "文曲",
-   "classicalTerm": "",
+   "classicalTerm": "文曲星",
    "professionalDef": "礼乐之星，主才艺、口才与巧思，偏诗词歌赋、技艺表演，与文昌同列文星。",
-   "evidenceQuote": "",
+   "evidenceQuote": "《紫微斗数全书》论文曲（意引）：文曲属水，北斗，为礼乐之星，主才艺口才。",
    "semanticLibrary": "文曲星主才艺与口才，倾向于展现巧思与表演天赋，但往往伴随心思浮滑或贪玩特质，需留意专注力分散。",
    "translations": {
     "zh": "你有点艺术细胞、嘴也巧，唱歌写东西耍点小手艺都比划得起来。适合把才气变成能秀出来的本事，别埋着。"
@@ -7343,7 +7415,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.aux.xianchi",
@@ -7352,9 +7424,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "aux",
    "displayZh": "咸池",
-   "classicalTerm": "",
+   "classicalTerm": "咸池星",
    "professionalDef": "桃花之星，主情欲、风流与艺术感性，庙旺则才情，陷地则滥情。",
-   "evidenceQuote": "",
+   "evidenceQuote": "紫微通行星情（意引）：咸池为桃花之曜，主情欲风流，庙旺则才情，陷地须防滥情。",
    "semanticLibrary": "咸池星主感性魅力与艺术才情，庙旺时往往展现独特风采，陷地时则可能因情感分心而略显浮躁。",
    "translations": {
     "zh": "你自带吸引力，对美对情敏感，也容易招桃花。享受魅力但别贪多，挑真心的人，别让烂桃花缠身。"
@@ -7373,7 +7445,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.aux.youbi",
@@ -7382,9 +7454,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "aux",
    "displayZh": "右弼",
-   "classicalTerm": "",
+   "classicalTerm": "右弼星",
    "professionalDef": "协助之星，主副手、计划与暗中扶持，性沉稳，主内助与幕后成全。",
-   "evidenceQuote": "",
+   "evidenceQuote": "《紫微斗数全书》论右弼（意引）：右弼属水，北斗，为协助之星，主暗中成全。",
    "semanticLibrary": "右弼星象征沉稳的幕后扶持力量，倾向于通过隐忍与周密计划提供内助，往往在暗中成全大局，体现辅助与协调的正面征象。",
    "translations": {
     "zh": "你是那种在背后把事托住的人，也常遇到默默帮你兜底的人。计划统筹类的事你在行，别小看自己的辅助力。"
@@ -7403,7 +7475,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.aux.zuofu",
@@ -7412,9 +7484,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "aux",
    "displayZh": "左辅",
-   "classicalTerm": "",
+   "classicalTerm": "左辅星",
    "professionalDef": "佐助之星，主贵人、辅弼与助力，性温良，喜夹命或会吉，主得人力扶持。",
-   "evidenceQuote": "",
+   "evidenceQuote": "《紫微斗数全书》论左辅（意引）：左辅属土，北斗，为佐助之星，主贵人力扶。",
    "semanticLibrary": "左辅星象征温和的助力与贵人扶持，倾向于在人际互动中获得外部支持，往往体现为依赖或附和的倾向，利于缓解压力。",
    "translations": {
     "zh": "你命里自带「帮手运」——做事容易遇到肯搭手的人，团队里你也愿意补位。多经营人脉，关键时刻有人拉你一把。"
@@ -7433,7 +7505,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.palace.caibo",
@@ -7442,9 +7514,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "palace",
    "displayZh": "财帛宫",
-   "classicalTerm": "",
+   "classicalTerm": "财帛宫",
    "professionalDef": "主财源、理财方式与进财之途。",
-   "evidenceQuote": "",
+   "evidenceQuote": "紫微斗数通行命盘法（意引）：财帛宫主财源进路理财之方。",
    "semanticLibrary": "财帛宫倾向于揭示个人获取财富的途径与理财风格，往往反映其对金钱的态度及进财的潜在趋势。",
    "translations": {
     "zh": "看钱怎么来、怎么花、怎么管——你是赚辛苦钱还是资源钱，是攒得住还是留不住，这里给线索。"
@@ -7462,7 +7534,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.palace.fude",
@@ -7471,9 +7543,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "palace",
    "displayZh": "福德宫",
-   "classicalTerm": "",
+   "classicalTerm": "福德宫",
    "professionalDef": "主内心福泽、精神享受与晚年心境。",
-   "evidenceQuote": "",
+   "evidenceQuote": "紫微斗数通行命盘法（意引）：福德宫主内心福泽精神享受与晚年心境。",
    "semanticLibrary": "福德宫倾向于反映内心福泽与精神享受，往往暗示晚年心境趋于安稳，但也可能因过度空想而偏离现实。",
    "translations": {
     "zh": "看你怎么「给自己充电」——什么让你真正松下来、觉得值。精神富不富，比账面更决定你舒不舒服。"
@@ -7491,7 +7563,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.palace.fumu",
@@ -7500,9 +7572,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "palace",
    "displayZh": "父母宫",
-   "classicalTerm": "",
+   "classicalTerm": "父母宫",
    "professionalDef": "主父母庇荫、长辈缘与文书缘分。",
-   "evidenceQuote": "",
+   "evidenceQuote": "紫微斗数通行命盘法（意引）：父母宫主尊长庇荫与文书缘分。",
    "semanticLibrary": "父母宫倾向于反映长辈缘与文书机遇，星曜组合往往暗示获得庇荫或依赖倾向，需结合整体格局判断其正面助力或潜在压力。",
    "translations": {
     "zh": "看你和父母、长辈的缘分，也管「文书、契约、证照」一类事的顺逆。长辈是你早年的靠山或课题。"
@@ -7520,7 +7592,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.palace.fuqi",
@@ -7529,9 +7601,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "palace",
    "displayZh": "夫妻宫",
-   "classicalTerm": "",
+   "classicalTerm": "夫妻宫",
    "professionalDef": "主配偶性情、姻缘早晚与相处模式。",
-   "evidenceQuote": "",
+   "evidenceQuote": "紫微斗数通行命盘法（意引）：夫妻宫主配偶性情与姻缘相处之道。",
    "semanticLibrary": "夫妻宫倾向于反映伴侣性情与相处模式，星曜组合可能暗示姻缘早晚及互动中的挑剔倾向，往往需结合整体命局综合解读。",
    "translations": {
     "zh": "看亲密关系的样子——对方大概什么脾气、你们是和睦型还是磨合型。注意它只说「相处模式」，不是注定，经营才是关键。"
@@ -7549,7 +7621,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.palace.guanlu",
@@ -7558,9 +7630,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "palace",
    "displayZh": "官禄宫",
-   "classicalTerm": "",
+   "classicalTerm": "官禄宫",
    "professionalDef": "主事业、职位与功名趋向。",
-   "evidenceQuote": "",
+   "evidenceQuote": "紫微斗数通行命盘法（意引）：官禄宫主事业职位与功名趋向。",
    "semanticLibrary": "官禄宫主要映射事业与职位的潜在走向，其星曜组合往往倾向于揭示功名获取的难易程度及职场发展的整体趋势。",
    "translations": {
     "zh": "看事业这条线——适合走专业还是管理，是稳步上升还是波动前行。它是职业方向的线索，不是定死的职业。"
@@ -7578,7 +7650,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.palace.jiaoyou",
@@ -7587,9 +7659,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "palace",
    "displayZh": "交友宫",
-   "classicalTerm": "",
+   "classicalTerm": "交友宫",
    "professionalDef": "主部属、同事与泛泛之交。",
-   "evidenceQuote": "",
+   "evidenceQuote": "紫微斗数通行命盘法（意引）：交友宫主部属同事与交际之缘。",
    "semanticLibrary": "交友宫倾向于反映部属与泛泛之交的互动模式，往往暗示在人际圈子中可能因轻信而遭遇波折，需理性看待社交趋势。",
    "translations": {
     "zh": "看你和「手下、同事、圈子」的互动——是得人帮，还是被拖累。也管你在一个群体里的位置。"
@@ -7607,7 +7679,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.palace.jie",
@@ -7616,9 +7688,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "palace",
    "displayZh": "疾厄宫",
-   "classicalTerm": "",
+   "classicalTerm": "疾厄宫",
    "professionalDef": "主体质强弱、精力耗散与养生倾向。",
-   "evidenceQuote": "",
+   "evidenceQuote": "紫微斗数通行命盘法（意引）：疾厄宫主体质强弱与养生倾向。",
    "semanticLibrary": "疾厄宫倾向于反映主体质强弱与精力耗散趋势，往往提示养生倾向或健康焦虑，解读时宜关注潜在隐患而非具体病症。",
    "translations": {
     "zh": "看你对身体的「使用习惯」和容易耗神的领域——是拼起来不要命，还是总在小事上费神。它是提醒你注意节奏，不是诊断，身体问题请看医生。"
@@ -7637,7 +7709,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.palace.mingong",
@@ -7646,9 +7718,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "palace",
    "displayZh": "命宫",
-   "classicalTerm": "",
+   "classicalTerm": "命宫",
    "professionalDef": "立命之所，统摄一身之格局，为十二宫之纲领。",
-   "evidenceQuote": "",
+   "evidenceQuote": "紫微斗数通行命盘法（意引）：命宫为立命之所，统摄一身格局，为十二宫之纲领。",
    "semanticLibrary": "命宫统摄整体格局，反映个人根基与本性，往往倾向于固执于性，需结合其他宫位综合解读其人生走向。",
    "translations": {
     "zh": "这是你这人的「总开关」——性格底色、先天禀赋、给人第一眼的印象，都从这里看。读懂命宫，再看别的宫才有根。"
@@ -7666,7 +7738,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.palace.qianyi",
@@ -7675,9 +7747,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "palace",
    "displayZh": "迁移宫",
-   "classicalTerm": "",
+   "classicalTerm": "迁移宫",
    "professionalDef": "主外出、远行与在外际遇。",
-   "evidenceQuote": "",
+   "evidenceQuote": "紫微斗数通行命盘法（意引）：迁移宫主外出远行与在外际遇。",
    "semanticLibrary": "迁移宫倾向于反映远行际遇与外部机遇，往往暗示漂泊倾向，可能呈现机遇与变动并存的趋势。",
    "translations": {
     "zh": "看离开熟悉环境后的你——出差、旅居、去陌生地方是不是如鱼得水。想往外走、做外地/海外业务，这宫是参考。"
@@ -7695,7 +7767,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.palace.tianzhai",
@@ -7704,9 +7776,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "palace",
    "displayZh": "田宅宫",
-   "classicalTerm": "",
+   "classicalTerm": "田宅宫",
    "professionalDef": "主房产、家运与安身之所。",
-   "evidenceQuote": "",
+   "evidenceQuote": "紫微斗数通行命盘法（意引）：田宅宫主房产家运与安身之所。",
    "semanticLibrary": "田宅宫倾向于反映家宅安顿与房产运势，往往体现对居住环境的执念，可能预示家运的平稳或波动。",
    "translations": {
     "zh": "看你和「家、房子、根」的关系——是安稳恋家，还是总在搬。也管祖基和不动产缘。"
@@ -7724,7 +7796,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.palace.xiongdi",
@@ -7733,9 +7805,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "palace",
    "displayZh": "兄弟宫",
-   "classicalTerm": "",
+   "classicalTerm": "兄弟宫",
    "professionalDef": "主兄弟姊妹、同辈朋友与早年助力。",
-   "evidenceQuote": "",
+   "evidenceQuote": "紫微斗数通行命盘法（意引）：兄弟宫主手足同侪与平辈之助力缘分。",
    "semanticLibrary": "兄弟宫揭示同辈关系与早年助力，星曜组合倾向于反映手足情谊的紧密或疏离，往往影响人际支持系统的稳定性。",
    "translations": {
     "zh": "看你和兄弟姐妹、平辈伙伴的缘分与互动——是互相帮衬，还是各自闯荡。也折射你早期人脉的底色。"
@@ -7753,7 +7825,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.palace.zinv",
@@ -7762,9 +7834,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "palace",
    "displayZh": "子女宫",
-   "classicalTerm": "",
+   "classicalTerm": "子女宫",
    "professionalDef": "主子女缘分、晚辈与创意产出。",
-   "evidenceQuote": "",
+   "evidenceQuote": "紫微斗数通行命盘法（意引）：子女宫主子息缘分与晚辈创意之象。",
    "semanticLibrary": "子女宫倾向于反映晚辈缘分及创意产出趋势，星曜组合可能暗示对后代的苛责倾向或创作灵感的波动，需结合整体格局客观解读。",
    "translations": {
     "zh": "看你和孩子的缘分，也管你「生出来的东西」——作品、项目、创意。想搞创作，这宫有戏。"
@@ -7782,7 +7854,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.sihua.huaji",
@@ -7791,9 +7863,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "sihua",
    "displayZh": "化忌",
-   "classicalTerm": "",
+   "classicalTerm": "化忌",
    "professionalDef": "四化之一，主阻滞、执念与亏欠。星曜化忌则其所司之事多纠结、宜谨慎。",
-   "evidenceQuote": "",
+   "evidenceQuote": "紫微四化通行释义（意引）：忌主阻滞纠结，化忌则所司之事多执念，宜谨慎收敛。",
    "semanticLibrary": "化忌象征执念与阻滞，往往提示该领域易生纠结或亏欠感，倾向于引发深刻反思，宜保持谨慎以化解潜在阻碍。",
    "translations": {
     "zh": "某个领域要「上心但别较劲」——容易卡、容易放不下、容易反复。不是坏事，是提醒你这里多花心思、别硬碰，绕一下更顺。"
@@ -7812,7 +7884,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.sihua.huake",
@@ -7821,9 +7893,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "sihua",
    "displayZh": "化科",
-   "classicalTerm": "",
+   "classicalTerm": "化科",
    "professionalDef": "四化之一，主名声、清贵与化解。星曜化科则其所司之事有声望、得缓和。",
-   "evidenceQuote": "",
+   "evidenceQuote": "紫微四化通行释义（意引）：科主声名清贵，化科则所司之事得誉而缓和。",
    "semanticLibrary": "星曜化科倾向于提升名声与清贵气质，往往能缓和事态紧张感，但需注意可能伴随虚名或表面光鲜的倾向。",
    "translations": {
     "zh": "某个领域你容易「得名」——口碑、名声、被人夸，或者遇到尴尬能软着陆。适合把它用在需要露脸、建立信誉的事上。"
@@ -7841,7 +7913,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.sihua.hualu",
@@ -7850,9 +7922,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "sihua",
    "displayZh": "化禄",
-   "classicalTerm": "",
+   "classicalTerm": "化禄",
    "professionalDef": "四化之一，主滋长、获得与顺遂。星曜化禄则其所司之事得助、有进益。",
-   "evidenceQuote": "",
+   "evidenceQuote": "紫微四化通行释义（意引）：禄主滋长进益，化禄则所司之事得助而顺遂。",
    "semanticLibrary": "星曜化禄往往象征资源进益与事务顺遂，倾向于获得外部助力，但需留意因贪恋而导致的过度扩张倾向。",
    "translations": {
     "zh": "某个领域被「加持」了——事情容易顺、资源容易来、付出有回响。把它当成你的加分项去用，别浪费在无关紧要的地方。"
@@ -7870,7 +7942,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.sihua.huaquan",
@@ -7879,9 +7951,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "sihua",
    "displayZh": "化权",
-   "classicalTerm": "",
+   "classicalTerm": "化权",
    "professionalDef": "四化之一，主掌权、主导与掌控。星曜化权则其所司之事有力、能主事。",
-   "evidenceQuote": "",
+   "evidenceQuote": "紫微四化通行释义（意引）：权主掌控主导，化权则所司之事有力而能主事。",
    "semanticLibrary": "星曜化权往往象征主导与掌控力的增强，倾向于在事务中占据主动，但也可能因过于专断而引发人际摩擦。",
    "translations": {
     "zh": "某个领域你说话算数——有掌控感、能拍板、别人听你的。用它去牵头，但权柄越重越要听得进反对声。"
@@ -7899,7 +7971,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.star.jumen",
@@ -7908,9 +7980,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "star",
    "displayZh": "巨门",
-   "classicalTerm": "",
+   "classicalTerm": "巨门星",
    "professionalDef": "北斗第二星，化气为暗，主口舌、分析与疑惑。善辩说，亦主是非，宜以口才立业。",
-   "evidenceQuote": "",
+   "evidenceQuote": "《紫微斗数全书》论巨门星（意引）：巨门属水，北斗第二星，化为暗，主口舌是非，善辩。",
    "semanticLibrary": "巨门星化气为暗，倾向于激发敏锐的洞察力与钻研精神，往往利于以口才或分析能力立业，但也可能伴随口舌是非与多疑倾向。",
    "translations": {
     "zh": "你是爱钻研、嘴上也利索的人，钻牛角尖能钻出道理，辩论不输人。适合调研、法务、靠嘴吃饭的活；话说太快易惹误会，开口前过一遍脑子更稳。"
@@ -7929,7 +8001,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.star.lianzhen",
@@ -7938,9 +8010,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "star",
    "displayZh": "廉贞",
-   "classicalTerm": "",
+   "classicalTerm": "廉贞星",
    "professionalDef": "北斗第五星，化气为囚，为官禄主，主感情、才艺与波折。性烈而敏感，成败起伏较大。",
-   "evidenceQuote": "",
+   "evidenceQuote": "《紫微斗数全书》论廉贞星（意引）：廉贞属火，北斗第五星，化为囚，为官禄主，性刚而躁。",
    "semanticLibrary": "廉贞星化气为囚，往往赋予命主敏锐的才情与重情特质，但情绪易显纠结，人生轨迹倾向于在起伏波折中寻求突破。",
    "translations": {
     "zh": "你心思细、重感情、有点才气，但也容易一根筋钻进去，情绪起落比旁人大。适合艺术、人际、需要灵气的活；气头上的决定先放一晚，第二天多半不一样。"
@@ -7959,7 +8031,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.star.pojun",
@@ -7968,9 +8040,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "star",
    "displayZh": "破军",
-   "classicalTerm": "",
+   "classicalTerm": "破军星",
    "professionalDef": "北斗第七星，化气为耗，主破旧立新、变动与消耗。性刚强，喜颠覆重整，成败起伏大。",
-   "evidenceQuote": "",
+   "evidenceQuote": "《紫微斗数全书》论破军星（意引）：破军属水，北斗第七星，化为耗，主破旧立新，先破后成。",
    "semanticLibrary": "破军星化气为耗，倾向于主导破旧立新的变革趋势，往往伴随资源消耗与局势动荡，解读时多关注其重建与突破的潜在可能。",
    "translations": {
     "zh": "你是改革派，嫌旧、爱破、敢重来，别人不敢动的你敢掀桌子重搭。适合转型、创业、推倒重来的活；变太多容易根基虚，破完记得立新的。"
@@ -7989,7 +8061,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.star.qisha",
@@ -7998,9 +8070,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "star",
    "displayZh": "七杀",
-   "classicalTerm": "",
+   "classicalTerm": "七杀星",
    "professionalDef": "南斗第六星，化气为将，主肃杀、果决与开拓。性刚烈，好胜，宜开创冒险之业。",
-   "evidenceQuote": "",
+   "evidenceQuote": "《紫微斗数全书》论七杀星（意引）：七杀属火，南斗第六星，化为将，主肃杀，遇紫微则化杀为权。",
    "semanticLibrary": "七杀星象征果敢与开拓，倾向于在竞争中展现魄力，但往往伴随冲动与孤克，宜以稳健心态驾驭其肃杀之气。",
    "translations": {
     "zh": "你是冲锋型，敢拼、不怕生、认准目标往前冲，越难的事越来劲。适合开拓、业务、需要狠劲的活；冲太猛易伤人伤己，留三分余地，胜算更久。"
@@ -8019,7 +8091,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.star.taiyang",
@@ -8028,9 +8100,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "star",
    "displayZh": "太阳",
-   "classicalTerm": "",
+   "classicalTerm": "太阳星",
    "professionalDef": "中天主星，化气为贵，为官禄主，主光明、显露与付出。庙旺则显达，陷地则辛劳。",
-   "evidenceQuote": "",
+   "evidenceQuote": "《紫微斗数全书》论太阳星（意引）：太阳属火，中天主星，化为贵，为官禄主，主光明博爱。",
    "semanticLibrary": "太阳星主光明与外显，庙旺时倾向于事业显达与责任担当，陷地时则往往伴随过度付出与辛劳，需关注精力分配。",
    "translations": {
     "zh": "你像个小太阳，做事爱摆在明面上，肯为大家忙、愿意扛事，也容易被人看见。适合抛头露面、带队、做让大家受益的事；别把付出都攒着等回报，累了要肯歇。"
@@ -8049,7 +8121,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.star.taiyin",
@@ -8058,9 +8130,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "star",
    "displayZh": "太阴",
-   "classicalTerm": "",
+   "classicalTerm": "太阴星",
    "professionalDef": "中天主星，化气为富，为田宅主，主阴柔、内敛与积蓄。庙旺则富，陷地则劳心。",
-   "evidenceQuote": "",
+   "evidenceQuote": "《紫微斗数全书》论太阴星（意引）：太阴属水，中天主星，化为富，为田宅主，主母星。",
    "semanticLibrary": "太阴主阴柔内敛与积蓄，庙旺时倾向于展现细腻内秀的特质，陷地则可能因多思而显得阴郁，往往需关注其情绪波动对运势的影响。",
    "translations": {
     "zh": "你是内秀型，心思细、爱琢磨、不张扬，钱和家都默默经营得好。适合文案、设计、需要静气的活；别把情绪都闷着，该说就说，久了伤自己。"
@@ -8079,7 +8151,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.star.tanlang",
@@ -8088,9 +8160,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "star",
    "displayZh": "贪狼",
-   "classicalTerm": "",
+   "classicalTerm": "贪狼星",
    "professionalDef": "北斗第一星，化气为桃花，主欲望、才艺与交际。多才多艺，善应酬，亦主波荡。",
-   "evidenceQuote": "",
+   "evidenceQuote": "《紫微斗数全书》论贪狼星（意引）：贪狼属水木，北斗第一星，化为桃花，主欲望才艺。",
    "semanticLibrary": "贪狼星倾向于展现多才多艺与灵活交际的特质，往往在追求多元发展时伴随欲望波动，解读时宜关注其才艺发挥与人际互动的平衡。",
    "translations": {
     "zh": "你是气氛组兼多面手，会来事、学啥像啥、人多场合如鱼得水。适合销售、创意、靠人气的活；欲望一多容易散，挑一两样深耕，比样样浅尝强。"
@@ -8109,7 +8181,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.star.tianfu",
@@ -8118,9 +8190,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "star",
    "displayZh": "天府",
-   "classicalTerm": "",
+   "classicalTerm": "天府星",
    "professionalDef": "南斗主星，化气为令，为财帛库，主厚重、稳健与储蓄。善积聚，有包容，为禄库之象。",
-   "evidenceQuote": "",
+   "evidenceQuote": "《紫微斗数全书》论天府星（意引）：天府属土，南斗主星，化为令，为财帛田宅之主，能积能守。",
    "semanticLibrary": "天府星象征财库与稳健，倾向于积累资源与守成，往往体现包容特质，但也可能因过于谨慎而显得保守。",
    "translations": {
     "zh": "你是稳妥的管家型，东西爱囤、事爱安排妥当，给人靠得住的感觉。适合财务、后勤、需要兜底的岗位；别因为怕乱而啥都自己扛，分出去也是本事。"
@@ -8139,7 +8211,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.star.tianji",
@@ -8148,9 +8220,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "star",
    "displayZh": "天机",
-   "classicalTerm": "",
+   "classicalTerm": "天机星",
    "professionalDef": "南斗第三星，化气为善，为兄弟主，主机智、谋略与变动。善筹划，多变通，宜动中建功。",
-   "evidenceQuote": "",
+   "evidenceQuote": "《紫微斗数全书》论天机星（意引）：天机属木，南斗第三星，化为善，为兄弟主，主机变。",
    "semanticLibrary": "天机星主谋略与变动，倾向于展现机敏善变的特质，往往在动态调整中寻求突破，但也可能伴随多虑倾向。",
    "translations": {
     "zh": "你是脑子转得最快的那类人，点子多、会盘算、临场应变强。适合做策划、参谋、需要灵活转弯的事；但想得太多容易犹豫，定好的事别反复推翻。"
@@ -8169,7 +8241,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.star.tianliang",
@@ -8178,9 +8250,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "star",
    "displayZh": "天梁",
-   "classicalTerm": "",
+   "classicalTerm": "天梁星",
    "professionalDef": "南斗第二星，化气为荫，主庇护、清贵与化解。性慈和，喜排难解纷，有逢凶化吉之象。",
-   "evidenceQuote": "",
+   "evidenceQuote": "《紫微斗数全书》论天梁星（意引）：天梁属土，南斗第二星，化为荫，主庇荫解厄，老人星。",
    "semanticLibrary": "天梁星化气为荫，倾向于在困境中提供庇护与化解之力，往往伴随操心劳碌或说教倾向，整体呈现逢凶化吉的缓和趋势。",
    "translations": {
     "zh": "你是身边人的依靠，心软、爱管闲事、谁有难你愿意搭把手，也常能帮人化解麻烦。适合咨询、公益、长辈缘的活；帮人也要有边界，别把自己的事耽误了。"
@@ -8199,7 +8271,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.star.tiantong",
@@ -8208,9 +8280,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "star",
    "displayZh": "天同",
-   "classicalTerm": "",
+   "classicalTerm": "天同星",
    "professionalDef": "南斗第四星，化气为福，为福德主，主安逸、温和与享受。性柔顺，喜悠闲，忌奔波劳碌。",
-   "evidenceQuote": "",
+   "evidenceQuote": "《紫微斗数全书》论天同星（意引）：天同属水，南斗第四星，化为福，为福德主，性温和。",
    "semanticLibrary": "天同星化气为福，象征温和安逸与精神享受，倾向于随遇而安，往往在轻松环境中更易获得内心满足。",
    "translations": {
     "zh": "你是温和派，不爱争、图舒服、相处让人轻松，是朋友圈里的调和剂。适合服务、文娱、慢节奏的活；太安逸容易没劲，给自己找点小目标，福气才稳。"
@@ -8229,7 +8301,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.star.tianxiang",
@@ -8238,9 +8310,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "star",
    "displayZh": "天相",
-   "classicalTerm": "",
+   "classicalTerm": "天相星",
    "professionalDef": "南斗第五星，化气为印，为官禄主，主端庄、辅佐与诚信。有印绶之象，宜佐贵立功。",
-   "evidenceQuote": "",
+   "evidenceQuote": "《紫微斗数全书》论天相星（意引）：天相属水，南斗第五星，化为印，为官禄主，掌印信。",
    "semanticLibrary": "天相星化气为印，象征稳重诚信与辅佐之力，往往倾向于在稳定环境中通过辅助角色获得认可，行事风格偏保守。",
    "translations": {
     "zh": "你是可信的二把手，做事体面、靠谱、有分寸，领导把事交你放心。适合助理、行政、需要背书的位置；别总躲在别人后面，你的稳也是种实力。"
@@ -8259,7 +8331,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.star.wuqu",
@@ -8268,9 +8340,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "star",
    "displayZh": "武曲",
-   "classicalTerm": "",
+   "classicalTerm": "武曲星",
    "professionalDef": "北斗第六星，化气为财，为财帛主，主刚毅、果决与实务。善理财，性刚直，宜武职或技术。",
-   "evidenceQuote": "",
+   "evidenceQuote": "《紫微斗数全书》论武曲星（意引）：武曲属金，北斗第六星，化为财，为财帛主，性刚果决。",
    "semanticLibrary": "武曲星化气为财，象征刚毅果决与务实特质，倾向于在理财或技术领域展现执行力，但性格往往较为固执强硬。",
    "translations": {
     "zh": "你是实干派，认准了就下手快、不拖泥带水，对钱和资源也看得紧、会打理。适合技术、财务、需要硬功夫的活；刚起来别伤人不留余地，柔软一点关系更顺。"
@@ -8289,7 +8361,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   },
   {
    "archetypeKey": "ziwei.star.ziwei",
@@ -8298,9 +8370,9 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    "category": "term",
    "termGroup": "star",
    "displayZh": "紫微",
-   "classicalTerm": "",
+   "classicalTerm": "紫微星",
    "professionalDef": "北斗主星，化气为尊，为帝座，司爵禄，主贵气与统御。喜会左辅右弼、文昌文曲等吉星，忌煞忌冲破。",
-   "evidenceQuote": "",
+   "evidenceQuote": "《紫微斗数全书》论紫微星（意引）：紫微属土，乃南北斗中天之主宰，化为尊，为官禄主。",
    "semanticLibrary": "紫微星象征尊贵与统御力，倾向展现领导力与统筹格局，但往往伴随孤芳自赏的特质，需吉星辅佐以平衡独断倾向。",
    "translations": {
     "zh": "你天生像团队里的主心骨，自带气场和决断力，遇到大事别人会下意识看你。适合往管理、统筹、拿主意的方向走；只是别太独断，多听身边人一句，路更宽。"
@@ -8319,7 +8391,7 @@ export const LEXICON_TRANSLATOR_SEED: { meta: { dict_version: string; source: st
    ],
    "licenseTier": "public_domain",
    "version": "1.0.0",
-   "l1_status": "pending_manual"
+   "l1_status": "draft"
   }
  ]
 };
