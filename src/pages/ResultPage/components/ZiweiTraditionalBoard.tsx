@@ -3,6 +3,7 @@ import { uniqueNonEmptyStrings } from '@/lib/array-utils';
 import { ZIWEI_GRID_ORDER } from '../ResultPage.constants';
 import { getZiweiDisplaySurroundedPalaces, joinStarNames } from '../ResultPage.helpers';
 import { ChartStarLine } from './ChartStar';
+import { TermText } from '@/lib/i18n/terms-shim';
 
 const ZIWEI_PALACE_CENTER: Record<number, readonly [number, number]> = {
   0: [12.5, 87.5],
@@ -162,22 +163,26 @@ export function ZiweiTraditionalBoard(props: {
                     ) : null}
                   </div>
                   <div className="ziwei-board-center-meta chart-center-grid">
-                    <div className="chart-center-chip">命主 {payload.basic_info.soul}</div>
-                    <div className="chart-center-chip">身主 {payload.basic_info.body}</div>
+                    <div className="chart-center-chip">
+                      命主 <TermText zh={payload.basic_info.soul} />
+                    </div>
+                    <div className="chart-center-chip">
+                      身主 <TermText zh={payload.basic_info.body} />
+                    </div>
                     <div className="chart-center-chip">
                       {payload.basic_info.five_elements_class}
                     </div>
                     <div className="chart-center-chip">
-                      命宫 {payload.basic_info.soul_palace_branch}
+                      <TermText zh="命宫" /> <TermText zh={payload.basic_info.soul_palace_branch} />
                     </div>
                     <div className="chart-center-chip">
-                      身宫 {payload.basic_info.body_palace_branch}
+                      <TermText zh="身宫" /> <TermText zh={payload.basic_info.body_palace_branch} />
                     </div>
                   </div>
                   <div className="ziwei-board-center-relation chart-center-focus">
                     <div className="chart-center-focus-label">当前宫位</div>
                     <div className="ziwei-board-center-name chart-center-focus-name">
-                      {selectedPalace.name}
+                      <TermText zh={selectedPalace.name} />
                     </div>
                     <div className="ziwei-board-center-stars chart-center-focus-stars">
                       {joinStarNames(selectedPalace.major_stars, '无主星')}
@@ -185,7 +190,9 @@ export function ZiweiTraditionalBoard(props: {
                     <div className="chart-center-relations">
                       <div className="chart-center-relation-row">
                         <span className="chart-center-relation-label">对宫</span>
-                        <span className="chart-center-relation-value">{oppositePalace}</span>
+                        <span className="chart-center-relation-value">
+                          <TermText zh={oppositePalace} />
+                        </span>
                       </div>
                       <div className="chart-center-relation-row">
                         <span className="chart-center-relation-label">三方四正</span>
@@ -255,15 +262,17 @@ export function ZiweiTraditionalBoard(props: {
                 onClick={() => onSelectPalace(palace.index)}
               >
                 <div className="ziwei-grid-cell-corner chart-cell-corner chart-cell-corner-left">
-                  {palace.heavenly_stem}
-                  {palace.earthly_branch}
+                  <TermText zh={palace.heavenly_stem} />
+                  <TermText zh={palace.earthly_branch} />
                 </div>
                 <div className="ziwei-grid-cell-corner chart-cell-corner chart-cell-corner-right">
                   {palace.decadal_range[0]}-{palace.decadal_range[1]}
                 </div>
                 <div className="chart-cell-body">
                   <div className="ziwei-grid-cell-title chart-cell-title-stack">
-                    <span className="chart-cell-title">{palace.name}</span>
+                    <span className="chart-cell-title">
+                      <TermText zh={palace.name} />
+                    </span>
                     <div className="ziwei-grid-cell-flags chart-cell-flags">
                       {palace.is_body_palace ? <span className="chart-cell-flag">身</span> : null}
                       {palace.is_original_palace ? (

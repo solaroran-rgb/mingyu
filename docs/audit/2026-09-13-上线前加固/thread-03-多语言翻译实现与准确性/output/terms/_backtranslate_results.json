@@ -1,0 +1,294 @@
+{
+ "endpoint": "http://127.0.0.1:8080/v1",
+ "model": "Qwen3.8-27B-UD-VLM",
+ "results": [
+  {
+   "lang": "en",
+   "zh": "甲",
+   "trans": "Jia",
+   "back": "甲",
+   "match": "exact",
+   "key": "bazi:stem:jia"
+  },
+  {
+   "lang": "en",
+   "zh": "子",
+   "trans": "Zi",
+   "back": "子",
+   "match": "exact",
+   "key": "bazi:branch:zi"
+  },
+  {
+   "lang": "en",
+   "zh": "兔",
+   "trans": "Rabbit",
+   "back": "兔",
+   "match": "exact",
+   "key": "bazi:zodiac:tu"
+  },
+  {
+   "lang": "en",
+   "zh": "木",
+   "trans": "Wood",
+   "back": "木",
+   "match": "exact",
+   "key": "bazi:wuxing:mu"
+  },
+  {
+   "lang": "en",
+   "zh": "比肩",
+   "trans": "Friend",
+   "back": "比肩",
+   "match": "exact",
+   "key": "bazi:shishen:bijian"
+  },
+  {
+   "lang": "en",
+   "zh": "紫微",
+   "trans": "Ziwei",
+   "back": "紫微",
+   "match": "exact",
+   "key": "ziwei:star:ziwei"
+  },
+  {
+   "lang": "es-ES",
+   "zh": "甲",
+   "trans": "Jia",
+   "back": "甲",
+   "match": "exact",
+   "key": "bazi:stem:jia"
+  },
+  {
+   "lang": "es-ES",
+   "zh": "子",
+   "trans": "Zi",
+   "back": "子",
+   "match": "exact",
+   "key": "bazi:branch:zi"
+  },
+  {
+   "lang": "es-ES",
+   "zh": "兔",
+   "trans": "Conejo",
+   "back": "兔",
+   "match": "exact",
+   "key": "bazi:zodiac:tu"
+  },
+  {
+   "lang": "es-ES",
+   "zh": "木",
+   "trans": "Madera",
+   "back": "木",
+   "match": "exact",
+   "key": "bazi:wuxing:mu"
+  },
+  {
+   "lang": "es-ES",
+   "zh": "比肩",
+   "trans": "Compañero",
+   "back": "比肩",
+   "match": "exact",
+   "key": "bazi:shishen:bijian"
+  },
+  {
+   "lang": "es-ES",
+   "zh": "紫微",
+   "trans": "Ziwei",
+   "back": "紫微",
+   "match": "exact",
+   "key": "ziwei:star:ziwei"
+  },
+  {
+   "lang": "ja",
+   "zh": "甲",
+   "trans": "甲",
+   "back": "甲",
+   "match": "exact",
+   "key": "bazi:stem:jia"
+  },
+  {
+   "lang": "ja",
+   "zh": "子",
+   "trans": "子",
+   "back": "子",
+   "match": "exact",
+   "key": "bazi:branch:zi"
+  },
+  {
+   "lang": "ja",
+   "zh": "兔",
+   "trans": "兎",
+   "back": "兔",
+   "match": "exact",
+   "key": "bazi:zodiac:tu"
+  },
+  {
+   "lang": "ja",
+   "zh": "木",
+   "trans": "木",
+   "back": "木",
+   "match": "exact",
+   "key": "bazi:wuxing:mu"
+  },
+  {
+   "lang": "ja",
+   "zh": "比肩",
+   "trans": "比肩",
+   "back": "比肩",
+   "match": "exact",
+   "key": "bazi:shishen:bijian"
+  },
+  {
+   "lang": "ja",
+   "zh": "紫微",
+   "trans": "紫微",
+   "back": "紫微",
+   "match": "exact",
+   "key": "ziwei:star:ziwei"
+  },
+  {
+   "lang": "ko-KN",
+   "zh": "甲",
+   "trans": "갑",
+   "back": "甲",
+   "match": "exact",
+   "key": "bazi:stem:jia"
+  },
+  {
+   "lang": "ko-KN",
+   "zh": "子",
+   "trans": "자",
+   "back": "子",
+   "match": "exact",
+   "key": "bazi:branch:zi"
+  },
+  {
+   "lang": "ko-KN",
+   "zh": "兔",
+   "trans": "토끼",
+   "back": "兔",
+   "match": "exact",
+   "key": "bazi:zodiac:tu"
+  },
+  {
+   "lang": "ko-KN",
+   "zh": "木",
+   "trans": "목",
+   "back": "木",
+   "match": "exact",
+   "key": "bazi:wuxing:mu"
+  },
+  {
+   "lang": "ko-KN",
+   "zh": "比肩",
+   "trans": "비견",
+   "back": "比肩",
+   "match": "exact",
+   "key": "bazi:shishen:bijian"
+  },
+  {
+   "lang": "ko-KN",
+   "zh": "紫微",
+   "trans": "자미",
+   "back": "紫微",
+   "match": "exact",
+   "key": "ziwei:star:ziwei"
+  },
+  {
+   "lang": "th-TH",
+   "zh": "甲",
+   "trans": "เจีย",
+   "back": "甲",
+   "match": "exact",
+   "key": "bazi:stem:jia"
+  },
+  {
+   "lang": "th-TH",
+   "zh": "子",
+   "trans": "จื้อ",
+   "back": "子",
+   "match": "exact",
+   "key": "bazi:branch:zi"
+  },
+  {
+   "lang": "th-TH",
+   "zh": "兔",
+   "trans": "เถาะ",
+   "back": "卯",
+   "match": "miss",
+   "key": "bazi:zodiac:tu"
+  },
+  {
+   "lang": "th-TH",
+   "zh": "木",
+   "trans": "ไม้",
+   "back": "木",
+   "match": "exact",
+   "key": "bazi:wuxing:mu"
+  },
+  {
+   "lang": "th-TH",
+   "zh": "比肩",
+   "trans": "ปี้เจี้ยน",
+   "back": "偏印",
+   "match": "miss",
+   "key": "bazi:shishen:bijian"
+  },
+  {
+   "lang": "th-TH",
+   "zh": "紫微",
+   "trans": "จื่อเหวย",
+   "back": "紫微",
+   "match": "exact",
+   "key": "ziwei:star:ziwei"
+  },
+  {
+   "lang": "vi-VN",
+   "zh": "甲",
+   "trans": "Giáp",
+   "back": "甲",
+   "match": "exact",
+   "key": "bazi:stem:jia"
+  },
+  {
+   "lang": "vi-VN",
+   "zh": "子",
+   "trans": "Tý",
+   "back": "子",
+   "match": "exact",
+   "key": "bazi:branch:zi"
+  },
+  {
+   "lang": "vi-VN",
+   "zh": "兔",
+   "trans": "Mèo",
+   "back": "猫",
+   "match": "miss",
+   "key": "bazi:zodiac:tu"
+  },
+  {
+   "lang": "vi-VN",
+   "zh": "木",
+   "trans": "Mộc",
+   "back": "木",
+   "match": "exact",
+   "key": "bazi:wuxing:mu"
+  },
+  {
+   "lang": "vi-VN",
+   "zh": "比肩",
+   "trans": "Tỷ Kiến",
+   "back": "比肩",
+   "match": "exact",
+   "key": "bazi:shishen:bijian"
+  },
+  {
+   "lang": "vi-VN",
+   "zh": "紫微",
+   "trans": "Tử Vi",
+   "back": "紫微",
+   "match": "exact",
+   "key": "ziwei:star:ziwei"
+  }
+ ]
+}

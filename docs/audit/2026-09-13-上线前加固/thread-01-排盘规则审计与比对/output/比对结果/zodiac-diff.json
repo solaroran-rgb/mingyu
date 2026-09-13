@@ -1,0 +1,212 @@
+[
+  {
+    "case": "zodiac-001",
+    "field": "yearGanZhi",
+    "expected": "甲子",
+    "status": "match",
+    "engine": "甲子"
+  },
+  {
+    "case": "zodiac-001",
+    "field": "zodiac",
+    "expected": "鼠",
+    "status": "match",
+    "engine": "鼠"
+  },
+  {
+    "case": "zodiac-001",
+    "field": "yearBranch",
+    "expected": "子",
+    "status": "match",
+    "engine": "子"
+  },
+  {
+    "case": "zodiac-002",
+    "field": "yearGanZhi",
+    "expected": "乙丑",
+    "status": "match",
+    "engine": "乙丑"
+  },
+  {
+    "case": "zodiac-002",
+    "field": "zodiac",
+    "expected": "牛",
+    "status": "match",
+    "engine": "牛"
+  },
+  {
+    "case": "zodiac-002",
+    "field": "yearBranch",
+    "expected": "丑",
+    "status": "match",
+    "engine": "丑"
+  },
+  {
+    "case": "zodiac-003",
+    "field": "yearGanZhi",
+    "expected": "己卯",
+    "status": "match",
+    "engine": "己卯"
+  },
+  {
+    "case": "zodiac-003",
+    "field": "zodiac",
+    "expected": "兔",
+    "status": "match",
+    "engine": "兔"
+  },
+  {
+    "case": "zodiac-003",
+    "field": "yearBranch",
+    "expected": "卯",
+    "status": "match",
+    "engine": "卯"
+  },
+  {
+    "case": "zodiac-004",
+    "field": "yearGanZhi",
+    "expected": "庚辰",
+    "status": "match",
+    "engine": "庚辰"
+  },
+  {
+    "case": "zodiac-004",
+    "field": "zodiac",
+    "expected": "龙",
+    "status": "match",
+    "engine": "龙"
+  },
+  {
+    "case": "zodiac-004",
+    "field": "yearBranch",
+    "expected": "辰",
+    "status": "match",
+    "engine": "辰"
+  },
+  {
+    "case": "zodiac-005",
+    "field": "yearGanZhi",
+    "expected": "戊子",
+    "status": "match",
+    "engine": "戊子"
+  },
+  {
+    "case": "zodiac-005",
+    "field": "zodiac",
+    "expected": "鼠",
+    "status": "match",
+    "engine": "鼠"
+  },
+  {
+    "case": "zodiac-005",
+    "field": "yearBranch",
+    "expected": "子",
+    "status": "match",
+    "engine": "子"
+  },
+  {
+    "case": "zodiac-006",
+    "field": "yearGanZhi",
+    "expected": "丁酉",
+    "status": "match",
+    "engine": "丁酉"
+  },
+  {
+    "case": "zodiac-006",
+    "field": "zodiac",
+    "expected": "鸡",
+    "status": "match",
+    "engine": "鸡"
+  },
+  {
+    "case": "zodiac-006",
+    "field": "yearBranch",
+    "expected": "酉",
+    "status": "match",
+    "engine": "酉"
+  },
+  {
+    "case": "zodiac-007",
+    "field": "yearGanZhi",
+    "expected": "甲辰",
+    "status": "match",
+    "engine": "甲辰"
+  },
+  {
+    "case": "zodiac-007",
+    "field": "zodiac",
+    "expected": "龙",
+    "status": "match",
+    "engine": "龙"
+  },
+  {
+    "case": "zodiac-007",
+    "field": "yearBranch",
+    "expected": "辰",
+    "status": "match",
+    "engine": "辰"
+  },
+  {
+    "case": "zodiac-008",
+    "field": "yearGanZhi",
+    "expected": "乙巳",
+    "status": "match",
+    "engine": "乙巳"
+  },
+  {
+    "case": "zodiac-008",
+    "field": "zodiac",
+    "expected": "蛇",
+    "status": "match",
+    "engine": "蛇"
+  },
+  {
+    "case": "zodiac-008",
+    "field": "yearBranch",
+    "expected": "巳",
+    "status": "match",
+    "engine": "巳"
+  },
+  {
+    "case": "zodiac-009",
+    "field": "yearGanZhi",
+    "expected": "庚申",
+    "status": "match",
+    "engine": "庚申"
+  },
+  {
+    "case": "zodiac-009",
+    "field": "zodiac",
+    "expected": "猴",
+    "status": "match",
+    "engine": "猴"
+  },
+  {
+    "case": "zodiac-009",
+    "field": "yearBranch",
+    "expected": "申",
+    "status": "match",
+    "engine": "申"
+  },
+  {
+    "case": "zodiac-010",
+    "field": "yearGanZhi",
+    "expected": "庚子",
+    "status": "match",
+    "engine": "庚子"
+  },
+  {
+    "case": "zodiac-010",
+    "field": "zodiac",
+    "expected": "鼠",
+    "status": "match",
+    "engine": "鼠"
+  },
+  {
+    "case": "zodiac-010",
+    "field": "yearBranch",
+    "expected": "子",
+    "status": "match",
+    "engine": "子"
+  }
+]

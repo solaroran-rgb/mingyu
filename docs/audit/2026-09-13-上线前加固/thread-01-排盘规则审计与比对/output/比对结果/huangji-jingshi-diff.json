@@ -1,0 +1,352 @@
+[
+  {
+    "case": "huangji-001",
+    "field": "position.yuan.indexFromEpoch",
+    "expected": 1,
+    "status": "match",
+    "engine": 1
+  },
+  {
+    "case": "huangji-001",
+    "field": "position.hui.indexInYuan",
+    "expected": 1,
+    "status": "match",
+    "engine": 1
+  },
+  {
+    "case": "huangji-001",
+    "field": "position.yun.indexInHui",
+    "expected": 1,
+    "status": "match",
+    "engine": 1
+  },
+  {
+    "case": "huangji-001",
+    "field": "position.shi.indexInYun",
+    "expected": 1,
+    "status": "match",
+    "engine": 1
+  },
+  {
+    "case": "huangji-001",
+    "field": "position.year.indexInShi",
+    "expected": 1,
+    "status": "match",
+    "engine": 1
+  },
+  {
+    "case": "huangji-002",
+    "field": "position.yuan.indexFromEpoch",
+    "expected": 1,
+    "status": "match",
+    "engine": 1
+  },
+  {
+    "case": "huangji-002",
+    "field": "position.hui.indexInYuan",
+    "expected": 1,
+    "status": "match",
+    "engine": 1
+  },
+  {
+    "case": "huangji-002",
+    "field": "position.yun.indexInHui",
+    "expected": 1,
+    "status": "match",
+    "engine": 1
+  },
+  {
+    "case": "huangji-002",
+    "field": "position.shi.indexInYun",
+    "expected": 1,
+    "status": "match",
+    "engine": 1
+  },
+  {
+    "case": "huangji-002",
+    "field": "position.year.indexInShi",
+    "expected": 2,
+    "status": "match",
+    "engine": 2
+  },
+  {
+    "case": "huangji-003",
+    "field": "position.yuan.indexFromEpoch",
+    "expected": 1,
+    "status": "match",
+    "engine": 1
+  },
+  {
+    "case": "huangji-003",
+    "field": "position.hui.indexInYuan",
+    "expected": 1,
+    "status": "match",
+    "engine": 1
+  },
+  {
+    "case": "huangji-003",
+    "field": "position.yun.indexInHui",
+    "expected": 1,
+    "status": "match",
+    "engine": 1
+  },
+  {
+    "case": "huangji-003",
+    "field": "position.shi.indexInYun",
+    "expected": 1,
+    "status": "match",
+    "engine": 1
+  },
+  {
+    "case": "huangji-003",
+    "field": "position.year.indexInShi",
+    "expected": 16,
+    "status": "match",
+    "engine": 16
+  },
+  {
+    "case": "huangji-004",
+    "field": "position.yuan.indexFromEpoch",
+    "expected": 1,
+    "status": "match",
+    "engine": 1
+  },
+  {
+    "case": "huangji-004",
+    "field": "position.hui.indexInYuan",
+    "expected": 1,
+    "status": "match",
+    "engine": 1
+  },
+  {
+    "case": "huangji-004",
+    "field": "position.yun.indexInHui",
+    "expected": 1,
+    "status": "match",
+    "engine": 1
+  },
+  {
+    "case": "huangji-004",
+    "field": "position.shi.indexInYun",
+    "expected": 1,
+    "status": "match",
+    "engine": 1
+  },
+  {
+    "case": "huangji-004",
+    "field": "position.year.indexInShi",
+    "expected": 17,
+    "status": "match",
+    "engine": 17
+  },
+  {
+    "case": "huangji-005",
+    "field": "position.yuan.indexFromEpoch",
+    "expected": 1,
+    "status": "match",
+    "engine": 1
+  },
+  {
+    "case": "huangji-005",
+    "field": "position.hui.indexInYuan",
+    "expected": 1,
+    "status": "match",
+    "engine": 1
+  },
+  {
+    "case": "huangji-005",
+    "field": "position.yun.indexInHui",
+    "expected": 1,
+    "status": "match",
+    "engine": 1
+  },
+  {
+    "case": "huangji-005",
+    "field": "position.shi.indexInYun",
+    "expected": 2,
+    "status": "match",
+    "engine": 2
+  },
+  {
+    "case": "huangji-005",
+    "field": "position.year.indexInShi",
+    "expected": 11,
+    "status": "match",
+    "engine": 11
+  },
+  {
+    "case": "huangji-006",
+    "field": "position.yuan.indexFromEpoch",
+    "expected": 1,
+    "status": "match",
+    "engine": 1
+  },
+  {
+    "case": "huangji-006",
+    "field": "position.hui.indexInYuan",
+    "expected": 1,
+    "status": "match",
+    "engine": 1
+  },
+  {
+    "case": "huangji-006",
+    "field": "position.yun.indexInHui",
+    "expected": 1,
+    "status": "match",
+    "engine": 1
+  },
+  {
+    "case": "huangji-006",
+    "field": "position.shi.indexInYun",
+    "expected": 4,
+    "status": "match",
+    "engine": 4
+  },
+  {
+    "case": "huangji-006",
+    "field": "position.year.indexInShi",
+    "expected": 11,
+    "status": "match",
+    "engine": 11
+  },
+  {
+    "case": "huangji-007",
+    "field": "position.yuan.indexFromEpoch",
+    "expected": 1,
+    "status": "match",
+    "engine": 1
+  },
+  {
+    "case": "huangji-007",
+    "field": "position.hui.indexInYuan",
+    "expected": 1,
+    "status": "match",
+    "engine": 1
+  },
+  {
+    "case": "huangji-007",
+    "field": "position.yun.indexInHui",
+    "expected": 2,
+    "status": "match",
+    "engine": 2
+  },
+  {
+    "case": "huangji-007",
+    "field": "position.shi.indexInYun",
+    "expected": 2,
+    "status": "match",
+    "engine": 2
+  },
+  {
+    "case": "huangji-007",
+    "field": "position.year.indexInShi",
+    "expected": 11,
+    "status": "match",
+    "engine": 11
+  },
+  {
+    "case": "huangji-008",
+    "field": "position.yuan.indexFromEpoch",
+    "expected": 1,
+    "status": "match",
+    "engine": 1
+  },
+  {
+    "case": "huangji-008",
+    "field": "position.hui.indexInYuan",
+    "expected": 2,
+    "status": "match",
+    "engine": 2
+  },
+  {
+    "case": "huangji-008",
+    "field": "position.yun.indexInHui",
+    "expected": 1,
+    "status": "match",
+    "engine": 1
+  },
+  {
+    "case": "huangji-008",
+    "field": "position.shi.indexInYun",
+    "expected": 1,
+    "status": "match",
+    "engine": 1
+  },
+  {
+    "case": "huangji-008",
+    "field": "position.year.indexInShi",
+    "expected": 1,
+    "status": "match",
+    "engine": 1
+  },
+  {
+    "case": "huangji-009",
+    "field": "position.yuan.indexFromEpoch",
+    "expected": 1,
+    "status": "match",
+    "engine": 1
+  },
+  {
+    "case": "huangji-009",
+    "field": "position.hui.indexInYuan",
+    "expected": 2,
+    "status": "match",
+    "engine": 2
+  },
+  {
+    "case": "huangji-009",
+    "field": "position.yun.indexInHui",
+    "expected": 1,
+    "status": "match",
+    "engine": 1
+  },
+  {
+    "case": "huangji-009",
+    "field": "position.shi.indexInYun",
+    "expected": 1,
+    "status": "match",
+    "engine": 1
+  },
+  {
+    "case": "huangji-009",
+    "field": "position.year.indexInShi",
+    "expected": 2,
+    "status": "match",
+    "engine": 2
+  },
+  {
+    "case": "huangji-010",
+    "field": "position.yuan.indexFromEpoch",
+    "expected": 1,
+    "status": "match",
+    "engine": 1
+  },
+  {
+    "case": "huangji-010",
+    "field": "position.hui.indexInYuan",
+    "expected": 2,
+    "status": "match",
+    "engine": 2
+  },
+  {
+    "case": "huangji-010",
+    "field": "position.yun.indexInHui",
+    "expected": 7,
+    "status": "match",
+    "engine": 7
+  },
+  {
+    "case": "huangji-010",
+    "field": "position.shi.indexInYun",
+    "expected": 2,
+    "status": "match",
+    "engine": 2
+  },
+  {
+    "case": "huangji-010",
+    "field": "position.year.indexInShi",
+    "expected": 27,
+    "status": "match",
+    "engine": 27
+  }
+]

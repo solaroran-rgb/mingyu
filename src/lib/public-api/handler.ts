@@ -5,7 +5,6 @@ import {
   type ShenShaVariantConfig,
 } from '@temposoul/core/bazi';
 import { baziCalculator } from '@core/bazi/baziCalculator';
-import { analyzeZiweiCompatibility } from '@temposoul/core/ziwei';
 import { buildFortuneSelectionContext, type BaziFortuneSelectionValue } from '@temposoul/core/bazi';
 import {
   buildAstronomicalTimeEvidence,
@@ -16,35 +15,15 @@ import {
   getTimeIndexFromClock,
   resolveTrueSolarBirthTime,
 } from '@temposoul/core/calendar';
-import { buildZiweiChartInput, calculatePublicZiweiChartForScopes } from '@temposoul/core/ziwei';
-import { buildCombinedZiweiCompatibilityPrompt } from '@temposoul/core/ziwei/prompt';
 import {
   daysInSolarMonth,
   getBirthDateValidationMessage,
   isValidIsoDateTime,
 } from '../date-validation';
-import { generateLiuyao, type LiuyaoGenerationOptions } from '@temposoul/core/divination/liuyao';
-import { generateMeihua } from '@temposoul/core/divination/meihua';
-import { generateXiaoliuren } from '@temposoul/core/divination/xiaoliuren';
-import { generateJinkoujue } from '@temposoul/core/divination/jinkoujue';
-import { generateQimen } from '@temposoul/core/divination/qimen';
-import { generateLiuren } from '@temposoul/core/divination/liuren';
-import { analyzeAlmanacEvidence, generateAlmanacSelection } from '@temposoul/core/divination/almanac';
-import { drawLenormandSpread } from '@temposoul/core/divination/lenormand';
-import { generateAstrolabe } from '@temposoul/core/divination/astrolabe';
-import { analyzeAstrolabeSynastry } from '@temposoul/core/divination/astrolabe-synastry';
-import { drawRandomSign } from '@temposoul/core/divination/ssgw';
-import {
-  bazhai,
-  zodiac,
-  taiyi,
-  wuyunLiuqi,
-  huangjiJingshi,
-  qizheng,
-  xuankong,
-  residentialFengshui,
-  MingyuCoreError,
-} from '@temposoul/core';
+import type { LiuyaoGenerationOptions } from '@temposoul/core/divination/liuyao';
+// ponytail: 1102 修复——重型子系统改为端点内动态 import，冷启动不再评估全量模块图。
+// 常量与错误类保持静态（体积小且近乎所有端点共用）。
+import { MingyuCoreError } from '@temposoul/core/result';
 import { isValidGanZhi } from '@temposoul/core/ganzhi';
 import { BAGUA, TWENTY_FOUR_MOUNTAINS } from '@temposoul/core/direction';
 import {
@@ -81,7 +60,6 @@ import type {
   SupplementaryInfo,
   XiaoliurenDivinationMethod,
 } from '../../types/divination';
-import { drawTarotSpread } from '@temposoul/core/divination/tarot';
 import type { DivinationMethodId } from '@temposoul/core/divination/config';
 import type { ScopeType } from '../../types/analysis';
 import {
@@ -117,6 +95,17 @@ type ApiMeta = {
   service: string;
   version: typeof API_VERSION;
 };
+
+/**
+ * 跨副本识别 core 错误：测试环境 @core/* 走 src、barrel 走 dist，
+ * `instanceof` 会因双份类定义失效，故补 name 哨兵判断。
+ */
+function isMingyuCoreError(error: unknown): error is MingyuCoreError {
+  return (
+    error instanceof MingyuCoreError ||
+    (error instanceof Error && error.name === 'MingyuCoreError')
+  );
+}
 
 type ApiSuccess<T> = {
   ok: true;
@@ -1830,7 +1819,7 @@ function calculateSolarIlluminationApi(input: JsonRecord) {
   } catch (error) {
     if (error instanceof ApiError) throw error;
     // 501 墙不能被下面的 400 兜底吞掉，必须原样上抛给 handleError 映射。
-    if (error instanceof MingyuCoreError) throw error;
+    if (isMingyuCoreError(error)) throw error;
     throw new ApiError(
       400,
       'BAD_REQUEST',
@@ -2053,7 +2042,7 @@ function buildMetaphysicsPrompt(
   return buildSharedMetaphysicsPrompt(basePrompt, question, { method });
 }
 
-function calculateBaZhaiApi(input: JsonRecord) {
+async function calculateBaZhaiApi(input: JsonRecord) {
   const gender =
     input.gender === 'female' ? 'female' : input.gender === 'male' ? 'male' : undefined;
   const birthYear = optInt(input, 'birthYear', 1900, 2100);
@@ -2093,19 +2082,20 @@ function calculateBaZhaiApi(input: JsonRecord) {
     ...(birthYear !== undefined ? { birthYear, gender, birthMonth, birthDay } : {}),
     mingGua: mingGua || undefined,
   };
+  const { analyzeBaZhai, analyzeBaZhaiByDoorDegree } = await import('@temposoul/core/bazhai');
   return doorToInteriorDegree !== undefined
-    ? bazhai.analyzeBaZhaiByDoorDegree({
+    ? analyzeBaZhaiByDoorDegree({
         ...baseInput,
         doorToInteriorDegree,
         northReference: northReference as 'unspecified' | 'magnetic' | 'true' | undefined,
         magneticDeclinationDegrees,
         measurementUncertaintyDegrees,
       })
-    : bazhai.analyzeBaZhai({ ...baseInput, sitMountain: sitMountain || undefined });
+    : analyzeBaZhai({ ...baseInput, sitMountain: sitMountain || undefined });
 }
 
-function buildBaZhaiPrompt(input: JsonRecord) {
-  const result = calculateBaZhaiApi(input);
+async function buildBaZhaiPrompt(input: JsonRecord) {
+  const result = await calculateBaZhaiApi(input);
   return buildPromptApiResult({
     responseMode: readPromptResponseMode(input),
     prompt: buildSharedMetaphysicsPrompt(
@@ -2121,7 +2111,7 @@ function buildBaZhaiPrompt(input: JsonRecord) {
   });
 }
 
-function calculateZodiacApi(input: JsonRecord) {
+async function calculateZodiacApi(input: JsonRecord) {
   const zodiacName = readString(input, 'zodiac', '');
   if (!zodiacName) throw new ApiError(400, 'BAD_REQUEST', 'zodiac 必须是生肖或地支。');
   const yearGanZhi = readString(input, 'yearGanZhi', '');
@@ -2132,8 +2122,9 @@ function calculateZodiacApi(input: JsonRecord) {
   if (year === undefined && !yearGanZhi) {
     throw new ApiError(400, 'BAD_REQUEST', 'year 与 yearGanZhi 至少提供一个。');
   }
+  const { calculateZodiacYearFortune } = await import('@temposoul/core/zodiac');
   try {
-    return zodiac.calculateZodiacYearFortune({
+    return calculateZodiacYearFortune({
       zodiac: zodiacName,
       ...(year !== undefined ? { year } : {}),
       ...(yearGanZhi ? { yearGanZhi } : {}),
@@ -2147,8 +2138,8 @@ function calculateZodiacApi(input: JsonRecord) {
   }
 }
 
-function buildZodiacPrompt(input: JsonRecord) {
-  const result = calculateZodiacApi(input);
+async function buildZodiacPrompt(input: JsonRecord) {
+  const result = await calculateZodiacApi(input);
   return buildPromptApiResult({
     responseMode: readPromptResponseMode(input),
     prompt: buildMetaphysicsPrompt(result.prompt, input, 'zodiac'),
@@ -2156,15 +2147,16 @@ function buildZodiacPrompt(input: JsonRecord) {
   });
 }
 
-function calculateTaiyiApi(input: JsonRecord) {
+async function calculateTaiyiApi(input: JsonRecord) {
   const scope = readEnum(input, 'scope', ['year'], 'year');
   const year = readInteger(input, 'year', 1900, 2200);
   const ganZhi = readString(input, 'ganZhi', '');
   if (ganZhi && !isValidGanZhi(ganZhi)) {
     throw new ApiError(400, 'BAD_REQUEST', `ganZhi 不是有效的六十甲子：${ganZhi}。`);
   }
+  const { generateTaiyi } = await import('@temposoul/core/taiyi');
   try {
-    return taiyi.generateTaiyi({
+    return generateTaiyi({
       scope,
       year,
       ...(ganZhi ? { ganZhi } : {}),
@@ -2178,8 +2170,8 @@ function calculateTaiyiApi(input: JsonRecord) {
   }
 }
 
-function buildTaiyiPrompt(input: JsonRecord) {
-  const result = calculateTaiyiApi(input);
+async function buildTaiyiPrompt(input: JsonRecord) {
+  const result = await calculateTaiyiApi(input);
   return buildPromptApiResult({
     responseMode: readPromptResponseMode(input),
     prompt: buildMetaphysicsPrompt(result.prompt, input, 'taiyi'),
@@ -2187,7 +2179,7 @@ function buildTaiyiPrompt(input: JsonRecord) {
   });
 }
 
-function calculateWuyunLiuqiApi(input: JsonRecord) {
+async function calculateWuyunLiuqiApi(input: JsonRecord) {
   const year = optInt(input, 'year', 1, 9999);
   const yearGanZhi = readString(input, 'yearGanZhi', '').trim();
   const question = readString(input, 'question', '').trim();
@@ -2197,8 +2189,9 @@ function calculateWuyunLiuqiApi(input: JsonRecord) {
   if (yearGanZhi && !isValidGanZhi(yearGanZhi)) {
     throw new ApiError(400, 'BAD_REQUEST', `yearGanZhi 不是有效的六十甲子：${yearGanZhi}。`);
   }
+  const { calculateWuyunLiuqi } = await import('@temposoul/core/wuyun-liuqi');
   try {
-    return wuyunLiuqi.calculateWuyunLiuqi({
+    return calculateWuyunLiuqi({
       ...(year !== undefined ? { year } : {}),
       ...(yearGanZhi ? { yearGanZhi } : {}),
       ...(question ? { question } : {}),
@@ -2212,8 +2205,8 @@ function calculateWuyunLiuqiApi(input: JsonRecord) {
   }
 }
 
-function buildWuyunLiuqiPromptApi(input: JsonRecord) {
-  const result = calculateWuyunLiuqiApi(input);
+async function buildWuyunLiuqiPromptApi(input: JsonRecord) {
+  const result = await calculateWuyunLiuqiApi(input);
   return buildPromptApiResult({
     responseMode: readPromptResponseMode(input),
     prompt: result.prompt,
@@ -2231,7 +2224,7 @@ function buildWuyunLiuqiPromptApi(input: JsonRecord) {
   });
 }
 
-function calculateHuangjiJingshiApi(input: JsonRecord) {
+async function calculateHuangjiJingshiApi(input: JsonRecord) {
   const epochYear = readInteger(input, 'epochYear');
   const year = optInt(input, 'year');
   const elapsedYears = optInt(input, 'elapsedYears', 0);
@@ -2239,8 +2232,9 @@ function calculateHuangjiJingshiApi(input: JsonRecord) {
   if ((year === undefined) === (elapsedYears === undefined)) {
     throw new ApiError(400, 'BAD_REQUEST', 'year 与 elapsedYears 必须且只能提供一个。');
   }
+  const { calculateHuangjiJingshi } = await import('@temposoul/core/huangji-jingshi');
   try {
-    return huangjiJingshi.calculateHuangjiJingshi({
+    return calculateHuangjiJingshi({
       epochYear,
       ...(year !== undefined ? { year } : {}),
       ...(elapsedYears !== undefined ? { elapsedYears } : {}),
@@ -2255,8 +2249,8 @@ function calculateHuangjiJingshiApi(input: JsonRecord) {
   }
 }
 
-function buildHuangjiJingshiPromptApi(input: JsonRecord) {
-  const result = calculateHuangjiJingshiApi(input);
+async function buildHuangjiJingshiPromptApi(input: JsonRecord) {
+  const result = await calculateHuangjiJingshiApi(input);
   return buildPromptApiResult({
     responseMode: readPromptResponseMode(input),
     prompt: result.prompt,
@@ -2270,7 +2264,7 @@ function buildHuangjiJingshiPromptApi(input: JsonRecord) {
   });
 }
 
-function calculateQizhengApi(input: JsonRecord) {
+async function calculateQizhengApi(input: JsonRecord) {
   const year = readInteger(input, 'year', 1900, 2200);
   const month = readInteger(input, 'month', 1, 12);
   const day = readInteger(input, 'day', 1, 31);
@@ -2285,8 +2279,9 @@ function calculateQizhengApi(input: JsonRecord) {
   const timeZoneId =
     input.timeZoneId === undefined ? undefined : readString(input, 'timeZoneId', '');
   const useTrueSolarTime = readBoolean(input, 'useTrueSolarTime', false);
+  const { generateQizheng } = await import('@temposoul/core/qizheng');
   try {
-    return qizheng.generateQizheng({
+    return generateQizheng({
       year,
       month,
       day,
@@ -2307,7 +2302,7 @@ function calculateQizhengApi(input: JsonRecord) {
   }
 }
 
-function calculateXuanKongApi(input: JsonRecord) {
+async function calculateXuanKongApi(input: JsonRecord) {
   const year = readInteger(input, 'year', 1, 9999);
   const sitMountain =
     input.sitMountain === undefined ? undefined : readString(input, 'sitMountain', '');
@@ -2325,8 +2320,9 @@ function calculateXuanKongApi(input: JsonRecord) {
     input.guaType === undefined
       ? undefined
       : (readEnum(input, 'guaType', ['下卦', '替卦']) as '下卦' | '替卦');
+  const { generateXuanKong } = await import('@temposoul/core/xuankong');
   try {
-    return xuankong.generateXuanKong({
+    return generateXuanKong({
       year,
       ...(sitMountain ? { sitMountain } : {}),
       ...(facingMountain ? { facingMountain } : {}),
@@ -2344,7 +2340,7 @@ function calculateXuanKongApi(input: JsonRecord) {
   }
 }
 
-function calculateResidentialApi(input: JsonRecord) {
+async function calculateResidentialApi(input: JsonRecord) {
   const year = input.year === undefined ? undefined : readInteger(input, 'year', 1, 9999);
   const birthYear = optInt(input, 'birthYear', 1900, 2100);
   const birthMonth = optInt(input, 'birthMonth', 1, 12);
@@ -2391,7 +2387,8 @@ function calculateResidentialApi(input: JsonRecord) {
   }
 
   try {
-    return residentialFengshui.generateResidentialFengshui({
+    const { generateResidentialFengshui } = await import('@temposoul/core/residential-fengshui');
+  return generateResidentialFengshui({
       ...(year !== undefined ? { year } : {}),
       ...(birthYear !== undefined ? { birthYear } : {}),
       ...(birthMonth !== undefined ? { birthMonth } : {}),
@@ -2419,8 +2416,8 @@ function calculateResidentialApi(input: JsonRecord) {
   }
 }
 
-function buildResidentialPrompt(input: JsonRecord) {
-  const result = calculateResidentialApi(input);
+async function buildResidentialPrompt(input: JsonRecord) {
+  const result = await calculateResidentialApi(input);
   return buildPromptApiResult({
     responseMode: readPromptResponseMode(input),
     prompt: buildMetaphysicsPrompt(result.prompt, input, 'residential'),
@@ -2428,8 +2425,8 @@ function buildResidentialPrompt(input: JsonRecord) {
   });
 }
 
-function buildXuanKongPrompt(input: JsonRecord) {
-  const result = calculateXuanKongApi(input);
+async function buildXuanKongPrompt(input: JsonRecord) {
+  const result = await calculateXuanKongApi(input);
   return buildPromptApiResult({
     responseMode: readPromptResponseMode(input),
     prompt: buildMetaphysicsPrompt(result.prompt, input, 'xuankong'),
@@ -2437,8 +2434,8 @@ function buildXuanKongPrompt(input: JsonRecord) {
   });
 }
 
-function buildQizhengPrompt(input: JsonRecord) {
-  const result = calculateQizhengApi(input);
+async function buildQizhengPrompt(input: JsonRecord) {
+  const result = await calculateQizhengApi(input);
   return buildPromptApiResult({
     responseMode: readPromptResponseMode(input),
     prompt: buildMetaphysicsPrompt(result.prompt, input, 'qizheng'),
@@ -2678,6 +2675,9 @@ export async function calculateZiweiRuntime(input: JsonRecord, scopes: ScopeType
         birthMinute: readString(input, 'birthMinute', ''),
         birthLongitude: readString(input, 'birthLongitude', ''),
       };
+  const { buildZiweiChartInput, calculatePublicZiweiChartForScopes } = await import(
+    '@temposoul/core/ziwei'
+  );
   return calculatePublicZiweiChartForScopes(
     buildZiweiChartInput({
       name: readString(input, 'name', ''),
@@ -2762,6 +2762,7 @@ async function readZiweiCompatibilityCharts(input: JsonRecord) {
 
 async function calculateZiweiCompatibilityApi(input: JsonRecord) {
   assertNoRandomOptions(input, '紫微双盘是确定性计算，不接受 seed 或 replay。');
+  const { analyzeZiweiCompatibility } = await import('@temposoul/core/ziwei');
   const charts = await readZiweiCompatibilityCharts(input);
   const compatibility = analyzeZiweiCompatibility(
     charts.person1.payloadByScope.origin,
@@ -2784,6 +2785,8 @@ async function calculateZiweiCompatibilityApi(input: JsonRecord) {
 
 async function buildZiweiCompatibilityPromptApi(input: JsonRecord) {
   assertNoRandomOptions(input, '紫微双盘是确定性计算，不接受 seed 或 replay。');
+  const { analyzeZiweiCompatibility } = await import('@temposoul/core/ziwei');
+  const { buildCombinedZiweiCompatibilityPrompt } = await import('@temposoul/core/ziwei/prompt');
   const charts = await readZiweiCompatibilityCharts(input);
   const compatibility = analyzeZiweiCompatibility(
     charts.person1.payloadByScope.origin,
@@ -2890,7 +2893,7 @@ async function buildBaziZiweiPrompt(input: JsonRecord) {
   });
 }
 
-function calculateLiuyao(input: JsonRecord) {
+async function calculateLiuyao(input: JsonRecord) {
   const method = readOptionalEnum(input, 'liuyaoMethod', ['time', 'manual', 'coins'] as const);
   const yaos = readOptionalIntegerArray(input, 'yaos', 6, 6, 9);
   const randomOptions = readRandomOptions(input);
@@ -2902,13 +2905,15 @@ function calculateLiuyao(input: JsonRecord) {
           ...randomOptions,
         }
       : undefined;
+  const { generateLiuyao } = await import('@temposoul/core/divination/liuyao');
   return generateLiuyao(readCustomDate(input), options);
 }
 
-function calculateQimen(input: JsonRecord) {
+async function calculateQimen(input: JsonRecord) {
   assertNoRandomOptions(input, '奇门遁甲是确定性排盘，不接受 seed 或 replay。');
   const method = readEnum(input, 'qimenMethod', ['zhuanpan', 'feipan'], 'zhuanpan');
   const juMethod = readEnum(input, 'qimenJuMethod', ['chaibu', 'zhirun'], 'chaibu');
+  const { generateQimen } = await import('@temposoul/core/divination/qimen');
   return generateQimen(
     readCustomDate(input),
     method as 'zhuanpan' | 'feipan',
@@ -2917,12 +2922,12 @@ function calculateQimen(input: JsonRecord) {
   );
 }
 
-function calculateQimenApi(input: JsonRecord) {
-  const result = calculateQimen(input);
+async function calculateQimenApi(input: JsonRecord) {
+  const result = await calculateQimen(input);
   return readDetailMode(input) === 'compact' ? buildCompactQimenResult(result) : result;
 }
 
-function calculateMeihua(input: JsonRecord) {
+async function calculateMeihua(input: JsonRecord) {
   const method = readEnum(input, 'method', ['time', 'number', 'random', 'timeTrigram'], 'time');
   const settings: MeihuaSettings = {
     method,
@@ -2931,10 +2936,11 @@ function calculateMeihua(input: JsonRecord) {
   };
   if (method !== 'random') assertNoRandomOptions(input, '梅花易数仅随机起卦接受 seed 或 replay。');
 
+  const { generateMeihua } = await import('@temposoul/core/divination/meihua');
   return generateMeihua(readCustomDate(input), settings);
 }
 
-function calculateLiuren(input: JsonRecord) {
+async function calculateLiuren(input: JsonRecord) {
   assertNoRandomOptions(input, '大六壬是确定性排盘，不接受 seed 或 replay。');
   const template = readEnum(
     input,
@@ -2942,13 +2948,14 @@ function calculateLiuren(input: JsonRecord) {
     ['general', 'ganqing', 'shiye', 'caifu'],
     'general',
   );
+  const { generateLiuren } = await import('@temposoul/core/divination/liuren');
   return {
     ...generateLiuren(readCustomDate(input)),
     template,
   };
 }
 
-function calculateXiaoliuren(input: JsonRecord) {
+async function calculateXiaoliuren(input: JsonRecord) {
   assertNoRandomOptions(input, '小六壬是确定性时间起课，不接受 seed 或 replay。');
   const method = readEnum(
     input,
@@ -2963,18 +2970,20 @@ function calculateXiaoliuren(input: JsonRecord) {
       '小六壬已移除无可靠来源的流派和数字起课参数，当前仅接受时间起课。',
     );
   }
+  const { generateXiaoliuren } = await import('@temposoul/core/divination/xiaoliuren');
   return generateXiaoliuren({
     method,
     customDate: readCustomDate(input),
   });
 }
 
-function calculateJinkoujue(input: JsonRecord) {
+async function calculateJinkoujue(input: JsonRecord) {
   const method = readEnum(input, 'jinkoujueMethod', ['time', 'number', 'random'], 'time') as
     'time' | 'number' | 'random';
   if (method !== 'random') {
     assertNoRandomOptions(input, '金口诀仅随机起课接受 seed 或 replay。');
   }
+  const { generateJinkoujue } = await import('@temposoul/core/divination/jinkoujue');
   return generateJinkoujue({
     method,
     customDate: readCustomDate(input),
@@ -2983,7 +2992,7 @@ function calculateJinkoujue(input: JsonRecord) {
   });
 }
 
-function calculateTarot(input: JsonRecord) {
+async function calculateTarot(input: JsonRecord) {
   const randomOptions = readRandomOptions(input);
   const spreadType = readEnum(
     input,
@@ -3002,20 +3011,23 @@ function calculateTarot(input: JsonRecord) {
     ],
     'single',
   );
+  const { drawTarotSpread } = await import('@temposoul/core/divination/tarot');
   return drawTarotSpread(spreadType, randomOptions);
 }
 
-function drawSsgw(input: JsonRecord) {
+async function drawSsgw(input: JsonRecord) {
+  const { drawRandomSign } = await import('@temposoul/core/divination/ssgw');
   return drawRandomSign(readCustomDate(input), readRandomOptions(input));
 }
 
-function calculateSsgw(input: JsonRecord) {
+async function calculateSsgw(input: JsonRecord) {
   return drawSsgw(input);
 }
 
-function calculateAlmanac(input: JsonRecord) {
+async function calculateAlmanac(input: JsonRecord) {
   assertNoRandomOptions(input, '黄历择日是确定性计算，不接受 seed 或 replay。');
   const { startDate, endDate } = readAlmanacDateRange(input);
+  const { generateAlmanacSelection } = await import('@temposoul/core/divination/almanac');
   return generateAlmanacSelection({
     topic: readEnum(
       input,
@@ -3040,12 +3052,13 @@ function calculateAlmanac(input: JsonRecord) {
   });
 }
 
-function calculateAlmanacApi(input: JsonRecord) {
-  const result = calculateAlmanac(input);
+async function calculateAlmanacApi(input: JsonRecord) {
+  const result = await calculateAlmanac(input);
   return shapeAlmanacResult(result, input);
 }
 
-function calculateLenormand(input: JsonRecord) {
+async function calculateLenormand(input: JsonRecord) {
+  const { drawLenormandSpread } = await import('@temposoul/core/divination/lenormand');
   return drawLenormandSpread(
     readEnum(
       input,
@@ -3057,7 +3070,7 @@ function calculateLenormand(input: JsonRecord) {
   );
 }
 
-function calculateAstrolabe(input: JsonRecord) {
+async function calculateAstrolabe(input: JsonRecord) {
   assertNoRandomOptions(input, '星盘是确定性排盘，不接受 seed 或 replay。');
   const birthDate = readBirthDate(input, { dateType: 'solar' });
   const timezone = optNumber(input, 'timezone', -12, 14);
@@ -3083,27 +3096,29 @@ function calculateAstrolabe(input: JsonRecord) {
     locationName: readString(input, 'locationName', ''),
     useTrueSolarTime: readBoolean(input, 'useTrueSolarTime', false),
   };
+  const { generateAstrolabe } = await import('@temposoul/core/divination/astrolabe');
   return generateAstrolabe(astrolabeInput);
 }
 
-function readAstrolabeSynastryCharts(input: JsonRecord) {
+async function readAstrolabeSynastryCharts(input: JsonRecord) {
   if (!isRecord(input.person1) || !isRecord(input.person2)) {
     throw new ApiError(400, 'BAD_REQUEST', 'person1 和 person2 必须是完整的星盘出生资料。');
   }
-  const chart1 = calculateAstrolabe(input.person1);
-  const chart2 = calculateAstrolabe(input.person2);
+  const chart1 = await calculateAstrolabe(input.person1);
+  const chart2 = await calculateAstrolabe(input.person2);
   return { chart1, chart2 };
 }
 
-function calculateAstrolabeSynastryApi(input: JsonRecord) {
+async function calculateAstrolabeSynastryApi(input: JsonRecord) {
   assertNoRandomOptions(input, '西占双盘是确定性计算，不接受 seed 或 replay。');
-  const { chart1, chart2 } = readAstrolabeSynastryCharts(input);
+  const { chart1, chart2 } = await readAstrolabeSynastryCharts(input);
+  const { analyzeAstrolabeSynastry } = await import('@temposoul/core/divination/astrolabe-synastry');
   const synastry = analyzeAstrolabeSynastry(chart1, chart2);
   return { charts: { person1: chart1, person2: chart2 }, synastry };
 }
 
-function buildAstrolabeSynastryPromptApi(input: JsonRecord) {
-  const result = calculateAstrolabeSynastryApi(input);
+async function buildAstrolabeSynastryPromptApi(input: JsonRecord) {
+  const result = await calculateAstrolabeSynastryApi(input);
   const prompt = buildAstrolabeSynastryPrompt({
     chart1: result.charts.person1,
     chart2: result.charts.person2,
@@ -3205,7 +3220,7 @@ function buildAstrolabeScopeEvidence(input: JsonRecord, data: AstrolabeData) {
   }
 }
 
-function buildDivinationPromptResult(
+async function buildDivinationPromptResult(
   method: Exclude<DivinationMethodId, 'random'>,
   input: JsonRecord,
 ) {
@@ -3213,12 +3228,14 @@ function buildDivinationPromptResult(
     method === 'almanac'
       ? readString(input, 'question', '')
       : readRequiredString(input, 'question');
-  const rawData = calculateDivinationData(method, input);
+  const rawData = await calculateDivinationData(method, input);
   const promptData =
-    method === 'almanac' ? shapeAlmanacPromptData(rawData as AlmanacData, input) : rawData;
+    method === 'almanac'
+      ? await shapeAlmanacPromptData(rawData as AlmanacData, input)
+      : rawData;
   const fullResult =
     method === 'almanac'
-      ? shapeAlmanacResult(rawData as AlmanacData, input)
+      ? await shapeAlmanacResult(rawData as AlmanacData, input)
       : method === 'ssgw'
         ? rawData
         : method === 'astrolabe'
@@ -3238,10 +3255,10 @@ function buildDivinationPromptResult(
   });
 }
 
-function calculateDivinationData(
+async function calculateDivinationData(
   method: Exclude<DivinationMethodId, 'random'>,
   input: JsonRecord,
-): DivinationData {
+): Promise<DivinationData> {
   switch (method) {
     case 'liuyao':
       return calculateLiuyao(input);
@@ -3549,7 +3566,10 @@ function buildCompactZiweiResult(result: ReturnType<typeof buildSerializableZiwe
   };
 }
 
-function buildCompactQimenResult(result: ReturnType<typeof generateQimen>) {
+type QimenChartModule = typeof import('@temposoul/core/divination/qimen');
+type QimenChartResult = ReturnType<QimenChartModule['generateQimen']>;
+
+function buildCompactQimenResult(result: QimenChartResult) {
   const classicPatterns = (result.classicPatterns ?? []).slice(
     0,
     MAX_COMPACT_QIMEN_CLASSIC_PATTERNS,
@@ -3670,18 +3690,20 @@ function readAlmanacPageSelection(result: AlmanacData, input: JsonRecord) {
   };
 }
 
-function shapeAlmanacPromptData(result: AlmanacData, input: JsonRecord): AlmanacData {
+async function shapeAlmanacPromptData(result: AlmanacData, input: JsonRecord): Promise<AlmanacData> {
   const { shouldPaginate, selectedDays } = readAlmanacPageSelection(result, input);
   if (!shouldPaginate) return result;
   const shaped = { ...result, days: selectedDays };
+  const { analyzeAlmanacEvidence } = await import('@temposoul/core/divination/almanac');
   shaped.evidenceAnalysis = analyzeAlmanacEvidence(shaped);
   return shaped;
 }
 
-function shapeAlmanacResult(result: AlmanacData, input: JsonRecord): AlmanacApiResult {
+async function shapeAlmanacResult(result: AlmanacData, input: JsonRecord): Promise<AlmanacApiResult> {
   const detailMode = readDetailMode(input);
   const { shouldPaginate, selectedDays, pagination } = readAlmanacPageSelection(result, input);
   const days = detailMode === 'compact' ? selectedDays.map(compactAlmanacDay) : selectedDays;
+  const { analyzeAlmanacEvidence } = await import('@temposoul/core/divination/almanac');
 
   return {
     ...result,
@@ -4113,7 +4135,7 @@ export function handleError(error: unknown, runtime: PublicApiRuntime) {
     return json(failure(error.code, error.message, runtime), error.status);
   }
 
-  if (error instanceof MingyuCoreError) {
+  if (isMingyuCoreError(error)) {
     const status =
       error.category === 'validation'
         ? 400

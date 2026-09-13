@@ -1,0 +1,21 @@
+{
+  "caseId": "zodiac-002",
+  "system": "zodiac",
+  "desc": "1985 年 牛 流年干支",
+  "input": {
+    "zodiac": "牛",
+    "year": 1985
+  },
+  "expected": {
+    "yearGanZhi": "乙丑",
+    "zodiac": "牛",
+    "yearBranch": "丑"
+  },
+  "expectedAssumption": "年柱探针 2/10 依赖立春≤2/5；期望值按标准干支纪年（立春界，年中一致）",
+  "source": {
+    "type": "典籍推演",
+    "note": "干支纪年 (year-1984)%60 独立算式；与引擎 tyme4ts 立春界年柱交叉验证"
+  },
+  "boundaryTags": [],
+  "yearRange": "1900-2100"
+}

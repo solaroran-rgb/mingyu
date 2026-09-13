@@ -1,0 +1,1202 @@
+﻿archetype_key,zh,pinyin,category,en,es,ja,ko,th,vi,basis,status
+bazi:stem:jia,甲,jiǎ,天干,Jia,Jia,甲,갑,เจีย,Giáp,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:stem:yi,乙,yǐ,天干,Yi,Yi,乙,을,อี้,Ất,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:stem:bing,丙,bǐng,天干,Bing,Bing,丙,병,ปิ่ง,Bính,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:stem:ding,丁,dīng,天干,Ding,Ding,丁,정,ติง,Đinh,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:stem:wu,戊,wù,天干,Wu,Wu,戊,무,อู้,Mậu,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:stem:ji,己,jǐ,天干,Ji,Ji,己,기,จี่,Kỷ,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:stem:geng,庚,gēng,天干,Geng,Geng,庚,경,เกิง,Canh,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:stem:xin,辛,xīn,天干,Xin,Xin,辛,신,ซิน,Tân,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:stem:ren,壬,rén,天干,Ren,Ren,壬,임,เหริน,Nhâm,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:stem:gui,癸,guǐ,天干,Gui,Gui,癸,계,กุย,Quý,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:branch:zi,子,zǐ,地支,Zi,Zi,子,자,จื้อ,Tý,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:branch:chou,丑,chǒu,地支,Chou,Chou,丑,축,ฉู่,Sửu,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:branch:yin,寅,yín,地支,Yin,Yin,寅,인,อิน,Dần,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:branch:mao,卯,mǎo,地支,Mao,Mao,卯,묘,เหมา,Mão,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:branch:chen,辰,chén,地支,Chen,Chen,辰,진,เฉิน,Thìn,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:branch:si,巳,sì,地支,Si,Si,巳,사,สื่อ,Tỵ,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:branch:wu,午,wǔ,地支,Wu,Wu,午,오,อู่,Ngọ,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:branch:wei,未,wèi,地支,Wei,Wei,未,미,เว่ย,Mùi,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:branch:shen,申,shēn,地支,Shen,Shen,申,신,เชิน,Thân,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:branch:you,酉,yǒu,地支,You,You,酉,유,โหย่ว,Dậu,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:branch:xu,戌,xū,地支,Xu,Xu,戌,술,ซวิว,Tuất,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:branch:hai,亥,hài,地支,Hai,Hai,亥,해,ไห่,Hợi,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:wuxing:mu,木,mù,五行,Wood,Madera,木,목,ไม้,Mộc,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:wuxing:huo,火,huǒ,五行,Fire,Fuego,火,화,ไฟ,Hỏa,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:wuxing:tu,土,tǔ,五行,Earth,Tierra,土,토,ดิน,Thổ,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:wuxing:jin,金,jīn,五行,Metal,Metal,金,금,โลหะ,Kim,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:wuxing:shui,水,shuǐ,五行,Water,Agua,水,수,น้ำ,Thủy,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:wuxing:mushenghuo,木生火,mùshēnghuǒ,五行,—,—,—,—,—,—,,tier2_pending
+bazi:wuxing:huoshengtu,火生土,huǒshēngtǔ,五行,—,—,—,—,—,—,,tier2_pending
+bazi:wuxing:tushengjin,土生金,tǔshēngjīn,五行,—,—,—,—,—,—,,tier2_pending
+bazi:wuxing:jinshengshui,金生水,jīnshēngshuǐ,五行,—,—,—,—,—,—,,tier2_pending
+bazi:wuxing:shuishengmu,水生木,shuǐshēngmù,五行,—,—,—,—,—,—,,tier2_pending
+bazi:wuxing:muketu,木克土,mùkètǔ,五行,—,—,—,—,—,—,,tier2_pending
+bazi:wuxing:tukeshui,土克水,tǔkèshuǐ,五行,—,—,—,—,—,—,,tier2_pending
+bazi:wuxing:shuikehuo,水克火,shuǐkèhuǒ,五行,—,—,—,—,—,—,,tier2_pending
+bazi:wuxing:huokejin,火克金,huǒkèjīn,五行,—,—,—,—,—,—,,tier2_pending
+bazi:wuxing:jinkemu,金克木,jīnkèmù,五行,—,—,—,—,—,—,,tier2_pending
+bazi:wuxing:xiangcheng,相乘,xiāngchéng,五行,—,—,—,—,—,—,,tier2_pending
+bazi:wuxing:xiangwu,相侮,xiāngwǔ,五行,—,—,—,—,—,—,,tier2_pending
+bazi:wuxing:muzhugan,木主肝,mùzhǔgān,五行,—,—,—,—,—,—,,tier2_pending
+bazi:wuxing:huozhuxin,火主心,huǒzhǔxīn,五行,—,—,—,—,—,—,,tier2_pending
+bazi:wuxing:tuzhupi,土主脾,tǔzhǔpí,五行,—,—,—,—,—,—,,tier2_pending
+bazi:wuxing:jinzhufei,金主肺,jīnzhǔfèi,五行,—,—,—,—,—,—,,tier2_pending
+bazi:wuxing:shuizhushen,水主肾,shuǐzhǔshèn,五行,—,—,—,—,—,—,,tier2_pending
+bazi:wuxing:muxinghangye,木行行业,mùxínghángyè,五行,—,—,—,—,—,—,,tier2_pending
+bazi:wuxing:huoxinghangye,火行行业,huǒxínghángyè,五行,—,—,—,—,—,—,,tier2_pending
+bazi:wuxing:tuxinghangye,土行行业,tǔxínghángyè,五行,—,—,—,—,—,—,,tier2_pending
+bazi:wuxing:jinxinghangye,金行行业,jīnxínghángyè,五行,—,—,—,—,—,—,,tier2_pending
+bazi:wuxing:shuixinghangye,水行行业,shuǐxínghángyè,五行,—,—,—,—,—,—,,tier2_pending
+bazi:shishen:bijian,比肩,bǐjiān,十神,Friend,Compañero,比肩,비견,ปี้เจี้ยน,Tỷ Kiến,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:shishen:jiecai,劫财,jiécái,十神,Rob Wealth,Roba Riqueza,劫財,겁재,เจี๋ยไฉ่,Kiếp Tài,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:shishen:shishen,食神,shíshén,十神,Eating God,Dios Comedor,食神,식신,สือเซิน,Thực Thần,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:shishen:shangguan,伤官,shāngguān,十神,Hurting Officer,Oficial Dañino,傷官,상관,ซางกวน,Thương Quan,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:shishen:zhengcai,正财,zhèngcái,十神,Direct Wealth,Riqueza Directa,正財,정재,จิ้งไฉ่,Chính Tài,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:shishen:piancai,偏财,piāncái,十神,Indirect Wealth,Riqueza Indirecta,偏財,편재,เทียนไฉ่,Thiên Tài,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:shishen:zhengguan,正官,zhèngguān,十神,Direct Officer,Oficial Directo,正官,정관,จิ้งกวน,Chính Quan,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:shishen:qisha,七杀,qīshā,十神,Seven Killings,Siete Asesinatos,七殺,칠살,ฉีซา,Thất Sát,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:shishen:zhengyin,正印,zhèngyìn,十神,Direct Resource,Recurso Directo,正印,정인,จิ้งอิน,Chính Ấn,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:shishen:pianyin,偏印,piānyìn,十神,Indirect Resource,Recurso Indirecto,偏印,편인,เทียนอิน,Thiên Ấn,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:shishen:shangguanjianguan,伤官见官,shāngguānjiànguān,十神,—,—,—,—,—,—,,tier2_pending
+bazi:shishen:shishenzhisha,食神制杀,shíshénzhìshā,十神,—,—,—,—,—,—,,tier2_pending
+bazi:shishen:guanyinxiangsheng,官印相生,guānyìnxiāngshēng,十神,—,—,—,—,—,—,,tier2_pending
+bazi:shishen:caiguanshuangmei,财官双美,cáiguānshuāngměi,十神,—,—,—,—,—,—,,tier2_pending
+bazi:shishen:shayinxiangsheng,杀印相生,shāyìnxiāngshēng,十神,—,—,—,—,—,—,,tier2_pending
+bazi:shishen:bijiezhengcai,比劫争财,bǐjiézhēngcái,十神,—,—,—,—,—,—,,tier2_pending
+bazi:shishen:shangguanshangjin,伤官伤尽,shāngguānshāngjìn,十神,—,—,—,—,—,—,,tier2_pending
+bazi:shishen:shishenshengcai,食神生财,shíshénshēngcái,十神,—,—,—,—,—,—,,tier2_pending
+bazi:shishen:yinshouhushen,印绶护身,yìnshòuhùshēn,十神,—,—,—,—,—,—,,tier2_pending
+bazi:shishen:guanshahunza,官杀混杂,guānshāhùnzá,十神,—,—,—,—,—,—,,tier2_pending
+bazi:shishen:yangrenjiasha,羊刃驾杀,yángrènjiàshā,十神,—,—,—,—,—,—,,tier2_pending
+bazi:shishen:shangguanpeiyin,伤官配印,shāngguānpèiyìn,十神,—,—,—,—,—,—,,tier2_pending
+bazi:shishen:caixingpoyin,财星破印,cáixīngpòyìn,十神,—,—,—,—,—,—,,tier2_pending
+bazi:shishen:riguige,日贵格,rìguìgé,十神,—,—,—,—,—,—,,tier2_pending
+bazi:shishen:kuigangge,魁罡格,kuígānggé,十神,Kuigang,Kuigang,魁罡,괴강,คุยกาง,Khôi Cương,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:shishen:jinyuge,金舆格,jīnyúgé,十神,—,—,—,—,—,—,,tier2_pending
+bazi:shishen:xuetangge,学堂格,xuétánggé,十神,—,—,—,—,—,—,,tier2_pending
+bazi:shishen:lumatongxiang,禄马同乡,lùmǎtóngxiāng,十神,—,—,—,—,—,—,,tier2_pending
+bazi:shishen:tianganwuhe,天干五合,tiāngānwǔhé,十神,—,—,—,—,—,—,,tier2_pending
+bazi:shishen:jiajihe,甲己合,jiǎjǐhé,十神,—,—,—,—,—,—,,tier2_pending
+bazi:shishen:yigenghe,乙庚合,yǐgēnghé,十神,—,—,—,—,—,—,,tier2_pending
+bazi:shishen:bingxinhe,丙辛合,bǐngxīnhé,十神,—,—,—,—,—,—,,tier2_pending
+bazi:shishen:dingranhe,丁壬合,dīngránhé,十神,—,—,—,—,—,—,,tier2_pending
+bazi:shishen:wuguihe,戊癸合,wùguǐhé,十神,—,—,—,—,—,—,,tier2_pending
+ziwei:star:ziwei,紫微,zǐwēi,紫微星曜,Ziwei,Ziwei,紫微,자미,จื่อเหวย,Tử Vi,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:star:tianji,天机,tiānjī,紫微星曜,Tianji,Tianji,天機,천기,เทียนจี,Thiên Cơ,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:star:taiyang,太阳,tàiyáng,紫微星曜,Taiyang (Sun),Taiyang (Sol),太陽,태양,ไท่หยาง,Thái Dương,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:star:wuqu,武曲,wǔqū,紫微星曜,Wuqu,Wuqu,武曲,무곡,อู่ฉวี้,Vũ Khúc,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:star:tiantong,天同,tiāntóng,紫微星曜,Tiantong,Tiantong,天同,천동,เทียนถง,Thiên Đồng,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:star:lianzhen,廉贞,liánzhēn,紫微星曜,Lianzhen,Lianzhen,廉貞,염정,เหลียนเจิ้น,Liêm Trinh,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:star:tianfu,天府,tiānfǔ,紫微星曜,Tianfu,Tianfu,天府,천부,เทียนฝู่,Thiên Phủ,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:star:taiyin,太阴,tàiyīn,紫微星曜,Taiyin (Moon),Taiyin (Luna),太陰,태음,ไท่อิน,Thái Âm,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:star:tanlang,贪狼,tānláng,紫微星曜,Tanlang,Tanlang,貪狼,탐랑,ทานหลาง,Tham Lang,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:star:jumen,巨门,jùmén,紫微星曜,Jumen,Jumen,巨門,거문,จวี้เหมิน,Cự Môn,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:star:tianxiang,天相,tiānxiàng,紫微星曜,Tianxiang,Tianxiang,天相,천상,เทียนเซี่ยง,Thiên Tướng,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:star:tianliang,天梁,tiānliáng,紫微星曜,Tianliang,Tianliang,天梁,천량,เทียนเหลียง,Thiên Lương,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:star:qisha,七杀,qīshā,紫微星曜,Seven Killings,Siete Asesinatos,七殺,칠살,ฉีซา,Thất Sát,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:star:pojun,破军,pòjūn,紫微星曜,Pojun,Pojun,破軍,파군,โพจวิน,Phá Quân,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:star:zuofu,左辅,zuǒfǔ,紫微星曜,Zuofu,Zuofu,左輔,좌보,จั่วฝู่,Tả Phụ,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:star:youbi,右弼,yòubì,紫微星曜,Youbi,Youbi,右弼,우필,โยวปี้,Hữu Bật,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:star:wenchang,文昌,wénchāng,紫微星曜,Wenchang,Wenchang,文昌,문창,เหวินชาง,Văn Xương,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:star:wenqu,文曲,wénqǔ,紫微星曜,Wenqu,Wenqu,文曲,문곡,เหวินชวี้,Văn Khúc,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:star:tiankui,天魁,tiānkuí,紫微星曜,Tiankui,Tiankui,天魁,천괴,เทียนคุย,Thiên Khuê,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:star:tianyue,天钺,tiānyuè,紫微星曜,Tianyue,Tianyue,天鉞,천월,เทียนเยว่,Thiên Việt,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:star:lucun,禄存,lùcún,紫微星曜,Lucun,Lucun,祿存,녹존,ลู่ชุน,Lộc Tồn,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:star:tianma,天马,tiānmǎ,紫微星曜,Tianma,Tianma,天馬,천마,เทียนหม่า,Thiên Mã,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:star:qingyang,擎羊,qíngyáng,紫微星曜,Qingyang,Qingyang,擎羊,경양,ชิงหยาง,Kình Dương,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:star:tuoluo,陀罗,tuóluó,紫微星曜,Tuoluo,Tuoluo,陀羅,타라,ถัวลัว,Đà La,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:star:huoxing,火星,huǒxīng,紫微星曜,Huoxing (Mars),Huoxing (Marte),火星,화성,หัวซิง,Hỏa Tinh,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:star:lingxing,铃星,língxīng,紫微星曜,Lingxing,Lingxing,鈴星,영성,หลิงซิง,Linh Tinh,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:star:dikong,地空,dìkōng,紫微星曜,Dikong,Dikong,地空,지공,ตี้คง,Địa Không,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:star:dijie,地劫,dìjié,紫微星曜,Dijie,Dijie,地劫,지격,ตี้เจี้ย,Địa Kiếp,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:star:tianxing,天刑,tiānxíng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:tianyao,天姚,tiānyáo,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:hongluan,红鸾,hóngluán,紫微星曜,Hongluan,Hongluan,紅鸞,홍란,หงหลวน,Hồng Loan,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:star:tianxi,天喜,tiānxǐ,紫微星曜,Tianxi (Sky Joy),Tianxi (Alegría celeste),天喜,천희,เทียนซี,Thiên Hỷ,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:star:guchen,孤辰,gūchén,紫微星曜,Solitude Star,Estrella de la soledad,孤辰,고진,กูเฉิน,Cô Thần,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:star:guasu,寡宿,guǎsù,紫微星曜,Widowhood Star,Estrella de la viudez,寡宿,과수,กวาซิ่ว,Quả Tú,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:star:tianxu,天虚,tiānxū,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:tiangui,天贵,tiānguì,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:enguang,恩光,ēnguāng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:tiankong,天空,tiānkōng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:hualu,化禄,huàlù,紫微星曜,Hualu,Hualu,化祿,화록,ฮัวลก,Hóa Lộc,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:star:huaquan,化权,huàquán,紫微星曜,Huaquan,Huaquan,化權,화권,ฮัวเชวน,Hóa Quyền,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:star:huake,化科,huàkē,紫微星曜,Huake,Huake,化科,화과,ฮัวเค,Hóa Khoa,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:star:huaji,化忌,huàjì,紫微星曜,Huaji,Huaji,化忌,화기,ฮัวกี้,Hóa Kỵ,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:star:junchenqinghui,君臣庆会,jūnchénqìnghuì,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:jixiangliming,极向离明,jíxiànglímíng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:zifutonggong,紫府同宫,zǐfǔtónggōng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:shapolang,杀破狼,shāpòláng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:jiyuetongliang,机月同梁,jīyuètóngliáng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:juritonggong,巨日同宫,jùrìtónggōng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:rizhaoleimen,日照雷门,rìzhàoléimén,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:yueshenghangcang,月生沧海,yuèshēnghāngcāng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:huotange,火贪格,huǒtāngé,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:matoudaijian,马头带箭,mǎtóudàijiàn,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:shizhongyinyu,石中隐玉,shízhōngyǐnyù,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:ziweimiaowang,紫微庙旺,zǐwēimiàowàng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:taiyangmiaowang,太阳庙旺,tàiyángmiàowàng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:wuqumiaowang,武曲庙旺,wǔqūmiàowàng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:taiyinmiaowang,太阴庙旺,tàiyīnmiàowàng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:tiantongmiaowang,天同庙旺,tiāntóngmiàowàng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:lianzhenmiaowang,廉贞庙旺,liánzhēnmiàowàng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:tianfumiaowang,天府庙旺,tiānfǔmiàowàng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:tianxiangmiaowang,天相庙旺,tiānxiàngmiàowàng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:tianliangmiaowang,天梁庙旺,tiānliángmiàowàng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:qishamiaowang,七杀庙旺,qīshāmiàowàng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:pojunmiaowang,破军庙旺,pòjūnmiàowàng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+common:term:minggong,命宫,mìnggōng,基础,Life Palace,Palacio de la Vida,命宮,명궁,เหมิงกง,Mệnh Cung,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+common:term:shengong,身宫,shēngōng,基础,—,—,—,—,—,—,,tier2_pending
+common:term:sizhu,四柱,sìzhù,基础,Four Pillars,Cuatro Pilares,四柱,사주,สื่อจู่,Tứ Trụ,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+common:term:bazi,八字,bāzì,基础,BaZi,BaZi,八字,팔자,ปาจื่อ,Bát Tự,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+common:term:zhentaiyangshi,真太阳时,zhēntàiyángshí,基础,—,—,—,—,—,—,,tier2_pending
+common:term:jieqi,节气,jiéqì,基础,—,—,—,—,—,—,,tier2_pending
+common:term:nayin,纳音,nàyīn,基础,—,—,—,—,—,—,,tier2_pending
+common:term:gongwei,宫位,gōngwèi,基础,—,—,—,—,—,—,,tier2_pending
+common:term:sanfangsizheng,三方四正,sānfāngsìzhèng,基础,—,—,—,—,—,—,,tier2_pending
+common:term:wuxingshengke,五行生克,wǔxíngshēngkè,基础,—,—,—,—,—,—,,tier2_pending
+common:term:yongshen,用神,yòngshén,基础,—,—,—,—,—,—,,tier2_pending
+common:term:wangshuai,旺衰,wàngshuāi,基础,—,—,—,—,—,—,,tier2_pending
+common:term:dayun,大运,dàyùn,基础,Luck Pillar,Pilar de la suerte,大運,대운,ไต่อวิ้น,Đại Vận,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+common:term:liunian,流年,liúnián,基础,Annual Luck,Suerte anual,流年,유년,หลิวเหนียน,Lưu Niên,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+common:term:liuyue,流月,liúyuè,基础,—,—,—,—,—,—,,tier2_pending
+common:term:kongwang,空亡,kōngwáng,基础,Void,Vacío,空亡,공망,คงหวาง,Không Vong,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+common:term:taiyuan,胎元,tāiyuán,基础,—,—,—,—,—,—,,tier2_pending
+common:term:minggongqifa,命宫起法,mìnggōngqǐfǎ,基础,—,—,—,—,—,—,,tier2_pending
+common:term:shiergongming,十二宫名,shíèrgōngmíng,基础,—,—,—,—,—,—,,tier2_pending
+common:term:rizhu,日主,rìzhǔ,基础,—,—,—,—,—,—,,tier2_pending
+common:term:yueling,月令,yuèlìng,基础,—,—,—,—,—,—,,tier2_pending
+common:term:geju,格局,géjú,基础,—,—,—,—,—,—,,tier2_pending
+common:term:tiaohou,调候,tiáohòu,基础,—,—,—,—,—,—,,tier2_pending
+common:term:tongguan,通关,tōngguān,基础,—,—,—,—,—,—,,tier2_pending
+bazi:shensha:wenchang,文昌,wénchāng,神煞,Wenchang,Wenchang,文昌,문창,เหวินชาง,Văn Xương,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:shensha:wenqu,文曲,wénqǔ,神煞,Wenqu,Wenqu,文曲,문곡,เหวินชวี้,Văn Khúc,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:shensha:zuofu,左辅,zuǒfǔ,神煞,Zuofu,Zuofu,左輔,좌보,จั่วฝู่,Tả Phụ,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:shensha:youbi,右弼,yòubì,神煞,Youbi,Youbi,右弼,우필,โยวปี้,Hữu Bật,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:shensha:tiankui,天魁,tiānkuí,神煞,Tiankui,Tiankui,天魁,천괴,เทียนคุย,Thiên Khuê,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:shensha:tianyue,天钺,tiānyuè,神煞,Tianyue,Tianyue,天鉞,천월,เทียนเยว่,Thiên Việt,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:shensha:lucun,禄存,lùcún,神煞,Lucun,Lucun,祿存,녹존,ลู่ชุน,Lộc Tồn,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:shensha:qingyang,擎羊,qíngyáng,神煞,Qingyang,Qingyang,擎羊,경양,ชิงหยาง,Kình Dương,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:shensha:tuoluo,陀罗,tuóluó,神煞,Tuoluo,Tuoluo,陀羅,타라,ถัวลัว,Đà La,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:shensha:huoxing,火星,huǒxīng,神煞,Huoxing (Mars),Huoxing (Marte),火星,화성,หัวซิง,Hỏa Tinh,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:shensha:lingxing,铃星,língxīng,神煞,Lingxing,Lingxing,鈴星,영성,หลิงซิง,Linh Tinh,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:shensha:tianyiguiren,天乙贵人,tiānyǐguìrén,神煞,Nobleman,Noble,天乙貴人,천을귀인,เทียนอี้กุยเหริน,Thiên Ất Quý Nhân,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:shensha:taijiguiren,太极贵人,tàijíguìrén,神煞,Taiji Nobleman,Noble Taiji,太極貴人,태극귀인,ไท่จี๋กุยเหริน,Thái Cực Quý Nhân,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:shensha:tiande,天德,tiāndé,神煞,Heavenly Virtue,Virtud Celestial,天德貴人,천덕귀인,เทียนเต๋อกุยเหริน,Thiên Đức Quý Nhân,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:shensha:yuede,月德,yuèdé,神煞,Lunar Virtue,Virtud Lunar,月德貴人,월덕귀인,เยว่เต๋อกุยเหริน,Nguyệt Đức Quý Nhân,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:shensha:tiandehe,天德合,tiāndéhé,神煞,—,—,—,—,—,—,,tier2_pending
+bazi:shensha:yuedehe,月德合,yuèdéhé,神煞,—,—,—,—,—,—,,tier2_pending
+bazi:shensha:taohua,桃花,táohuā,神煞,Peach Blossom,Flor de durazno,桃花,도화,เทาฮัว,Đào Hoa,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:shensha:xianchi,咸池,xiánchí,神煞,Xianchi (Peach Blossom),Xianchi (Flor de durazno),咸池,함지,เซียนฉือ,Hàm Trì,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:shensha:yima,驿马,yìmǎ,神煞,Sky Horse,Cabalo del cielo,驛馬,역마,อี้หม่า,Dịch Mã,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:shensha:huagai,华盖,huágài,神煞,Canopy,Dosel,華蓋,화개,หัวไก่,Hoa Cái,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:shensha:guchen,孤辰,gūchén,神煞,Solitude Star,Estrella de la soledad,孤辰,고진,กูเฉิน,Cô Thần,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:shensha:guasu,寡宿,guǎsù,神煞,Widowhood Star,Estrella de la viudez,寡宿,과수,กวาซิ่ว,Quả Tú,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:shensha:jiesha,劫煞,jiéshā,神煞,Robbery Star,Estrella del robo,劫煞,격살,เจี๋ยซา,Kiếp Sát,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:shensha:zaisha,灾煞,zāishā,神煞,Calamity Star,Estrella de la calamidad,災煞,재살,ไจซา,Tai Sát,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:shensha:suipo,岁破,suìpò,神煞,—,—,—,—,—,—,,tier2_pending
+bazi:shensha:dahao,大耗,dàhào,神煞,—,—,—,—,—,—,,tier2_pending
+bazi:shensha:posui,破碎,pòsuì,神煞,—,—,—,—,—,—,,tier2_pending
+bazi:shensha:hongluan,红鸾,hóngluán,神煞,Hongluan,Hongluan,紅鸞,홍란,หงหลวน,Hồng Loan,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:shensha:tianxi,天喜,tiānxǐ,神煞,Tianxi (Sky Joy),Tianxi (Alegría celeste),天喜,천희,เทียนซี,Thiên Hỷ,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:shensha:yinsha,阴煞,yīnshā,神煞,—,—,—,—,—,—,,tier2_pending
+bazi:shensha:tianyao,天姚,tiānyáo,神煞,—,—,—,—,—,—,,tier2_pending
+bazi:shensha:tianxing,天刑,tiānxíng,神煞,—,—,—,—,—,—,,tier2_pending
+bazi:shensha:jieshen,解神,jiěshén,神煞,—,—,—,—,—,—,,tier2_pending
+bazi:shensha:longde,龙德,lóngdé,神煞,—,—,—,—,—,—,,tier2_pending
+bazi:shensha:baobai,暴败,bàobài,神煞,—,—,—,—,—,—,,tier2_pending
+bazi:shensha:sangmen,丧门,sāngmén,神煞,—,—,—,—,—,—,,tier2_pending
+bazi:shensha:diaoke,吊客,diàokè,神煞,—,—,—,—,—,—,,tier2_pending
+bazi:shensha:baihu,白虎,báihǔ,神煞,White Tiger,Tigre Blanco,白虎,백호,ไป๋หู,Bạch Hổ,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:shensha:jiangxing,将星,jiāngxīng,神煞,General Star,Estrella del general,將星,장성,เจี้ยงซิง,Tướng Tinh,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:shensha:panan,攀鞍,pānān,神煞,—,—,—,—,—,—,,tier2_pending
+bazi:shensha:suiyi,岁驿,suìyì,神煞,—,—,—,—,—,—,,tier2_pending
+bazi:shensha:xishen,息神,xīshén,神煞,—,—,—,—,—,—,,tier2_pending
+bazi:shensha:tianchu,天厨,tiānchú,神煞,—,—,—,—,—,—,,tier2_pending
+bazi:shensha:tiancai,天才,tiāncái,神煞,—,—,—,—,—,—,,tier2_pending
+bazi:shensha:tianshou,天寿,tiānshòu,神煞,—,—,—,—,—,—,,tier2_pending
+bazi:shensha:guasuguchen,寡宿孤辰并见,guǎsùgūchén,神煞,—,—,—,—,—,—,,tier2_pending
+bazi:shensha:taohuadaisha,桃花带杀,táohuādàishā,神煞,—,—,—,—,—,—,,tier2_pending
+bazi:shensha:guirenruming,贵人入命,guìrénrùmìng,神煞,—,—,—,—,—,—,,tier2_pending
+bazi:shensha:yimafengchong,驿马逢冲,yìmǎféngchōng,神煞,—,—,—,—,—,—,,tier2_pending
+bazi:shensha:huagaifengkong,华盖逢空,huágàiféngkōng,神煞,—,—,—,—,—,—,,tier2_pending
+bazi:shensha:sanqiguiren,三奇贵人,sānqíguìrén,神煞,—,—,—,—,—,—,,tier2_pending
+bazi:shensha:tiandeyuede,天德月德并临,tiāndéyuèdé,神煞,—,—,—,—,—,—,,tier2_pending
+bazi:shensha:yangren,羊刃,yángrèn,神煞,Goat Blade,Filo de la Cabra,羊刃,양인,หยางเหริน,Dương Nhẫn,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:shensha:feiren,飞刃,fēirèn,神煞,—,—,—,—,—,—,,tier2_pending
+bazi:shensha:xueren,血刃,xuèrèn,神煞,—,—,—,—,—,—,,tier2_pending
+common:school:zipingbazi,子平八字,zǐpíngbāzì,命理流派,—,—,—,—,—,—,,tier2_pending
+common:school:ziweidoushu,紫微斗数,zǐwēidǒushù,命理流派,Zi Wei Dou Shu,Zi Wei Dou Shu,紫微斗数,자미두수,จื่อเหวยโดวซู,Tử Vi Đẩu Số,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+common:school:qimendunjia,奇门遁甲,qíméndùnjiǎ,命理流派,—,—,—,—,—,—,,tier2_pending
+common:school:daliuren,大六壬,dàliùrén,命理流派,—,—,—,—,—,—,,tier2_pending
+common:school:taiyishenshu,太乙神数,tàiyǐshénshù,命理流派,—,—,—,—,—,—,,tier2_pending
+common:school:tiebanshenshu,铁板神数,tiěbǎnshénshù,命理流派,—,—,—,—,—,—,,tier2_pending
+common:school:meihuayishu,梅花易数,méihuāyìshù,命理流派,—,—,—,—,—,—,,tier2_pending
+common:school:shaozishenshu,邵子神数,shàozǐshénshù,命理流派,—,—,—,—,—,—,,tier2_pending
+common:school:cezi,测字,cèzì,命理流派,—,—,—,—,—,—,,tier2_pending
+common:school:mianxiang,面相,miànxiàng,命理流派,—,—,—,—,—,—,,tier2_pending
+common:school:shouxiang,手相,shǒuxiàng,命理流派,—,—,—,—,—,—,,tier2_pending
+common:school:fengshuiluantou,风水峦头,fēngshuǐluántóu,命理流派,—,—,—,—,—,—,,tier2_pending
+common:school:fengshuiliqi,风水理气,fēngshuǐlǐqì,命理流派,—,—,—,—,—,—,,tier2_pending
+common:school:qizhengsiyu,七政四余,qīzhèngsìyú,命理流派,—,—,—,—,—,—,,tier2_pending
+common:school:guolaoxingzong,果老星宗,guǒlǎoxīngzōng,命理流派,—,—,—,—,—,—,,tier2_pending
+common:school:yanqin,演禽,yǎnqín,命理流派,—,—,—,—,—,—,,tier2_pending
+common:school:jiugongfeixing,九宫飞星,jiǔgōngfēixīng,命理流派,—,—,—,—,—,—,,tier2_pending
+common:school:xuankongfeixing,玄空飞星,xuánkōngfēixīng,命理流派,—,—,—,—,—,—,,tier2_pending
+common:sancai:taiji,太极,tàijí,三才四象,—,—,—,—,—,—,,tier2_pending
+common:sancai:liangyi,两仪,liǎngyí,三才四象,—,—,—,—,—,—,,tier2_pending
+common:sancai:sancai,三才,sāncái,三才四象,—,—,—,—,—,—,,tier2_pending
+common:sancai:sixiang,四象,sìxiàng,三才四象,—,—,—,—,—,—,,tier2_pending
+common:sancai:yinyang,阴阳,yīnyáng,三才四象,—,—,—,—,—,—,,tier2_pending
+common:sancai:wuji,无极,wújí,三才四象,—,—,—,—,—,—,,tier2_pending
+common:sancai:daoshengyi,道生一,dàoshēngyī,三才四象,—,—,—,—,—,—,,tier2_pending
+common:sancai:xiantianbagua,先天八卦,xiāntiānbāguà,三才四象,—,—,—,—,—,—,,tier2_pending
+common:sancai:houtianbagua,后天八卦,hòutiānbāguà,三才四象,—,—,—,—,—,—,,tier2_pending
+common:sancai:hetu,河图,hétú,三才四象,—,—,—,—,—,—,,tier2_pending
+common:sancai:luoshu,洛书,luòshū,三才四象,—,—,—,—,—,—,,tier2_pending
+yijing:heluo:tianyishengshui,天一生水,tiānyīshēngshuǐ,河洛,—,—,—,—,—,—,,tier2_pending
+yijing:heluo:diershenghuo,地二生火,dìèrshēnghuǒ,河洛,—,—,—,—,—,—,,tier2_pending
+yijing:heluo:tiansanshengmu,天三生木,tiānsānshēngmù,河洛,—,—,—,—,—,—,,tier2_pending
+yijing:heluo:disishengjin,地四生金,dìsìshēngjīn,河洛,—,—,—,—,—,—,,tier2_pending
+yijing:heluo:tianwushengtu,天五生土,tiānwǔshēngtǔ,河洛,—,—,—,—,—,—,,tier2_pending
+yijing:heluo:shengchengshu,生成数,shēngchéngshù,河洛,—,—,—,—,—,—,,tier2_pending
+yijing:heluo:xiantianshu,先天数,xiāntiānshù,河洛,—,—,—,—,—,—,,tier2_pending
+yijing:heluo:houtianshu,后天数,hòutiānshù,河洛,—,—,—,—,—,—,,tier2_pending
+astrology:qizheng:ri,日,rì,七政四余,—,—,—,—,—,—,,tier2_pending
+astrology:qizheng:yue,月,yuè,七政四余,—,—,—,—,—,—,,tier2_pending
+astrology:qizheng:jinxing,金星,jīnxīng,七政四余,—,—,—,—,—,—,,tier2_pending
+astrology:qizheng:muxing,木星,mùxīng,七政四余,—,—,—,—,—,—,,tier2_pending
+astrology:qizheng:shuixing,水星,shuǐxīng,七政四余,—,—,—,—,—,—,,tier2_pending
+astrology:qizheng:huoxing,火星,huǒxīng,七政四余,Huoxing (Mars),Huoxing (Marte),火星,화성,หัวซิง,Hỏa Tinh,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+astrology:qizheng:tuxing,土星,tǔxīng,七政四余,—,—,—,—,—,—,,tier2_pending
+astrology:qizheng:luohou,罗睺,luóhóu,七政四余,—,—,—,—,—,—,,tier2_pending
+astrology:qizheng:jidou,计都,jìdōu,七政四余,—,—,—,—,—,—,,tier2_pending
+astrology:qizheng:ziqi,紫气,zǐqì,七政四余,—,—,—,—,—,—,,tier2_pending
+astrology:qizheng:yuebei,月孛,yuèbèi,七政四余,—,—,—,—,—,—,,tier2_pending
+qimen:term:tianpeng,天蓬,tiānpéng,奇门遁甲,—,—,—,—,—,—,,tier2_pending
+qimen:term:tianrui,天芮,tiānruì,奇门遁甲,—,—,—,—,—,—,,tier2_pending
+qimen:term:tianchong,天冲,tiānchōng,奇门遁甲,—,—,—,—,—,—,,tier2_pending
+qimen:term:tianfu,天辅,tiānfǔ,奇门遁甲,—,—,—,—,—,—,,tier2_pending
+qimen:term:tianqin,天禽,tiānqín,奇门遁甲,—,—,—,—,—,—,,tier2_pending
+qimen:term:tianxin,天心,tiānxīn,奇门遁甲,—,—,—,—,—,—,,tier2_pending
+qimen:term:tianzhu,天柱,tiānzhù,奇门遁甲,—,—,—,—,—,—,,tier2_pending
+qimen:term:tianren,天任,tiānrèn,奇门遁甲,—,—,—,—,—,—,,tier2_pending
+qimen:term:tianying,天英,tiānyīng,奇门遁甲,—,—,—,—,—,—,,tier2_pending
+qimen:term:xiumen,休门,xiūmén,奇门遁甲,—,—,—,—,—,—,,tier2_pending
+qimen:term:shengmen,生门,shēngmén,奇门遁甲,—,—,—,—,—,—,,tier2_pending
+qimen:term:shangmen,伤门,shāngmén,奇门遁甲,—,—,—,—,—,—,,tier2_pending
+qimen:term:dumen,杜门,dùmén,奇门遁甲,—,—,—,—,—,—,,tier2_pending
+qimen:term:jingmen,景门,jǐngmén,奇门遁甲,—,—,—,—,—,—,,tier2_pending
+qimen:term:simen,死门,sǐmén,奇门遁甲,—,—,—,—,—,—,,tier2_pending
+qimen:term:jingmen_2,惊门,jīngmén,奇门遁甲,—,—,—,—,—,—,,tier2_pending
+qimen:term:kaimen,开门,kāimén,奇门遁甲,—,—,—,—,—,—,,tier2_pending
+qimen:term:zhifu,值符,zhífú,奇门遁甲,—,—,—,—,—,—,,tier2_pending
+qimen:term:tengshe,螣蛇,téngshé,奇门遁甲,Tengshe,Tengshe,螣蛇,등사,เติ้งเสอ,Đằng Xà,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+qimen:term:taiyin,太阴,tàiyīn,奇门遁甲,Taiyin (Moon),Taiyin (Luna),太陰,태음,ไท่อิน,Thái Âm,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+qimen:term:liuhe,六合,liùhé,奇门遁甲,—,—,—,—,—,—,,tier2_pending
+qimen:term:baihu,白虎,báihǔ,奇门遁甲,White Tiger,Tigre Blanco,白虎,백호,ไป๋หู,Bạch Hổ,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+qimen:term:xuanwu,玄武,xuánwǔ,奇门遁甲,Xuanwu,Xuanwu,玄武,현무,เสวียนอู่,Huyền Vũ,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+qimen:term:jiudi,九地,jiǔdì,奇门遁甲,—,—,—,—,—,—,,tier2_pending
+qimen:term:jiutian,九天,jiǔtiān,奇门遁甲,—,—,—,—,—,—,,tier2_pending
+liuren:term:guiren,贵人,guìrén,六壬,—,—,—,—,—,—,,tier2_pending
+liuren:term:tengshe,螣蛇,téngshé,六壬,Tengshe,Tengshe,螣蛇,등사,เติ้งเสอ,Đằng Xà,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+liuren:term:zhuque,朱雀,zhūquè,六壬,Vermilion Bird,Ave Bermellón,朱雀,주작,จูเชว่,Chu Tước,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+liuren:term:liuhe,六合,liùhé,六壬,—,—,—,—,—,—,,tier2_pending
+liuren:term:gouchen,勾陈,gōuchén,六壬,Gouchen,Gouchen,勾陳,구진,โกวเฉิน,Câu Trần,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+liuren:term:qinglong,青龙,qīnglóng,六壬,Azure Dragon,Dragón Azul,青龍,청룡,ชิงหลง,Thanh Long,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+liuren:term:tiankong,天空,tiānkōng,六壬,—,—,—,—,—,—,,tier2_pending
+liuren:term:baihu,白虎,báihǔ,六壬,White Tiger,Tigre Blanco,白虎,백호,ไป๋หู,Bạch Hổ,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+liuren:term:taichang,太常,tàicháng,六壬,—,—,—,—,—,—,,tier2_pending
+liuren:term:xuanwu,玄武,xuánwǔ,六壬,Xuanwu,Xuanwu,玄武,현무,เสวียนอู่,Huyền Vũ,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+liuren:term:taiyin,太阴,tàiyīn,六壬,Taiyin (Moon),Taiyin (Luna),太陰,태음,ไท่อิน,Thái Âm,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+liuren:term:tianhou,天后,tiānhòu,六壬,—,—,—,—,—,—,,tier2_pending
+calendar:jieqi:lichun,立春,lìchūn,节气,Beginning of Spring,Comienzo de la primavera,立春,입춘,ลี่ชุน,Lập Xuân,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+calendar:jieqi:yushui,雨水,yǔshuǐ,节气,Rain Water,Agua de lluvia,雨水,우수,อวี่สุ่ย,Vũ Thủy,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+calendar:jieqi:jingzhe,惊蛰,jīngzhé,节气,Awakening of Insects,Despertar de los insectos,啓蟄,경칩,จิงเจอ,Kinh Trập,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+calendar:jieqi:chunfen,春分,chūnfēn,节气,Spring Equinox,Equinoccio de primavera,春分,춘분,ชุนเฟิน,Xuân Phân,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+calendar:jieqi:qingming,清明,qīngmíng,节气,Pure Brightness,Claridad pura,清明,청명,ชิงหมิง,Thanh Minh,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+calendar:jieqi:guyu,谷雨,gǔyǔ,节气,Grain Rain,Lluvia de grano,穀雨,곡우,กูอวี่,Cốc Vũ,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+calendar:jieqi:lixia,立夏,lìxià,节气,Beginning of Summer,Comienzo del verano,立夏,입하,ลี่เซี่ย,Lập Hạ,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+calendar:jieqi:xiaoman,小满,xiǎomǎn,节气,Grain Buds,Llenitud de granos,小満,소만,เสี่ยวหมาน,Tiểu Mãn,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+calendar:jieqi:mangzhong,芒种,mángzhòng,节气,Grain in Ear,Granos con espiga,芒種,망종,หมางจ้อง,Mang Chủng,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+calendar:jieqi:xiazhi,夏至,xiàzhì,节气,Summer Solstice,Solsticio de verano,夏至,하지,เซี่ยจื้อ,Hạ Chí,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+calendar:jieqi:xiaoshu,小暑,xiǎoshǔ,节气,Minor Heat,Calor menor,小暑,소서,เสี่ยวฉู่,Tiểu Thử,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+calendar:jieqi:dashu,大暑,dàshǔ,节气,Major Heat,Calor mayor,大暑,대서,ต้าฉู่,Đại Thử,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+calendar:jieqi:liqiu,立秋,lìqiū,节气,Beginning of Autumn,Comienzo del otoño,立秋,입추,ลี่ชิว,Lập Thu,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+calendar:jieqi:chushu,处暑,chǔshǔ,节气,End of Heat,Fin del calor,処暑,처서,ฉู่ฉู่,Xử Thử,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+calendar:jieqi:bailu,白露,báilù,节气,White Dew,Rocío blanco,白露,백로,ไป๋ลู่,Bạch Lộ,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+calendar:jieqi:qiufen,秋分,qiūfēn,节气,Autumn Equinox,Equinoccio de otoño,秋分,추분,ชิวเฟิน,Thu Phân,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+calendar:jieqi:hanlu,寒露,hánlù,节气,Cold Dew,Rocío frío,寒露,한로,หานลู่,Hàn Lộ,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+calendar:jieqi:shuangjiang,霜降,shuāngjiàng,节气,Frost's Descent,Descenso de escarcha,霜降,상강,ซวางเจี้ยง,Sương Giáng,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+calendar:jieqi:lidong,立冬,lìdōng,节气,Beginning of Winter,Comienzo del invierno,立冬,입동,ลี่ตง,Lập Đông,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+calendar:jieqi:xiaoxue,小雪,xiǎoxuě,节气,Minor Snow,Nieve menor,小雪,소설,เสี่ยวเสวี่ย,Tiểu Tuyết,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+calendar:jieqi:daxue,大雪,dàxuě,节气,Major Snow,Nieve mayor,大雪,대설,ต้าเสวี่ย,Đại Tuyết,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+calendar:jieqi:dongzhi,冬至,dōngzhì,节气,Winter Solstice,Solsticio de invierno,冬至,동지,ตงจื้อ,Đông Chí,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+calendar:jieqi:xiaohan,小寒,xiǎohán,节气,Minor Cold,Frío menor,小寒,소한,เสี่ยวหาน,Tiểu Hàn,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+calendar:jieqi:dahan,大寒,dàhán,节气,Major Cold,Frío mayor,大寒,대한,ต้าหาน,Đại Hàn,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+calendar:zeri:jian,建,jiàn,择日,—,—,—,—,—,—,,tier2_pending
+calendar:zeri:chu,除,chú,择日,—,—,—,—,—,—,,tier2_pending
+calendar:zeri:man,满,mǎn,择日,—,—,—,—,—,—,,tier2_pending
+calendar:zeri:ping,平,píng,择日,—,—,—,—,—,—,,tier2_pending
+calendar:zeri:ding,定,dìng,择日,—,—,—,—,—,—,,tier2_pending
+calendar:zeri:zhi,执,zhí,择日,—,—,—,—,—,—,,tier2_pending
+calendar:zeri:po,破,pò,择日,—,—,—,—,—,—,,tier2_pending
+calendar:zeri:wei,危,wēi,择日,—,—,—,—,—,—,,tier2_pending
+calendar:zeri:cheng,成,chéng,择日,—,—,—,—,—,—,,tier2_pending
+calendar:zeri:shou,收,shōu,择日,—,—,—,—,—,—,,tier2_pending
+calendar:zeri:kai,开,kāi,择日,—,—,—,—,—,—,,tier2_pending
+calendar:zeri:bi,闭,bì,择日,—,—,—,—,—,—,,tier2_pending
+calendar:zeri:qinglong,青龙,qīnglóng,择日,Azure Dragon,Dragón Azul,青龍,청룡,ชิงหลง,Thanh Long,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+calendar:zeri:mingtang,明堂,míngtáng,择日,—,—,—,—,—,—,,tier2_pending
+calendar:zeri:tianxing,天刑,tiānxíng,择日,—,—,—,—,—,—,,tier2_pending
+calendar:zeri:zhuque,朱雀,zhūquè,择日,Vermilion Bird,Ave Bermellón,朱雀,주작,จูเชว่,Chu Tước,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+calendar:zeri:jingui,金匮,jīnguì,择日,—,—,—,—,—,—,,tier2_pending
+calendar:zeri:tiande,天德,tiāndé,择日,Heavenly Virtue,Virtud Celestial,天德貴人,천덕귀인,เทียนเต๋อกุยเหริน,Thiên Đức Quý Nhân,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+calendar:zeri:baihu,白虎,báihǔ,择日,White Tiger,Tigre Blanco,白虎,백호,ไป๋หู,Bạch Hổ,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+calendar:zeri:yutang,玉堂,yùtáng,择日,—,—,—,—,—,—,,tier2_pending
+calendar:zeri:tianlao,天牢,tiānláo,择日,—,—,—,—,—,—,,tier2_pending
+calendar:zeri:xuanwu,玄武,xuánwǔ,择日,Xuanwu,Xuanwu,玄武,현무,เสวียนอู่,Huyền Vũ,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+calendar:zeri:siming,司命,sīmìng,择日,—,—,—,—,—,—,,tier2_pending
+calendar:zeri:gouchen,勾陈,gōuchén,择日,Gouchen,Gouchen,勾陳,구진,โกวเฉิน,Câu Trần,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+fengshui:sanyuan:yiyunkan,一运坎,yīyùnkǎn,三元九运,—,—,—,—,—,—,,tier2_pending
+fengshui:sanyuan:eryunkun,二运坤,èryùnkūn,三元九运,—,—,—,—,—,—,,tier2_pending
+fengshui:sanyuan:sanyunzhen,三运震,sānyùnzhèn,三元九运,—,—,—,—,—,—,,tier2_pending
+fengshui:sanyuan:siyunxun,四运巽,sìyùnxùn,三元九运,—,—,—,—,—,—,,tier2_pending
+fengshui:sanyuan:wuyunzhong,五运中,wǔyùnzhōng,三元九运,—,—,—,—,—,—,,tier2_pending
+fengshui:sanyuan:liuyunqian,六运乾,liùyùnqián,三元九运,—,—,—,—,—,—,,tier2_pending
+fengshui:sanyuan:qiyundui,七运兑,qīyùnduì,三元九运,—,—,—,—,—,—,,tier2_pending
+fengshui:sanyuan:bayungen,八运艮,bāyùngèn,三元九运,—,—,—,—,—,—,,tier2_pending
+fengshui:sanyuan:jiuyunli,九运离,jiǔyùnlí,三元九运,—,—,—,—,—,—,,tier2_pending
+fengshui:shan24:zishan,子山,zǐshān,二十四山,—,—,—,—,—,—,,tier2_pending
+fengshui:shan24:guishan,癸山,guǐshān,二十四山,—,—,—,—,—,—,,tier2_pending
+fengshui:shan24:choushan,丑山,chǒushān,二十四山,—,—,—,—,—,—,,tier2_pending
+fengshui:shan24:genshan,艮山,gènshān,二十四山,—,—,—,—,—,—,,tier2_pending
+fengshui:shan24:yinshan,寅山,yínshān,二十四山,—,—,—,—,—,—,,tier2_pending
+fengshui:shan24:jiashan,甲山,jiǎshān,二十四山,—,—,—,—,—,—,,tier2_pending
+fengshui:shan24:maoshan,卯山,mǎoshān,二十四山,—,—,—,—,—,—,,tier2_pending
+fengshui:shan24:yishan,乙山,yǐshān,二十四山,—,—,—,—,—,—,,tier2_pending
+fengshui:shan24:chenshan,辰山,chénshān,二十四山,—,—,—,—,—,—,,tier2_pending
+fengshui:shan24:xunshan,巽山,xùnshān,二十四山,—,—,—,—,—,—,,tier2_pending
+fengshui:shan24:sishan,巳山,sìshān,二十四山,—,—,—,—,—,—,,tier2_pending
+fengshui:shan24:bingshan,丙山,bǐngshān,二十四山,—,—,—,—,—,—,,tier2_pending
+fengshui:shan24:wushan,午山,wǔshān,二十四山,—,—,—,—,—,—,,tier2_pending
+fengshui:shan24:dingshan,丁山,dīngshān,二十四山,—,—,—,—,—,—,,tier2_pending
+fengshui:shan24:weishan,未山,wèishān,二十四山,—,—,—,—,—,—,,tier2_pending
+fengshui:shan24:kunshan,坤山,kūnshān,二十四山,—,—,—,—,—,—,,tier2_pending
+fengshui:shan24:shenshan,申山,shēnshān,二十四山,—,—,—,—,—,—,,tier2_pending
+fengshui:shan24:gengshan,庚山,gēngshān,二十四山,—,—,—,—,—,—,,tier2_pending
+fengshui:shan24:youshan,酉山,yǒushān,二十四山,—,—,—,—,—,—,,tier2_pending
+fengshui:shan24:xinshan,辛山,xīnshān,二十四山,—,—,—,—,—,—,,tier2_pending
+fengshui:shan24:xushan,戌山,xūshān,二十四山,—,—,—,—,—,—,,tier2_pending
+fengshui:shan24:qianshan,乾山,qiánshān,二十四山,—,—,—,—,—,—,,tier2_pending
+fengshui:shan24:haishan,亥山,hàishān,二十四山,—,—,—,—,—,—,,tier2_pending
+fengshui:shan24:renshan,壬山,rénshān,二十四山,—,—,—,—,—,—,,tier2_pending
+fengshui:term:xunlong,寻龙,xúnlóng,风水,—,—,—,—,—,—,,tier2_pending
+fengshui:term:dianxue,点穴,diǎnxué,风水,—,—,—,—,—,—,,tier2_pending
+fengshui:term:chasha,察砂,cháshā,风水,—,—,—,—,—,—,,tier2_pending
+fengshui:term:mishui,觅水,mìshuǐ,风水,—,—,—,—,—,—,,tier2_pending
+fengshui:term:lixiang,立向,lìxiàng,风水,—,—,—,—,—,—,,tier2_pending
+ziwei:palace:xiongdigong,兄弟宫,xiōngdìgōng,十二宫,Siblings Palace,Palacio de los Hermanos,兄弟宮,형제궁,กงพี่น้อง,Huynh Đệ Cung,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:palace:fuqigong,夫妻宫,fūqīgōng,十二宫,Spouse Palace,Palacio del Cónyuge,夫妻宮,부처궁,กงคู่สมรส,Phu Thê Cung,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:palace:zinugong,子女宫,zǐnǚgōng,十二宫,Children Palace,Palacio de los Hijos,子女宮,자녀궁,กงบุตร,Tử Tức Cung,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:palace:caibogong,财帛宫,cáibógōng,十二宫,Wealth Palace,Palacio de la Riqueza,財帛宮,재백궁,กงทรัพย์,Tài Bạch Cung,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:palace:jiegong,疾厄宫,jíègōng,十二宫,Health Palace,Palacio de la Salud,疾厄宮,질액궁,กงสุขภาพ,Tật Ách Cung,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:palace:qianyigong,迁移宫,qiānyígōng,十二宫,Travel Palace,Palacio de los Viajes,遷移宮,천이궁,กงการเดินทาง,Thiên Di Cung,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:palace:jiaoyougong,交友宫,jiāoyǒugōng,十二宫,Friends Palace,Palacio de los Amigos,交友宮,교우궁,กงมิตร,Nô Bộc Cung,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:palace:guanlugong,官禄宫,guānlùgōng,十二宫,Career Palace,Palacio de la Carrera,官祿宮,관록궁,กงอาชีพ,Quan Lộc Cung,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:palace:tianzhaigong,田宅宫,tiánzháigōng,十二宫,Property Palace,Palacio de la Propiedad,田宅宮,전택궁,กงทรัพย์สิน,Điền Trạch Cung,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:palace:fudegong,福德宫,fúdégōng,十二宫,Fortune Palace,Palacio de la Fortuna,福德宮,복덕궁,กงโชคดวง,Phúc Đức Cung,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:palace:fumugong,父母宫,fùmǔgōng,十二宫,Parents Palace,Palacio de los Padres,父母宮,부모궁,กงบิดามารดา,Phụ Mẫu Cung,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:changsheng:changsheng,长生,chángshēng,十二长生,Changsheng (Birth),Changsheng (Nacimiento),長生,장생,ฉางเชิง,Trường Sinh,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:changsheng:muyu,沐浴,mùyù,十二长生,Muyu (Bath),Muyu (Baño),沐浴,목욕,มู่ยู่,Mục Dục,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:changsheng:guandai,冠带,guāndài,十二长生,Guandai (Cap & Belt),Guandai (Gorra y cinturón),冠帯,관대,กวนต้าย,Quan Đới,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:changsheng:linguan,临官,línguān,十二长生,Linguan (Arrival),Linguan (Llegada),臨官,임관,หลินกวน,Lâm Quan,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:changsheng:diwang,帝旺,dìwàng,十二长生,Diwang (Peak),Diwang (Apogeo),帝旺,제왕,ตี้หวาง,Đế Vượng,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:changsheng:shuai,衰,shuāi,十二长生,Shuai (Decline),Shuai (Declive),衰,쇠,ซุย,Suy,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:changsheng:bing,病,bìng,十二长生,Bing (Sickness),Bing (Enfermedad),病,병,ปิ้ง,Bệnh,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:changsheng:si,死,sǐ,十二长生,Si (Death),Si (Muerte),死,사,ซื่อ,Tử,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:changsheng:mu,墓,mù,十二长生,Mu (Tomb),Mu (Tumba),墓,묘,หมู่,Mộ,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:changsheng:jue,绝,jué,十二长生,Jue (Extinction),Jue (Extinción),絶,절,เจวี๋ย,Tuyệt,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:changsheng:tai,胎,tāi,十二长生,Tai (Womb),Tai (Útero),胎,태,ไท่,Thai,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:changsheng:yang,养,yǎng,十二长生,Yang (Nurture),Yang (Nutrición),養,양,หยาง,Dưỡng,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+fengshui:jiugong:yibaikan,一白坎,yībáikǎn,九宫,—,—,—,—,—,—,,tier2_pending
+fengshui:jiugong:erheikun,二黑坤,èrhēikūn,九宫,—,—,—,—,—,—,,tier2_pending
+fengshui:jiugong:sanbizhen,三碧震,sānbìzhèn,九宫,—,—,—,—,—,—,,tier2_pending
+fengshui:jiugong:siluxun,四绿巽,sìlǜxùn,九宫,—,—,—,—,—,—,,tier2_pending
+fengshui:jiugong:wuhuangzhong,五黄中,wǔhuángzhōng,九宫,—,—,—,—,—,—,,tier2_pending
+fengshui:jiugong:liubaiqian,六白乾,liùbáiqián,九宫,—,—,—,—,—,—,,tier2_pending
+fengshui:jiugong:qichidui,七赤兑,qīchìduì,九宫,—,—,—,—,—,—,,tier2_pending
+fengshui:jiugong:babaigen,八白艮,bābáigèn,九宫,—,—,—,—,—,—,,tier2_pending
+fengshui:jiugong:jiuzili,九紫离,jiǔzǐlí,九宫,—,—,—,—,—,—,,tier2_pending
+yijing:bagua:qian,乾,qián,八卦,Qian,Qian,乾,건,เชียน,Càn,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+yijing:bagua:dui,兑,duì,八卦,Dui,Dui,兌,태,ตุ้ย,Đoài,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+yijing:bagua:li,离,lí,八卦,Li,Li,離,리,ลี่,Ly,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+yijing:bagua:zhen,震,zhèn,八卦,Zhen,Zhen,震,진,เจิ้น,Chấn,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+yijing:bagua:xun,巽,xùn,八卦,Xun,Xun,巽,손,ซวิ้น,Tốn,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+yijing:bagua:kan,坎,kǎn,八卦,Kan,Kan,坎,감,คั่น,Khảm,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+yijing:bagua:gen,艮,gèn,八卦,Gen,Gen,艮,간,เกิ้น,Cấn,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+yijing:bagua:kun,坤,kūn,八卦,Kun,Kun,坤,곤,คุน,Khôn,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+astrology:xiu28:jiaoxiu,角宿,jiǎoxiù,二十八宿,—,—,—,—,—,—,,tier2_pending
+astrology:xiu28:kangxiu,亢宿,kàngxiù,二十八宿,—,—,—,—,—,—,,tier2_pending
+astrology:xiu28:dixiu,氐宿,dīxiù,二十八宿,—,—,—,—,—,—,,tier2_pending
+astrology:xiu28:fangxiu,房宿,fángxiù,二十八宿,—,—,—,—,—,—,,tier2_pending
+astrology:xiu28:xinxiu,心宿,xīnxìù,二十八宿,—,—,—,—,—,—,,tier2_pending
+astrology:xiu28:weixiu,尾宿,wěixìù,二十八宿,—,—,—,—,—,—,,tier2_pending
+astrology:xiu28:jixiu,箕宿,jīxìù,二十八宿,—,—,—,—,—,—,,tier2_pending
+astrology:xiu28:douxiu,斗宿,dǒuxìù,二十八宿,—,—,—,—,—,—,,tier2_pending
+astrology:xiu28:niuxiu,牛宿,niúxìù,二十八宿,—,—,—,—,—,—,,tier2_pending
+astrology:xiu28:nuxiu,女宿,nǚxìù,二十八宿,—,—,—,—,—,—,,tier2_pending
+astrology:xiu28:xuxiu,虚宿,xūxìù,二十八宿,—,—,—,—,—,—,,tier2_pending
+astrology:xiu28:weixiu_2,危宿,wēixìù,二十八宿,—,—,—,—,—,—,,tier2_pending
+astrology:xiu28:shixiu,室宿,shìxìù,二十八宿,—,—,—,—,—,—,,tier2_pending
+astrology:xiu28:bixiu,壁宿,bìxìù,二十八宿,—,—,—,—,—,—,,tier2_pending
+astrology:xiu28:kuixiu,奎宿,kuíxìù,二十八宿,—,—,—,—,—,—,,tier2_pending
+astrology:xiu28:louxiu,娄宿,lóuxìù,二十八宿,—,—,—,—,—,—,,tier2_pending
+astrology:xiu28:weixiu_3,胃宿,wèixìù,二十八宿,—,—,—,—,—,—,,tier2_pending
+astrology:xiu28:maoxiu,昴宿,mǎoxìù,二十八宿,—,—,—,—,—,—,,tier2_pending
+astrology:xiu28:bixiu_2,毕宿,bìxìù,二十八宿,—,—,—,—,—,—,,tier2_pending
+astrology:xiu28:zixiu,觜宿,zīxìù,二十八宿,—,—,—,—,—,—,,tier2_pending
+astrology:xiu28:shenxiu,参宿,shēnxìù,二十八宿,—,—,—,—,—,—,,tier2_pending
+astrology:xiu28:jingxiu,井宿,jǐngxìù,二十八宿,—,—,—,—,—,—,,tier2_pending
+astrology:xiu28:guixiu,鬼宿,guǐxìù,二十八宿,—,—,—,—,—,—,,tier2_pending
+astrology:xiu28:liuxiu,柳宿,liǔxìù,二十八宿,—,—,—,—,—,—,,tier2_pending
+astrology:xiu28:xingxiu,星宿,xīngxìù,二十八宿,—,—,—,—,—,—,,tier2_pending
+astrology:xiu28:zhangxiu,张宿,zhāngxìù,二十八宿,—,—,—,—,—,—,,tier2_pending
+astrology:xiu28:yixiu,翼宿,yìxìù,二十八宿,—,—,—,—,—,—,,tier2_pending
+astrology:xiu28:zhenxiu,轸宿,zhěnxìù,二十八宿,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:jiazi,甲子,jiǎzǐ,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:yichou,乙丑,yǐchǒu,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:bingyin,丙寅,bǐngyín,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:dingmao,丁卯,dīngmǎo,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:wuchen,戊辰,wùchén,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:jisi,己巳,jǐsì,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:gengwu,庚午,gēngwǔ,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:xinwei,辛未,xīnwèi,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:renshen,壬申,rénshēn,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:guiyou,癸酉,guǐyǒu,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:jiaxu,甲戌,jiǎxū,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:yihai,乙亥,yǐhài,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:bingzi,丙子,bǐngzǐ,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:dingchou,丁丑,dīngchǒu,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:wuyin,戊寅,wùyín,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:jimao,己卯,jǐmǎo,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:gengchen,庚辰,gēngchén,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:xinsi,辛巳,xīnsì,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:renwu,壬午,rénwǔ,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:guiwei,癸未,guǐwèi,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:jiashen,甲申,jiǎshēn,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:yiyou,乙酉,yǐyǒu,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:bingxu,丙戌,bǐngxū,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:dinghai,丁亥,dīnghài,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:wuzi,戊子,wùzǐ,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:jichou,己丑,jǐchǒu,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:gengyin,庚寅,gēngyín,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:xinmao,辛卯,xīnmǎo,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:renchen,壬辰,rénchén,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:guisi,癸巳,guǐsì,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:jiawu,甲午,jiǎwǔ,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:yiwei,乙未,yǐwèi,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:bingshen,丙申,bǐngshēn,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:dingyou,丁酉,dīngyǒu,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:wuxu,戊戌,wùxū,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:jihai,己亥,jǐhài,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:gengzi,庚子,gēngzǐ,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:xinchou,辛丑,xīnchǒu,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:renyin,壬寅,rényín,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:guimao,癸卯,guǐmǎo,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:jiachen,甲辰,jiǎchén,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:yisi,乙巳,yǐsì,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:bingwu,丙午,bǐngwǔ,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:dingwei,丁未,dīngwèi,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:wushen,戊申,wùshēn,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:jiyou,己酉,jǐyǒu,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:gengxu,庚戌,gēngxū,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:xinhai,辛亥,xīnhài,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:renzi,壬子,rénzǐ,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:guichou,癸丑,guǐchǒu,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:jiayin,甲寅,jiǎyín,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:yimao,乙卯,yǐmǎo,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:bingchen,丙辰,bǐngchén,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:dingsi,丁巳,dīngsì,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:wuwu,戊午,wùwǔ,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:jiwei,己未,jǐwèi,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:gengshen,庚申,gēngshēn,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:xinyou,辛酉,xīnyǒu,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:renxu,壬戌,rénxū,纳音,—,—,—,—,—,—,,tier2_pending
+bazi:nayin:guihai,癸亥,guǐhài,纳音,—,—,—,—,—,—,,tier2_pending
+yijing:gua:qianweitian,乾为天,qiánwéitiān,六十四卦,Qian,Qian,乾,건,—,Càn,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:kunweidi,坤为地,kūnwéidì,六十四卦,Kun,Kun,坤,곤,—,Khôn,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:shuileitun,水雷屯,shuǐléitún,六十四卦,Zhun,Zhun,屯,준,—,Truần,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:shanshuimeng,山水蒙,shānshuǐméng,六十四卦,Meng,Meng,蒙,몽,—,Mông,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:shuitianxu,水天需,shuǐtiānxū,六十四卦,Xu,Xu,需,수,—,Tu,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:tianshuisong,天水讼,tiānshuǐsòng,六十四卦,Song,Song,訟,송,—,Tụng,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:dishuishi,地水师,dìshuǐshī,六十四卦,Shi,Shi,師,사,—,Sư,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:shuidibi,水地比,shuǐdìbǐ,六十四卦,Bi,Bi,比,비,—,Tỷ,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:fengtianxiaoxu,风天小畜,fēngtiānxiǎoxù,六十四卦,Xiao Chu,Xiao Chu,小畜,소축,—,Tiểu Súc,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:tianzelu,天泽履,tiānzélǚ,六十四卦,Lv,Lv,履,리,—,Lý,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:ditiantai,地天泰,dìtiāntài,六十四卦,Tai,Tai,泰,태,—,Thái,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:tiandipi,天地否,tiāndìpǐ,六十四卦,Fou,Fou,否,부,—,U,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:tianhuotongren,天火同人,tiānhuǒtóngrén,六十四卦,Tong Ren,Tong Ren,同人,동인,—,Đồng Nhân,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:huotiandayou,火天大有,huǒtiāndàyǒu,六十四卦,Da You,Da You,大有,대유,—,Đại Hữu,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:dishanqian,地山谦,dìshānqiān,六十四卦,Qian (Modesty),Qian (Modesty),謙,겸,—,Khiêm,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:leidiyu,雷地豫,léidìyù,六十四卦,Yu,Yu,豫,예,—,Dự,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:zeleisui,泽雷随,zéléisuí,六十四卦,Sui,Sui,隨,수,—,Tùy,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:shanfenggu,山风蛊,shānfēnggǔ,六十四卦,Gu,Gu,蠱,고,—,Cổ,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:dizelin,地泽临,dìzélín,六十四卦,Lin,Lin,臨,임,—,Lâm,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:fengdiguan,风地观,fēngdìguān,六十四卦,Guan,Guan,觀,관,—,Quan,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:huoleishike,火雷噬嗑,huǒléishìkè,六十四卦,Shi Ke,Shi Ke,噬嗑,섭합,—,Thế Hiệp,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:shanhuobi,山火贲,shānhuǒbì,六十四卦,Bi (Adornment),Bi (Adornment),賁,비,—,Bí,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:shandibo,山地剥,shāndìbō,六十四卦,Bo,Bo,剝,박,—,Bác,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:dileifu,地雷复,dìléifù,六十四卦,Fu,Fu,復,복,—,Phục,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:tianleiwuwang,天雷无妄,tiānléiwúwàng,六十四卦,Wu Wang,Wu Wang,無妄,무망,—,Vô Vọng,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:shantiandaxu,山天大畜,shāntiāndàxù,六十四卦,Da Chu,Da Chu,大畜,대축,—,Đại Súc,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:shanleiyi,山雷颐,shānléiyí,六十四卦,Yi (Nourishment),Yi (Nourishment),頤,이,—,Di,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:zefengdaguo,泽风大过,zéfēngdàguò,六十四卦,Da Guo,Da Guo,大過,대과,—,Đại Quá,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:kanweishui,坎为水,kǎnwéishuǐ,六十四卦,Kan (Abyss),Kan (Abyss),坎,감,—,Khảm,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:liweihuo,离为火,líwéihuǒ,六十四卦,Li (Clinging),Li (Clinging),離,리,—,Ly,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:zeshanxian,泽山咸,zéshānxián,六十四卦,Xian,Xian,咸,함,—,Hàm,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:leifengheng,雷风恒,léifēnghéng,六十四卦,Heng,Heng,恆,항,—,Hằng,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:tianshandun,天山遁,tiānshāndùn,六十四卦,Dun,Dun,遯,돈,—,Độn,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:leitiandazhuang,雷天大壮,léitiāndàzhuàng,六十四卦,Da Zhuang,Da Zhuang,大壯,대장,—,Đại Tráng,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:huodijin,火地晋,huǒdìjìn,六十四卦,Jin,Jin,晉,진,—,Tấn,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:dihuomingyi,地火明夷,dìhuǒmíngyí,六十四卦,Ming Yi,Ming Yi,明夷,명이,—,Minh Di,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:fenghuojiaren,风火家人,fēnghuǒjiārén,六十四卦,Jia Ren,Jia Ren,家人,가인,—,Gia Nhân,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:huozekui,火泽睽,huǒzékuí,六十四卦,Kui,Kui,睽,괘,—,Khuê,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:shuishanjian,水山蹇,shuǐshānjiǎn,六十四卦,Jian,Jian,蹇,건,—,Kiển,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:leishuixie,雷水解,léishuǐxiè,六十四卦,Xie,Xie,解,해,—,Giải,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:shanzesun,山泽损,shānzésǔn,六十四卦,Sun,Sun,損,손,—,Tổn,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:fengleiyi,风雷益,fēngléiyì,六十四卦,Yi (Increase),Yi (Increase),益,익,—,Ích,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:zetianguai,泽天夬,zétiānguài,六十四卦,Guai,Guai,夬,괘,—,Khoái,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:tianfenggou,天风姤,tiānfēnggòu,六十四卦,Gou,Gou,姤,고,—,Cấu,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:zedicui,泽地萃,zédìcuì,六十四卦,Cui,Cui,萃,췌,—,Tụ,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:difengsheng,地风升,dìfēngshēng,六十四卦,Sheng,Sheng,升,승,—,Thăng,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:zeshuikun,泽水困,zéshuǐkùn,六十四卦,Kun (Oppression),Kun (Oppression),困,곤,—,Khốn,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:shuifengjing,水风井,shuǐfēngjǐng,六十四卦,Jing,Jing,井,정,—,Tỉnh,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:zehuoge,泽火革,zéhuǒgé,六十四卦,Ge,Ge,革,혁,—,Cách,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:huofengding,火风鼎,huǒfēngdǐng,六十四卦,Ding,Ding,鼎,정,—,Đỉnh,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:zhenweilei,震为雷,zhènwéiléi,六十四卦,Zhen (Thunder),Zhen (Thunder),震,진,—,Chấn,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:genweishan,艮为山,gènwéishān,六十四卦,Gen (Stillness),Gen (Stillness),艮,간,—,Cấn,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:fengshanjian,风山渐,fēngshānjiàn,六十四卦,Jian (Gradual),Jian (Gradual),漸,점,—,Tiệm,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:leizeguimei,雷泽归妹,léizéguīmèi,六十四卦,Gui Mei,Gui Mei,歸妹,귀매,—,Quy Muội,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:leihuofeng,雷火丰,léihuǒfēng,六十四卦,Feng,Feng,豐,풍,—,Phong,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:huoshanlu,火山旅,huǒshānlǚ,六十四卦,Lv (Traveler),Lv (Traveler),旅,여,—,Lữ,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:xunweifeng,巽为风,xùnwéifēng,六十四卦,Xun (Wind),Xun (Wind),巽,손,—,Tốn,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:duiweize,兑为泽,duìwéizé,六十四卦,Dui (Joy),Dui (Joy),兌,태,—,Đoài,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:fengshuihuan,风水涣,fēngshuǐhuàn,六十四卦,Huan,Huan,渙,환,—,Hoán,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:shuizejie,水泽节,shuǐzéjié,六十四卦,Jie,Jie,節,절,—,Tiết,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:fengzezhongfu,风泽中孚,fēngzézhōngfú,六十四卦,Zhong Fu,Zhong Fu,中孚,중부,—,Trung Phủ,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:leishanxiaoguo,雷山小过,léishānxiǎoguò,六十四卦,Xiao Guo,Xiao Guo,小過,소과,—,Tiểu Quá,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:shuihuojiji,水火既济,shuǐhuǒjìjì,六十四卦,Ji Ji,Ji Ji,既濟,기제,—,Ký Tế,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:huoshuiweiji,火水未济,huǒshuǐwèijì,六十四卦,Wei Ji,Wei Ji,未濟,미제,—,Vị Tế,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+bazi:branch_rel:shenzichenheshui,申子辰合水,shēnzǐchénhéshuǐ,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:haimaoweihemu,亥卯未合木,hàimǎowèihémù,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:yinmuxuhehuo,寅午戌合火,yínmǔxūhéhuǒ,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:siyouchouhejin,巳酉丑合金,sìyǒuchǒuhéjīn,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:zichouhetu,子丑合土,zǐchǒuhétǔ,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:yinhaihemu,寅亥合木,yínhàihémù,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:maoxuhehuo,卯戌合火,mǎoxūhéhuǒ,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:chenyouhejin,辰酉合金,chényǒuhéjīn,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:sishenheshui,巳申合水,sìshēnhéshuǐ,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:wuweihehuo,午未合火,wǔwèihéhuǒ,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:yinmaochendongfangmu,寅卯辰东方木,yínmǎochéndōngfāngmù,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:siwuweinanfanghuo,巳午未南方火,sìwǔwèinánfānghuǒ,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:shenyouxuxifangjin,申酉戌西方金,shēnyǒuxūxīfāngjīn,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:haizichoubeifangshui,亥子丑北方水,hàizǐchǒuběifāngshuǐ,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:ziwuchong,子午冲,zǐwǔchōng,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:chouweichong,丑未冲,chǒuwèichōng,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:yinshenchong,寅申冲,yínshēnchōng,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:maoyouchong,卯酉冲,mǎoyǒuchōng,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:chenxuchong,辰戌冲,chénxūchōng,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:sihaichong,巳亥冲,sìhàichōng,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:yinsishensanxing,寅巳申三刑,yínsìshēnsānxíng,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:chouxuweisanxing,丑戌未三刑,chǒuxūwèisānxíng,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:zimaoxiangxing,子卯相刑,zǐmǎoxiāngxíng,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:chenchenzixing,辰辰自刑,chénchénzìxíng,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:wuwuzixing,午午自刑,wǔwǔzìxíng,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:youyouzixing,酉酉自刑,yǒuyǒuzìxíng,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:haihaizixing,亥亥自刑,hàihàizìxíng,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:ziweixianghai,子未相害,zǐwèixiānghài,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:chouwuxianghai,丑午相害,chǒuwǔxiānghài,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:yinsixianghai,寅巳相害,yínsìxiānghài,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:maochenxianghai,卯辰相害,mǎochénxiānghài,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:shenhaixianghai,申亥相害,shēnhàixiānghài,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:youxuxianghai,酉戌相害,yǒuxūxiānghài,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:ziyouxiangpo,子酉相破,zǐyǒuxiāngpò,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:yinhaixiangpo,寅亥相破,yínhàixiāngpò,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:maowuxiangpo,卯午相破,mǎowǔxiāngpò,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:chenchouxiangpo,辰丑相破,chénchǒuxiāngpò,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:sishenxiangpo,巳申相破,sìshēnxiāngpò,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:wumaoxiangpo,午卯相破,wǔmǎoxiāngpò,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:zicanggui,子藏癸,zǐcángguǐ,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:choucangjiguixin,丑藏己癸辛,chǒucángjǐguǐxīn,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:yincangjiabingwu,寅藏甲丙戊,yíncángjiǎbǐngwù,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:maocangyi,卯藏乙,mǎocángyǐ,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:chencangwuyigui,辰藏戊乙癸,chéncángwùyǐguǐ,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:sicangbingwugeng,巳藏丙戊庚,sìcángbǐngwùgēng,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:wucangdingji,午藏丁己,wǔcángdīngjǐ,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:weicangjidingyi,未藏己丁乙,wèicángjǐdīngyǐ,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:shencanggengrenwu,申藏庚壬戊,shēncánggēngrénwù,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:youcangxin,酉藏辛,yǒucángxīn,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:xucangwuxinding,戌藏戊辛丁,xūcángwùxīndīng,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:haicangrenjia,亥藏壬甲,hàicángrénjiǎ,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:jiazi:jiazi,甲子,jiǎzǐ,干支组合,Jia Zi,Jia Zi,甲子,갑자,เจียจื้อ,Giáp Tý,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:yichou,乙丑,yǐchǒu,干支组合,Yi Chou,Yi Chou,乙丑,을축,อี้ฉู่,Ất Sửu,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:bingyin,丙寅,bǐngyín,干支组合,Bing Yin,Bing Yin,丙寅,병인,ปิ่งอิน,Bính Dần,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:dingmao,丁卯,dīngmǎo,干支组合,Ding Mao,Ding Mao,丁卯,정묘,ติงเหมา,Đinh Mão,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:wuchen,戊辰,wùchén,干支组合,Wu Chen,Wu Chen,戊辰,무진,อู้เฉิน,Mậu Thìn,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:jisi,己巳,jǐsì,干支组合,Ji Si,Ji Si,己巳,기사,จี่สื่อ,Kỷ Tỵ,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:gengwu,庚午,gēngwǔ,干支组合,Geng Wu,Geng Wu,庚午,경오,เกิงอู่,Canh Ngọ,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:xinwei,辛未,xīnwèi,干支组合,Xin Wei,Xin Wei,辛未,신미,ซินเว่ย,Tân Mùi,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:renshen,壬申,rénshēn,干支组合,Ren Shen,Ren Shen,壬申,임신,เหรินเชิน,Nhâm Thân,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:guiyou,癸酉,guǐyǒu,干支组合,Gui You,Gui You,癸酉,계유,กุยโหย่ว,Quý Dậu,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:jiaxu,甲戌,jiǎxū,干支组合,Jia Xu,Jia Xu,甲戌,갑술,เจียซวิว,Giáp Tuất,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:yihai,乙亥,yǐhài,干支组合,Yi Hai,Yi Hai,乙亥,을해,อี้ไห่,Ất Hợi,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:bingzi,丙子,bǐngzǐ,干支组合,Bing Zi,Bing Zi,丙子,병자,ปิ่งจื้อ,Bính Tý,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:dingchou,丁丑,dīngchǒu,干支组合,Ding Chou,Ding Chou,丁丑,정축,ติงฉู่,Đinh Sửu,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:wuyin,戊寅,wùyín,干支组合,Wu Yin,Wu Yin,戊寅,무인,อู้อิน,Mậu Dần,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:jimao,己卯,jǐmǎo,干支组合,Ji Mao,Ji Mao,己卯,기묘,จี่เหมา,Kỷ Mão,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:gengchen,庚辰,gēngchén,干支组合,Geng Chen,Geng Chen,庚辰,경진,เกิงเฉิน,Canh Thìn,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:xinsi,辛巳,xīnsì,干支组合,Xin Si,Xin Si,辛巳,신사,ซินสื่อ,Tân Tỵ,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:renwu,壬午,rénwǔ,干支组合,Ren Wu,Ren Wu,壬午,임오,เหรินอู่,Nhâm Ngọ,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:guiwei,癸未,guǐwèi,干支组合,Gui Wei,Gui Wei,癸未,계미,กุยเว่ย,Quý Mùi,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:jiashen,甲申,jiǎshēn,干支组合,Jia Shen,Jia Shen,甲申,갑신,เจียเชิน,Giáp Thân,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:yiyou,乙酉,yǐyǒu,干支组合,Yi You,Yi You,乙酉,을유,อี้โหย่ว,Ất Dậu,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:bingxu,丙戌,bǐngxū,干支组合,Bing Xu,Bing Xu,丙戌,병술,ปิ่งซวิว,Bính Tuất,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:dinghai,丁亥,dīnghài,干支组合,Ding Hai,Ding Hai,丁亥,정해,ติงไห่,Đinh Hợi,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:wuzi,戊子,wùzǐ,干支组合,Wu Zi,Wu Zi,戊子,무자,อู้จื้อ,Mậu Tý,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:jichou,己丑,jǐchǒu,干支组合,Ji Chou,Ji Chou,己丑,기축,จี่ฉู่,Kỷ Sửu,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:gengyin,庚寅,gēngyín,干支组合,Geng Yin,Geng Yin,庚寅,경인,เกิงอิน,Canh Dần,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:xinmao,辛卯,xīnmǎo,干支组合,Xin Mao,Xin Mao,辛卯,신묘,ซินเหมา,Tân Mão,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:renchen,壬辰,rénchén,干支组合,Ren Chen,Ren Chen,壬辰,임진,เหรินเฉิน,Nhâm Thìn,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:guisi,癸巳,guǐsì,干支组合,Gui Si,Gui Si,癸巳,계사,กุยสื่อ,Quý Tỵ,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:jiawu,甲午,jiǎwǔ,干支组合,Jia Wu,Jia Wu,甲午,갑오,เจียอู่,Giáp Ngọ,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:yiwei,乙未,yǐwèi,干支组合,Yi Wei,Yi Wei,乙未,을미,อี้เว่ย,Ất Mùi,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:bingshen,丙申,bǐngshēn,干支组合,Bing Shen,Bing Shen,丙申,병신,ปิ่งเชิน,Bính Thân,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:dingyou,丁酉,dīngyǒu,干支组合,Ding You,Ding You,丁酉,정유,ติงโหย่ว,Đinh Dậu,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:wuxu,戊戌,wùxū,干支组合,Wu Xu,Wu Xu,戊戌,무술,อู้ซวิว,Mậu Tuất,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:jihai,己亥,jǐhài,干支组合,Ji Hai,Ji Hai,己亥,기해,จี่ไห่,Kỷ Hợi,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:gengzi,庚子,gēngzǐ,干支组合,Geng Zi,Geng Zi,庚子,경자,เกิงจื้อ,Canh Tý,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:xinchou,辛丑,xīnchǒu,干支组合,Xin Chou,Xin Chou,辛丑,신축,ซินฉู่,Tân Sửu,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:renyin,壬寅,rényín,干支组合,Ren Yin,Ren Yin,壬寅,임인,เหรินอิน,Nhâm Dần,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:guimao,癸卯,guǐmǎo,干支组合,Gui Mao,Gui Mao,癸卯,계묘,กุยเหมา,Quý Mão,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:jiachen,甲辰,jiǎchén,干支组合,Jia Chen,Jia Chen,甲辰,갑진,เจียเฉิน,Giáp Thìn,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:yisi,乙巳,yǐsì,干支组合,Yi Si,Yi Si,乙巳,을사,อี้สื่อ,Ất Tỵ,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:bingwu,丙午,bǐngwǔ,干支组合,Bing Wu,Bing Wu,丙午,병오,ปิ่งอู่,Bính Ngọ,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:dingwei,丁未,dīngwèi,干支组合,Ding Wei,Ding Wei,丁未,정미,ติงเว่ย,Đinh Mùi,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:wushen,戊申,wùshēn,干支组合,Wu Shen,Wu Shen,戊申,무신,อู้เชิน,Mậu Thân,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:jiyou,己酉,jǐyǒu,干支组合,Ji You,Ji You,己酉,기유,จี่โหย่ว,Kỷ Dậu,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:gengxu,庚戌,gēngxū,干支组合,Geng Xu,Geng Xu,庚戌,경술,เกิงซวิว,Canh Tuất,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:xinhai,辛亥,xīnhài,干支组合,Xin Hai,Xin Hai,辛亥,신해,ซินไห่,Tân Hợi,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:renzi,壬子,rénzǐ,干支组合,Ren Zi,Ren Zi,壬子,임자,เหรินจื้อ,Nhâm Tý,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:guichou,癸丑,guǐchǒu,干支组合,Gui Chou,Gui Chou,癸丑,계축,กุยฉู่,Quý Sửu,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:jiayin,甲寅,jiǎyín,干支组合,Jia Yin,Jia Yin,甲寅,갑인,เจียอิน,Giáp Dần,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:yimao,乙卯,yǐmǎo,干支组合,Yi Mao,Yi Mao,乙卯,을묘,อี้เหมา,Ất Mão,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:bingchen,丙辰,bǐngchén,干支组合,Bing Chen,Bing Chen,丙辰,병진,ปิ่งเฉิน,Bính Thìn,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:dingsi,丁巳,dīngsì,干支组合,Ding Si,Ding Si,丁巳,정사,ติงสื่อ,Đinh Tỵ,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:wuwu,戊午,wùwǔ,干支组合,Wu Wu,Wu Wu,戊午,무오,อู้อู่,Mậu Ngọ,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:jiwei,己未,jǐwèi,干支组合,Ji Wei,Ji Wei,己未,기미,จี่เว่ย,Kỷ Mùi,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:gengshen,庚申,gēngshēn,干支组合,Geng Shen,Geng Shen,庚申,경신,เกิงเชิน,Canh Thân,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:xinyou,辛酉,xīnyǒu,干支组合,Xin You,Xin You,辛酉,신유,ซินโหย่ว,Tân Dậu,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:renxu,壬戌,rénxū,干支组合,Ren Xu,Ren Xu,壬戌,임술,เหรินซวิว,Nhâm Tuất,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:jiazi:guihai,癸亥,guǐhài,干支组合,Gui Hai,Gui Hai,癸亥,계해,กุยไห่,Quý Hợi,干支组合=天干+地支译名按位组合（构成式，确定性）,tier1_filled
+bazi:ganhe:jiajihetu,甲己合土,jiǎjǐhétǔ,天干五合,—,—,—,—,—,—,,tier2_pending
+bazi:ganhe:yigenghejin,乙庚合金,yǐgēnghéjīn,天干五合,—,—,—,—,—,—,,tier2_pending
+bazi:ganhe:bingxinheshui,丙辛合水,bǐngxīnhéshuǐ,天干五合,—,—,—,—,—,—,,tier2_pending
+bazi:ganhe:dingrenhemu,丁壬合木,dīngrénhémù,天干五合,—,—,—,—,—,—,,tier2_pending
+bazi:ganhe:wuguihehuo,戊癸合火,wùguǐhéhuǒ,天干五合,—,—,—,—,—,—,,tier2_pending
+bazi:sanhe:yinmaoxusanhehuo,寅午戌三合火,yínmǎoxūsānhéhuǒ,三合三会,—,—,—,—,—,—,,tier2_pending
+bazi:sanhe:shenzichesanheshui,申子辰三合水,shēnzǐchésānhéshuǐ,三合三会,—,—,—,—,—,—,,tier2_pending
+bazi:sanhe:siyouchousanhejin,巳酉丑三合金,sìyǒuchǒusānhéjīn,三合三会,—,—,—,—,—,—,,tier2_pending
+bazi:sanhe:haimaoweisanhemu,亥卯未三合木,hàimǎowèisānhémù,三合三会,—,—,—,—,—,—,,tier2_pending
+bazi:sanhe:yinmaochensanhui,寅卯辰三会木,yínmǎochénsānhuì,三合三会,—,—,—,—,—,—,,tier2_pending
+bazi:sanhe:siwuweisanhui,巳午未三会火,sìwǔwèisānhuì,三合三会,—,—,—,—,—,—,,tier2_pending
+bazi:sanhe:shenyouxusanhui,申酉戌三会金,shēnyǒuxūsānhuì,三合三会,—,—,—,—,—,—,,tier2_pending
+bazi:sanhe:haizichousanhui,亥子丑三会水,hàizǐchǒusānhuì,三合三会,—,—,—,—,—,—,,tier2_pending
+yijing:gua:fugua,复卦,fùguà,十二消息卦,Fu,Fu,復,복,—,Phục,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:lingua,临卦,línguà,十二消息卦,Lin,Lin,臨,임,—,Lâm,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:taigua,泰卦,tàiguà,十二消息卦,Tai,Tai,泰,태,—,Thái,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:dazhuanggua,大壮卦,dàzhuàngguà,十二消息卦,Da Zhuang,Da Zhuang,大壯,대장,—,Đại Tráng,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:guaigua,夬卦,guàiguà,十二消息卦,Guai,Guai,夬,괘,—,Khoái,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:qiangua,乾卦,qiánguà,十二消息卦,Qian,Qian,乾,건,—,Càn,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:gougua,姤卦,gòuguà,十二消息卦,Gou,Gou,姤,고,—,Cấu,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:dungua,遁卦,dùnguà,十二消息卦,Dun,Dun,遯,돈,—,Độn,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:pigua,否卦,pǐguà,十二消息卦,Fou,Fou,否,부,—,U,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:guangua,观卦,guānguà,十二消息卦,Guan,Guan,觀,관,—,Quan,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:bogua,剥卦,bōguà,十二消息卦,Bo,Bo,剝,박,—,Bác,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:gua:kungua,坤卦,kūnguà,十二消息卦,Kun,Kun,坤,곤,—,Khôn,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_partial
+yijing:heluo:hetuyiliushui,河图一六水,hétúyīliùshuǐ,河洛,—,—,—,—,—,—,,tier2_pending
+yijing:heluo:hetuerqihuo,河图二七火,hétúèrqīhuǒ,河洛,—,—,—,—,—,—,,tier2_pending
+yijing:heluo:hetusanbamu,河图三八木,hétúsānbāmù,河洛,—,—,—,—,—,—,,tier2_pending
+yijing:heluo:hetusijiujin,河图四九金,hétúsìjiǔjīn,河洛,—,—,—,—,—,—,,tier2_pending
+yijing:heluo:hetuwushitu,河图五十土,hétúwǔshítǔ,河洛,—,—,—,—,—,—,,tier2_pending
+yijing:heluo:luoshudaijiuluyi,洛书戴九履一,luòshūdàijiǔlǚyī,河洛,—,—,—,—,—,—,,tier2_pending
+yijing:heluo:luoshuzuosan_youqi,洛书左三右七,luòshūzuǒsān yòuqī,河洛,—,—,—,—,—,—,,tier2_pending
+yijing:heluo:luoshuersiweijian,洛书二四为肩,luòshūèrsìwéijiān,河洛,—,—,—,—,—,—,,tier2_pending
+yijing:heluo:luoshuliubaweizu,洛书六八为足,luòshūliùbāwéizú,河洛,—,—,—,—,—,—,,tier2_pending
+yijing:heluo:luoshuwujuzhongyang,洛书五居中央,luòshūwǔjūzhōngyāng,河洛,—,—,—,—,—,—,,tier2_pending
+common:classic:sanmingtonghui,《三命通会》,sānmìngtōnghuì,命理典籍,—,—,—,—,—,—,,tier2_pending
+common:classic:yuanhaiziping,《渊海子平》,yuānhǎizǐpíng,命理典籍,—,—,—,—,—,—,,tier2_pending
+common:classic:ditiansui,《滴天髓》,dītiānsuǐ,命理典籍,—,—,—,—,—,—,,tier2_pending
+common:classic:qiongtongbaojian,《穷通宝鉴》,qióngtōngbǎojiàn,命理典籍,—,—,—,—,—,—,,tier2_pending
+common:classic:zipingzhenquan,《子平真诠》,zǐpíngzhēnquán,命理典籍,—,—,—,—,—,—,,tier2_pending
+common:classic:shenfengtongkao,《神峰通考》,shénfēngtōngkǎo,命理典籍,—,—,—,—,—,—,,tier2_pending
+common:classic:ziweidoushuquanji,《紫微斗数全集》,zǐwēidǒushùquánjí,命理典籍,—,—,—,—,—,—,,tier2_pending
+common:classic:xiejibianfangshu,《协纪辨方书》,xiéjìbiànfāngshū,命理典籍,—,—,—,—,—,—,,tier2_pending
+common:classic:qimendunjia,《奇门遁甲》,qíméndùnjiǎ,命理典籍,—,—,—,—,—,—,,tier2_pending
+common:classic:liurendaquan,《六壬大全》,liùréndàquán,命理典籍,—,—,—,—,—,—,,tier2_pending
+common:classic:taiyishenshu,《太乙神数》,tàiyǐshénshù,命理典籍,—,—,—,—,—,—,,tier2_pending
+common:classic:yuxiaji,《玉匣记》,yùxiájì,命理典籍,—,—,—,—,—,—,,tier2_pending
+common:classic:zangshu,《葬书》,zàngshū,命理典籍,—,—,—,—,—,—,,tier2_pending
+common:classic:zhaijing,《宅经》,zháijīng,命理典籍,—,—,—,—,—,—,,tier2_pending
+common:classic:zhouyi,《周易》,zhōuyì,命理典籍,—,—,—,—,—,—,,tier2_pending
+astrology:beidou:tanlangxing,贪狼星,tānlángxīng,北斗七星,—,—,—,—,—,—,,tier2_pending
+astrology:beidou:jumenxing,巨门星,jùménxīng,北斗七星,—,—,—,—,—,—,,tier2_pending
+astrology:beidou:lucunxing,禄存星,lùcúnxīng,北斗七星,—,—,—,—,—,—,,tier2_pending
+astrology:beidou:wenquxing,文曲星,wénqǔxīng,北斗七星,—,—,—,—,—,—,,tier2_pending
+astrology:beidou:lianzhenxing,廉贞星,liánzhēnxīng,北斗七星,—,—,—,—,—,—,,tier2_pending
+astrology:beidou:wuquxing,武曲星,wǔqǔxīng,北斗七星,—,—,—,—,—,—,,tier2_pending
+astrology:beidou:pojunxing,破军星,pòjūnxīng,北斗七星,—,—,—,—,—,—,,tier2_pending
+bazi:shiganlu:jialuzaiyin,甲禄在寅,jiǎlùzàiyín,十干禄,—,—,—,—,—,—,,tier2_pending
+bazi:shiganlu:yiluzaimao,乙禄在卯,yǐlùzàimǎo,十干禄,—,—,—,—,—,—,,tier2_pending
+bazi:shiganlu:bingluzaisi,丙禄在巳,bǐnglùzàisì,十干禄,—,—,—,—,—,—,,tier2_pending
+bazi:shiganlu:dingluzaiwu,丁禄在午,dīnglùzàiwǔ,十干禄,—,—,—,—,—,—,,tier2_pending
+bazi:shiganlu:wuluzaisi,戊禄在巳,wùlùzàisì,十干禄,—,—,—,—,—,—,,tier2_pending
+bazi:shiganlu:jiluzaiwu,己禄在午,jǐlùzàiwǔ,十干禄,—,—,—,—,—,—,,tier2_pending
+bazi:shiganlu:gengluzaishen,庚禄在申,gēnglùzàishēn,十干禄,—,—,—,—,—,—,,tier2_pending
+bazi:shiganlu:xinluzaiyou,辛禄在酉,xīnlùzàiyǒu,十干禄,—,—,—,—,—,—,,tier2_pending
+bazi:shiganlu:renluzaihai,壬禄在亥,rénlùzàihài,十干禄,—,—,—,—,—,—,,tier2_pending
+bazi:shiganlu:guiluzaizi,癸禄在子,guǐlùzàizǐ,十干禄,—,—,—,—,—,—,,tier2_pending
+common:school:nianzhu,年柱,niánzhù,推命体系,Year Pillar,Pilar del Año,年柱,년주,เสาปี,Trụ Năm,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+common:school:yuezhu,月柱,yuèzhù,推命体系,Month Pillar,Pilar del Mes,月柱,월주,เสาเดือน,Trụ Tháng,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+common:school:rizhu,日柱,rìzhù,推命体系,Day Pillar,Pilar del Día,日柱,일주,เสาวัน,Trụ Ngày,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+common:school:shizhu,时柱,shízhù,推命体系,Hour Pillar,Pilar de la Hora,時柱,시주,เสายาม,Trụ Giờ,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+common:school:dayun,大运,dàyùn,推命体系,Luck Pillar,Pilar de la suerte,大運,대운,ไต่อวิ้น,Đại Vận,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+common:school:liunian,流年,liúnián,推命体系,Annual Luck,Suerte anual,流年,유년,หลิวเหนียน,Lưu Niên,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+common:school:taiyuan,胎元,tāiyuán,推命体系,—,—,—,—,—,—,,tier2_pending
+common:school:minggong,命宫,mìnggōng,推命体系,Life Palace,Palacio de la Vida,命宮,명궁,เหมิงกง,Mệnh Cung,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+common:school:shengong,身宫,shēngōng,推命体系,—,—,—,—,—,—,,tier2_pending
+ziwei:star:tianguan,天官,tiānguān,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:tianfu_2,天福,tiānfú,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:santai,三台,sāntái,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:bazuo,八座,bāzuò,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:longchi,龙池,lóngchí,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:fengge,凤阁,fènggé,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:taifu,台辅,táifǔ,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:fenggao,封诰,fēnggào,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:tianku,天哭,tiānkū,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:tianwu,天巫,tiānwū,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:tianyue_2,天月,tiānyuè,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:tianshang,天伤,tiānshāng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:tianshi,天使,tiānshǐ,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:jiekong,截空,jiékōng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:xunkong,旬空,xúnkōng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:hongfen,红粉,hóngfěn,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:xishen,喜神,xǐshén,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:zoushu,奏书,zòushū,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:feilian,飞廉,fēilián,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:boshi,博士,bóshì,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:lishi,力士,lìshì,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:jiangjun,将军,jiāngjūn,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:fubing,伏兵,fúbīng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:guanfu,官府,guānfǔ,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:suijian,岁建,suìjiàn,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:huiqi,晦气,huìqì,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:guansuo,贯索,guànsuǒ,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:guanfu_2,官符,guānfú,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:diaoke,吊客,diàokè,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:tiansha,天煞,tiānshà,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:zhibei,指背,zhǐbèi,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:yuesha,月煞,yuèshà,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:wangshen,亡神,wángshén,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:miao,庙,miào,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:wang,旺,wàng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:dedi,得地,dédì,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:liyi,利益,lìyì,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:pinghe,平和,pínghé,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:luoxian,落陷,luòxiàn,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:budedi,不得地,bùdédì,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:daxian,大限,dàxiàn,紫微星曜,Decade Luck,Suerte decenal,大限,대한,ไต้ฮั่น,Đại Hạn,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:star:xiaoxian,小限,xiǎoxiàn,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:doujun,斗君,dòujūn,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:paipan,排盘,páipán,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:anxing,安星,ānxīng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:zhengyao,正曜,zhèngyào,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:fuyao,辅曜,fǔyào,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:zuoyao,佐曜,zuǒyào,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:zaoyao,杂曜,záoyào,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:suiyao,岁曜,suìyào,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:liujixing,六吉星,liùjíxīng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:liushaxing,六煞星,liùshàxīng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:nandouxing,南斗星,nándǒuxīng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:beidouxing,北斗星,běidǒuxīng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:zhongtianxing,中天星,zhōngtiānxīng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:dongdouxing,东斗星,dōngdǒuxīng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:xidouxing,西斗星,xīdǒuxīng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:mingpan,命盘,mìngpán,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:qiziwei,起紫微,qǐzǐwēi,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:anshisizhengyao,安十四正曜,ānshísìzhèngyào,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:sanfangsizheng,三方四正,sānfāngsìzhèng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:duigong,对宫,duìgōng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:hegong,合宫,hégōng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:jiagong,夹宫,jiágōng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:gongming,拱命,gǒngmìng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:zhaoming,照命,zhàomìng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:zuoming,坐命,zuòmìng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:shouming,守命,shǒumìng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:rumiao,入庙,rùmiào,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:jiexingangong,借星安宫,jièxīngāngōng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:mingwuzhengyao,命无正曜,mìngwúzhèngyào,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:zuoyoutonggong,左右同宫,zuǒyòutónggōng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:changqutonggong,昌曲同宫,chāngqūtónggōng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:kuiyuejiaming,魁钺夹命,kuíyuèjiāmìng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:lumajiaochi,禄马交驰,lùmǎjiāochí,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:huotan,火贪,huǒtān,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:lingtan,铃贪,língtān,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:tanwutongxing,贪武同行,tānwǔtóngxíng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:riyuebingming,日月并明,riyuèbìngmíng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:riyuefanbei,日月反背,riyuèfǎnbèi,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:xingjiaoyin,刑囚夹印,xíngjiáoyìn,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:fanshuitaohua,泛水桃花,fànshuǐtáohuā,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:fengliucaizhang,风流彩杖,fēngliúcǎizhàng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:juhuoqingyang,巨火擎羊,jùhuǒqíngyáng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:zifuchaoyuan,紫府朝垣,zǐfǔcháoyuán,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:fuxiangchaoyuan,府相朝垣,fǔxiàngcháoyuán,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:wutantongxing,武贪同行,wǔtāntóngxíng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:liantantonggong,廉贪同宫,liántāntónggōng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:tonglianghuizhao,同梁会照,tóngliánghuìzhào,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:jijutonglin,机巨同临,jījùtónglín,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:mingzhu,命主,mìngzhǔ,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:shenzhu,身主,shēnzhǔ,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:doushu,斗数,dòushù,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:feixing,飞星,fēixīng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:gonggan,宫干,gōnggàn,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:laiyingong,来因宫,láiyīngōng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:guoweigong,果位宫,guǒwèigōng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:tiyong,体用,tǐyòng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:shengnianlu,生年禄,shēngniánlù,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:shengnianquan,生年权,shēngniánquán,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:shengnianke,生年科,shēngniánkē,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:shengnianji,生年忌,shēngniánjì,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:mingzhulu,命主禄,mìngzhǔlù,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:mingzhuquan,命主权,mìngzhǔquán,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:mingzhuke,命主科,mìngzhǔkē,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:mingzhuji,命主忌,mìngzhǔjì,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:daxianlu,大限禄,dàxiànlù,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:daxianquan,大限权,dàxiànquán,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:daxianke,大限科,dàxiànkē,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:daxianji,大限忌,dàxiànjì,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:liunianlu,流年禄,liúniánlù,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:liunianquan,流年权,liúniánquán,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:liunianke,流年科,liúniánkē,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:liunianji,流年忌,liúniánjì,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:xiaoxianlu,小限禄,xiǎoxiànlù,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:xiaoxianquan,小限权,xiǎoxiànquán,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:xiaoxianke,小限科,xiǎoxiànkē,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:xiaoxianji,小限忌,xiǎoxiànjì,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:zihualu,自化禄,zìhuàlù,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:zihuaquan,自化权,zìhuàquán,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:zihuake,自化科,zìhuàkē,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:zihuaji,自化忌,zìhuàjì,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:feihualu,飞化禄,fēihuàlù,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:feihuaquan,飞化权,fēihuàquán,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:feihuake,飞化科,fēihuàkē,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:feihuaji,飞化忌,fēihuàjì,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:dielu,叠禄,diélù,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:diequan,叠权,diéquán,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:dieke,叠科,diékē,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:dieji,叠忌,diéjì,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:jichu,忌出,jìchū,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:jiru,忌入,jìrù,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:luru,禄入,lùrù,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:quanru,权入,quánrù,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:keru,科入,kērù,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:fuxiangchaoyuange,府相朝垣格,fǔxiàngcháoyuángé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:tanwutongxingge,贪武同行格,tānwǔtóngxínggé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:riyuebingmingge,日月并明格,riyuèbìngmínggé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:riyuefanbeige,日月反背格,riyuèfǎnbèigé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:minglifengkongge,命里逢空格,mìngliféngkōnggé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:xingjiaoyinge,刑囚夹印格,xíngjiáoyìngé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:fanshuitaohuage,泛水桃花格,fànshuǐtáohuāgé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:fengliucaizhange,风流彩杖格,fēngliúcǎizhàngé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:juhuoqingyange,巨火擎羊格,jùhuǒqíngyángé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:zifuchaoyuange,紫府朝垣格,zǐfǔcháoyuángé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:wutantongxingge,武贪同行格,wǔtāntóngxínggé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:liantantonggongge,廉贪同宫格,liántāntónggōnggé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:tonglianghuizhaoge,同梁会照格,tóngliánghuìzhàogé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:jijutonglinge,机巨同临格,jījùtónglíngé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:taiyangjuge,太阳居午格,tàiyángjǔgé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:taiyinjuzige,太阴居子格,tàiyīnjūzǐgé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:zuoyoutonggongge,左右同宫格,zuǒyòutónggōnggé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:changqutonggongge,昌曲同宫格,chāngqūtónggōnggé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:kuiyuejiaminge,魁钺夹命格,kuíyuèjiāmìngé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:lumajiaochige,禄马交驰格,lùmǎjiāochígé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:huotange,火贪格,huǒtāngé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:lingtange,铃贪格,língtāngé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:matoudaijiange,马头带剑格,mǎtóudàijiàngé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:mingwuzhengyaoge,命无正曜格,mìngwúzhèngyàogé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:shizhongyinyuge,石中隐玉格,shízhōngyǐnyùgé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:jixiangliminge,极向离明格,jíxiànglímíngé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:rizhaoleimenge,日照雷门格,rìzhàoléiméngé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:yueshengcanghaige,月生沧海格,yuèshēngcānghǎigé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:shapolange,杀破狼格,shāpòlángé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:jiyuetongliange,机月同梁格,jīyuètóngliángé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:zifutonggongge,紫府同宫格,zǐfǔtónggōnggé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:juritonggongge,巨日同宫格,jùrìtónggōnggé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:junchenqinghuige,君臣庆会格,jūnchénqìnghuìgé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:matoudaijiange_2,马头带箭格,mǎtóudàijiàngé,紫微格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:conge,从格,cóngé,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:congwang,从旺,cóngwàng,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:congqiang,从强,cóngqiáng,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:congruo,从弱,cóngruò,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:huage,化格,huàgé,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:huaqige,化气格,huàqìgé,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:quzhige,曲直格,qūzhígé,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:yanshangge,炎上格,yánshànggé,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:jiasege,稼穑格,jiàsègé,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:conggege,从革格,cónggégé,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:runxiage,润下格,rùnxiàgé,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:liangshenchengxiang,两神成象,liǎngshénchéngxiàng,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:liangganbuza,两干不杂,liǎnggànbùzá,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:tianyuanzuolu,天元坐禄,tiānyuánzuòlù,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:feitianluma,飞天禄马,fēitiānlùmǎ,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:renqilongbei,壬骑龙背,rénqílóngbèi,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:liuyinchaoyang,六阴朝阳,liùyīncháoyáng,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:jinglanchage,井栏叉格,jǐnglánchāgé,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:jinshenge,金神格,jīnshéngé,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:shishangpiancai,时上偏财,shíshàngpiāncái,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:shishangyiweigui,时上一位贵,shíshàngyīwèiguì,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:jianluge,建禄格,jiànlùgé,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:yuerenge,月刃格,yuèrèngé,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:zaqicaiguan,杂气财官,záqìcáiguān,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:muku,墓库,mùkù,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:tianyuan,天元,tiānyuán,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:diyuan,地元,dìyuán,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:renyuan,人元,rényuán,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:canggan,藏干,cánggān,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:renyuansiling,人元司令,rényuánsìlìng,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:deling,得令,délìng,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:shiling,失令,shīlìng,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:dedi,得地,dédì,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:shidi,失地,shīdì,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:deshi,得势,déshì,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:shishi,失势,shīshì,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:shenqiang,身强,shēnqiáng,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:shenruo,身弱,shēnruò,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:zhonghe,中和,zhōnghé,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:pianwang,偏旺,piānwàng,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:pianruo,偏弱,piānruò,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:yongshen,用神,yòngshén,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:xishen,喜神,xǐshén,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:jishen,忌神,jìshén,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:choushen,仇神,chóushén,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:xianshen,闲神,xiánshén,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:tongguan,通关,tōngguān,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:fuyi,扶抑,fúyì,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:tiaohou,调候,tiáohòu,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:bingyao,病药,bìngyào,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:yuanliu,源流,yuánliú,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:quge,取格,qǔgé,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:biange,变格,biàngé,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:waige,外格,wàigé,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:neige,内格,nèigé,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:chenge,成格,chéngé,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:geju:poge,破格,pògé,八字格局,—,—,—,—,—,—,,tier2_pending
+bazi:shensha:tianyi,天医,tiānyī,神煞,—,—,—,—,—,—,,tier2_pending
+bazi:shensha:fuxingguiren,福星贵人,fúxīngguìrén,神煞,—,—,—,—,—,—,,tier2_pending
+bazi:shensha:wenchangguiren,文昌贵人,wénchāngguìrén,神煞,Literary Nobleman,Noble Literario,文昌貴人,문창귀인,เหวินชางกุยเหริน,Văn Xương Quý Nhân,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:shensha:yutangguiren,玉堂贵人,yùtángguìrén,神煞,—,—,—,—,—,—,,tier2_pending
+bazi:shensha:jinyu,金舆,jīnyú,神煞,—,—,—,—,—,—,,tier2_pending
+bazi:shensha:guoyunguiren,国印贵人,guóyùnguìrén,神煞,—,—,—,—,—,—,,tier2_pending
+bazi:shensha:tianchuguiren,天厨贵人,tiānchúguìrén,神煞,—,—,—,—,—,—,,tier2_pending
+bazi:shensha:sifei,四废,sìfèi,神煞,—,—,—,—,—,—,,tier2_pending
+bazi:shensha:wumu,五墓,wǔmù,神煞,—,—,—,—,—,—,,tier2_pending
+bazi:shensha:shi_ebabai,十恶大败,shi ebabai,神煞,—,—,—,—,—,—,,tier2_pending
+bazi:shensha:yinyangcuo,阴阳差错,yīnyángcuò,神煞,—,—,—,—,—,—,,tier2_pending
+bazi:shensha:silisijue,四离四绝,sìlísìjué,神煞,—,—,—,—,—,—,,tier2_pending
+bazi:shensha:dasha,大煞,dàshà,神煞,—,—,—,—,—,—,,tier2_pending
+bazi:wuxing:xiuqiu,休囚,xiūqiú,五行,—,—,—,—,—,—,,tier2_pending
+bazi:wuxing:wangxiang,旺相,wàngxiàng,五行,—,—,—,—,—,—,,tier2_pending
+bazi:wuxing:sijue,死绝,sǐjué,五行,—,—,—,—,—,—,,tier2_pending
+bazi:shensha:jielukongwang,截路空亡,jiélùkōngwáng,神煞,—,—,—,—,—,—,,tier2_pending
+bazi:shensha:kongwang,空亡,kōngwáng,神煞,Void,Vacío,空亡,공망,คงหวาง,Không Vong,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+bazi:shensha:xunkong,旬空,xúnkōng,神煞,—,—,—,—,—,—,,tier2_pending
+bazi:shensha:guxu,孤虚,gūxū,神煞,—,—,—,—,—,—,,tier2_pending
+bazi:wuxing:nayiwuxing,纳音五行,nàyīwǔxíng,五行,—,—,—,—,—,—,,tier2_pending
+bazi:wuxing:zhengwuxing,正五行,zhèngwǔxíng,五行,—,—,—,—,—,—,,tier2_pending
+bazi:wuxing:huaqiwuxing,化气五行,huàqìwǔxíng,五行,—,—,—,—,—,—,,tier2_pending
+bazi:jiazi:ganzhitongqi,干支同气,gànzhītóngqì,干支组合,—,—,—,—,—,—,,tier2_pending
+bazi:jiazi:gaitou,盖头,gàitóu,干支组合,—,—,—,—,—,—,,tier2_pending
+bazi:jiazi:jiejiao,截脚,jiéjiǎo,干支组合,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:tiankedichong,天克地冲,tiānkèdìchōng,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:tianshengdichong,天生地冲,tiānshēngdìchōng,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:tiankedihe,天克地合,tiānkèdìhé,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:fuyin,伏吟,fúyín,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:fanyin,反吟,fǎnyín,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:anhe,暗合,ànhé,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:yaohe,遥合,yáohé,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:yaochong,遥冲,yáochōng,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:gonghe,拱合,gǒnghé,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:gongjia,拱夹,gǒngjiā,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:sanxing,三刑,sānxíng,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:zixing,自刑,zìxíng,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:wu_en_zhi_xing,无恩之刑,wu en zhi xing,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:shishizhixing,恃势之刑,shìshìzhīxíng,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:wulizhixing,无礼之刑,wúlǐzhīxíng,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:hehua,合化,héhuà,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:duhe,妒合,dùhé,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:zhenghe,争合,zhēnghé,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:tanhewangchong,贪合忘冲,tānhéwàngchōng,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:tanhewangke,贪合忘克,tānhéwàngkè,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:he_er_bu_hua,合而不化,he er bu hua,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:chongzhongfenghe,冲中逢合,chōngzhōngfénghé,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:hechufengchong,合处逢冲,héchùféngchōng,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:banhe,半合,bànhé,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:shengdibanhe,生地半合,shēngdìbànhé,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:mudibanhe,墓地半合,mùdìbànhé,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:fangju,方局,fāngjú,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:sanhui,三会,sànhuì,地支关系,—,—,—,—,—,—,,tier2_pending
+bazi:branch_rel:anchong,暗冲,ànchōng,地支关系,—,—,—,—,—,—,,tier2_pending
+common:school:paisizhu,排四柱,páisìzhù,推命体系,—,—,—,—,—,—,,tier2_pending
+common:school:paidayun,排大运,páidàyùn,推命体系,—,—,—,—,—,—,,tier2_pending
+common:school:pailiunian,排流年,páiliúnián,推命体系,—,—,—,—,—,—,,tier2_pending
+common:school:qiyunshu,起运数,qǐyùnshù,推命体系,—,—,—,—,—,—,,tier2_pending
+common:school:shunpai,顺排,shùnpái,推命体系,—,—,—,—,—,—,,tier2_pending
+common:school:nipai,逆排,nìpái,推命体系,—,—,—,—,—,—,,tier2_pending
+common:school:jiaoyun,交运,jiāoyùn,推命体系,—,—,—,—,—,—,,tier2_pending
+common:school:tuoyun,脱运,tuōyùn,推命体系,—,—,—,—,—,—,,tier2_pending
+common:school:huanyun,换运,huànyùn,推命体系,—,—,—,—,—,—,,tier2_pending
+common:school:xiaoyun,小运,xiǎoyùn,推命体系,—,—,—,—,—,—,,tier2_pending
+common:school:mingxian,命限,mìngxiàn,推命体系,—,—,—,—,—,—,,tier2_pending
+common:school:shenfengtongkao,神峰通考,shénfēngtōngkǎo,推命体系,—,—,—,—,—,—,,tier2_pending
+common:term:mingshu,命书,mìngshū,基础,—,—,—,—,—,—,,tier2_pending
+common:term:tuiming,推命,tuīmìng,基础,—,—,—,—,—,—,,tier2_pending
+common:term:suanming,算命,suànmìng,基础,—,—,—,—,—,—,,tier2_pending
+common:term:pibazi,批八字,pībāzì,基础,—,—,—,—,—,—,,tier2_pending
+common:term:paipan,排盘,páipán,基础,—,—,—,—,—,—,,tier2_pending
+common:term:qipan,起盘,qǐpán,基础,—,—,—,—,—,—,,tier2_pending
+common:term:dingpan,定盘,dìngpán,基础,—,—,—,—,—,—,,tier2_pending
+common:term:gaiyun,改运,gǎiyùn,基础,—,—,—,—,—,—,,tier2_pending
+common:term:suanmingxiansheng,算命先生,suànmìngxiānsheng,基础,—,—,—,—,—,—,,tier2_pending
+common:term:shushi,术士,shùshì,基础,—,—,—,—,—,—,,tier2_pending
+common:term:shushu,术数,shùshù,基础,—,—,—,—,—,—,,tier2_pending
+common:term:mingli,命理,mìnglǐ,基础,—,—,—,—,—,—,,tier2_pending
+common:term:mingyun,命运,mìngyùn,基础,—,—,—,—,—,—,,tier2_pending
+common:term:suming,宿命,sùmìng,基础,—,—,—,—,—,—,,tier2_pending
+common:term:gaiming,改命,gǎimìng,基础,—,—,—,—,—,—,,tier2_pending
+common:term:zaoming,造命,zàomìng,基础,—,—,—,—,—,—,,tier2_pending
+common:term:zhiming,知命,zhīmìng,基础,—,—,—,—,—,—,,tier2_pending
+common:term:liming,立命,lìmìng,基础,—,—,—,—,—,—,,tier2_pending
+common:term:anxing,安星,ānxīng,基础,—,—,—,—,—,—,,tier2_pending
+common:term:luogong,落宫,luògōng,基础,—,—,—,—,—,—,,tier2_pending
+ziwei:palace:minggong,命宫,mìnggōng,十二宫,Life Palace,Palacio de la Vida,命宮,명궁,เหมิงกง,Mệnh Cung,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:palace:shengong,身宫,shēngōng,十二宫,—,—,—,—,—,—,,tier2_pending
+ziwei:star:qinglong,青龙,qīnglóng,紫微星曜,Azure Dragon,Dragón Azul,青龍,청룡,ชิงหลง,Thanh Long,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:star:xiaohao,小耗,xiǎohào,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:bingfu,病符,bìngfú,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:sangmen,丧门,sàngmén,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:baihu,白虎,báihǔ,紫微星曜,White Tiger,Tigre Blanco,白虎,백호,ไป๋หู,Bạch Hổ,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:star:longde,龙德,lóngdé,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:tiande,天德,tiāndé,紫微星曜,Heavenly Virtue,Virtud Celestial,天德貴人,천덕귀인,เทียนเต๋อกุยเหริน,Thiên Đức Quý Nhân,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:star:xianchi,咸池,xiánchí,紫微星曜,Xianchi (Peach Blossom),Xianchi (Flor de durazno),咸池,함지,เซียนฉือ,Hàm Trì,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:star:huagai,华盖,huágài,紫微星曜,Canopy,Dosel,華蓋,화개,หัวไก่,Hoa Cái,Sino-xenic 定读(ja/ko/vi)+pinyin 通行(en/es)+th 音译或意译；待母语复核,tier1_filled
+ziwei:star:suipo,岁破,suìpò,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:wuxingju,五行局,wǔxíngjú,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:shui_er_ju,水二局,shui er ju,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:musanju,木三局,mùsānjú,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:jinsiju,金四局,jīnsìjú,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:tuwuju,土五局,tǔwǔjú,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:huoliuju,火六局,huǒliùjú,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:yangnan,阳男,yángnán,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:yinu,阴女,yīnǚ,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:yingnan,阴男,yīngnán,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:yangnu,阳女,yángnǚ,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:shunxing,顺行,shùnxíng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:nixing,逆行,nìxíng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:shunbu,顺布,shùnbù,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:nibu,逆布,nìbù,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:anshengong,安身宫,ānshēngōng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:qixiaoxian,起小限,qǐxiǎoxiàn,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:qiliunian,起流年,qǐliúnián,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:anfuyao,安辅曜,ānfǔyào,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:anshayao,安煞曜,ānshàyào,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:ansihua,安四化,ānsìhuà,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:paidaxian,排大限,páidàxiàn,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:dingziwei,定紫微星,dìngzǐwēi,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:qidoujun,起斗君,qǐdòujūn,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:anminggong,安命宫,ānmìnggōng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:an_shi_er_gong,安十二宫,an shi er gong,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:qishengong,起身宫,qǐshēngōng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:mingshentonggong,命身同宫,mìngshēntónggōng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:mingshenduizhao,命身对照,mìngshēnduìzhào,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:mingshenfengong,命身分宫,mìngshēnfēngōng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:daxianminggong,大限命宫,dàxiànmìnggōng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:liunianminggong,流年命宫,liúniánmìnggōng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:xiaoxianminggong,小限命宫,xiǎoxiànmìnggōng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:xingyao,星曜,xīngyào,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:liangdu,亮度,liàngdù,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:pingxian,平闲,píngxián,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:luoxianxing,落陷星,luòxiànxīng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:sihua,四化,sìhuà,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:huaqi,化气,huàqì,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:gonggansihua,宫干四化,gōnggànsìhuà,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:feixingsihua,飞星四化,fēixīngsìhuà,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:shengniansihua,生年四化,shēngniánsìhuà,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:daxiansihua,大限四化,dàxiànsìhuà,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:liuniansihua,流年四化,liúniánsìhuà,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:xiaoxiansihua,小限四化,xiǎoxiànsìhuà,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:sanqijiahui,三奇加会,sānqíjiāhuì,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:luquankehui,禄权科会,lùquánkēhuì,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:huajichong,化忌冲,huàjìchōng,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:hualufengkong,化禄逢空,huàlùféngkōng,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:huaquanyusha,化权遇煞,huàquányùshà,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:sihua:huakefengji,化科逢忌,huàkēféngjì,紫微四化,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:tanlange,贪狼格,tānlángé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:wuquge,武曲格,wǔqūgé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:lianzhenge,廉贞格,liánzhēngé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:tianfuge,天府格,tiānfǔgé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:taiyangge,太阳格,tàiyánggé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:taiyinge,太阴格,tàiyīngé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:tianjige,天机格,tiānjīgé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:tiantonge,天同格,tiāntóngé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:tianliange,天梁格,tiānliángé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:tianxiangge,天相格,tiānxiànggé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:jumenge,巨门格,jùméngé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:pojunge,破军格,pòjūngé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:qishage,七杀格,qīshāgé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:ziweige,紫微格,zǐwēigé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:xingshajiazhige,刑杀夹制格,xíngshājiázhìgé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:tanwubufashaoniange,贪武不发少年格,tānwǔbùfāshàoniángé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:mingshentonggongge,命身同宫格,mìngshēntónggōnggé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:sanfangguige,三方贵格,sānfāngguìgé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:sizhengxiongge,四正凶格,sìzhèngxiōnggé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:xingyaobingminge,星曜并明格,xīngyàobìngmíngé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:mingzuoguige,命坐贵格,mìngzuòguìgé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:shenzuoguige,身坐贵格,shēnzuòguìgé,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:star:mingzhuxing,命主星,mìngzhǔxīng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:shenzhuxing,身主星,shēnzhǔxīng,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:star:ziweidoushumingpan,紫微斗数命盘,zǐwēidòushùmìngpán,紫微星曜,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:minggongshengongguanxi,命宫身宫关系,mìnggōngshēngōngguānxì,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:sanfangsizhenghuizhao,三方四正会照,sānfāngsìzhènghuìzhào,紫微格局,—,—,—,—,—,—,,tier2_pending
+ziwei:geju:ziweizaiwu,紫微在午,zǐwēizàiwǔ,紫微格局,—,—,—,—,—,—,,tier2_pending
+liuyao:liuqin:xiong_di,兄弟,,__补充未入lexicon__,Siblings,Hermanos,兄弟,형제,เซียงตี้,Huynh Đệ,同 tier1 依据；缺 pinyin 待补,tier1_supplement
+bazi:zodiac:tu,兔,,__补充未入lexicon__,Rabbit,Conejo,兎,토끼,เถาะ,Mèo,同 tier1 依据；缺 pinyin 待补,tier1_supplement
+liuyao:liuqin:qi_cai,妻财,,__补充未入lexicon__,Spouse & Wealth,Cónyuge y Riqueza,妻財,처재,ชายไฉ่,Thê Tài,同 tier1 依据；缺 pinyin 待补,tier1_supplement
+liuyao:liuqin:zi_sun,子孙,,__补充未入lexicon__,Descendants,Descendientes,子孫,자손,จื้อซุน,Tử Tôn,同 tier1 依据；缺 pinyin 待补,tier1_supplement
+liuyao:liuqin:guan_gui,官鬼,,__补充未入lexicon__,Officer & Ghost,Oficial y Fantasma,官鬼,관귀,กวนกุ่ย,Quan Quỷ,同 tier1 依据；缺 pinyin 待补,tier1_supplement
+common:term:ben_ming,本命,,__补充未入lexicon__,Natal,Natal,本命,본명,เบิ้นมิ้ง,Bản Mệnh,同 tier1 依据；缺 pinyin 待补,tier1_supplement
+liuyao:liuqin:fu_mu,父母,,__补充未入lexicon__,Parents,Padres,父母,부모,ฟู่หมู่,Phụ Mẫu,同 tier1 依据；缺 pinyin 待补,tier1_supplement
+bazi:zodiac:niu,牛,,__补充未入lexicon__,Ox,Buey,牛,소,ฉลู,Trâu,同 tier1 依据；缺 pinyin 待补,tier1_supplement
+bazi:zodiac:gou,狗,,__补充未入lexicon__,Dog,Perro,犬,개,จอ,Chó,同 tier1 依据；缺 pinyin 待补,tier1_supplement
+bazi:zodiac:zhu,猪,,__补充未入lexicon__,Pig,Cerdo,豬,돼지,กุน,Lợn,同 tier1 依据；缺 pinyin 待补,tier1_supplement
+bazi:zodiac:hou,猴,,__补充未入lexicon__,Monkey,Mono,猿,원숭이,วอก,Khỉ,同 tier1 依据；缺 pinyin 待补,tier1_supplement
+bazi:shensha:lu_shen,禄神,,__补充未入lexicon__,Prosperity Star,Estrella de la prosperidad,祿神,녹신,ลู่เหริน,Lộc Thần,同 tier1 依据；缺 pinyin 待补,tier1_supplement
+bazi:zodiac:yang,羊,,__补充未入lexicon__,Goat,Cabra,羊,양,มะแม,Dê,同 tier1 依据；缺 pinyin 待补,tier1_supplement
+bazi:zodiac:hu,虎,,__补充未入lexicon__,Tiger,Tigre,虎,호랑이,ขาล,Hổ,同 tier1 依据；缺 pinyin 待补,tier1_supplement
+bazi:zodiac:she,蛇,,__补充未入lexicon__,Snake,Serpiente,蛇,뱀,มะเส็ง,Rắn,同 tier1 依据；缺 pinyin 待补,tier1_supplement
+common:yinyang:yang,阳,,__补充未入lexicon__,Yang,Yang,陽,양,หยาง,Dương,同 tier1 依据；缺 pinyin 待补,tier1_supplement
+common:yinyang:yin,阴,,__补充未入lexicon__,Yin,Yin,陰,음,หยิน,Âm,同 tier1 依据；缺 pinyin 待补,tier1_supplement
+bazi:zodiac:ma,马,,__补充未入lexicon__,Horse,Caballo,馬,말,มะเมีย,Ngựa,同 tier1 依据；缺 pinyin 待补,tier1_supplement
+bazi:zodiac:ji,鸡,,__补充未入lexicon__,Rooster,Gallo,鶏,닭,ระกา,Gà,同 tier1 依据；缺 pinyin 待补,tier1_supplement
+bazi:zodiac:shu,鼠,,__补充未入lexicon__,Rat,Rata,鼠,쥐,ชวด,Chuột,同 tier1 依据；缺 pinyin 待补,tier1_supplement
+bazi:zodiac:long,龙,,__补充未入lexicon__,Dragon,Dragón,龍,용,มะโรง,Rồng,同 tier1 依据；缺 pinyin 待补,tier1_supplement

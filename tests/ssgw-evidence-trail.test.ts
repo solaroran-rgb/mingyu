@@ -68,3 +68,21 @@ test('ssgw evidenceTrail：resolveSignByNumber 附带证据链', () => {
   const step = methodItem.computationChain.find((s) => s.name.includes('抽取方法'))!;
   assert.equal(step.output, 'manual', 'manual 方式应标记');
 });
+
+// --- 7. 出处体系正确性（T1 审计回归：曾误标「观音灵签」体系） ---
+test('ssgw evidenceTrail：出处应为三山国王签谱，不得混入其他灵签体系', () => {
+  const data = drawRandomSign({ seed: 'source-check' });
+  for (const item of data.evidenceTrail!.items) {
+    assert.ok(
+      !item.source.name.includes('观音') &&
+        !item.source.name.includes('关帝') &&
+        !item.source.name.includes('吕祖'),
+      `「${item.title}」出处混入其他灵签体系：${item.source.name}`,
+    );
+  }
+  const primary = data.evidenceTrail!.items.find((i) => i.title.includes('基础'))!;
+  assert.ok(
+    primary.source.name.includes('三山国王'),
+    `主证出处应标注三山国王签谱（实际: ${primary.source.name}）`,
+  );
+});

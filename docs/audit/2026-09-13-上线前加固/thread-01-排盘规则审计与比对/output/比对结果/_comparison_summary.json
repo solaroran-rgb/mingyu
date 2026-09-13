@@ -1,0 +1,18 @@
+{
+  "huangji-jingshi": {
+    "match": 50
+  },
+  "ssgw": {
+    "match": 26,
+    "engine-throw": 4
+  },
+  "taiyi": {
+    "match": 30
+  },
+  "wuyun-liuqi": {
+    "match": 50
+  },
+  "zodiac": {
+    "match": 30
+  }
+}

@@ -33,7 +33,7 @@ export function buildSsgwEvidenceTrail(result: SsgwData): EvidenceTrail {
         output: result.number,
       },
     ],
-    source: { type: 'classical', name: '观音灵签（第一百签）体系' },
+    source: { type: 'classical', name: '三山国王签谱（92 签）' },
     boundary: {
       applicableWhen: ['在签池中随机抽取'],
       cautionWhen: ['签文寓意随求问事由而变化', '不同灵签版本签文有差异'],
@@ -89,7 +89,7 @@ export function buildSsgwEvidenceTrail(result: SsgwData): EvidenceTrail {
         output: result.details ?? null,
       },
     ],
-    source: { type: 'classical', name: '观音灵签签文与注解' },
+    source: { type: 'classical', name: '三山国王签文与注解' },
     boundary: {
       applicableWhen: ['按签号呈现签文'],
       cautionWhen: ['签意解读存在多解'],

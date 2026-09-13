@@ -1,0 +1,20 @@
+{
+  "caseId": "taiyi-004",
+  "system": "taiyi",
+  "desc": "2004 年年计太乙（阳遁第 33 局·算式假设）",
+  "input": {
+    "year": 2004
+  },
+  "expected": {
+    "yinYang": "阳遁",
+    "bureau": 33,
+    "accumulatedYears": 10155921
+  },
+  "expectedAssumption": "算式假设：accumulated=10153917+year、余0作72；若引擎为 BASE+year-1 或余0取舍不同，S5 对勘后修正本表",
+  "source": {
+    "type": "开源参照",
+    "note": "Kintaiyi@9842d8f 太乙统宗积年口径，算式假设见 expectedAssumption；局数待 S5 对勘锁定"
+  },
+  "boundaryTags": [],
+  "yearRange": "1900-2100"
+}

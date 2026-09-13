@@ -1,0 +1,22 @@
+{
+  "caseId": "wuyun-010",
+  "system": "wuyun-liuqi",
+  "desc": "2043 年（癸亥）岁运与司天在泉",
+  "input": {
+    "year": 2043
+  },
+  "expected": {
+    "yearGanZhi": "癸亥",
+    "annualMovement.element": "火",
+    "annualMovement.strength": "不及",
+    "sitian.name": "厥阴风木",
+    "zaiquan.name": "少阳相火"
+  },
+  "expectedAssumption": "交司以大寒起运为引擎现行口径（B3）；本样例只锁岁运五行/太少与司天在泉名",
+  "source": {
+    "type": "典籍推演",
+    "note": "《素问·天元纪大论/五运行大论》七篇独立算式；大寒起运口径按引擎声明仅锁岁运/司天在泉"
+  },
+  "boundaryTags": [],
+  "yearRange": "1900-2100"
+}

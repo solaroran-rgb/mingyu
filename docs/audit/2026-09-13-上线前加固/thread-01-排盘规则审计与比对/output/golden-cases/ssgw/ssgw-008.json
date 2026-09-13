@@ -1,0 +1,22 @@
+{
+  "caseId": "ssgw-008",
+  "system": "ssgw",
+  "desc": "manual 抽第 92 签",
+  "input": {
+    "number": 92
+  },
+  "expected": {
+    "number": 92,
+    "poolSize": 92,
+    "shouldThrow": false
+  },
+  "expectedAssumption": "manual 模式无随机；签题/签诗内容以 signs-full（官方版本）为回归基线，权威站比对转人工",
+  "source": {
+    "type": "官方签谱",
+    "note": "三山国王签谱 92 签官方版本；manual 签号回代确定性，签题内容属引擎数据回归锁定"
+  },
+  "boundaryTags": [
+    "边界"
+  ],
+  "yearRange": "1900-2100"
+}

@@ -5,6 +5,7 @@
 
 import { daysInGregorianMonth, isValidClockTime } from './date-validation';
 import { resolveHistoricalTimezone, type HistoricalTimezoneEvidence } from './historical-timezone';
+import { MingyuCoreError } from '../shared/result';
 
 export const MIN_FIXED_TIMEZONE_HOURS = -12;
 export const MAX_FIXED_TIMEZONE_HOURS = 14;
@@ -130,20 +131,31 @@ export function resolveCivilTime(
     : undefined;
 
   if (timezoneEvidence?.status === 'ambiguous' && input.timezone === undefined) {
-    throw new Error(
-      `${timeZoneId} 的当地钟表时间 ${formatCivilDateTime(localTime)} 存在夏令时回拨歧义，请同时提供与原始记录一致的 timezone 固定偏移。`,
-    );
+    throw new MingyuCoreError({
+      code: 'AMBIGUOUS_LOCAL_TIME',
+      category: 'validation',
+      field: 'timezone',
+      message: `${timeZoneId} 的当地钟表时间 ${formatCivilDateTime(localTime)} 存在夏令时回拨歧义，请同时提供与原始记录一致的 timezone 固定偏移。`,
+    });
   }
   if (timezoneEvidence?.offsetConflict) {
-    throw new Error(
-      `timezone 固定偏移 UTC${input.timezone! >= 0 ? '+' : ''}${input.timezone} 与 ${timeZoneId} 在该当地时刻的历史偏移不一致。`,
-    );
+    throw new MingyuCoreError({
+      code: 'TIMEZONE_OFFSET_CONFLICT',
+      category: 'validation',
+      field: 'timezone',
+      message: `timezone 固定偏移 UTC${input.timezone! >= 0 ? '+' : ''}${input.timezone} 与 ${timeZoneId} 在该当地时刻的历史偏移不一致。`,
+    });
   }
 
   const timezone =
     timezoneEvidence?.resolvedOffsetHours ?? input.timezone ?? options.defaultTimezone;
   if (timezone === undefined) {
-    throw new Error('timezone 与 timeZoneId 至少需要提供一项。');
+    throw new MingyuCoreError({
+      code: 'TIMEZONE_REQUIRED',
+      category: 'validation',
+      field: 'timezone',
+      message: 'timezone 与 timeZoneId 至少需要提供一项。',
+    });
   }
   const wallTimestamp = Date.UTC(
     localTime.year,

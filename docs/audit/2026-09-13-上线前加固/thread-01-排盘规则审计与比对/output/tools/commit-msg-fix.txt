@@ -1,0 +1,11 @@
+fix(audit): T1 修复 ssgw 证据链出处体系并补登 jinkoujue 端点
+
+- ssgwEvidence.ts: 证据链出处「观音灵签（第一百签）体系/观音灵签签文与注解」
+  误标为观音体系，与三山国王 92 签数据不符，改为「三山国王签谱（92 签）/三山国王签文与注解」
+  （T1-S2 批次1 实锤 A 类 bug，ZCode 抽查原文证实）
+- metadata.ts: PUBLIC_API_ENDPOINTS 补登 POST /api/v1/divination/jinkoujue 与
+  /divination/jinkoujue/prompt（handler.ts:1680 已实现，清单漏登，T1-S1 发现 F1）
+- 回归断言：ssgw-evidence-trail 新增出处体系断言（不得混入观音/关帝/吕祖），
+  public-api manifest 测试新增 jinkoujue 两端点断言
+- 验证：ssgw-evidence-trail + public-api + public-api-docs 三文件 112/112 全绿
+- 审计线程：thread/t1-paipan-audit（docs/audit/2026-09-13-上线前加固/thread-01）

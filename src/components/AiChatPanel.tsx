@@ -2,6 +2,7 @@ import { memo, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { marked } from '@/lib/marked-init';
 import { useAiChat } from '@/hooks/useAiChat';
 import type { ChatTurn } from '@/hooks/useAiChat';
+import { useI18n } from '@/i18n';
 import {
   buildAiChatInitialPrompt,
   createAiChatSessionId,
@@ -108,6 +109,7 @@ function AiChatPanelImpl({
   historyKey,
   aiConfig,
 }: AiChatPanelProps) {
+  const { locale } = useI18n();
   const {
     turns,
     streamingContent,
@@ -120,7 +122,7 @@ function AiChatPanelImpl({
     retry,
     canRetry,
     reset,
-  } = useAiChat(aiConfig);
+  } = useAiChat(aiConfig, locale);
   const scrollRef = useRef<HTMLDivElement | null>(null);
   const shouldAutoScrollRef = useRef(true);
   const inputRef = useRef<HTMLTextAreaElement | null>(null);

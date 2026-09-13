@@ -1,0 +1,22 @@
+{
+  "caseId": "wuyun-005",
+  "system": "wuyun-liuqi",
+  "desc": "1991 年（辛未）岁运与司天在泉",
+  "input": {
+    "year": 1991
+  },
+  "expected": {
+    "yearGanZhi": "辛未",
+    "annualMovement.element": "水",
+    "annualMovement.strength": "不及",
+    "sitian.name": "太阴湿土",
+    "zaiquan.name": "太阳寒水"
+  },
+  "expectedAssumption": "交司以大寒起运为引擎现行口径（B3）；本样例只锁岁运五行/太少与司天在泉名",
+  "source": {
+    "type": "典籍推演",
+    "note": "《素问·天元纪大论/五运行大论》七篇独立算式；大寒起运口径按引擎声明仅锁岁运/司天在泉"
+  },
+  "boundaryTags": [],
+  "yearRange": "1900-2100"
+}

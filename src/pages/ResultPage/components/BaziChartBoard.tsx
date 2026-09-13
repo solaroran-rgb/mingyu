@@ -6,6 +6,7 @@ import {
   type BaziChartResult,
 } from '@temposoul/core/bazi';
 import { uniqueNonEmptyStrings } from '@/lib/array-utils';
+import { useTermLabel } from '@/lib/i18n/terms-shim';
 import {
   formatAvoidGodPrioritySummary,
   formatBaziDate,
@@ -75,12 +76,16 @@ function filterBaziBoardShensha(items: string[]) {
 
 function BaziGanZhiValue(props: { value: string }) {
   const wuxing = getWuxing(props.value);
+  const label = useTermLabel(props.value);
+  const wuxingLabel = useTermLabel(wuxing);
 
   return (
     <span className="bazi-ganzhi-value">
-      <strong className="bazi-ganzhi-symbol">{props.value}</strong>
+      <strong className="bazi-ganzhi-symbol" title={props.value}>
+        {label ?? props.value}
+      </strong>
       <small className="bazi-wuxing-label" data-wuxing={wuxing}>
-        {wuxing}
+        {wuxingLabel ?? wuxing}
       </small>
     </span>
   );

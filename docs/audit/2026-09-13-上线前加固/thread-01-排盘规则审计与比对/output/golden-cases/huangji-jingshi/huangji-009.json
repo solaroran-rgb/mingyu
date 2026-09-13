@@ -1,0 +1,25 @@
+{
+  "caseId": "huangji-009",
+  "system": "huangji-jingshi",
+  "desc": "epochYear=1984 下 12785 年的元会运世坐标",
+  "input": {
+    "epochYear": 1984,
+    "year": 12785
+  },
+  "expected": {
+    "position.yuan.indexFromEpoch": 1,
+    "position.hui.indexInYuan": 2,
+    "position.yun.indexInHui": 1,
+    "position.shi.indexInYun": 1,
+    "position.year.indexInShi": 2
+  },
+  "expectedAssumption": "算式假设：elapsed=year-epochYear（不含当年）、各层序号一基；与引擎差一边界时以 S5 对勘为准（huangji-007/008 专测会界）",
+  "source": {
+    "type": "典籍推演",
+    "note": "《皇极经世》元会运世换算（1元=129600/会=10800/运=360/世=30），epochYear=1984 约定"
+  },
+  "boundaryTags": [
+    "会界"
+  ],
+  "yearRange": "1900-2100"
+}

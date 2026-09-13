@@ -17,6 +17,8 @@ export interface StreamOptions extends StreamCallbacks {
   /** AbortSignal 用于取消请求 */
   signal?: AbortSignal;
   aiConfig?: AiRequestConfig;
+  /** 解读输出语言（T3 多语言）；缺省 zh-CN */
+  lang?: string;
 }
 
 export type ChatMessage = { role: 'user' | 'assistant'; content: string };
@@ -32,13 +34,13 @@ type AiErrorPayload = {
  * @param options 回调和可选的 AbortSignal
  */
 export async function streamAiChat(messages: ChatMessage[], options: StreamOptions) {
-  const { onChunk, onDone, onError, signal, aiConfig } = options;
+  const { onChunk, onDone, onError, signal, aiConfig, lang } = options;
 
   try {
     const response = await fetch('/api/v1/ai/analyze', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ messages, aiConfig }),
+      body: JSON.stringify({ messages, aiConfig, lang }),
       signal,
     });
 
