@@ -1,4 +1,4 @@
-# 任务状态：TempoSoul 命律 网站建设系统
+﻿# 任务状态：TempoSoul 命律 网站建设系统
 
 ## 目标
 命理赛道网站建设系统（@temposoul/core「命律 · TempoSoul」体系，2026-08-09 改名，09-11 全面收口上线），排盘/起卦/择日提示词生成 + 网站建设
@@ -42,3 +42,14 @@
 ## 2026-09-12 · 第二轮 8 线程合并部署（59bb9092）
 - g1 Lighthouse 实测 ✅（报告+JSON）｜ g2 468 fail 修复 ✅（UTC→TT/萨摩亚跳日）｜ g3 吠陀排期 ✅ ｜ g4 经纬度库 ✅ ｜ g5 词库按钮+品牌终检 ✅ ｜ g6 tree-shaking（首页省199KB gzip）✅ ｜ g7 治理执行 ✅ ｜ g8 T0-T6 事件+订阅双确认 ✅
 - HEAD 07fb977 已推 solaroran-rgb；线上 sw v4 / meta 完整 / 首页无 prompt-engine 预载
+
+## 2026-09-13 · 四线程上线前加固合并部署（046ebf70/70feeecd，sw v7）
+- 线程 T1（排盘规则审计）✅ 合并 2271369：21 体系排盘规则逐条审计收口
+- 线程 T2（三级转译审计）✅ 合并 2c949a7：M1 运行时约束（temperature=0 + COMPLIANCE_RULES + OutputFuse 熔断）
+- 线程 T3（多语言实现）✅ 合并 b9de693：L0 查表 + 术语注入 + i18n-nightly CI + BP1 会签材料；主控融合 proxy.ts（T3 翻译档 + M1 合规锁，防回归）
+- 线程 T4（基础设施）✅ 合并 cc985cd：500→400 时区/农历修复 + 元学八体系/紫微占卜端点内懒加载（1102 修复两片）
+- 主控收口：codex/website-basic-settings HEAD 723010f 已推 solaroran-rgb；docs 收口 8d7ade4（thread/t3 分支）
+- 回归：core 1550/1550（修复 bazi-chart-board 两例 I18nProvider）、api 108、prompt 229 全绿
+- 部署：wrangler pages deploy --branch main → Production 046ebf70（首部署 promotion 未生效，二次 70feeecd 触发切换），www.temposoul.com 已生效（sw=v7、时区冲突返回 400）
+- 验收：repro_503 3 轮 → 5xx 未清零。诊断：500 全消（T4 修复生效）；剩余 503 为 CF Free 10ms CPU 限制（qimen/ziwei/bazi 重端点间歇性，liuren 基本稳定；200 响应内容正确）。**需用户决策：升级 CF Workers Paid（US$5/月，CPU 30s）**
+- 待办：**阿里云免备案迁移（正式上线时执行，用户已拍板）**——CF Paid 不可行（无美元支付），方案=中国站+香港地域（轻量 ¥24-34/月 或 FC ¥0），详见 AI地图 部署日志 2026-09-13_阿里云免备案迁移方案；qizheng 验收 case 参数（repro 脚本 hour 字段）；sky /sky v2 promote 拍板；GSC/Bing
