@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import { useI18n } from '@/i18n';
+import { useEffect, useState, useContext } from 'react';
+import { I18nContext } from '@/i18n';
 
 /**
  * L0 查表 shim（T3·M2）：中文源术语 → 当前界面语言标签。
@@ -14,7 +14,8 @@ function loadTerms7lang() {
 }
 
 export function useTermLabel(zh: string): string | null {
-  const { locale } = useI18n();
+  const ctx = useContext(I18nContext);
+  const locale = ctx?.locale ?? 'zh-CN';
   const [label, setLabel] = useState<string | null>(null);
   useEffect(() => {
     if (locale === 'zh-CN') return;
