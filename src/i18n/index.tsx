@@ -45,7 +45,7 @@ type I18nContextValue = {
   locales: { id: Locale; label: string }[];
 };
 
-const I18nContext = createContext<I18nContextValue | null>(null);
+export const I18nContext = createContext<I18nContextValue | null>(null);
 export function I18nProvider({ children }: { children: ReactNode }) {
   const [locale, setLocaleState] = useState<Locale>(() => readStoredLocale());
   useEffect(() => {
