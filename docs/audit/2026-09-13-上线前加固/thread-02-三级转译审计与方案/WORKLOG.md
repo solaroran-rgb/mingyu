@@ -81,6 +81,19 @@
 - 下一步：M2 剩余 214 条 L1（需古籍人工核验/录入，AI 起草批次可继续但须控制伪造风险）；M3 全量接入（buildBaziPrompt 集成 buildArchetypeSection）待 T1 十神/格局审计结论；M4 熔断矩阵与覆盖率看板
 - 阻塞项：M2 verified 状态依赖人工核验资源（命理顾问）；M3 全量依赖 T1 结论
 
+## 2026-09-13 · ZCode（全自动追问落地：本地模型实证 + M2 全自动批次完成）
+
+- 做了什么：
+  1. **AI key 问答**：本机无付费 key；发现本地 Qwen3.8-27B-UD-VLM @ 8080（OpenAI 兼容）可零成本全自动
+  2. **输出端动态抽测（07 报告）**：A 组（M1 约束）0/6 禁词 vs B 组（旧管线）同题「离婚」输出倾向性断言——M1 实证有效；附带发现推理模型 reasoning 吃 max_tokens 与禁词正则语义盲区（M4 语义熔断必要性佐证）
+  3. **M2 全自动批次**：214 条 semanticLibrary 由本地模型生成（318/318 全覆盖，平均 42 字，禁词 0）——三轮迭代排障：①reasoning 吃 token 致 content 空→enable_thinking=false；②服务过载 80% 失败→限速 0.5s+3 次重试→193/193 全成功；③体系码直译错字 成骨→称骨
+- 工程沉淀（scripts/m2-gen-semantic.py）：enable_thinking 参数 + 限速重试 + JSONL 断点续传 + 禁词门禁，可复用于未来数据生产
+- git：d5048d2（07 报告）/ e5d9cd5（M2 全自动批次，dict_version 1.2.0）已推
+- 部署决策：M2 数据暂不部署（semanticLibrary 尚无运行时消费方，buildTermHints 用 professionalDef；部署攒到 M3 全量接入时一次生效）
+- 下一步：M2 剩余 214 条 L1 古籍引文（AI 起草 draft 批次可全自动，verified 需人核）；M3 全量接入（待 T1）；M4 语义熔断+覆盖率看板
+- 阻塞项：无
+
+
 
 
 
