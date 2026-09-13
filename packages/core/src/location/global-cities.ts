@@ -15,8 +15,8 @@ export interface GlobalCitySearchOptions {
   limit?: number;
   /** 限定国家代码（ISO alpha-2）。 */
   countries?: readonly string[];
-  /** 限定目标语言。 */
-  languages?: readonly ('en' | 'es' | 'ja' | 'ko' | 'th' | 'vi')[];
+  /** 限定目标语言（ISO 639-1 主语言码）。 */
+  languages?: readonly string[];
 }
 
 export interface ResolvedGlobalCity {
@@ -66,9 +66,9 @@ export function getGlobalCitiesByCountry(country: string): readonly GlobalCity[]
   return GLOBAL_CITIES.filter((city) => normalizeKey(city.country) === cc);
 }
 
-/** 按目标语言代码筛选。 */
+/** 按主语言代码筛选。 */
 export function getGlobalCitiesByLanguage(
-  language: 'en' | 'es' | 'ja' | 'ko' | 'th' | 'vi',
+  language: string,
 ): readonly GlobalCity[] {
   return GLOBAL_CITIES.filter((city) => city.language === language);
 }
