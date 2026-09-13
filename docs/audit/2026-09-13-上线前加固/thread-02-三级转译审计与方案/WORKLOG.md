@@ -93,6 +93,26 @@
 - 下一步：M2 剩余 214 条 L1 古籍引文（AI 起草 draft 批次可全自动，verified 需人核）；M3 全量接入（待 T1）；M4 语义熔断+覆盖率看板
 - 阻塞项：无
 
+## 2026-09-13 · ZCode（队 2：M2 剩余 + M3 全量接入 + M4 + 红线申报，任务卡执行完毕）
+
+- 做了什么：
+  **M2 剩余 ✅（dict 1.3.1）**
+  - L1 起草批 1：紫微 60/奇门 12/择日 12/大六壬 12 = 84+12（daliuren key 修正）= 96 条通行赋文（**全部标「意引」不冒充原文**）；L1 总量 draft **200/318（63%）**、verified=0（诚实）、pending 118（称骨/风水/七政/太乙置信不足 + 塔罗/吠陀/西洋 70 条无中文古籍对象）
+  - 数据修正：`bazi.shensha.xuetang_yima`→`tianluodiwang` 键核正（资产线源 lexicon_bazi_shensha.json + 网站仓 seed 两处同步）
+  **M3 全量接入 ✅（不等 T1 的 provisional 集成）**
+  - `aiPrompts.buildPromptFromConfig` 双路径注入【原型法理锚定】段（L1 引文+L3 白话口径查表）；适配本地 buildPromptSection 无条件拼标题的坑（空段整段省略）
+  - 集成测试 10/10；全量回归 **1793/1793 零失败**；十神提取 provisional 标注待 T1 回填
+  **M4 ✅**
+  - 熔断第二层 WARN_PATTERNS 4 组（语义盲区：8080 实证「指向是」绕过 FUSE 结构）——不熔断只发 meta.warning，测试 3/3
+  - coverage-dashboard.py 看板（词库分层/分体系 L1/链路注入/红线矩阵）→ coverage-dashboard.md
+  **红线申报 ✅**
+  - output\08：24 项逐项（审计态→修复态），建议 4 项升级 🟡（05/06/18/19）、human-in-the-loop 项建议引入「C 类人审申报口径」
+- 产物路径：output\08_红线2.1申报材料.md + coverage-dashboard.md + scripts/coverage-dashboard.py
+- git：d33f7dc（M2批1+M3）/ 967fe81（M4+申报）已推；分支领先 main 8 个提交攒批待部署
+- 下一步（移交）：①M2 批 2 起草（称骨/风水/七政/太乙 48 条需古籍原文录入）+ 200 条 verified 人核；②M3 紫微/占卜链路扩展；③主控裁决部署（分支可整体合并，M3 集成改变线上 prompt 内容建议 preview 验证）；④08 申报材料交主控+用户终裁；⑤T3 移交项确认（archetype_key/L3 源/脱敏表）
+- 阻塞项：verified 人核资源（命理顾问/用户）；T1 十神审计结论（M3 回填用）
+
+
 
 
 
