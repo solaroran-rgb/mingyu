@@ -2,14 +2,21 @@
  * 红线 1.5-04 · 出生时间跨度（公元前 3000 至公元 5000）
  *
  * 红线要求：排盘支持公元前 3000 至公元 5000 年；无法可靠计算的范围应显式报错。
- * 实现现状：
- *   - 天文原语层（utc-tt ΔT、true-solar-time、星历）按儒略日支持极宽跨度；
- *   - 出生交互输入层 getBirthDateValidationMessage 现行口径为 1900–2100，
- *     越界显式返回“年份需在 1900-2100 之间”（显式报错，非静默错算）。
- *   - daysInGregorianMonth 为历法原语，支持 1–9999 年。
  *
- * 本测试固定当前契约：越界年份显式报错；历法原语支持宽年范围。
- * 是否把交互输入口径放开到 -3000~5000（涉农历/BC 历）为残留裁决项，见证据文档。
+ * 【2026-09-13 历法能力实测裁决：不放开输入口径，落边界】
+ * 实测底层历法（tyme4ts 1.5.2）：
+ *   - 中文命理链路 SolarTime/SolarYear/SolarMonth/SolarDay 硬下限 = 公元 1 年，
+ *     公历入口 validateRange(year, 1, 9999)；year ≤ 0（含所有公元前）直接抛
+ *     `illegal solar year`。-3000/-1000/-1/0 均不可计算，四柱/农历/节气/干支全失效。
+ *   - 农历 LunarYear、六十甲子 SixtyCycleYear 直接构造下限仅到 -1（= 公元前 1 年），
+ *     但四柱链路走公历入口，仍要求 ≥ 公元 1 年。
+ *   - 上沿硬上限 = 公元 9999；5000/9999 可排干支四柱，10000 抛错。
+ *   - 天文引擎 astronomy-engine 可算公元前（-3000 太阳黄经正常返回），但仅服务
+ *     西方占星（七政/vedic），与中文四柱链路无关；自研 ΔT 证据层硬限 1900–2200。
+ * 结论：红线 -3000 下沿在当前中文命理栈下根本算不出，放开只会让排盘抛错，
+ * 故维持交互输入 1900–2100、zodiac 流年 1900–2200 的保守口径，越界一律显式报错。
+ * 详见 docs/audit/2026-09-13-上线前加固/thread-04-基础设施加固与红线收口/
+ *   evidence-p1/1.5-04-时间跨度-历法能力审计.md
  */
 import assert from 'node:assert/strict';
 import test from 'node:test';
@@ -22,6 +29,8 @@ test('1.5-04 出生交互输入越界年份应显式报错（当前口径 1900�
   assert.match(getBirthDateValidationMessage(solar(1899)) ?? '', /1900-2100/);
   assert.match(getBirthDateValidationMessage(solar(2101)) ?? '', /1900-2100/);
   assert.match(getBirthDateValidationMessage(solar(-100)) ?? '', /1900-2100/);
+  // 红线下沿公元前 3000：底层 tyme4ts 无法计算，输入层必须显式拦截
+  assert.match(getBirthDateValidationMessage(solar(-3000)) ?? '', /1900-2100/);
   // 合法年份不报错
   assert.equal(getBirthDateValidationMessage(solar(2024)), undefined);
   assert.equal(getBirthDateValidationMessage(solar(1900)), undefined);
