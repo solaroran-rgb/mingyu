@@ -60,5 +60,40 @@
 - 下一步（等待主控）：①合并/部署 M1（本分支可 review）；②M2 词库升级（68 条 L1/L2 迁移校验 + 15 体系 L1 补齐）；③M3 引擎 archetype_key 对接（依赖 T1）
 - 阻塞项：无
 
+## 2026-09-13 · ZCode（老板批示三步连做：①合并/部署 M1 → ②M2 词库升级 → ③M3 前置）
+
+- 做了什么：
+  **① 合并/部署 M1 ✅ 完整完成**
+  - 拓扑确认：远程 main @ 0ac5808（09-12 五线程合并态）为 t2 分支祖先，fast-forward 干净；CF Pages 为 direct upload 模式（Git Provider=No）；最近生产部署 1 天前无覆盖风险
+  - sw v5→v6 bump（public/sw.js 两行，dc86ea1）；pnpm build 15.28s 通过；worktree 合规 7/7
+  - push main（0ac5808→dc86ea1）+ `wrangler pages deploy dist --branch main` → **Deployment 4de2841d**
+  - 线上验证：sw.js=v6 ✓ / 首页 200 ✓ / /api/v1/health ok ✓ / /api/v1/ai/analyze 403 AI_SERVER_NOT_ENABLED（内置 AI 默认关=隐私铁律，与部署前一致；M1 约束对 custom AI 用户已生效）
+  **② M2 词库升级 ✅ 第一批完成（约 40%）**
+  - `scripts/validate-lexicon-translator.py` 门禁：archetypeKey 唯一性/格式/必填字段/licenseTier/semver/L1 一致性——318 条全过
+  - L1 补齐 36 条（六爻 23 + 梅花 13）：《说卦传》八卦性情逐字原文、《卜筮正宗》六亲/六神/世应、《梅花易数》先天卦数与体用总诀——**全部标 draft（AI 依通行本起草，待人工核验），不标 verified，不伪造出处**
+  - 存量 68 条标 draft；214 条 pending_manual；dict_version 1.0.0→1.1.0；interface 补 l1_status 字段
+  - 数据修正：`bazi.dizhi.si` displayZh/classicalTerm `si_snake`→`巳`；`天罗地网/xuetang_yima` key 错位记入核验清单（待对照资产线源数据）
+  **③ M3 前置 ✅ 桥接层落地（全量接入依赖 T1）**
+  - `src/lib/ai/archetype-bridge.ts`：extractTenGodKeys（日主×四柱天干生克自算，**provisional 待 T1 核验后回填**）/extractShenShaKeys/extractGanZhiKeys/lookupArchetype/buildArchetypeSection（L1 引文+L3 白话口径注入段，确定性查表）/toHyphenKey（点分↔连字符规范互转）
+  - `tests/archetype-bridge.test.ts` 7 用例全绿
+- 验证：M2/M3 各 7 用例 + 合规 7/7 + build 通过；生产部署未再触发（M2 数据变更攒到完成批，避免频繁 sw 更新）
+- git：dc86ea1（sw bump+合并部署）/ a01cf58（M2 第一批）/ aaa1161（M3 前置）已推 solaroran-rgb，远程 main @ dc86ea1
+- 下一步：M2 剩余 214 条 L1（需古籍人工核验/录入，AI 起草批次可继续但须控制伪造风险）；M3 全量接入（buildBaziPrompt 集成 buildArchetypeSection）待 T1 十神/格局审计结论；M4 熔断矩阵与覆盖率看板
+- 阻塞项：M2 verified 状态依赖人工核验资源（命理顾问）；M3 全量依赖 T1 结论
+
+## 2026-09-13 · ZCode（全自动追问落地：本地模型实证 + M2 全自动批次完成）
+
+- 做了什么：
+  1. **AI key 问答**：本机无付费 key；发现本地 Qwen3.8-27B-UD-VLM @ 8080（OpenAI 兼容）可零成本全自动
+  2. **输出端动态抽测（07 报告）**：A 组（M1 约束）0/6 禁词 vs B 组（旧管线）同题「离婚」输出倾向性断言——M1 实证有效；附带发现推理模型 reasoning 吃 max_tokens 与禁词正则语义盲区（M4 语义熔断必要性佐证）
+  3. **M2 全自动批次**：214 条 semanticLibrary 由本地模型生成（318/318 全覆盖，平均 42 字，禁词 0）——三轮迭代排障：①reasoning 吃 token 致 content 空→enable_thinking=false；②服务过载 80% 失败→限速 0.5s+3 次重试→193/193 全成功；③体系码直译错字 成骨→称骨
+- 工程沉淀（scripts/m2-gen-semantic.py）：enable_thinking 参数 + 限速重试 + JSONL 断点续传 + 禁词门禁，可复用于未来数据生产
+- git：d5048d2（07 报告）/ e5d9cd5（M2 全自动批次，dict_version 1.2.0）已推
+- 部署决策：M2 数据暂不部署（semanticLibrary 尚无运行时消费方，buildTermHints 用 professionalDef；部署攒到 M3 全量接入时一次生效）
+- 下一步：M2 剩余 214 条 L1 古籍引文（AI 起草 draft 批次可全自动，verified 需人核）；M3 全量接入（待 T1）；M4 语义熔断+覆盖率看板
+- 阻塞项：无
+
+
+
 
 
