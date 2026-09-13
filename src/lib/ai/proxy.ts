@@ -12,13 +12,17 @@ import {
   RequestBodyTooLargeError,
 } from '../http/request-body';
 import {
+  buildCrisisNotice,
+  buildCrisisSystemSection,
   buildTermHints,
   COMPLIANCE_RULES,
   COMPLIANCE_VERSION,
+  detectCrisis,
   detectSensitiveGuidance,
   DICT_VERSION,
   FUSED_NOTICE,
   OutputFuse,
+  type CrisisLocale,
 } from './compliance';
 import {
   buildTranslateSystemPrompt,
@@ -226,7 +230,11 @@ export async function handleAiAnalyze(request: Request, env?: AiEnv): Promise<Re
       : '';
   // M1 合规约束（T2）：user 内容保持原样转发，合规铁律/敏感领域注入/术语口径查表并入 system。
   const userText = chatMessages.map((m) => m.content).join('\n');
+  // T2-01 危机干预（最高优先级）：命中即把危机指令拼在最前，先于铁律与敏感领域约束。
+  const crisisHit = detectCrisis(userText);
+  const crisisPart = crisisHit ? buildCrisisSystemSection(locale as CrisisLocale) : '';
   const compliancePart = [
+    crisisPart,
     COMPLIANCE_RULES,
     detectSensitiveGuidance(userText),
     buildTermHints(userText),
@@ -291,6 +299,14 @@ export async function handleAiAnalyze(request: Request, env?: AiEnv): Promise<Re
     const decoder = new TextDecoder();
     let buffer = '';
     let fusedOut = false;
+    // T2-01 危机热线确定性收尾：不经过 OutputFuse/tagFilter/模型，保证任何情况下热线触达用户。
+    const crisisTail = crisisHit ? buildCrisisNotice(locale as CrisisLocale) : '';
+    let tailWritten = false;
+    const writeCrisisTail = async (): Promise<void> => {
+      if (tailWritten || !crisisTail) return;
+      tailWritten = true;
+      await writer.write(encoder.encode(`data: ${JSON.stringify({ content: crisisTail })}\n\n`));
+    };
 
     // 流首 meta：三元组版本与合规版本（前端只识别 content/error，本事件向后兼容地被忽略）
     const metaPayload = JSON.stringify({
@@ -345,6 +361,7 @@ export async function handleAiAnalyze(request: Request, env?: AiEnv): Promise<Re
                 );
               }
             }
+            await writeCrisisTail();
             await writer.write(encoder.encode('data: [DONE]\n\n'));
             continue;
           }
@@ -387,10 +404,14 @@ export async function handleAiAnalyze(request: Request, env?: AiEnv): Promise<Re
                 encoder.encode(`data: ${JSON.stringify({ content: tail })}\n\n`),
               );
             }
+            await writeCrisisTail();
           }
         }
       }
+      // 上游未发 [DONE] 时也保证危机热线送达（已写过则幂等跳过）
+      await writeCrisisTail();
       if (fusedOut) {
+        await writeCrisisTail();
         await writer.write(encoder.encode('data: [DONE]\n\n'));
         await reader.cancel().catch(() => undefined);
       } else if (fuse.isWarned) {
@@ -414,6 +435,8 @@ export async function handleAiAnalyze(request: Request, env?: AiEnv): Promise<Re
         // writer 已关闭或出错，静默忽略
       }
     } finally {
+      // 异常中断路径兜底：危机热线仍要送达（正常路径已写过，幂等跳过）
+      await writeCrisisTail().catch(() => undefined);
       try {
         await writer.close();
       } catch {

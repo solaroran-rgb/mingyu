@@ -4,7 +4,7 @@
 
 import { LEXICON_TRANSLATOR_SEED } from '../../data/lexicon-translator-seed';
 
-export const COMPLIANCE_VERSION = 'm1.0';
+export const COMPLIANCE_VERSION = 'm1.1'; // m1.1: 新增 T2-01 心理危机干预层
 export const DICT_VERSION = LEXICON_TRANSLATOR_SEED.meta.dict_version;
 
 /** 解读铁律：拼入 system message，对单轮与多轮共用。 */
@@ -148,3 +148,75 @@ const WARN_PATTERNS: Array<RegExp> = [
 /** 熔断后的安全收尾文案（2.1-16 形态之一）。 */
 export const FUSED_NOTICE =
   '\n\n——\n⚠️ 系统提示：以上解读包含超出命理咨询边界的表述，已在生成过程中截断。命理解读仅供趋势参考，健康、法律、财务等重大事项请咨询持证专业人士。';
+
+// ---------- 心理危机干预层（T2-01，纲要 10.1 铁律） ----------
+// 优先级高于一切合规/熔断规则：命中即注入危机干预指令；热线信息由 proxy 在流尾
+// 以确定性文案直接输出（不经过 OutputFuse，保证不被熔断截断吞掉）。
+
+export const CRISIS_VERSION = 'crisis.1';
+
+/** AI 链路支持的语言档（与 proxy SUPPORTED_AI_LOCALES 对齐，避免循环依赖在此内联）。 */
+export type CrisisLocale = 'zh-CN' | 'en' | 'es-ES' | 'ja' | 'ko-KN' | 'th-TH' | 'vi-VN';
+
+/**
+ * 危机检测词表（中英双语，取词组降低误杀）：自残/抑郁/轻生倾向。
+ * 命中后宁可信其有——误报代价只是一条温和的热线提示，漏报代价不可接受。
+ */
+const CRISIS_PATTERNS: Array<RegExp> = [
+  /自杀|轻生|想死|想去死|寻死|了结(自己|一切|生命)?|结束(自己|一切|生命|这条命)/,
+  /不想活|活不下去|活着没(意思|意义)|活着有什么(意思|意义)|撑不下去|万念俱灰|没有希望了/,
+  /自残|自伤|自虐|割腕|吞药|上吊|跳楼|跳桥|烧炭|想解脱/,
+  /抑郁|极度绝望|重度忧郁/,
+  /suicid\w*|kill\s+(myself|me)\b|end(?:ing)?\s+(my\s+)?life\b|want\s+to\s+die|better\s+off\s+dead/i,
+  /self[-\s]?harm|hurt(ing)?\s+myself|cut(ting)?\s+myself|don'?t\s+want\s+to\s+live|no\s+reason\s+to\s+live/i,
+  /depress(?:ed|ion|ive)/i,
+];
+
+/** 检测用户输入中的心理危机倾向信号。 */
+export function detectCrisis(userText: string): boolean {
+  return CRISIS_PATTERNS.some((p) => p.test(userText));
+}
+
+/**
+ * 各语言心理援助热线资源（7 语言齐备）。
+ * zh-CN/en 给具体热线；es/ja/ko/th/vi 给国际通用资源指引，均标注「待母语复核」。
+ */
+export const CRISIS_HOTLINES: Record<CrisisLocale, string> = {
+  'zh-CN': '全国心理援助热线 12356（24 小时）｜北京心理危机研究与干预中心热线 010-82951332',
+  en: '988 Suicide & Crisis Lifeline (US) — call or text 988 | Samaritans (UK & Ireland) — call 116 123',
+  'es-ES':
+    'Directorio internacional de líneas de ayuda emocional: https://findahelpline.com（待母语复核）',
+  ja: '国際的な心理支援ホットライン一覧：https://findahelpline.com（待母语复核）',
+  'ko-KN': '국제 심리 지원 핫라인 안내: https://findahelpline.com（待母语复核）',
+  'th-TH': 'รายชื่อสายด่วนช่วยเหลือด้านจิตใจระดับนานาชาติ: https://findahelpline.com（待母语复核）',
+  'vi-VN': 'Danh mục đường dây nóng hỗ trợ tâm lý quốc tế: https://findahelpline.com（待母语复核）',
+};
+
+/** 危机命中时注入 system 的危机干预指令（拼在一切合规规则之前，优先级最高）。 */
+export function buildCrisisSystemSection(locale: CrisisLocale = 'zh-CN'): string {
+  const hotline = CRISIS_HOTLINES[locale] ?? CRISIS_HOTLINES['zh-CN'];
+  return [
+    '【危机干预指令（最高优先级，先于本提示中其他一切规则执行）】',
+    '用户的输入显示其可能正处于情绪危机（自伤/轻生倾向）。请立即切换为危机回应模式：',
+    `1. 放下命理推演框架，先温和回应用户本人：肯定其感受被听见、肯定生命价值与求助的勇气，用${locale === 'zh-CN' ? '中文' : '用户的语言'}回应。`,
+    '2. 在回复中必须原样、完整地包含以下心理援助热线信息（不得省略、不得改写号码或网址）：',
+    `   · ${hotline}`,
+    '3. 建议用户联系信任的人陪伴；如用户处于紧急危险中，请提示拨打当地紧急电话（如 110/120/911/119）。',
+    '4. 全程温和、不评判、不说教，不把话题引回运势或命理解读，不做任何与寿数、吉凶相关的推演。',
+  ].join('\n');
+}
+
+/**
+ * 危机确定性收尾文案：由 proxy 在流尾直接写出（不经过 OutputFuse 与模型），
+ * 无论上游输出如何（包括熔断）都保证热线触达用户。
+ */
+export function buildCrisisNotice(locale: CrisisLocale = 'zh-CN'): string {
+  const hotline = CRISIS_HOTLINES[locale] ?? CRISIS_HOTLINES['zh-CN'];
+  if (locale === 'zh-CN') {
+    return `\n\n——\n💙 此刻你可能正承受着很大的压力，这些感受值得被认真对待。心理援助热线：${hotline}。如遇紧急情况请拨打 110 / 120。愿意求助，已经是勇敢的一步。`;
+  }
+  if (locale === 'en') {
+    return `\n\n——\n💙 You are not alone, and support is available right now. ${hotline}. If you are in immediate danger, call your local emergency number. Reaching out is a brave first step.`;
+  }
+  return `\n\n——\n💙 ${hotline}（待母语复核）`;
+}
