@@ -28,6 +28,12 @@ export interface Person {
   birthMinute?: number;
   birthPlace?: string;
   birthLongitude?: number;
+  /**
+   * 出生纬度（度，南纬为负、北纬为正）。
+   * 468红线 1.3-10：latitude < 0 时按南半球口径反转月柱月令（月支对冲 + 月干重排五虎遁）；
+   * 缺省（undefined）按北半球，保持既有行为。年/日/时柱不在反转范围。
+   */
+  birthLatitude?: number;
   /** 当地标准时区，例如中国为 UTC+8；真太阳时模式默认 UTC+8。 */
   timezone?: number;
   /** IANA 历史时区；提供后按出生日期解析当时的法定 UTC 偏移。 */

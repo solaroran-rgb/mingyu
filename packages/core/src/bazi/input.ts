@@ -18,6 +18,8 @@ export interface BaziChartInputDraft {
   birthMinute?: BaziInputText;
   birthPlace?: string;
   birthLongitude?: BaziInputText;
+  /** 出生纬度（南纬为负、北纬为正）；<0 触发南半球月柱反转。缺省按北半球。 */
+  birthLatitude?: BaziInputText;
   timezone?: number;
   timeZoneId?: string;
   applyChinaDst?: boolean;
@@ -67,6 +69,25 @@ function readLongitude(value: BaziInputText | undefined) {
   return parsed;
 }
 
+function readLatitude(value: BaziInputText | undefined): number | undefined {
+  if (value === undefined || value === '') return undefined;
+  if (typeof value === 'number') {
+    if (!Number.isFinite(value) || value < -90 || value > 90) {
+      throw new Error('出生纬度需在 -90 到 90 之间。');
+    }
+    return value;
+  }
+  const text = value.trim();
+  if (!/^[-+]?(?:\d+(?:\.\d+)?|\.\d+)$/.test(text)) {
+    throw new Error('出生纬度必须是数字。');
+  }
+  const parsed = Number(text);
+  if (!Number.isFinite(parsed) || parsed < -90 || parsed > 90) {
+    throw new Error('出生纬度需在 -90 到 90 之间。');
+  }
+  return parsed;
+}
+
 function readDayDivide(value: unknown): 'forward' | 'current' | undefined {
   if (value === undefined) return undefined;
   if (value !== 'forward' && value !== 'current') {
@@ -105,6 +126,7 @@ export function buildBaziPersonInput(input: BaziChartInputDraft): Person {
     ? readIntegerInRange(input.birthMinute, '出生分钟', 0, 59)
     : undefined;
   const birthLongitude = useTrueSolarTime ? readLongitude(input.birthLongitude) : undefined;
+  const birthLatitude = readLatitude(input.birthLatitude);
   const dayDivide = readDayDivide(input.dayDivide);
 
   return {
@@ -120,6 +142,7 @@ export function buildBaziPersonInput(input: BaziChartInputDraft): Person {
     birthMinute,
     birthPlace: input.birthPlace?.trim() || undefined,
     birthLongitude,
+    ...(birthLatitude !== undefined ? { birthLatitude } : {}),
     timezone: input.timezone,
     ...(input.timeZoneId ? { timeZoneId: input.timeZoneId } : {}),
     applyChinaDst: input.applyChinaDst,
