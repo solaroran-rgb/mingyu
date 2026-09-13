@@ -1,0 +1,767 @@
+{
+ "ts": "2026-09-13 04:38:51",
+ "base": "https://www.temposoul.com/api/v1",
+ "runs": [
+  {
+   "ep": "ziwei/calculate",
+   "case": "01_normal",
+   "try": 1,
+   "http": 200,
+   "ms": 3592
+  },
+  {
+   "ep": "ziwei/calculate",
+   "case": "01_normal",
+   "try": 2,
+   "http": 200,
+   "ms": 2162
+  },
+  {
+   "ep": "ziwei/calculate",
+   "case": "02_early_zi",
+   "try": 1,
+   "http": 200,
+   "ms": 2419
+  },
+  {
+   "ep": "ziwei/calculate",
+   "case": "02_early_zi",
+   "try": 2,
+   "http": 200,
+   "ms": 2462
+  },
+  {
+   "ep": "ziwei/calculate",
+   "case": "03_late_zi",
+   "try": 1,
+   "http": 503,
+   "ms": 985,
+   "body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-c"
+  },
+  {
+   "ep": "ziwei/calculate",
+   "case": "03_late_zi",
+   "try": 2,
+   "http": 503,
+   "ms": 528,
+   "body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-c"
+  },
+  {
+   "ep": "ziwei/calculate",
+   "case": "04_lichun",
+   "try": 1,
+   "http": 200,
+   "ms": 1907
+  },
+  {
+   "ep": "ziwei/calculate",
+   "case": "04_lichun",
+   "try": 2,
+   "http": 503,
+   "ms": 374,
+   "body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-c"
+  },
+  {
+   "ep": "ziwei/calculate",
+   "case": "05_dongzhi",
+   "try": 1,
+   "http": 503,
+   "ms": 767,
+   "body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-c"
+  },
+  {
+   "ep": "ziwei/calculate",
+   "case": "05_dongzhi",
+   "try": 2,
+   "http": 503,
+   "ms": 376,
+   "body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-c"
+  },
+  {
+   "ep": "ziwei/calculate",
+   "case": "06_dst",
+   "try": 1,
+   "http": 503,
+   "ms": 350,
+   "body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-c"
+  },
+  {
+   "ep": "ziwei/calculate",
+   "case": "06_dst",
+   "try": 2,
+   "http": 503,
+   "ms": 398,
+   "body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-c"
+  },
+  {
+   "ep": "ziwei/calculate",
+   "case": "07_leap",
+   "try": 1,
+   "http": 503,
+   "ms": 370,
+   "body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-c"
+  },
+  {
+   "ep": "ziwei/calculate",
+   "case": "07_leap",
+   "try": 2,
+   "http": 503,
+   "ms": 370,
+   "body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-c"
+  },
+  {
+   "ep": "ziwei/calculate",
+   "case": "08_urumqi",
+   "try": 1,
+   "http": 503,
+   "ms": 378,
+   "body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-c"
+  },
+  {
+   "ep": "ziwei/calculate",
+   "case": "08_urumqi",
+   "try": 2,
+   "http": 503,
+   "ms": 396,
+   "body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-c"
+  },
+  {
+   "ep": "ziwei/calculate",
+   "case": "09_newyork",
+   "try": 1,
+   "http": 500,
+   "ms": 359,
+   "body": "{\"ok\":false,\"error\":{\"code\":\"INTERNAL_ERROR\",\"message\":\"服务内部错误。\"},"
+  },
+  {
+   "ep": "ziwei/calculate",
+   "case": "09_newyork",
+   "try": 2,
+   "http": 500,
+   "ms": 335,
+   "body": "{\"ok\":false,\"error\":{\"code\":\"INTERNAL_ERROR\",\"message\":\"服务内部错误。\"},"
+  },
+  {
+   "ep": "ziwei/calculate",
+   "case": "10_lunar_leap",
+   "try": 1,
+   "http": 400,
+   "ms": 332,
+   "body": "{\"ok\":false,\"error\":{\"code\":\"BAD_REQUEST\",\"message\":\"农历日期不存在，请"
+  },
+  {
+   "ep": "ziwei/calculate",
+   "case": "10_lunar_leap",
+   "try": 2,
+   "http": 400,
+   "ms": 340,
+   "body": "{\"ok\":false,\"error\":{\"code\":\"BAD_REQUEST\",\"message\":\"农历日期不存在，请"
+  },
+  {
+   "ep": "divination/qimen",
+   "case": "01_normal",
+   "try": 1,
+   "http": 503,
+   "ms": 387,
+   "body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-c"
+  },
+  {
+   "ep": "divination/qimen",
+   "case": "01_normal",
+   "try": 2,
+   "http": 503,
+   "ms": 392,
+   "body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-c"
+  },
+  {
+   "ep": "divination/qimen",
+   "case": "02_early_zi",
+   "try": 1,
+   "http": 200,
+   "ms": 1022
+  },
+  {
+   "ep": "divination/qimen",
+   "case": "02_early_zi",
+   "try": 2,
+   "http": 200,
+   "ms": 1044
+  },
+  {
+   "ep": "divination/qimen",
+   "case": "03_late_zi",
+   "try": 1,
+   "http": 503,
+   "ms": 390,
+   "body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-c"
+  },
+  {
+   "ep": "divination/qimen",
+   "case": "03_late_zi",
+   "try": 2,
+   "http": 200,
+   "ms": 920
+  },
+  {
+   "ep": "divination/qimen",
+   "case": "04_lichun",
+   "try": 1,
+   "http": 200,
+   "ms": 915
+  },
+  {
+   "ep": "divination/qimen",
+   "case": "04_lichun",
+   "try": 2,
+   "http": 503,
+   "ms": 362,
+   "body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-c"
+  },
+  {
+   "ep": "divination/qimen",
+   "case": "05_dongzhi",
+   "try": 1,
+   "http": 503,
+   "ms": 407,
+   "body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-c"
+  },
+  {
+   "ep": "divination/qimen",
+   "case": "05_dongzhi",
+   "try": 2,
+   "http": 200,
+   "ms": 969
+  },
+  {
+   "ep": "divination/qimen",
+   "case": "06_dst",
+   "try": 1,
+   "http": 503,
+   "ms": 342,
+   "body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-c"
+  },
+  {
+   "ep": "divination/qimen",
+   "case": "06_dst",
+   "try": 2,
+   "http": 200,
+   "ms": 671
+  },
+  {
+   "ep": "divination/qimen",
+   "case": "07_leap",
+   "try": 1,
+   "http": 200,
+   "ms": 689
+  },
+  {
+   "ep": "divination/qimen",
+   "case": "07_leap",
+   "try": 2,
+   "http": 200,
+   "ms": 697
+  },
+  {
+   "ep": "divination/qimen",
+   "case": "08_urumqi",
+   "try": 1,
+   "http": 503,
+   "ms": 362,
+   "body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-c"
+  },
+  {
+   "ep": "divination/qimen",
+   "case": "08_urumqi",
+   "try": 2,
+   "http": 503,
+   "ms": 370,
+   "body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-c"
+  },
+  {
+   "ep": "divination/qimen",
+   "case": "09_newyork",
+   "try": 1,
+   "http": 503,
+   "ms": 354,
+   "body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-c"
+  },
+  {
+   "ep": "divination/qimen",
+   "case": "09_newyork",
+   "try": 2,
+   "http": 200,
+   "ms": 695
+  },
+  {
+   "ep": "divination/qimen",
+   "case": "10_lunar_leap",
+   "try": 1,
+   "http": 200,
+   "ms": 654
+  },
+  {
+   "ep": "divination/qimen",
+   "case": "10_lunar_leap",
+   "try": 2,
+   "http": 503,
+   "ms": 320,
+   "body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-c"
+  },
+  {
+   "ep": "divination/liuren",
+   "case": "01_normal",
+   "try": 1,
+   "http": 200,
+   "ms": 462
+  },
+  {
+   "ep": "divination/liuren",
+   "case": "01_normal",
+   "try": 2,
+   "http": 200,
+   "ms": 532
+  },
+  {
+   "ep": "divination/liuren",
+   "case": "02_early_zi",
+   "try": 1,
+   "http": 503,
+   "ms": 338,
+   "body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-c"
+  },
+  {
+   "ep": "divination/liuren",
+   "case": "02_early_zi",
+   "try": 2,
+   "http": 503,
+   "ms": 325,
+   "body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-c"
+  },
+  {
+   "ep": "divination/liuren",
+   "case": "03_late_zi",
+   "try": 1,
+   "http": 503,
+   "ms": 340,
+   "body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-c"
+  },
+  {
+   "ep": "divination/liuren",
+   "case": "03_late_zi",
+   "try": 2,
+   "http": 200,
+   "ms": 512
+  },
+  {
+   "ep": "divination/liuren",
+   "case": "04_lichun",
+   "try": 1,
+   "http": 200,
+   "ms": 477
+  },
+  {
+   "ep": "divination/liuren",
+   "case": "04_lichun",
+   "try": 2,
+   "http": 200,
+   "ms": 634
+  },
+  {
+   "ep": "divination/liuren",
+   "case": "05_dongzhi",
+   "try": 1,
+   "http": 200,
+   "ms": 506
+  },
+  {
+   "ep": "divination/liuren",
+   "case": "05_dongzhi",
+   "try": 2,
+   "http": 200,
+   "ms": 544
+  },
+  {
+   "ep": "divination/liuren",
+   "case": "06_dst",
+   "try": 1,
+   "http": 200,
+   "ms": 526
+  },
+  {
+   "ep": "divination/liuren",
+   "case": "06_dst",
+   "try": 2,
+   "http": 200,
+   "ms": 452
+  },
+  {
+   "ep": "divination/liuren",
+   "case": "07_leap",
+   "try": 1,
+   "http": 200,
+   "ms": 458
+  },
+  {
+   "ep": "divination/liuren",
+   "case": "07_leap",
+   "try": 2,
+   "http": 503,
+   "ms": 342,
+   "body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-c"
+  },
+  {
+   "ep": "divination/liuren",
+   "case": "08_urumqi",
+   "try": 1,
+   "http": 200,
+   "ms": 481
+  },
+  {
+   "ep": "divination/liuren",
+   "case": "08_urumqi",
+   "try": 2,
+   "http": 200,
+   "ms": 469
+  },
+  {
+   "ep": "divination/liuren",
+   "case": "09_newyork",
+   "try": 1,
+   "http": 200,
+   "ms": 460
+  },
+  {
+   "ep": "divination/liuren",
+   "case": "09_newyork",
+   "try": 2,
+   "http": 200,
+   "ms": 448
+  },
+  {
+   "ep": "divination/liuren",
+   "case": "10_lunar_leap",
+   "try": 1,
+   "http": 200,
+   "ms": 443
+  },
+  {
+   "ep": "divination/liuren",
+   "case": "10_lunar_leap",
+   "try": 2,
+   "http": 200,
+   "ms": 471
+  },
+  {
+   "ep": "metaphysics/qizheng/calculate",
+   "case": "01_normal",
+   "try": 1,
+   "http": 400,
+   "ms": 317,
+   "body": "{\"ok\":false,\"error\":{\"code\":\"BAD_REQUEST\",\"message\":\"hour 必须是整数。\"},\""
+  },
+  {
+   "ep": "metaphysics/qizheng/calculate",
+   "case": "01_normal",
+   "try": 2,
+   "http": 400,
+   "ms": 339,
+   "body": "{\"ok\":false,\"error\":{\"code\":\"BAD_REQUEST\",\"message\":\"hour 必须是整数。\"},\""
+  },
+  {
+   "ep": "metaphysics/qizheng/calculate",
+   "case": "02_early_zi",
+   "try": 1,
+   "http": 400,
+   "ms": 336,
+   "body": "{\"ok\":false,\"error\":{\"code\":\"BAD_REQUEST\",\"message\":\"hour 必须是整数。\"},\""
+  },
+  {
+   "ep": "metaphysics/qizheng/calculate",
+   "case": "02_early_zi",
+   "try": 2,
+   "http": 400,
+   "ms": 329,
+   "body": "{\"ok\":false,\"error\":{\"code\":\"BAD_REQUEST\",\"message\":\"hour 必须是整数。\"},\""
+  },
+  {
+   "ep": "metaphysics/qizheng/calculate",
+   "case": "03_late_zi",
+   "try": 1,
+   "http": 400,
+   "ms": 339,
+   "body": "{\"ok\":false,\"error\":{\"code\":\"BAD_REQUEST\",\"message\":\"hour 必须是整数。\"},\""
+  },
+  {
+   "ep": "metaphysics/qizheng/calculate",
+   "case": "03_late_zi",
+   "try": 2,
+   "http": 400,
+   "ms": 324,
+   "body": "{\"ok\":false,\"error\":{\"code\":\"BAD_REQUEST\",\"message\":\"hour 必须是整数。\"},\""
+  },
+  {
+   "ep": "metaphysics/qizheng/calculate",
+   "case": "04_lichun",
+   "try": 1,
+   "http": 400,
+   "ms": 334,
+   "body": "{\"ok\":false,\"error\":{\"code\":\"BAD_REQUEST\",\"message\":\"hour 必须是整数。\"},\""
+  },
+  {
+   "ep": "metaphysics/qizheng/calculate",
+   "case": "04_lichun",
+   "try": 2,
+   "http": 400,
+   "ms": 327,
+   "body": "{\"ok\":false,\"error\":{\"code\":\"BAD_REQUEST\",\"message\":\"hour 必须是整数。\"},\""
+  },
+  {
+   "ep": "metaphysics/qizheng/calculate",
+   "case": "05_dongzhi",
+   "try": 1,
+   "http": 400,
+   "ms": 344,
+   "body": "{\"ok\":false,\"error\":{\"code\":\"BAD_REQUEST\",\"message\":\"hour 必须是整数。\"},\""
+  },
+  {
+   "ep": "metaphysics/qizheng/calculate",
+   "case": "05_dongzhi",
+   "try": 2,
+   "http": 400,
+   "ms": 325,
+   "body": "{\"ok\":false,\"error\":{\"code\":\"BAD_REQUEST\",\"message\":\"hour 必须是整数。\"},\""
+  },
+  {
+   "ep": "metaphysics/qizheng/calculate",
+   "case": "06_dst",
+   "try": 1,
+   "http": 400,
+   "ms": 313,
+   "body": "{\"ok\":false,\"error\":{\"code\":\"BAD_REQUEST\",\"message\":\"hour 必须是整数。\"},\""
+  },
+  {
+   "ep": "metaphysics/qizheng/calculate",
+   "case": "06_dst",
+   "try": 2,
+   "http": 400,
+   "ms": 324,
+   "body": "{\"ok\":false,\"error\":{\"code\":\"BAD_REQUEST\",\"message\":\"hour 必须是整数。\"},\""
+  },
+  {
+   "ep": "metaphysics/qizheng/calculate",
+   "case": "07_leap",
+   "try": 1,
+   "http": 400,
+   "ms": 323,
+   "body": "{\"ok\":false,\"error\":{\"code\":\"BAD_REQUEST\",\"message\":\"hour 必须是整数。\"},\""
+  },
+  {
+   "ep": "metaphysics/qizheng/calculate",
+   "case": "07_leap",
+   "try": 2,
+   "http": 400,
+   "ms": 323,
+   "body": "{\"ok\":false,\"error\":{\"code\":\"BAD_REQUEST\",\"message\":\"hour 必须是整数。\"},\""
+  },
+  {
+   "ep": "metaphysics/qizheng/calculate",
+   "case": "08_urumqi",
+   "try": 1,
+   "http": 400,
+   "ms": 337,
+   "body": "{\"ok\":false,\"error\":{\"code\":\"BAD_REQUEST\",\"message\":\"hour 必须是整数。\"},\""
+  },
+  {
+   "ep": "metaphysics/qizheng/calculate",
+   "case": "08_urumqi",
+   "try": 2,
+   "http": 400,
+   "ms": 325,
+   "body": "{\"ok\":false,\"error\":{\"code\":\"BAD_REQUEST\",\"message\":\"hour 必须是整数。\"},\""
+  },
+  {
+   "ep": "metaphysics/qizheng/calculate",
+   "case": "09_newyork",
+   "try": 1,
+   "http": 400,
+   "ms": 320,
+   "body": "{\"ok\":false,\"error\":{\"code\":\"BAD_REQUEST\",\"message\":\"hour 必须是整数。\"},\""
+  },
+  {
+   "ep": "metaphysics/qizheng/calculate",
+   "case": "09_newyork",
+   "try": 2,
+   "http": 400,
+   "ms": 307,
+   "body": "{\"ok\":false,\"error\":{\"code\":\"BAD_REQUEST\",\"message\":\"hour 必须是整数。\"},\""
+  },
+  {
+   "ep": "metaphysics/qizheng/calculate",
+   "case": "10_lunar_leap",
+   "try": 1,
+   "http": 400,
+   "ms": 320,
+   "body": "{\"ok\":false,\"error\":{\"code\":\"BAD_REQUEST\",\"message\":\"hour 必须是整数。\"},\""
+  },
+  {
+   "ep": "metaphysics/qizheng/calculate",
+   "case": "10_lunar_leap",
+   "try": 2,
+   "http": 400,
+   "ms": 307,
+   "body": "{\"ok\":false,\"error\":{\"code\":\"BAD_REQUEST\",\"message\":\"hour 必须是整数。\"},\""
+  },
+  {
+   "ep": "bazi/calculate",
+   "case": "01_normal",
+   "try": 1,
+   "http": 200,
+   "ms": 537
+  },
+  {
+   "ep": "bazi/calculate",
+   "case": "01_normal",
+   "try": 2,
+   "http": 200,
+   "ms": 604
+  },
+  {
+   "ep": "bazi/calculate",
+   "case": "02_early_zi",
+   "try": 1,
+   "http": 503,
+   "ms": 392,
+   "body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-c"
+  },
+  {
+   "ep": "bazi/calculate",
+   "case": "02_early_zi",
+   "try": 2,
+   "http": 503,
+   "ms": 378,
+   "body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-c"
+  },
+  {
+   "ep": "bazi/calculate",
+   "case": "03_late_zi",
+   "try": 1,
+   "http": 200,
+   "ms": 568
+  },
+  {
+   "ep": "bazi/calculate",
+   "case": "03_late_zi",
+   "try": 2,
+   "http": 503,
+   "ms": 342,
+   "body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-c"
+  },
+  {
+   "ep": "bazi/calculate",
+   "case": "04_lichun",
+   "try": 1,
+   "http": 503,
+   "ms": 333,
+   "body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-c"
+  },
+  {
+   "ep": "bazi/calculate",
+   "case": "04_lichun",
+   "try": 2,
+   "http": 200,
+   "ms": 511
+  },
+  {
+   "ep": "bazi/calculate",
+   "case": "05_dongzhi",
+   "try": 1,
+   "http": 200,
+   "ms": 555
+  },
+  {
+   "ep": "bazi/calculate",
+   "case": "05_dongzhi",
+   "try": 2,
+   "http": 503,
+   "ms": 334,
+   "body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-c"
+  },
+  {
+   "ep": "bazi/calculate",
+   "case": "06_dst",
+   "try": 1,
+   "http": 200,
+   "ms": 671
+  },
+  {
+   "ep": "bazi/calculate",
+   "case": "06_dst",
+   "try": 2,
+   "http": 503,
+   "ms": 316,
+   "body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-c"
+  },
+  {
+   "ep": "bazi/calculate",
+   "case": "07_leap",
+   "try": 1,
+   "http": 200,
+   "ms": 523
+  },
+  {
+   "ep": "bazi/calculate",
+   "case": "07_leap",
+   "try": 2,
+   "http": 200,
+   "ms": 521
+  },
+  {
+   "ep": "bazi/calculate",
+   "case": "08_urumqi",
+   "try": 1,
+   "http": 503,
+   "ms": 364,
+   "body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-c"
+  },
+  {
+   "ep": "bazi/calculate",
+   "case": "08_urumqi",
+   "try": 2,
+   "http": 503,
+   "ms": 346,
+   "body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-c"
+  },
+  {
+   "ep": "bazi/calculate",
+   "case": "09_newyork",
+   "try": 1,
+   "http": 500,
+   "ms": 318,
+   "body": "{\"ok\":false,\"error\":{\"code\":\"INTERNAL_ERROR\",\"message\":\"服务内部错误。\"},"
+  },
+  {
+   "ep": "bazi/calculate",
+   "case": "09_newyork",
+   "try": 2,
+   "http": 500,
+   "ms": 330,
+   "body": "{\"ok\":false,\"error\":{\"code\":\"INTERNAL_ERROR\",\"message\":\"服务内部错误。\"},"
+  },
+  {
+   "ep": "bazi/calculate",
+   "case": "10_lunar_leap",
+   "try": 1,
+   "http": 400,
+   "ms": 421,
+   "body": "{\"ok\":false,\"error\":{\"code\":\"BAD_REQUEST\",\"message\":\"农历日期不存在，请"
+  },
+  {
+   "ep": "bazi/calculate",
+   "case": "10_lunar_leap",
+   "try": 2,
+   "http": 400,
+   "ms": 396,
+   "body": "{\"ok\":false,\"error\":{\"code\":\"BAD_REQUEST\",\"message\":\"农历日期不存在，请"
+  }
+ ]
+}
