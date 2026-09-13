@@ -52,4 +52,4 @@
 - 回归：core 1550/1550（修复 bazi-chart-board 两例 I18nProvider）、api 108、prompt 229 全绿
 - 部署：wrangler pages deploy --branch main → Production 046ebf70（首部署 promotion 未生效，二次 70feeecd 触发切换），www.temposoul.com 已生效（sw=v7、时区冲突返回 400）
 - 验收：repro_503 3 轮 → 5xx 未清零。诊断：500 全消（T4 修复生效）；剩余 503 为 CF Free 10ms CPU 限制（qimen/ziwei/bazi 重端点间歇性，liuren 基本稳定；200 响应内容正确）。**需用户决策：升级 CF Workers Paid（US$5/月，CPU 30s）**
-- 待办：**阿里云免备案迁移（正式上线时执行，用户已拍板）**——CF Paid 不可行（无美元支付），方案=中国站+香港地域（轻量 ¥24-34/月 或 FC ¥0），详见 AI地图 部署日志 2026-09-13_阿里云免备案迁移方案；qizheng 验收 case 参数（repro 脚本 hour 字段）；sky /sky v2 promote 拍板；GSC/Bing
+- 待办：**阿里云免备案迁移（正式上线时执行，用户已拍板）**——CF Paid 不可行（无美元支付），方案=中国站+香港地域（轻量 ¥24-34/月 或 FC ¥0），详见 AI地图 部署日志 2026-09-13_阿里云免备案迁移方案；qizheng 验收 case 参数（repro 脚本 hour 字段）；sky /sky v2 **已 promote 生产（09-13，www.temposoul.com/sky，deploy 155745ce）**；四项开发（1.3-10 南半球 / 1.1-04 城市库 / 1.2-81 Swiss Ephemeris / 1.5-04 出生范围）已派发 Organizer 执行中；GSC/Bing
