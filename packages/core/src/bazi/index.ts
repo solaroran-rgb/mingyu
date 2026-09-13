@@ -113,6 +113,8 @@ export {
 } from './luckTiming';
 
 export { analyzeTenGodStructure, analyzeTenGodFlow } from './tenGodAnalysis';
+export { SHISHEN_ORDER, SHISHEN_KEYS, SHISHEN_KEY_MAP, getShiShenKey } from './shishen-keys';
+export type { ShiShenTerm } from './shishen-keys';
 export { analyzeStemRootProfile, analyzeExposedStemProfile } from './stemRootAnalysis';
 export { analyzeRelationStructure } from './relationStructure';
 export { analyzeKongWangProfile } from './kongWangAnalysis';
