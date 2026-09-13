@@ -9,6 +9,9 @@ dist/
 packages/core/src/location/china-data.js
 packages/core/src/location/global-cities-data.js
 
+# GeoNames 原始 dump 临时下载（大文件，不入库）
+.tmp-geonames/
+
 # TypeScript 增量编译缓存
 *.tsbuildinfo
 

@@ -8,8 +8,8 @@ export interface GlobalCity {
   nameAscii: string;
   /** ISO 3166-1 alpha-2 国家代码。 */
   country: string;
-  /** 目标语言代码 en|es|ja|ko|th|vi。 */
-  language: 'en' | 'es' | 'ja' | 'ko' | 'th' | 'vi';
+  /** 该国主语言代码（ISO 639-1，原 7 目标语言 en|es|ja|ko|th|vi 全量保留并新增 fr 等）。 */
+  language: string;
   /** ISO 3166-2 一级区划代码（可空）。 */
   admin1?: string;
   /** 纬度（WGS84）。 */

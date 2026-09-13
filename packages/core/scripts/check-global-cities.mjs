@@ -5,10 +5,10 @@
  *  1. 字段完整：每个城市必须有 id/name/country/language/latitude/longitude/timeZoneId
  *  2. 坐标范围：latitude ∈ [-90, 90]，longitude ∈ [-180, 180]
  *  3. 时区合法：timeZoneId 必须是 Node.js ICU (Intl.DateTimeFormat) 可识别的 IANA 时区名
- *  4. 无重复 id；同一 country 下无重复 (nameAscii)
- *  5. 必选目标语言：en/es/ja/ko/th/vi 至少各有一个国家覆盖
- *  6. 每个目标国家必须恰好有一个 isCapital=true
- *  7. population 为非负整数；language ∈ {en,es,ja,ko,th,vi}
+ *  4. 无重复 id；同国家重名（nameAscii）仅告警不阻断（10 万级地理库同名异城属正常）
+ *  5. 必选目标语言：en/es/ja/ko/th/vi 至少各有一个覆盖
+ *  6. 每个收录国家必须恰好有一个 isCapital=true（feature code PPLC）
+ *  7. population 为非负整数；language 为 ISO 639-1 主语言码（2-3 位小写）
  *
  * 用法：
  *   node scripts/check-global-cities.mjs
@@ -30,7 +30,7 @@ const REQUIRED_FIELDS = [
   'isCapital',
 ];
 
-const ALLOWED_LANGUAGES = new Set(['en', 'es', 'ja', 'ko', 'th', 'vi']);
+const ALLOWED_LANGUAGE = /^[a-z]{2,3}$/;
 const REQUIRED_LANGUAGES = ['en', 'es', 'ja', 'ko', 'th', 'vi'];
 
 /** 用 Node ICU 验证 IANA 时区名是否合法。 */
@@ -64,6 +64,7 @@ function main() {
   const countries = new Map();
   const languages = new Set();
   const invalidTimezones = new Set();
+  let homonymWarnings = 0;
 
   cities.forEach((c, idx) => {
     const prefix = `[#${idx} ${c.id ?? '?'}]`;
@@ -97,16 +98,16 @@ function main() {
     }
     seenIds.add(c.id);
 
-    // 同国家重名（nameAscii 小写）
+    // 同国家重名（nameAscii 小写）：10 万级库中同名异城正常，仅计数告警，不阻断。
     const nameKey = `${c.country}::${String(c.nameAscii).toLowerCase()}`;
     if (seenCountryName.has(nameKey)) {
-      fail(problems, `${prefix} 同国家重名: ${c.nameAscii} (${c.country})`);
+      homonymWarnings++;
     }
     seenCountryName.add(nameKey);
 
-    // 语言
-    if (!ALLOWED_LANGUAGES.has(c.language)) {
-      fail(problems, `${prefix} 未知语言: ${c.language}`);
+    // 语言（ISO 639-1 主语言码）
+    if (!ALLOWED_LANGUAGE.test(c.language)) {
+      fail(problems, `${prefix} 非法语言码: ${c.language}`);
     }
     languages.add(c.language);
 
@@ -143,6 +144,7 @@ function main() {
   console.log(`  语言覆盖    ${[...languages].sort().join(',')}`);
   console.log(`  唯一 id     ${seenIds.size}`);
   console.log(`  非法时区    ${invalidTimezones.size}`);
+  console.log(`  同名异城(告警) ${homonymWarnings}`);
   console.log('');
 
   if (problems.length > 0) {
