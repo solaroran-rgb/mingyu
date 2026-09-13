@@ -69,3 +69,17 @@
 - 关键结论/数据：T4 代码侧全部完成；**验收第 1 条（线上 0×5xx）待主控部署后跑 `repro_503.py` 3×100**。
 - 下一步：主控收口（部署 + 矩阵确认）；第三片懒加载为可选优化。
 - 阻塞项：CF 套餐档位确认（影响 1102 残余风险评估）——主控。
+
+## 2026-09-13 09:30–10:30 · 剩余项备料（部署 Runbook / 验收脚本 / 第三片评估 / 红线移交包）✅
+
+- 做了什么（按主控「队 4 只备料，不得自行 deploy」分工）：
+  - **合并预检**：`git merge-tree` 实证 thread/t4-infra ↔ codex/website-basic-settings **零冲突**（T2 分支亦零冲突）。
+  - **sw 版本勘察**：T2 分支已 bump v6（`thread/t2-translation-audit:public/sw.js`），本分支保持 v5 → 部署按主控指令 bump **v7**（runbook 给出精确两行改动，留给主控合并后执行，避免与 T2 的 v6 同行冲突）。
+  - **验收脚本升级**：`repro_503.py` 增 `--rounds/--endpoints` 参数与 `VERDICT PASS/FAIL` 判定（判据 5xx=0），原始数据追加落盘 `_raw_503_repro.json`；语法校验通过。
+  - **第三片评估（只评估未实施）**：esbuild metafile（740 inputs）量化——已懒加载 ≈2.23MB/33%（iztro+占卜数据等最重模块），第三片候选（bazi/calendar 1MB+prompt 0.19MB+跟随依赖）最多再收 ~20-30%；结论维持「部署后再定」，判据写在 `09_第三片评估.md`。
+  - **红线移交包**：`10_红线矩阵待应用修订_给DSH主控.md`——1.2-96/97/99 三行可直接粘贴的替换文本（pass 待终裁）+ gaps 现状文本刷新建议 + 终裁后重跑 `gen_schedule.py` 的算术说明；1.2-98 维持 partial 待复核。
+  - **部署 Runbook**：`08_部署runbook_主控执行.md`（合并→sw v7→deploy→`repro_503.py --rounds 3` 验收→CF 套餐检查步骤→回滚预案→收尾 3 步）。
+- 产物路径：`output/08_部署runbook_主控执行.md`、`output/09_第三片评估.md`、`output/10_红线矩阵待应用修订_给DSH主控.md`、`output/meta_analyze.py`、升级后 `output/repro_503.py`
+- 关键结论/数据：第三片静态剩余构成（metafile 实测）：bazi+calendar/ganzhi 1024KB(15%) + prompt 187KB(3%) + 其它 node_modules 2796KB(42%，tyme4ts 等跟随 calendar)；已懒加载 2226KB(33%)。
+- 下一步：本条目 commit 至 thread/t4-infra（独立 worktree，主工作区脏且在基线分支）→ push solaroran-rgb → 等 DSH/主控终裁红线 + 主控部署。
+- 阻塞项：无（部署权与套餐确认在主控/用户）。
