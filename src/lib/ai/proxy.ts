@@ -278,6 +278,10 @@ export async function handleAiAnalyze(request: Request, env?: AiEnv): Promise<Re
       if (fusedOut) {
         await writer.write(encoder.encode('data: [DONE]\n\n'));
         await reader.cancel().catch(() => undefined);
+      } else if (fuse.isWarned) {
+        // M4 第二层：语义盲区警示——不截断，流尾发 meta.warning 供埋点/前端复核提示
+        const warnPayload = JSON.stringify({ meta: { warning: true, warning_reason: fuse.warning } });
+        await writer.write(encoder.encode(`data: ${warnPayload}\n\n`));
       }
     } catch (err) {
       const payload = JSON.stringify({

@@ -103,6 +103,16 @@ export class OutputFuse {
         return { fused: true, reason: this.fuseReason };
       }
     }
+    if (!this.warned) {
+      for (const pattern of WARN_PATTERNS) {
+        const m = pattern.exec(this.buffered);
+        if (m) {
+          this.warned = true;
+          this.warnReason = `输出含断言式表述（${m[0].slice(0, 24)}…），建议复核`;
+          break;
+        }
+      }
+    }
     return { fused: false };
   }
 
@@ -113,7 +123,27 @@ export class OutputFuse {
   get reason(): string | undefined {
     return this.fuseReason;
   }
+
+  get isWarned(): boolean {
+    return this.warned;
+  }
+
+  get warning(): string | undefined {
+    return this.warnReason;
+  }
 }
+
+/**
+ * 第二层·语义盲区警示（M4）：宽阈值断言句式检测——命中不熔断（避免误杀），
+ * 由 proxy 在流尾发 meta.warning 事件供前端/埋点消费。
+ * 来源：本地 8080 实测发现「牌面整体指向是」类表述可绕过第一层「建议+离婚」结构。
+ */
+const WARN_PATTERNS: Array<RegExp> = [
+  /指向\s*[「"']?是[」"']?|答案是|结论是(肯定|明确)|明确表示(应该|可以|会)/,
+  /(你|您)(会|将|终将|终究)(离婚|破产|坐牢|失败|发大财)/,
+  /切勿?(离婚|分手|辞职|投资)|必须马上去/,
+  /逃不掉|躲不过|在劫难逃|命中注定/,
+];
 
 /** 熔断后的安全收尾文案（2.1-16 形态之一）。 */
 export const FUSED_NOTICE =
