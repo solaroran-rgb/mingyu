@@ -1,0 +1,586 @@
+{"archetypeKey": "chenggu.deng.baliang", "ok": false, "out": ""}
+{"archetypeKey": "chenggu.deng.erliang", "ok": false, "out": ""}
+{"archetypeKey": "chenggu.deng.liuliang", "ok": false, "out": ""}
+{"archetypeKey": "chenggu.deng.qiliang", "ok": false, "out": ""}
+{"archetypeKey": "chenggu.deng.sanliang", "ok": false, "out": ""}
+{"archetypeKey": "chenggu.deng.siliang", "ok": false, "out": ""}
+{"archetypeKey": "chenggu.deng.wuliang", "ok": false, "out": ""}
+{"archetypeKey": "chenggu.jie.fu", "ok": false, "out": ""}
+{"archetypeKey": "chenggu.jie.lao", "ok": false, "out": ""}
+{"archetypeKey": "chenggu.jie.mingge", "ok": false, "out": ""}
+{"archetypeKey": "chenggu.jie.wen", "ok": false, "out": ""}
+{"archetypeKey": "chenggu.method.fa", "ok": false, "out": ""}
+{"archetypeKey": "daliuren.struct.fayong", "ok": false, "out": ""}
+{"archetypeKey": "daliuren.struct.sanchuan", "ok": false, "out": ""}
+{"archetypeKey": "daliuren.struct.sike", "ok": false, "out": ""}
+{"archetypeKey": "daliuren.struct.yuanshou", "ok": false, "out": ""}
+{"archetypeKey": "daliuren.tianjiang.baihu", "ok": false, "out": ""}
+{"archetypeKey": "daliuren.tianjiang.guiren", "ok": false, "out": ""}
+{"archetypeKey": "daliuren.tianjiang.liuhe", "ok": false, "out": ""}
+{"archetypeKey": "daliuren.tianjiang.qinglong", "ok": false, "out": ""}
+{"archetypeKey": "daliuren.tianjiang.taiyin", "ok": false, "out": ""}
+{"archetypeKey": "daliuren.tianjiang.tengshe", "ok": false, "out": ""}
+{"archetypeKey": "daliuren.tianjiang.xuanwu", "ok": false, "out": ""}
+{"archetypeKey": "daliuren.tianjiang.zhuque", "ok": false, "out": ""}
+{"archetypeKey": "fengshui.liqi.bagua", "ok": false, "out": ""}
+{"archetypeKey": "fengshui.liqi.caiwei", "ok": false, "out": ""}
+{"archetypeKey": "fengshui.liqi.wuxing", "ok": false, "out": ""}
+{"archetypeKey": "fengshui.qiju.chuang", "ok": false, "out": ""}
+{"archetypeKey": "fengshui.qiju.men", "ok": false, "out": ""}
+{"archetypeKey": "fengshui.qiju.zhen", "ok": false, "out": ""}
+{"archetypeKey": "fengshui.xingfa.long", "ok": false, "out": ""}
+{"archetypeKey": "fengshui.xingfa.mingtang", "ok": false, "out": ""}
+{"archetypeKey": "fengshui.xingfa.sha", "ok": false, "out": ""}
+{"archetypeKey": "fengshui.xingfa.shui", "ok": false, "out": ""}
+{"archetypeKey": "fengshui.xingfa.xiang", "ok": false, "out": ""}
+{"archetypeKey": "fengshui.xingfa.xue", "ok": false, "out": ""}
+{"archetypeKey": "qimen.men.du", "ok": false, "out": ""}
+{"archetypeKey": "qimen.men.jing", "ok": false, "out": ""}
+{"archetypeKey": "qimen.men.jingx", "ok": false, "out": ""}
+{"archetypeKey": "qimen.men.kai", "ok": false, "out": ""}
+{"archetypeKey": "qimen.men.shang", "ok": false, "out": ""}
+{"archetypeKey": "qimen.men.sheng", "ok": false, "out": ""}
+{"archetypeKey": "qimen.men.si", "ok": false, "out": ""}
+{"archetypeKey": "qimen.men.xiu", "ok": false, "out": ""}
+{"archetypeKey": "qimen.shen.bashen", "ok": false, "out": ""}
+{"archetypeKey": "qimen.star.jiuxing", "ok": false, "out": ""}
+{"archetypeKey": "qimen.yiji.liuyi", "ok": false, "out": ""}
+{"archetypeKey": "qimen.yiji.sanqi", "ok": false, "out": ""}
+{"archetypeKey": "qizheng.grid.gong", "ok": false, "out": ""}
+{"archetypeKey": "qizheng.yu.jidu", "ok": false, "out": ""}
+{"archetypeKey": "qizheng.yu.luohou", "ok": false, "out": ""}
+{"archetypeKey": "qizheng.yu.yuebi", "ok": false, "out": ""}
+{"archetypeKey": "qizheng.yu.ziqi", "ok": false, "out": ""}
+{"archetypeKey": "qizheng.zheng.huoxing", "ok": false, "out": ""}
+{"archetypeKey": "qizheng.zheng.jinxing", "ok": true, "semanticLibrary": "金星主礼义与威勇，得地时倾向于果决有成，失"}
+{"archetypeKey": "qizheng.zheng.muxing", "ok": false, "out": ""}
+{"archetypeKey": "qizheng.zheng.ri", "ok": false, "out": ""}
+{"archetypeKey": "qizheng.zheng.shuixing", "ok": false, "out": ""}
+{"archetypeKey": "qizheng.zheng.tuxing", "ok": false, "out": ""}
+{"archetypeKey": "qizheng.zheng.yue", "ok": false, "out": ""}
+{"archetypeKey": "taiyi.ju.dingju", "ok": false, "out": ""}
+{"archetypeKey": "taiyi.ju.yinyang", "ok": false, "out": ""}
+{"archetypeKey": "taiyi.li.bamen", "ok": false, "out": ""}
+{"archetypeKey": "taiyi.li.sancai", "ok": false, "out": ""}
+{"archetypeKey": "taiyi.shen.jishen", "ok": false, "out": ""}
+{"archetypeKey": "taiyi.shen.shiji", "ok": false, "out": ""}
+{"archetypeKey": "taiyi.shen.taiyi", "ok": false, "out": ""}
+{"archetypeKey": "taiyi.shen.wenchang", "ok": false, "out": ""}
+{"archetypeKey": "taiyi.shen.wujiang", "ok": false, "out": ""}
+{"archetypeKey": "taiyi.suan.ke", "ok": false, "out": ""}
+{"archetypeKey": "taiyi.suan.zhu", "ok": false, "out": ""}
+{"archetypeKey": "taiyi.xian.duke", "ok": false, "out": ""}
+{"archetypeKey": "tarot.major.emperor", "ok": false, "out": ""}
+{"archetypeKey": "tarot.major.empress", "ok": false, "out": ""}
+{"archetypeKey": "tarot.major.fool", "ok": false, "out": ""}
+{"archetypeKey": "tarot.major.lovers", "ok": false, "out": ""}
+{"archetypeKey": "tarot.major.magician", "ok": false, "out": ""}
+{"archetypeKey": "tarot.major.priestess", "ok": false, "out": ""}
+{"archetypeKey": "tarot.major.star", "ok": false, "out": ""}
+{"archetypeKey": "tarot.major.strength", "ok": false, "out": ""}
+{"archetypeKey": "tarot.major.wheel", "ok": false, "out": ""}
+{"archetypeKey": "tarot.major.world", "ok": false, "out": ""}
+{"archetypeKey": "tarot.suit.cups", "ok": false, "out": ""}
+{"archetypeKey": "tarot.suit.wands", "ok": false, "out": ""}
+{"archetypeKey": "vedic.angsha.lagna", "ok": false, "out": ""}
+{"archetypeKey": "vedic.angsha.rashi", "ok": false, "out": ""}
+{"archetypeKey": "vedic.graha.budha", "ok": false, "out": ""}
+{"archetypeKey": "vedic.graha.chandra", "ok": false, "out": ""}
+{"archetypeKey": "vedic.graha.guru", "ok": false, "out": ""}
+{"archetypeKey": "vedic.graha.ketu", "ok": false, "out": ""}
+{"archetypeKey": "vedic.graha.mangala", "ok": false, "out": ""}
+{"archetypeKey": "vedic.graha.rahu", "ok": false, "out": ""}
+{"archetypeKey": "vedic.graha.shani", "ok": false, "out": ""}
+{"archetypeKey": "vedic.graha.shukra", "ok": false, "out": ""}
+{"archetypeKey": "vedic.graha.surya", "ok": false, "out": ""}
+{"archetypeKey": "vedic.time.dasha", "ok": false, "out": ""}
+{"archetypeKey": "western.aspect.conjunction", "ok": false, "out": ""}
+{"archetypeKey": "western.aspect.opposition", "ok": false, "out": ""}
+{"archetypeKey": "western.aspect.sextile", "ok": false, "out": ""}
+{"archetypeKey": "western.aspect.square", "ok": false, "out": ""}
+{"archetypeKey": "western.aspect.trine", "ok": false, "out": ""}
+{"archetypeKey": "western.axis.asc", "ok": false, "out": ""}
+{"archetypeKey": "western.axis.east_point", "ok": false, "out": ""}
+{"archetypeKey": "western.axis.mc", "ok": false, "out": ""}
+{"archetypeKey": "western.axis.vertex", "ok": false, "out": ""}
+{"archetypeKey": "western.body.chiron", "ok": false, "out": ""}
+{"archetypeKey": "western.body.jupiter", "ok": false, "out": ""}
+{"archetypeKey": "western.body.mars", "ok": false, "out": ""}
+{"archetypeKey": "western.body.mean_node", "ok": false, "out": ""}
+{"archetypeKey": "western.body.mercury", "ok": false, "out": ""}
+{"archetypeKey": "western.body.moon", "ok": false, "out": ""}
+{"archetypeKey": "western.body.neptune", "ok": false, "out": ""}
+{"archetypeKey": "western.body.pluto", "ok": false, "out": ""}
+{"archetypeKey": "western.body.saturn", "ok": false, "out": ""}
+{"archetypeKey": "western.body.sun", "ok": false, "out": ""}
+{"archetypeKey": "western.body.true_node", "ok": false, "out": ""}
+{"archetypeKey": "western.body.uranus", "ok": false, "out": ""}
+{"archetypeKey": "western.body.venus", "ok": false, "out": ""}
+{"archetypeKey": "western.house.1", "ok": false, "out": ""}
+{"archetypeKey": "western.house.10", "ok": true, "semanticLibrary": "官禄宫即第十宫，倾向于映射事业成就与社会声望，受克时往往暗示职场压力与功利倾向的波动。"}
+{"archetypeKey": "western.house.11", "ok": false, "out": ""}
+{"archetypeKey": "western.house.12", "ok": false, "out": ""}
+{"archetypeKey": "western.house.2", "ok": false, "out": ""}
+{"archetypeKey": "western.house.3", "ok": false, "out": ""}
+{"archetypeKey": "western.house.4", "ok": false, "out": ""}
+{"archetypeKey": "western.house.5", "ok": true, "semanticLibrary": "第五宫往往指向创造、恋爱与自我表达的领域，星体配置可能影响个人在玩乐与冒险方面的倾向。"}
+{"archetypeKey": "western.house.6", "ok": false, "out": ""}
+{"archetypeKey": "western.house.7", "ok": false, "out": ""}
+{"archetypeKey": "western.house.8", "ok": false, "out": ""}
+{"archetypeKey": "western.house.9", "ok": false, "out": ""}
+{"archetypeKey": "western.sign.aquarius", "ok": false, "out": ""}
+{"archetypeKey": "western.sign.aries", "ok": true, "semanticLibrary": "白羊座倾向于以开创与热情驱动行动，往往表现果"}
+{"archetypeKey": "western.sign.cancer", "ok": false, "out": ""}
+{"archetypeKey": "western.sign.capricorn", "ok": false, "out": ""}
+{"archetypeKey": "western.sign.gemini", "ok": false, "out": ""}
+{"archetypeKey": "western.sign.leo", "ok": false, "out": ""}
+{"archetypeKey": "western.sign.libra", "ok": false, "out": ""}
+{"archetypeKey": "western.sign.pisces", "ok": false, "out": ""}
+{"archetypeKey": "western.sign.sagittarius", "ok": false, "out": ""}
+{"archetypeKey": "western.sign.scorpio", "ok": false, "out": ""}
+{"archetypeKey": "western.sign.taurus", "ok": false, "out": ""}
+{"archetypeKey": "western.sign.virgo", "ok": false, "out": ""}
+{"archetypeKey": "zeri.jianchu.bi", "ok": false, "out": ""}
+{"archetypeKey": "zeri.jianchu.cheng", "ok": false, "out": ""}
+{"archetypeKey": "zeri.jianchu.chu", "ok": false, "out": ""}
+{"archetypeKey": "zeri.jianchu.ding", "ok": false, "out": ""}
+{"archetypeKey": "zeri.jianchu.jian", "ok": false, "out": ""}
+{"archetypeKey": "zeri.jianchu.kai", "ok": false, "out": ""}
+{"archetypeKey": "zeri.jianchu.man", "ok": false, "out": ""}
+{"archetypeKey": "zeri.jianchu.ping", "ok": false, "out": ""}
+{"archetypeKey": "zeri.jianchu.po", "ok": false, "out": ""}
+{"archetypeKey": "zeri.jianchu.shou", "ok": false, "out": ""}
+{"archetypeKey": "zeri.jianchu.wei", "ok": false, "out": ""}
+{"archetypeKey": "zeri.jianchu.zhi", "ok": false, "out": ""}
+{"archetypeKey": "ziwei.aux.dijie", "ok": false, "out": ""}
+{"archetypeKey": "ziwei.aux.dikong", "ok": false, "out": ""}
+{"archetypeKey": "ziwei.aux.enguang", "ok": false, "out": ""}
+{"archetypeKey": "ziwei.aux.fenggao", "ok": false, "out": ""}
+{"archetypeKey": "ziwei.aux.fengge", "ok": false, "out": ""}
+{"archetypeKey": "ziwei.aux.guasu", "ok": false, "out": ""}
+{"archetypeKey": "ziwei.aux.guchen", "ok": false, "out": ""}
+{"archetypeKey": "ziwei.aux.hongluan", "ok": false, "out": ""}
+{"archetypeKey": "ziwei.aux.huagai", "ok": false, "out": ""}
+{"archetypeKey": "ziwei.aux.huoxing", "ok": false, "out": ""}
+{"archetypeKey": "ziwei.aux.lingxing", "ok": false, "out": ""}
+{"archetypeKey": "ziwei.aux.longchi", "ok": false, "out": ""}
+{"archetypeKey": "ziwei.aux.lucun", "ok": false, "out": ""}
+{"archetypeKey": "ziwei.aux.qingyang", "ok": false, "out": ""}
+{"archetypeKey": "ziwei.aux.taifu", "ok": false, "out": ""}
+{"archetypeKey": "ziwei.aux.tiancai", "ok": false, "out": ""}
+{"archetypeKey": "ziwei.aux.tiangui", "ok": false, "out": ""}
+{"archetypeKey": "ziwei.aux.tiankui", "ok": false, "out": ""}
+{"archetypeKey": "ziwei.aux.tianma", "ok": false, "out": ""}
+{"archetypeKey": "ziwei.aux.tianshou", "ok": false, "out": ""}
+{"archetypeKey": "ziwei.aux.tianxi", "ok": false, "out": ""}
+{"archetypeKey": "ziwei.aux.tianxing", "ok": false, "out": ""}
+{"archetypeKey": "ziwei.aux.tianyao", "ok": false, "out": ""}
+{"archetypeKey": "ziwei.aux.tianyue", "ok": false, "out": ""}
+{"archetypeKey": "ziwei.aux.tuoluo", "ok": false, "out": ""}
+{"archetypeKey": "ziwei.aux.wenchang", "ok": false, "out": ""}
+{"archetypeKey": "ziwei.aux.wenqu", "ok": false, "out": ""}
+{"archetypeKey": "ziwei.aux.xianchi", "ok": false, "out": ""}
+{"archetypeKey": "ziwei.aux.youbi", "ok": false, "out": ""}
+{"archetypeKey": "chenggu.deng.baliang", "ok": true, "semanticLibrary": "八两档象征命理格局中的极高权重，往往指向富贵寿考俱全的优异趋势，属于世所稀遇的顶级配置。"}
+{"archetypeKey": "chenggu.deng.erliang", "ok": true, "semanticLibrary": "二两档属轻命范畴，往往呈现早年波动与离祖自立之象，倾向于通过个人奋斗确立根基，整体运势多显劳碌。"}
+{"archetypeKey": "chenggu.deng.liuliang", "ok": true, "semanticLibrary": "六两档在成骨体系中属上等格局，往往倾向于官贵富厚，一生多受外力扶持，声名易远播。"}
+{"archetypeKey": "chenggu.deng.qiliang", "ok": true, "semanticLibrary": "七两档在成骨体系中象征极高格局，往往倾向于权位与财富兼隆，解读时多视为人生运势处于显著上升通道的趋势。"}
+{"archetypeKey": "chenggu.deng.sanliang", "ok": true, "semanticLibrary": "三两档属中下格局，往往预示需经奔波谋为方能衣食渐裕，生活少安逸，倾向于以勤力换取稳定。"}
+{"archetypeKey": "chenggu.deng.siliang", "ok": true, "semanticLibrary": "四两档象征中平格局，往往预示衣禄安稳，中年运势渐趋稳固，整体生活平稳少有大起大落。"}
+{"archetypeKey": "chenggu.deng.wuliang", "ok": true, "semanticLibrary": "五两档通常指向中上格局，倾向于才具得以展布，往往伴随建功得名的机遇，晚年运势多呈现安稳享福之象。"}
+{"archetypeKey": "chenggu.jie.fu", "ok": true, "semanticLibrary": "福泽象征荫庇与顺遂，往往预示行事多助、少灾之象，倾向于中上格局，体现得天独厚的发展态势。"}
+{"archetypeKey": "chenggu.jie.lao", "ok": true, "semanticLibrary": "该术语倾向于呈现亲力亲为、奔波劳碌之象，往往需以勤勉行动来平衡格局，解读时多关注其动态付出特征。"}
+{"archetypeKey": "chenggu.jie.mingge", "ok": true, "semanticLibrary": "命格依据总骨重划分富贵、平稳或劳碌等局，作为解读人生大势的参考框架，其归类仅呈现趋势倾向，并非不可改变的定数。"}
+{"archetypeKey": "chenggu.jie.wen", "ok": true, "semanticLibrary": "安稳主平顺无波之象，往往预示衣食可守、守成则安，倾向于中平格局，生活状态趋于稳定。"}
+{"archetypeKey": "chenggu.method.fa", "ok": true, "semanticLibrary": "称骨法通过折算生辰四柱得出总重量，倾向于以数值高低划分命局层次，往往作为辅助参考视角，可能反映传统民俗对运势轻重的趣味化解读。"}
+{"archetypeKey": "daliuren.struct.fayong", "ok": true, "semanticLibrary": "发用作为三传之首，往往揭示事态启动的源头与机括，其吉凶属性倾向于决定事件发展的初始走向与难易程度。"}
+{"archetypeKey": "daliuren.struct.sanchuan", "ok": true, "semanticLibrary": "三传结构依序推演事态始末，初传定端、中传示程、末传见果，传序顺逆往往倾向于反映事态发展的顺畅或阻滞趋势。"}
+{"archetypeKey": "daliuren.struct.sike", "ok": true, "semanticLibrary": "四课通过干支上下神排列，呈现宾主内外格局，往往作为推演事态发展脉络与潜在趋势的基础结构。"}
+{"archetypeKey": "daliuren.struct.yuanshou", "ok": true, "semanticLibrary": "元首卦象征事物从正面发端，往往呈现自上而下的顺畅趋势，倾向于在政务或常事中展现顺遂与得位的积极征象。"}
+{"archetypeKey": "daliuren.tianjiang.baihu", "ok": true, "semanticLibrary": "白虎属金，往往象征肃杀与威权，旺相时倾向于展现强势决断，衰弱时则可能引发刑伤或健康波动，需结合整体局势客观研判。"}
+{"archetypeKey": "daliuren.tianjiang.guiren", "ok": false, "err": "[WinError 10054] 远程主机强迫关闭了一个现有的连接。"}
+{"archetypeKey": "daliuren.tianjiang.liuhe", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "daliuren.tianjiang.qinglong", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "daliuren.tianjiang.taiyin", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "daliuren.tianjiang.tengshe", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "daliuren.tianjiang.xuanwu", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "daliuren.tianjiang.zhuque", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "fengshui.liqi.bagua", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "fengshui.liqi.caiwei", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "fengshui.liqi.wuxing", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "fengshui.qiju.chuang", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "fengshui.qiju.men", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "fengshui.qiju.zhen", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "fengshui.xingfa.long", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "fengshui.xingfa.mingtang", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "fengshui.xingfa.sha", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "fengshui.xingfa.shui", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "fengshui.xingfa.xiang", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "fengshui.xingfa.xue", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "qimen.men.du", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "qimen.men.jing", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "qimen.men.jingx", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "qimen.men.kai", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "qimen.men.shang", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "qimen.men.sheng", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "qimen.men.si", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "qimen.men.xiu", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "qimen.shen.bashen", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "qimen.star.jiuxing", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "qimen.yiji.liuyi", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "qimen.yiji.sanqi", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "qizheng.grid.gong", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "qizheng.yu.jidu", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "qizheng.yu.luohou", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "qizheng.yu.yuebi", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "qizheng.yu.ziqi", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "qizheng.zheng.huoxing", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "qizheng.zheng.muxing", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "qizheng.zheng.ri", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "qizheng.zheng.shuixing", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "qizheng.zheng.tuxing", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "qizheng.zheng.yue", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "taiyi.ju.dingju", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "taiyi.ju.yinyang", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "taiyi.li.bamen", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "taiyi.li.sancai", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "taiyi.shen.jishen", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "taiyi.shen.shiji", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "taiyi.shen.taiyi", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "taiyi.shen.wenchang", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "taiyi.shen.wujiang", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "taiyi.suan.ke", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "taiyi.suan.zhu", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "taiyi.xian.duke", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "tarot.major.emperor", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "tarot.major.empress", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "tarot.major.fool", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "tarot.major.lovers", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "tarot.major.magician", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "tarot.major.priestess", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "tarot.major.star", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "tarot.major.strength", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "tarot.major.wheel", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "tarot.major.world", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "tarot.suit.cups", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "tarot.suit.wands", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "vedic.angsha.lagna", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "vedic.angsha.rashi", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "vedic.graha.budha", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "vedic.graha.chandra", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "vedic.graha.guru", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "vedic.graha.ketu", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "vedic.graha.mangala", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "vedic.graha.rahu", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "vedic.graha.shani", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "vedic.graha.shukra", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "vedic.graha.surya", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "vedic.time.dasha", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "western.aspect.conjunction", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "western.aspect.opposition", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "western.aspect.sextile", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "western.aspect.square", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "western.aspect.trine", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "western.axis.asc", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "western.axis.east_point", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "western.axis.mc", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "western.axis.vertex", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "western.body.chiron", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "western.body.jupiter", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "western.body.mars", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "western.body.mean_node", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "western.body.mercury", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "western.body.moon", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "western.body.neptune", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "western.body.pluto", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "western.body.saturn", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "western.body.sun", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "western.body.true_node", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "western.body.uranus", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "western.body.venus", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "western.house.1", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "western.house.11", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "western.house.12", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "western.house.2", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "western.house.3", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "western.house.4", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "western.house.6", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "western.house.7", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "western.house.8", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "western.house.9", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "western.sign.aquarius", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "western.sign.cancer", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "western.sign.capricorn", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "western.sign.gemini", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "western.sign.leo", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "western.sign.libra", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "western.sign.pisces", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "western.sign.sagittarius", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "western.sign.scorpio", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "western.sign.taurus", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "western.sign.virgo", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "zeri.jianchu.bi", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "zeri.jianchu.cheng", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "zeri.jianchu.chu", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "zeri.jianchu.ding", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "zeri.jianchu.jian", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "zeri.jianchu.kai", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "zeri.jianchu.man", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "zeri.jianchu.ping", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "zeri.jianchu.po", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "zeri.jianchu.shou", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "zeri.jianchu.wei", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "zeri.jianchu.zhi", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "ziwei.aux.dijie", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "ziwei.aux.dikong", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "ziwei.aux.enguang", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "ziwei.aux.fenggao", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "ziwei.aux.fengge", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "ziwei.aux.guasu", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "ziwei.aux.guchen", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "ziwei.aux.hongluan", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "ziwei.aux.huagai", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "ziwei.aux.huoxing", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "ziwei.aux.lingxing", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "ziwei.aux.longchi", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "ziwei.aux.lucun", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "ziwei.aux.qingyang", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "ziwei.aux.taifu", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "ziwei.aux.tiancai", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "ziwei.aux.tiangui", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "ziwei.aux.tiankui", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "ziwei.aux.tianma", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "ziwei.aux.tianshou", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "ziwei.aux.tianxi", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "ziwei.aux.tianxing", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "ziwei.aux.tianyao", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "ziwei.aux.tianyue", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "ziwei.aux.tuoluo", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "ziwei.aux.wenchang", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "ziwei.aux.wenqu", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "ziwei.aux.xianchi", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "ziwei.aux.youbi", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "ziwei.aux.zuofu", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "ziwei.palace.caibo", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "ziwei.palace.fude", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "ziwei.palace.fumu", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "ziwei.palace.fuqi", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "ziwei.palace.guanlu", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "ziwei.palace.jiaoyou", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "ziwei.palace.jie", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "ziwei.palace.mingong", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "ziwei.palace.qianyi", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "ziwei.palace.tianzhai", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "ziwei.palace.xiongdi", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "ziwei.palace.zinv", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "ziwei.sihua.huaji", "ok": false, "err": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"}
+{"archetypeKey": "ziwei.sihua.huake", "ok": false, "err": "HTTP Error 503: Service Unavailable"}
+{"archetypeKey": "ziwei.sihua.hualu", "ok": false, "err": "HTTP Error 503: Service Unavailable"}
+{"archetypeKey": "ziwei.sihua.huaquan", "ok": false, "err": "HTTP Error 503: Service Unavailable"}
+{"archetypeKey": "ziwei.star.jumen", "ok": false, "err": "HTTP Error 503: Service Unavailable"}
+{"archetypeKey": "ziwei.star.lianzhen", "ok": false, "err": "HTTP Error 503: Service Unavailable"}
+{"archetypeKey": "ziwei.star.pojun", "ok": false, "err": "HTTP Error 503: Service Unavailable"}
+{"archetypeKey": "ziwei.star.qisha", "ok": false, "err": "HTTP Error 503: Service Unavailable"}
+{"archetypeKey": "ziwei.star.taiyang", "ok": false, "err": "HTTP Error 503: Service Unavailable"}
+{"archetypeKey": "ziwei.star.taiyin", "ok": false, "err": "HTTP Error 503: Service Unavailable"}
+{"archetypeKey": "ziwei.star.tanlang", "ok": false, "err": "HTTP Error 503: Service Unavailable"}
+{"archetypeKey": "ziwei.star.tianfu", "ok": false, "err": "HTTP Error 503: Service Unavailable"}
+{"archetypeKey": "ziwei.star.tianji", "ok": false, "err": "HTTP Error 503: Service Unavailable"}
+{"archetypeKey": "ziwei.star.tianliang", "ok": false, "err": "HTTP Error 503: Service Unavailable"}
+{"archetypeKey": "ziwei.star.tiantong", "ok": false, "err": "HTTP Error 503: Service Unavailable"}
+{"archetypeKey": "ziwei.star.tianxiang", "ok": false, "err": "HTTP Error 503: Service Unavailable"}
+{"archetypeKey": "ziwei.star.wuqu", "ok": false, "err": "HTTP Error 503: Service Unavailable"}
+{"archetypeKey": "ziwei.star.ziwei", "ok": false, "err": "HTTP Error 503: Service Unavailable"}
+{"archetypeKey": "daliuren.tianjiang.guiren", "ok": true, "semanticLibrary": "贵人主爵禄与助力，旺相时往往得尊长扶持，空陷则易生虚望，占事遇之多呈转机之象。"}
+{"archetypeKey": "daliuren.tianjiang.liuhe", "ok": true, "semanticLibrary": "六合属木，主和合与文书交易，旺相时往往利于人际协调与合约达成，落空则可能预示约定虚浮或合作难以落实。"}
+{"archetypeKey": "daliuren.tianjiang.qinglong", "ok": true, "semanticLibrary": "青龙属木，主官贵财喜与喜庆之事，旺相时往往倾向于福泽临门，若处囚死状态则可能呈现虚花之象。"}
+{"archetypeKey": "daliuren.tianjiang.taiyin", "ok": true, "semanticLibrary": "太阴属金主阴私与策划，旺相时倾向于展现隐秀特质并获阴人助力，落空则可能暗示谋事虚浮或健康呈虚寒趋势。"}
+{"archetypeKey": "daliuren.tianjiang.tengshe", "ok": true, "semanticLibrary": "螣蛇属火，往往象征虚惊、缠绕与阴私之事，临身时倾向于引发疑惧多梦，旺相则显灵变，衰弱则易生妖妄。"}
+{"archetypeKey": "daliuren.tianjiang.xuanwu", "ok": true, "semanticLibrary": "玄武属水，常关联隐秘或人际纠葛，旺相时倾向于展现智巧与谋略，衰弱时则可能暗示沟通中的模糊或误解。"}
+{"archetypeKey": "daliuren.tianjiang.zhuque", "ok": true, "semanticLibrary": "朱雀属火，主文书音信与口舌讼非，旺相时倾向于文章显达，衰弱时往往伴随口舌纷争，需结合旺衰判断事态走向。"}
+{"archetypeKey": "fengshui.liqi.bagua", "ok": true, "semanticLibrary": "八卦方位将八方与人事物类相配，如坎北主陷、离南主明，往往作为理气流布的纲领，倾向于从空间属性解读环境对人事的潜在影响。"}
+{"archetypeKey": "fengshui.liqi.caiwei", "ok": true, "semanticLibrary": "财位指入门对角或飞星方位，宜保持明亮洁净且稳固，往往有助于聚集气场，若受压迫或污秽则可能削弱财运趋势。"}
+{"archetypeKey": "fengshui.liqi.wuxing", "ok": true, "semanticLibrary": "五行生克是理气推演的基础，生助与克制关系往往用于分析气场平衡，倾向于通过布局与材质调整来优化整体环境氛围。"}
+{"archetypeKey": "fengshui.qiju.chuang", "ok": true, "semanticLibrary": "床作为休憩核心，宜靠实墙以趋安稳，避梁压与镜门冲射，其布局往往影响身心休养状态。"}
+{"archetypeKey": "fengshui.qiju.men", "ok": true, "semanticLibrary": "门作为纳气枢纽，其方位与布局往往影响气场流通，宜避直冲与对骂格局，以维持整体环境的和谐稳定。"}
+{"archetypeKey": "fengshui.qiju.zhen", "ok": true, "semanticLibrary": "镇煞指以器物化解形煞冲射，倾向于因形制宜、先避后化，往往通过调气而非对抗来改善气场，过度干预可能反致扰动。"}
+{"archetypeKey": "fengshui.xingfa.long", "ok": true, "semanticLibrary": "来龙指山脉起伏绵延入首之势，其生旺开帐往往象征地气深厚，若孤散则气薄，是解读峦头格局的关键依据。"}
+{"archetypeKey": "fengshui.xingfa.mingtang", "ok": true, "semanticLibrary": "明堂指穴前开阔聚气之地，宜宽广平正，往往象征心胸开阔与事业展布，若逼窄则可能趋于局促。"}
+{"archetypeKey": "fengshui.xingfa.sha", "ok": true, "semanticLibrary": "砂指穴场四周的山丘或建筑，环抱有情时倾向于护卫气场，若呈反背尖射之态则往往暗示环境压力较大。"}
+{"archetypeKey": "fengshui.xingfa.shui", "ok": true, "semanticLibrary": "风水水法主财禄气运，来水宜屈曲环抱以聚气，去水忌直泻反弓，往往影响纳气格局与运势流转。"}
+{"archetypeKey": "fengshui.xingfa.xiang", "ok": true, "semanticLibrary": "朝向作为理气枢纽，倾向于吸纳生旺之气以优化气场，若纳衰死之气则往往呈现运势低迷之象。"}
+{"archetypeKey": "fengshui.xingfa.xue", "ok": true, "semanticLibrary": "穴指龙砂水交会聚气之处，往往倾向于藏风聚气，窝钳乳突得宜时可能呈现安稳态势，点穴偏差则气散。"}
+{"archetypeKey": "qimen.men.du", "ok": true, "semanticLibrary": "杜门属木居东南，为平门偏凶，主闭塞隐藏与滞留，利于潜藏防守及研发，忌出行求见，旺时密谋易成，衰时则易感阻滞。"}
+{"archetypeKey": "qimen.men.jing", "ok": true, "semanticLibrary": "景门属火主文书与计划，旺相时利于信息传递与展示，衰弱时则易显虚浮不实，宜关注表达与规划层面的趋势。"}
+{"archetypeKey": "qimen.men.jingx", "ok": true, "semanticLibrary": "惊门属金居西，往往象征惊恐、口舌或词讼等波动，倾向于引发心理不安或人际摩擦，但衰时多属虚惊，宜以静制动。"}
+{"archetypeKey": "qimen.men.kai", "ok": true, "semanticLibrary": "开门属金居西北，象征开创与通达，往往利于事业谋为及公开事务，旺相时倾向于百事亨通，衰弱时则可能流于虚张声势。"}
+{"archetypeKey": "qimen.men.shang", "ok": true, "semanticLibrary": "伤门属木居东，往往象征竞争与损耗，倾向于引发争执或意外，解读时多关注变动趋势及潜在压力。"}
+{"archetypeKey": "qimen.men.sheng", "ok": true, "semanticLibrary": "生门属土居东北，主生发与财利，旺相时往往利于求财置产，失陷则可能呈现虚花不实之象。"}
+{"archetypeKey": "qimen.men.si", "ok": true, "semanticLibrary": "死门属土，往往象征事物进入停滞或终结阶段，倾向于旧事了结与沉淀，在求财或出行时可能面临困顿，宜静守不宜妄动。"}
+{"archetypeKey": "qimen.men.xiu", "ok": true, "semanticLibrary": "休门属水居北，主安养退守与人事和合，旺相时利于疗养缓和，失陷则易显虚浮，宜静不宜急进。"}
+{"archetypeKey": "qimen.shen.bashen", "ok": true, "semanticLibrary": "八神随遁盘游走，揭示隐微情态，如值符显尊贵、六合主和合，往往倾向于辅助判断事态发展的潜在趋势与吉凶倾向。"}
+{"archetypeKey": "qimen.star.jiuxing", "ok": true, "semanticLibrary": "九星代表天时气运，如天辅主文雅、天英显燥烈，其吉凶往往取决于与门盘的相生关系，倾向于反映事物发展的宏观趋势。"}
+{"archetypeKey": "qimen.yiji.liuyi", "ok": true, "semanticLibrary": "六仪作为奇门阵体骨干，戊主财库而己藏私欲，庚辛多显阻隔与纠偏，壬癸则倾向流动与隐匿，整体呈现复杂态势。"}
+{"archetypeKey": "qimen.yiji.sanqi", "ok": true, "semanticLibrary": "三奇指乙丙丁三干，往往象征文书、光明与敏捷，得使时倾向于谋事顺利，利于展现柔进与迅速之象。"}
+{"archetypeKey": "qizheng.grid.gong", "ok": true, "semanticLibrary": "十二宫划分人事领域，星曜落宫往往倾向于对应特定生活面向，解读时可能需结合星性研判该领域的发展态势。"}
+{"archetypeKey": "qizheng.yu.jidu", "ok": true, "semanticLibrary": "计都作为月南交点，往往象征旧业消散与孤独倾向，旺相时利于深层领悟，失守则易呈现耗散无依之象。"}
+{"archetypeKey": "qizheng.yu.luohou", "ok": true, "semanticLibrary": "罗睺作为月北交点，往往象征偏激与突发际遇，旺相时倾向于展现奇才特质，失守则可能引发生活轨迹的剧烈波动。"}
+{"archetypeKey": "qizheng.yu.yuebi", "ok": true, "semanticLibrary": "月孛主偏情与隐私，旺相时倾向于情感波动或暗昧之事，往往提示需留意人际边界与内心杂念。"}
+{"archetypeKey": "qizheng.yu.ziqi", "ok": true, "semanticLibrary": "紫气主清贵灵慧与福德，旺时倾向于心境澄明得助，若显虚浮则可能暗示精神内耗或运势不实。"}
+{"archetypeKey": "qizheng.zheng.huoxing", "ok": true, "semanticLibrary": "火星象征礼义与行动力，得用者往往果敢进取，失制时则倾向于情绪急躁或人际冲突，需结合整体格局判断其能量走向。"}
+{"archetypeKey": "qizheng.zheng.muxing", "ok": true, "semanticLibrary": "木星主仁寿与福德，庙旺时倾向于展现慈和通达之象，若留逆则可能呈现虚浮之态，宜从生养与文运角度解读。"}
+{"archetypeKey": "qizheng.zheng.ri", "ok": true, "semanticLibrary": "太阳象征尊贵与声名，庙旺时往往利于官禄与名声，失躔则可能晦暗，是解读命盘格局的关键枢纽。"}
+{"archetypeKey": "qizheng.zheng.shuixing", "ok": true, "semanticLibrary": "水星主智谋与巧艺，得地时倾向于展现聪敏善变之象，失度则往往呈现浮滑无根之态，宜从思维稳定性角度解读。"}
+{"archetypeKey": "qizheng.zheng.tuxing", "ok": true, "semanticLibrary": "土星象征信义与田宅，得位时往往呈现稳健趋势，失陷则可能遭遇迟滞阻隔，宜从厚重与耐心角度解读。"}
+{"archetypeKey": "qizheng.zheng.yue", "ok": true, "semanticLibrary": "月星象征母妻与财库，清朗时往往情绪安稳且利于积蓄，浑浊时则可能引发内心波动或财务压力。"}
+{"archetypeKey": "taiyi.ju.dingju", "ok": true, "semanticLibrary": "定局是太乙推演的结构基础，通过确立阴阳遁局来规范神将分布，往往为后续趋势研判提供稳定的逻辑框架。"}
+{"archetypeKey": "taiyi.ju.yinyang", "ok": true, "semanticLibrary": "阴阳遁依节气流转区分寒暑升降，阳遁顺行显扬，阴遁逆行潜藏，往往提示气机在显隐与进退间的动态平衡趋势。"}
+{"archetypeKey": "taiyi.li.bamen", "ok": true, "semanticLibrary": "太乙八门随局飞布以定人事出入之宜，其中开休生三吉门往往倾向于呈现顺遂之象，其余各门则可能显现出不同的宜忌趋势。"}
+{"archetypeKey": "taiyi.li.sancai", "ok": true, "semanticLibrary": "三才涵盖天时地利人事，太乙奇门六壬各有所主，合观时往往能呈现更完整的局势脉络，倾向于提供多维度的参考视角。"}
+{"archetypeKey": "taiyi.shen.jishen", "ok": true, "semanticLibrary": "计神主谋略与筹划，加临往往利于周密算计与策略布局，失位则可能因谋事乖张而致计划受阻。"}
+{"archetypeKey": "taiyi.shen.shiji", "ok": true, "semanticLibrary": "始击主兵革变动，加临往往预示事态突发或冲击，倾向于应机而动，安静则潜藏，多体现动态趋势。"}
+{"archetypeKey": "taiyi.shen.taiyi", "ok": true, "semanticLibrary": "太乙象征中枢枢纽，统摄全局运势，往往体现核心决策力与整体趋势的稳定性，倾向于主导事态发展的宏观走向。"}
+{"archetypeKey": "taiyi.shen.wenchang", "ok": true, "semanticLibrary": "文昌主文运谋议，加临往往利于文书显达与辞令沟通，受制则可能面临言路受阻或计划推进迟滞之象。"}
+{"archetypeKey": "taiyi.shen.wujiang", "ok": true, "semanticLibrary": "五将指太乙等星曜组合，其加临方位往往揭示事态主客格局，倾向于通过动静文伐属性研判局势走向与胜负倾向。"}
+{"archetypeKey": "taiyi.suan.ke", "ok": true, "semanticLibrary": "客算象征外部动态与彼方势力，往往揭示外在环境的变化趋势，需结合主算综合研判主客双方的互动格局与胜负倾向。"}
+{"archetypeKey": "taiyi.suan.zhu", "ok": true, "semanticLibrary": "主算数由太乙局推演，倾向于反映内在静态与自我状态，其奇偶阴阳往往用于界定动静属性及主客关系，从而辅助判断事态的远近与内外倾向。"}
+{"archetypeKey": "taiyi.xian.duke", "ok": true, "semanticLibrary": "太乙局中杜塞指主客二目皆塞无门可出，往往象征闭塞不通与谋为受阻，事宜守不宜攻，须待时可解。"}
+{"archetypeKey": "tarot.major.emperor", "ok": true, "semanticLibrary": "皇帝牌象征秩序与权威，正位倾向于建立稳固结构，逆位则可能显现掌控力失衡或决策专断，宜从框架稳定性视角解读。"}
+{"archetypeKey": "tarot.major.empress", "ok": true, "semanticLibrary": "皇后牌象征丰饶与创造力，正位倾向于关系滋润与收获，逆位则可能暗示停滞或过度纵容，解读时宜关注内在滋养与外在表达的平衡。"}
+{"archetypeKey": "tarot.major.fool", "ok": true, "semanticLibrary": "愚人牌象征纯真与未知的启程，正位倾向于无畏的新开始，逆位则可能暗示鲁莽或漂泊，解读时宜关注其自由与跃险的特质。"}
+{"archetypeKey": "tarot.major.lovers", "ok": true, "semanticLibrary": "恋人牌象征亲密关系与价值抉择，正位倾向于两情相悦，逆位往往提示关系失衡或逃避决定，需关注内心真实倾向。"}
+{"archetypeKey": "tarot.major.magician", "ok": true, "semanticLibrary": "魔术师象征意志显化与资源统合，正位倾向于目标达成，逆位可能暗示才能错用或投机倾向，解读时侧重主观能动性。"}
+{"archetypeKey": "tarot.major.priestess", "ok": true, "semanticLibrary": "女祭司象征直觉与潜识，正位倾向于静观内明，逆位可能暗示压抑或误信表象，往往提示需关注未说出口的真相。"}
+{"archetypeKey": "tarot.major.star", "ok": true, "semanticLibrary": "星星牌象征希望与疗愈，正位倾向于在困境后重获宁静信心，逆位则可能反映短暂失望或方向迷失，整体呈现复苏趋势。"}
+{"archetypeKey": "tarot.major.strength", "ok": true, "semanticLibrary": "力量牌象征柔韧与自制，正位倾向于以温和方式掌控局面，逆位则可能显现情绪波动或信心不足，解读时侧重内在能量的平衡。"}
+{"archetypeKey": "tarot.major.wheel", "ok": true, "semanticLibrary": "命运之轮象征周期流转与机遇更迭，正位倾向于时来运转，逆位往往提示局势下滑或失控，体现盛衰无常的趋势。"}
+{"archetypeKey": "tarot.major.world", "ok": true, "semanticLibrary": "世界牌象征旅程的圆满与通达，正位倾向于阶段性的功成与境界圆熟，逆位则可能暗示进程滞留或尚未完全达成。"}
+{"archetypeKey": "tarot.suit.cups", "ok": true, "semanticLibrary": "圣杯组属水，倾向于映射情感流动与内在直觉，往往通过盈满或亏缺的状态，反映关系中的满足感或潜在失落。"}
+{"archetypeKey": "tarot.suit.wands", "ok": true, "semanticLibrary": "权杖属火，象征行动力与事业动能，能量旺盛时往往倾向于积极开拓，若显弱势则可能呈现动力不足或热情减退的趋势。"}
+{"archetypeKey": "vedic.angsha.lagna", "ok": true, "semanticLibrary": "上升点作为命盘之轴，往往奠定个体气质基调，其星座属性倾向于统摄全盘格局，是解读整体生命趋势的核心参照。"}
+{"archetypeKey": "vedic.angsha.rashi", "ok": true, "semanticLibrary": "黄道十二宫界定星曜运行场域，各宫自性赋予星体特定倾向，星落宫位往往呈现相应特质，解读时宜关注其动态影响。"}
+{"archetypeKey": "vedic.graha.budha", "ok": true, "semanticLibrary": "水星主智慧与商业，吉时倾向于思维敏捷利交易，受克则可能引发口舌或思维紊乱，需结合星伴判断。"}
+{"archetypeKey": "vedic.graha.chandra", "ok": true, "semanticLibrary": "月亮作为心意之星，倾向于反映情绪稳定性与公众形象，吉象往往心境安和，受克则可能情绪浮动，需关注内心滋养。"}
+{"archetypeKey": "vedic.graha.guru", "ok": true, "semanticLibrary": "木星象征智慧与福德，吉位时倾向于带来名望与子嗣，受克时可能显现虚妄或福泽减弱，是衡量增益趋势的核心指标。"}
+{"archetypeKey": "vedic.graha.ketu", "ok": true, "semanticLibrary": "计都象征旧业与灵性解脱，倾向于通过孤立或神秘体验转化过往，往往在悟性提升与情感离散间呈现张力。"}
+{"archetypeKey": "vedic.graha.mangala", "ok": true, "semanticLibrary": "火星象征行动力与竞争，吉时倾向于果敢执行，受克则可能引发冲突或兄弟失和，需结合星位判断其能量走向。"}
+{"archetypeKey": "vedic.graha.rahu", "ok": true, "semanticLibrary": "罗睺象征突破常规的野心与异域机遇，吉时往往带来出奇制胜的声名，凶时则倾向于引发迷乱或突发变故。"}
+{"archetypeKey": "vedic.graha.shani", "ok": true, "semanticLibrary": "土星象征迟滞与业力磨炼，吉时倾向坚忍持重，受克则可能阻滞贫病，往往体现为缓慢而扎实的成长过程。"}
+{"archetypeKey": "vedic.graha.shukra", "ok": true, "semanticLibrary": "金星主掌情感与艺术，吉相时倾向于人缘和谐与才艺彰显，受克则可能引发情感波动或财物耗散，宜从生活情趣角度解读。"}
+{"archetypeKey": "vedic.graha.surya", "ok": true, "semanticLibrary": "太阳象征自我与权威，吉相倾向于声名显达与领导力，受克则可能体弱或父缘较薄，往往反映火性特质与自我意识的强弱。"}
+{"archetypeKey": "vedic.time.dasha", "ok": true, "semanticLibrary": "达沙体系依月宿定主运，各星期长短固定，运星吉凶往往统摄该时段整体趋势，为吠陀择时核心。"}
+{"archetypeKey": "western.aspect.conjunction", "ok": true, "semanticLibrary": "合相象征能量高度聚焦与彼此强化，往往倾向于放大特定特质，可能带来执拗倾向，需关注其正面聚焦力与负面固执性的平衡。"}
+{"archetypeKey": "western.aspect.opposition", "ok": true, "semanticLibrary": "冲相呈现对立张力，倾向于激发内在投射与互补需求，往往在动态平衡中寻求自我整合与成长。"}
+{"archetypeKey": "western.aspect.sextile", "ok": true, "semanticLibrary": "六合相位倾向于提供温和的助益与顺势机会，往往利于发挥潜能，但也可能因过于轻松而引发懈怠倾向。"}
+{"archetypeKey": "western.aspect.square", "ok": true, "semanticLibrary": "刑相代表内在张力与成长课题，往往通过摩擦激发动力，倾向于在化解冲突中实现自我突破。"}
+{"archetypeKey": "western.aspect.trine", "ok": true, "semanticLibrary": "三合相位倾向于展现天赋与自然的和谐，往往带来流畅的运势，但也可能因过度舒适而略显懒散。"}
+{"archetypeKey": "western.axis.asc", "ok": true, "semanticLibrary": "上升点象征个体外在人格面具与第一印象，往往倾向于展现社会适应策略，可能反映自我呈现与内在真实之间的张力。"}
+{"archetypeKey": "western.axis.east_point", "ok": true, "semanticLibrary": "东点作为自我表达与行动风格的显性接口，往往倾向于快速启动与直接表达，可能呈现出较为急躁的行动节奏。"}
+{"archetypeKey": "western.axis.mc", "ok": true, "semanticLibrary": "天顶象征社会成就与公众形象，往往反映事业发展的趋势方向，倾向于体现个人在公共领域的地位与影响力。"}
+{"archetypeKey": "western.axis.vertex", "ok": true, "semanticLibrary": "宿命点标示出生命中被强烈推动的关键领域，往往呈现出显著的被动感与缘分色彩，倾向于在特定阶段引发深刻的命运体验。"}
+{"archetypeKey": "western.body.chiron", "ok": true, "semanticLibrary": "凯龙星标记深层旧伤与情感缺口，倾向于通过共情与接纳实现自我疗愈，往往将过往痛苦转化为内在智慧与成长契机。"}
+{"archetypeKey": "western.body.jupiter", "ok": true, "semanticLibrary": "木星象征扩张与信念，往往带来机遇与意义感，但过度倾向可能导致盲目乐观或资源透支。"}
+{"archetypeKey": "western.body.mars", "ok": true, "semanticLibrary": "火星象征行动力与竞争欲望，其能量状态往往反映个体的斗志强弱，可能影响决策时的冲动倾向或冲突处理方式。"}
+{"archetypeKey": "western.body.mean_node", "ok": true, "semanticLibrary": "北交点象征灵魂进化的潜在方向，倾向于指引个体突破舒适区，往往在适应新领域时呈现成长机遇。"}
+{"archetypeKey": "western.body.mercury", "ok": true, "semanticLibrary": "水星倾向于反映思维与沟通模式，往往体现信息处理效率，可能影响学习适应力及表达清晰度。"}
+{"archetypeKey": "western.body.moon", "ok": true, "semanticLibrary": "月亮象征情绪与潜意识，其状态往往反映内在安全感及原生家庭印记，倾向于通过直觉影响个体的情绪稳定性。"}
+{"archetypeKey": "western.body.neptune", "ok": true, "semanticLibrary": "海王星在身体层面倾向于暗示感知模糊或界限消融，往往指向精神性消耗或易受外界情绪影响的体质倾向。"}
+{"archetypeKey": "western.body.pluto", "ok": true, "semanticLibrary": "冥王星象征深层转化与执念，往往指向权力重构或心理重生，倾向于在极端压力下实现内在蜕变。"}
+{"archetypeKey": "western.body.saturn", "ok": true, "semanticLibrary": "土星象征结构、责任与限制，往往指向长期沉淀的功课，倾向于在压抑中构建稳固根基，体现严谨自律的特质。"}
+{"archetypeKey": "western.body.sun", "ok": true, "semanticLibrary": "太阳象征自我与生命力的核心，其状态往往反映意志强弱及身份认同，倾向于体现个体在生活中的主导性与存在感。"}
+{"archetypeKey": "western.body.true_node", "ok": true, "semanticLibrary": "基于真黄经计算的北交点，往往指向更精确的生命进化方向，倾向于引导个体摆脱盲从，在成长路径上实现更清晰的自我定位。"}
+{"archetypeKey": "western.body.uranus", "ok": true, "semanticLibrary": "天王星象征突变与独创能量，倾向于打破常规束缚，往往预示思维模式的革新与对自由独立的强烈追求。"}
+{"archetypeKey": "western.body.venus", "ok": true, "semanticLibrary": "金星象征爱与审美价值的流向，其状态往往倾向于反映个体在关系中的吸引力及自我认同，可能暗示情感互动中的溺爱或价值交换模式。"}
+{"archetypeKey": "western.house.1", "ok": true, "semanticLibrary": "第一宫聚焦自我呈现与外在气质，往往反映个体在人生开局阶段的自我中心倾向及整体形象基调。"}
+{"archetypeKey": "western.house.11", "ok": true, "semanticLibrary": "第十一宫倾向于反映群体互动与未来愿景，往往暗示人脉资源的拓展或理想化倾向，解读时可能需关注从众心理对实际目标达成的潜在影响。"}
+{"archetypeKey": "western.house.12", "ok": true, "semanticLibrary": "第十二宫倾向于揭示潜意识深处的隐秘能量，往往指向独处疗愈或精神消融，可能暗示逃避倾向或混沌状态。"}
+{"archetypeKey": "western.house.2", "ok": true, "semanticLibrary": "第二宫聚焦个人资源与价值感，星体配置往往反映务实倾向，可能暗示对物质安全的重视或自我价值的物化倾向。"}
+{"archetypeKey": "western.house.3", "ok": true, "semanticLibrary": "第三宫倾向于反映沟通模式与学习状态，往往暗示近邻关系或浅层社交，可能呈现出思维活跃或信息交换频繁的趋势。"}
+{"archetypeKey": "western.house.4", "ok": true, "semanticLibrary": "第四宫象征家庭根基与内在安全感，星体落位往往倾向于反映居住环境的稳定性及家族支持系统的强弱。"}
+{"archetypeKey": "western.house.6", "ok": true, "semanticLibrary": "第六宫聚焦工作与健康秩序，星体配置倾向于反映日常条理与勤劳程度，往往通过细节管理体现生活状态，可能暗示对环境的挑剔或操劳倾向。"}
+{"archetypeKey": "western.house.7", "ok": true, "semanticLibrary": "第七宫聚焦伴侣与公开合作，其能量往往揭示关系中的契约感与依赖倾向，解读时倾向于关注互动中的对立与平衡。"}
+{"archetypeKey": "western.house.8", "ok": true, "semanticLibrary": "第八宫倾向于揭示深层资源的转化与共享机制，往往映射出个体在隐秘领域的执念，可能呈现出深度心理层面的动态变化。"}
+{"archetypeKey": "western.house.9", "ok": true, "semanticLibrary": "第九宫倾向于反映个体的信念体系与远行求学运势，往往暗示对高阶知识的追求，但也可能伴随理想化倾向或好高骛远的特质。"}
+{"archetypeKey": "western.sign.aquarius", "ok": true, "semanticLibrary": "水瓶座作为风象固定星座，往往倾向于独立革新与群体博爱，其能量特质可能带来疏离感，解读时宜关注其叛逆背后的独特视角。"}
+{"archetypeKey": "western.sign.cancer", "ok": true, "semanticLibrary": "巨蟹座作为水象基本星座，往往倾向于细腻的情绪表达与家庭守护，其征象多指向敏感特质及内在安全感的需求。"}
+{"archetypeKey": "western.sign.capricorn", "ok": true, "semanticLibrary": "摩羯座象征结构、责任与成就，倾向于务实坚韧，往往在追求功利目标时伴随压抑感，需关注其内在张力。"}
+{"archetypeKey": "western.sign.gemini", "ok": true, "semanticLibrary": "双子座倾向于展现沟通与好奇的特质，思维往往灵活多变，但也可能因兴趣广泛而显得专注力不足。"}
+{"archetypeKey": "western.sign.leo", "ok": true, "semanticLibrary": "狮子座倾向于展现自信与领导特质，往往在人际互动中追求表现与面子，其能量波动可能影响决策的果断性与人际关系的和谐度。"}
+{"archetypeKey": "western.sign.libra", "ok": true, "semanticLibrary": "天秤座象征追求和谐与审美，倾向于在关系中寻求平衡，可能因过度在意他人看法而显得犹豫或倾向于妥协。"}
+{"archetypeKey": "western.sign.pisces", "ok": true, "semanticLibrary": "双鱼座作为水象变动星座，倾向于展现强烈的共情与想象特质，往往在情绪感知上较为柔软，可能因边界模糊而呈现出逃避现实的倾向。"}
+{"archetypeKey": "western.sign.sagittarius", "ok": true, "semanticLibrary": "射手座象征精神扩张与信念追求，倾向于乐观开阔，但往往因思维跳跃而显得不够落地，需关注理想与现实间的平衡。"}
+{"archetypeKey": "western.sign.scorpio", "ok": true, "semanticLibrary": "天蝎座作为水象固定星座，倾向于展现深刻的洞察力与专注力，往往在深度转化中寻求掌控，但也可能因多疑而显得内敛。"}
+{"archetypeKey": "western.sign.taurus", "ok": true, "semanticLibrary": "金牛座象征土象固定特质，倾向于稳健积累与感官满足，往往表现出务实恋旧，但也可能因固执而缺乏变通。"}
+{"archetypeKey": "western.sign.virgo", "ok": true, "semanticLibrary": "处女座象征土象变动特质，倾向于以务实细致的视角审视生活，往往在追求完美与秩序中展现靠谱的服务精神，但也可能因过度挑剔而陷入焦虑。"}
+{"archetypeKey": "zeri.jianchu.bi", "ok": true, "semanticLibrary": "闭日象征能量收敛与积蓄，倾向于休整与内部建设，往往不宜对外扩张或开启新事务，利于稳固根基。"}
+{"archetypeKey": "zeri.jianchu.cheng", "ok": true, "semanticLibrary": "成日象征事物趋于圆满与和合，往往利于嫁娶、开市及入学等事宜，呈现出诸事顺遂、易于达成目标的积极趋势。"}
+{"archetypeKey": "zeri.jianchu.chu", "ok": true, "semanticLibrary": "除日象征吐故纳新，往往利于扫除旧弊、解除困局或调理身心，但求官娶妇等事宜则可能进展受阻，宜顺势而为。"}
+{"archetypeKey": "zeri.jianchu.ding", "ok": true, "semanticLibrary": "定日主静守，倾向于利于进人口、嫁娶及纳财等安定事务，往往不宜官讼、出行或医疗，解读视角宜固守现状。"}
+{"archetypeKey": "zeri.jianchu.jian", "ok": true, "semanticLibrary": "建为十二神之首，象征气运初生与开创，往往利于启动新计划或确立目标，但倾向于不宜变动旧局或进行拆除类事务。"}
+{"archetypeKey": "zeri.jianchu.kai", "ok": true, "semanticLibrary": "开日象征开启与启动，往往利于开业、出行及求医等开创性事务，但倾向于不宜安葬或伐木，解读时宜侧重其启新之意。"}
+{"archetypeKey": "zeri.jianchu.man", "ok": true, "semanticLibrary": "满日象征物盛丰盈，往往利于嫁娶开市等成就之事，但动土葬埋等事宜则可能因气机过实而受阻。"}
+{"archetypeKey": "zeri.jianchu.ping", "ok": true, "semanticLibrary": "平日象征运势平稳，宜守常安分，无显著吉凶波动，倾向于维持现状，适合处理日常事务。"}
+{"archetypeKey": "zeri.jianchu.po", "ok": true, "semanticLibrary": "破日象征冲破与损耗，往往预示变动或计划受阻，倾向于在拆除旧物或清理事务时展现其能量，需以调整心态应对潜在的不稳定趋势。"}
+{"archetypeKey": "zeri.jianchu.shou", "ok": true, "semanticLibrary": "收日主收敛纳财，倾向于利于娶妇入学等进取之事，往往不宜放债开市，解读视角宜进不宜出。"}
+{"archetypeKey": "zeri.jianchu.wei", "ok": true, "semanticLibrary": "危日象征高峻与不安，往往提示环境存在潜在风险，倾向于采取安守策略，可能需对行动保持谨慎。"}
+{"archetypeKey": "zeri.jianchu.zhi", "ok": true, "semanticLibrary": "执日主执行与修造，宜把持事务，往往利于捕捉与嫁娶，但倾向于不宜移徙或出行，解读时侧重稳固与掌控。"}
+{"archetypeKey": "ziwei.aux.dijie", "ok": true, "semanticLibrary": "地劫星往往象征资源损耗与突发波折，庙旺时倾向于激发应变韧性，陷地则可能加剧意外破财风险。"}
+{"archetypeKey": "ziwei.aux.dikong", "ok": true, "semanticLibrary": "地空星主虚耗与飘忽，庙旺时倾向于激发创意与想象力，陷地时则可能表现为计划落空或精神虚无，解读需结合整体格局。"}
+{"archetypeKey": "ziwei.aux.enguang", "ok": true, "semanticLibrary": "恩光星倾向于带来名声与口碑，往往因德行或表现获得外界称许，但也可能伴随对虚名的过度追求。"}
+{"archetypeKey": "ziwei.aux.fenggao", "ok": true, "semanticLibrary": "封诰星倾向于象征努力获得认可与名位提升，往往预示在追求功利或成果时易得嘉奖，利于事业稳固。"}
+{"archetypeKey": "ziwei.aux.fengge", "ok": true, "semanticLibrary": "凤阁星倾向于展现个人对外在仪表与审美品味的追求，往往暗示注重形象修饰，可能带来外在形象的提升或虚荣倾向。"}
+{"archetypeKey": "ziwei.aux.guasu", "ok": true, "semanticLibrary": "寡宿星倾向于呈现清冷自持的特质，往往暗示情感表达较为疏离，解读时多指向内心独立与慢热倾向。"}
+{"archetypeKey": "ziwei.aux.guchen", "ok": true, "semanticLibrary": "孤辰星倾向于强化独立清醒的特质，可能表现为性格疏离自在，往往暗示六亲缘分较薄，宜从自我空间角度解读。"}
+{"archetypeKey": "ziwei.aux.hongluan", "ok": true, "semanticLibrary": "红鸾星动往往预示情感升温或喜庆契机，倾向于促成姻缘，但也可能伴随冲动选择，需理性看待桃花机遇。"}
+{"archetypeKey": "ziwei.aux.huagai", "ok": true, "semanticLibrary": "华盖星倾向于赋予命主独特的艺术气质与玄学缘分，往往表现出孤高避世的倾向，可能更倾向于精神层面的超脱与内省。"}
+{"archetypeKey": "ziwei.aux.huoxing", "ok": true, "semanticLibrary": "火星象征刚烈与突发，庙旺时倾向于展现果敢与爆发力，陷地时则可能因急躁而引发波动，宜以冷静视角审视其能量走向。"}
+{"archetypeKey": "ziwei.aux.lingxing", "ok": true, "semanticLibrary": "铃星象征深沉隐忍的暗火，庙旺时倾向于蓄势待发，陷地时则可能引发持久困扰，解读需关注其压抑后的爆发趋势。"}
+{"archetypeKey": "ziwei.aux.longchi", "ok": true, "semanticLibrary": "龙池星倾向于展现艺术天赋与高雅格调，往往带来小众声誉，可能使个人在技艺领域获得独特认可。"}
+{"archetypeKey": "ziwei.aux.lucun", "ok": true, "semanticLibrary": "禄存象征俸禄与积聚，倾向于财库丰盈且生活安稳，但往往因性格保守而吝于流动，解读时宜关注其守财特质。"}
+{"archetypeKey": "ziwei.aux.qingyang", "ok": true, "semanticLibrary": "擎羊象征刚烈冲劲，庙旺时倾向于展现果决勇武，陷地时则可能引发急躁争执，往往需留意人际摩擦。"}
+{"archetypeKey": "ziwei.aux.taifu", "ok": true, "semanticLibrary": "台辅星倾向于体现辅佐与补位的特质，往往暗示在团队中甘当配角，可能通过幕后支持或幕僚角色获得职位上的助力。"}
+{"archetypeKey": "ziwei.aux.tiancai", "ok": true, "semanticLibrary": "天才星倾向于展现某领域的过人禀赋与机智，往往利于专精发展，但也可能伴随偏才特质或自负倾向。"}
+{"archetypeKey": "ziwei.aux.tiangui", "ok": true, "semanticLibrary": "天贵星倾向于提升个人社会地位与信用，往往因言行端正而获得他人敬重，利于求名与稳定发展。"}
+{"archetypeKey": "ziwei.aux.tiankui", "ok": true, "semanticLibrary": "天魁星倾向于带来长辈或男性贵人的提携，利于功名显达，但往往伴随被动依赖的特质，需警惕恃宠而骄。"}
+{"archetypeKey": "ziwei.aux.tianma", "ok": true, "semanticLibrary": "天马星象征奔波与变动，往往预示远行或环境迁移，若与吉星同宫，倾向于在动态中获取机遇与财富。"}
+{"archetypeKey": "ziwei.aux.tianshou", "ok": true, "semanticLibrary": "天寿星倾向于赋予命局稳健与康宁的特质，往往预示生活节奏平缓且具备较强的耐久力，但也可能因过于保守而显得行事拖沓。"}
+{"archetypeKey": "ziwei.aux.tianxi", "ok": true, "semanticLibrary": "天喜星倾向于带来和乐喜庆的氛围，往往利于人际互动与情感交流，但也可能因玩乐分心而稍显散漫。"}
+{"archetypeKey": "ziwei.aux.tianxing", "ok": true, "semanticLibrary": "天刑星倾向于强化规则意识与自律精神，庙旺时往往体现为原则分明，陷地时则可能因过于较真而引发是非或官非纠纷。"}
+{"archetypeKey": "ziwei.aux.tianyao", "ok": true, "semanticLibrary": "天姚星倾向于展现风情与机智，庙旺时往往体现灵巧，陷地时则可能引发是非口舌，需结合整体格局客观解读。"}
+{"archetypeKey": "ziwei.aux.tianyue", "ok": true, "semanticLibrary": "天钺象征被动获得的荫庇与化解之力，往往在危机时刻倾向于出现女性贵人相助，虽能缓解困境但常伴随人情牵绊。"}
+{"archetypeKey": "ziwei.aux.tuoluo", "ok": true, "semanticLibrary": "陀罗星象征纠缠与拖延，庙旺时体现坚韧持久的耐性，陷地则易致事务反复，解读时宜关注其带来的时间延展效应。"}
+{"archetypeKey": "ziwei.aux.wenchang", "ok": true, "semanticLibrary": "文昌星倾向于赋予命主聪慧与文采，利于考试及文书事务，但往往伴随眼高手低的倾向，需结合格局判断功名成就。"}
+{"archetypeKey": "ziwei.aux.wenqu", "ok": true, "semanticLibrary": "文曲星主才艺与口才，倾向于展现巧思与表演天赋，但往往伴随心思浮滑或贪玩特质，需留意专注力分散。"}
+{"archetypeKey": "ziwei.aux.xianchi", "ok": true, "semanticLibrary": "咸池星主感性魅力与艺术才情，庙旺时往往展现独特风采，陷地时则可能因情感分心而略显浮躁。"}
+{"archetypeKey": "ziwei.aux.youbi", "ok": true, "semanticLibrary": "右弼星象征沉稳的幕后扶持力量，倾向于通过隐忍与周密计划提供内助，往往在暗中成全大局，体现辅助与协调的正面征象。"}
+{"archetypeKey": "ziwei.aux.zuofu", "ok": true, "semanticLibrary": "左辅星象征温和的助力与贵人扶持，倾向于在人际互动中获得外部支持，往往体现为依赖或附和的倾向，利于缓解压力。"}
+{"archetypeKey": "ziwei.palace.caibo", "ok": true, "semanticLibrary": "财帛宫倾向于揭示个人获取财富的途径与理财风格，往往反映其对金钱的态度及进财的潜在趋势。"}
+{"archetypeKey": "ziwei.palace.fude", "ok": true, "semanticLibrary": "福德宫倾向于反映内心福泽与精神享受，往往暗示晚年心境趋于安稳，但也可能因过度空想而偏离现实。"}
+{"archetypeKey": "ziwei.palace.fumu", "ok": true, "semanticLibrary": "父母宫倾向于反映长辈缘与文书机遇，星曜组合往往暗示获得庇荫或依赖倾向，需结合整体格局判断其正面助力或潜在压力。"}
+{"archetypeKey": "ziwei.palace.fuqi", "ok": true, "semanticLibrary": "夫妻宫倾向于反映伴侣性情与相处模式，星曜组合可能暗示姻缘早晚及互动中的挑剔倾向，往往需结合整体命局综合解读。"}
+{"archetypeKey": "ziwei.palace.guanlu", "ok": true, "semanticLibrary": "官禄宫主要映射事业与职位的潜在走向，其星曜组合往往倾向于揭示功名获取的难易程度及职场发展的整体趋势。"}
+{"archetypeKey": "ziwei.palace.jiaoyou", "ok": true, "semanticLibrary": "交友宫倾向于反映部属与泛泛之交的互动模式，往往暗示在人际圈子中可能因轻信而遭遇波折，需理性看待社交趋势。"}
+{"archetypeKey": "ziwei.palace.jie", "ok": true, "semanticLibrary": "疾厄宫倾向于反映主体质强弱与精力耗散趋势，往往提示养生倾向或健康焦虑，解读时宜关注潜在隐患而非具体病症。"}
+{"archetypeKey": "ziwei.palace.mingong", "ok": true, "semanticLibrary": "命宫统摄整体格局，反映个人根基与本性，往往倾向于固执于性，需结合其他宫位综合解读其人生走向。"}
+{"archetypeKey": "ziwei.palace.qianyi", "ok": true, "semanticLibrary": "迁移宫倾向于反映远行际遇与外部机遇，往往暗示漂泊倾向，可能呈现机遇与变动并存的趋势。"}
+{"archetypeKey": "ziwei.palace.tianzhai", "ok": true, "semanticLibrary": "田宅宫倾向于反映家宅安顿与房产运势，往往体现对居住环境的执念，可能预示家运的平稳或波动。"}
+{"archetypeKey": "ziwei.palace.xiongdi", "ok": true, "semanticLibrary": "兄弟宫揭示同辈关系与早年助力，星曜组合倾向于反映手足情谊的紧密或疏离，往往影响人际支持系统的稳定性。"}
+{"archetypeKey": "ziwei.palace.zinv", "ok": true, "semanticLibrary": "子女宫倾向于反映晚辈缘分及创意产出趋势，星曜组合可能暗示对后代的苛责倾向或创作灵感的波动，需结合整体格局客观解读。"}
+{"archetypeKey": "ziwei.sihua.huaji", "ok": true, "semanticLibrary": "化忌象征执念与阻滞，往往提示该领域易生纠结或亏欠感，倾向于引发深刻反思，宜保持谨慎以化解潜在阻碍。"}
+{"archetypeKey": "ziwei.sihua.huake", "ok": true, "semanticLibrary": "星曜化科倾向于提升名声与清贵气质，往往能缓和事态紧张感，但需注意可能伴随虚名或表面光鲜的倾向。"}
+{"archetypeKey": "ziwei.sihua.hualu", "ok": true, "semanticLibrary": "星曜化禄往往象征资源进益与事务顺遂，倾向于获得外部助力，但需留意因贪恋而导致的过度扩张倾向。"}
+{"archetypeKey": "ziwei.sihua.huaquan", "ok": true, "semanticLibrary": "星曜化权往往象征主导与掌控力的增强，倾向于在事务中占据主动，但也可能因过于专断而引发人际摩擦。"}
+{"archetypeKey": "ziwei.star.jumen", "ok": true, "semanticLibrary": "巨门星化气为暗，倾向于激发敏锐的洞察力与钻研精神，往往利于以口才或分析能力立业，但也可能伴随口舌是非与多疑倾向。"}
+{"archetypeKey": "ziwei.star.lianzhen", "ok": true, "semanticLibrary": "廉贞星化气为囚，往往赋予命主敏锐的才情与重情特质，但情绪易显纠结，人生轨迹倾向于在起伏波折中寻求突破。"}
+{"archetypeKey": "ziwei.star.pojun", "ok": true, "semanticLibrary": "破军星化气为耗，倾向于主导破旧立新的变革趋势，往往伴随资源消耗与局势动荡，解读时多关注其重建与突破的潜在可能。"}
+{"archetypeKey": "ziwei.star.qisha", "ok": true, "semanticLibrary": "七杀星象征果敢与开拓，倾向于在竞争中展现魄力，但往往伴随冲动与孤克，宜以稳健心态驾驭其肃杀之气。"}
+{"archetypeKey": "ziwei.star.taiyang", "ok": true, "semanticLibrary": "太阳星主光明与外显，庙旺时倾向于事业显达与责任担当，陷地时则往往伴随过度付出与辛劳，需关注精力分配。"}
+{"archetypeKey": "ziwei.star.taiyin", "ok": true, "semanticLibrary": "太阴主阴柔内敛与积蓄，庙旺时倾向于展现细腻内秀的特质，陷地则可能因多思而显得阴郁，往往需关注其情绪波动对运势的影响。"}
+{"archetypeKey": "ziwei.star.tanlang", "ok": true, "semanticLibrary": "贪狼星倾向于展现多才多艺与灵活交际的特质，往往在追求多元发展时伴随欲望波动，解读时宜关注其才艺发挥与人际互动的平衡。"}
+{"archetypeKey": "ziwei.star.tianfu", "ok": true, "semanticLibrary": "天府星象征财库与稳健，倾向于积累资源与守成，往往体现包容特质，但也可能因过于谨慎而显得保守。"}
+{"archetypeKey": "ziwei.star.tianji", "ok": true, "semanticLibrary": "天机星主谋略与变动，倾向于展现机敏善变的特质，往往在动态调整中寻求突破，但也可能伴随多虑倾向。"}
+{"archetypeKey": "ziwei.star.tianliang", "ok": true, "semanticLibrary": "天梁星化气为荫，倾向于在困境中提供庇护与化解之力，往往伴随操心劳碌或说教倾向，整体呈现逢凶化吉的缓和趋势。"}
+{"archetypeKey": "ziwei.star.tiantong", "ok": true, "semanticLibrary": "天同星化气为福，象征温和安逸与精神享受，倾向于随遇而安，往往在轻松环境中更易获得内心满足。"}
+{"archetypeKey": "ziwei.star.tianxiang", "ok": true, "semanticLibrary": "天相星化气为印，象征稳重诚信与辅佐之力，往往倾向于在稳定环境中通过辅助角色获得认可，行事风格偏保守。"}
+{"archetypeKey": "ziwei.star.wuqu", "ok": true, "semanticLibrary": "武曲星化气为财，象征刚毅果决与务实特质，倾向于在理财或技术领域展现执行力，但性格往往较为固执强硬。"}
+{"archetypeKey": "ziwei.star.ziwei", "ok": true, "semanticLibrary": "紫微星象征尊贵与统御力，倾向展现领导力与统筹格局，但往往伴随孤芳自赏的特质，需吉星辅佐以平衡独断倾向。"}

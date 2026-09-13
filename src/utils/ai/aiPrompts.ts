@@ -17,6 +17,45 @@ import {
 } from '@temposoul/core/prompt';
 import { formatPromptCurrentTime } from '../../lib/prompt-time';
 import { buildPromptGuidanceSections } from '../../lib/prompt-guidance';
+import {
+  buildArchetypeSection,
+  extractGanZhiKeys,
+  extractShenShaKeys,
+  extractTenGodKeys,
+} from '../../lib/ai/archetype-bridge';
+
+/**
+ * M3：八字盘面 → archetype_key → 词库 L1/L3 查表锚定段（确定性查表，零 LLM 生成）。
+ * 桥接层十神提取为 provisional 实现，T1 审计结论确认后在 archetype-bridge.ts 统一回填。
+ */
+function buildBaziArchetypeSection(chartResult: BaziChartResult | null): string {
+  if (!chartResult?.pillars || !chartResult.dayMaster) return '';
+  const pillarKeys = (['year', 'month', 'day', 'hour'] as const).map((k) => chartResult.pillars[k]);
+  const shenSha = chartResult.shensha;
+  const keys = [
+    ...extractGanZhiKeys(
+      [chartResult.dayMaster.gan],
+      pillarKeys.map((p) => p.zhi),
+    ),
+    ...extractTenGodKeys(
+      chartResult.dayMaster.gan,
+      pillarKeys.map((p) => p.gan),
+    ),
+    ...extractShenShaKeys(
+      shenSha
+        ? [...shenSha.year, ...shenSha.month, ...shenSha.day, ...shenSha.hour, ...(shenSha.global ?? [])]
+        : [],
+    ),
+  ];
+  return buildArchetypeSection(keys, 8);
+}
+
+/** 本地 buildPromptSection 无条件拼标题，锚定段空时须整段省略。 */
+function anchorSection(chartResult: BaziChartResult | null): string {
+  const anchor = buildBaziArchetypeSection(chartResult);
+  return anchor ? `【原型法理锚定】\n${anchor}` : '';
+}
+
 
 export interface AIPromptOption {
   id: string;
@@ -154,6 +193,7 @@ export function buildPromptFromConfig(
         buildPromptGuidanceSections('bazi'),
         buildPromptSection('当前时间', formatPromptCurrentTime()),
         buildPromptSection('排盘信息', [chartData, enhancedSection].filter(Boolean).join('\n')),
+        anchorSection(chartResult),
         hasFullFortuneOutput
           ? buildPromptSection('分析对象', buildBaziFullAnalysisObjectSection())
           : '',
@@ -182,6 +222,7 @@ export function buildPromptFromConfig(
       buildPromptGuidanceSections('bazi'),
       buildPromptSection('当前时间', formatPromptCurrentTime()),
       buildPromptSection('排盘信息', chartData),
+      anchorSection(chartResult),
       hasFullFortuneOutput
         ? buildPromptSection('分析对象', buildBaziFullAnalysisObjectSection())
         : '',
