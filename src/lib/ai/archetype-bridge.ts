@@ -1,8 +1,16 @@
 // M3 前置桥接层：排盘结果 → archetype_key → 词库 L1/L3 查表。
-// ⚠️ 依赖 T1（排盘准确性审计）：十神自算与神煞映射为 provisional 实现，
-// T1 确认 core 判定准确后在本文件统一修正（唯一对接点）。
+// ✅ T1 审计结论已回填（docs/audit/2026-09-13-上线前加固/thread-01-排盘规则审计与比对/
+//    output/规则审计/bazi-ziwei.md）：
+//  - 十神：core 为本地 10×10 矩阵（baziUtils.ts L107-127），地支十神取藏干主气，测试锁全矩阵。
+//    本文件 tenGodOf 按五行生克+阴阳同异实现同一矩阵，与 core 口径一致（仅作展示层查表，
+//    排盘主链仍以 core 输出为准）。
+//  - 旺衰：三倾向多数表决（月令合看司令/地支通根/成局+明透结构）输出七级
+//    （极强/身强/偏强/中和/偏弱/身弱/极弱），score/commanderScore 标 @deprecated 不参与判定。
+//  - 格局取用：扶抑 4 条 → 调候覆盖 → 司令重排 → 病药优先（baziUsefulGodStrategy.ts）。
+//  - 合化：地支六合永不作成化（harmonyTransform isTransformed 恒 false）。
 // key 规范：点分 `bazi.shishen.bijian`（与国学资产线 lexicon-schema 实际数据一致）；
-// 白皮书 2.3 的连字符 `bazi-shishen-qisha-001` 形态由 toHyphenKey() 归一输出。
+// 白皮书 2.3 的连字符 `bazi-shishen-qisha-001` 形态由 toHyphenKey() 归一输出；
+// T4 v1 三段式冒号形态 `bazi:shishen:qisha` 由分支定义层（src/data/branch-definitions.ts）使用。
 
 import {
   LEXICON_TRANSLATOR_SEED,
@@ -21,7 +29,7 @@ export function toHyphenKey(dotKey: string): string {
   return dotKey.replace(/\./g, '-');
 }
 
-// ---------- 十神（provisional：T1 核验后回填） ----------
+// ---------- 十神（与 core 10×10 矩阵同口径：五行生克 × 阴阳同异；T1 审计已核） ----------
 
 const GAN_ELEMENT: Record<string, { element: string; yang: boolean }> = {
   甲: { element: '木', yang: true },

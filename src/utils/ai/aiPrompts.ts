@@ -23,10 +23,15 @@ import {
   extractShenShaKeys,
   extractTenGodKeys,
 } from '../../lib/ai/archetype-bridge';
+import {
+  buildBranchSection,
+  selectBranches,
+  type BranchMatch,
+} from '../../lib/translation/branch-selector';
 
 /**
  * M3：八字盘面 → archetype_key → 词库 L1/L3 查表锚定段（确定性查表，零 LLM 生成）。
- * 桥接层十神提取为 provisional 实现，T1 审计结论确认后在 archetype-bridge.ts 统一回填。
+ * 桥接层十神口径已按 T1 审计结论回填（见 archetype-bridge.ts 头注）。
  */
 function buildBaziArchetypeSection(chartResult: BaziChartResult | null): string {
   if (!chartResult?.pillars || !chartResult.dayMaster) return '';
@@ -54,6 +59,30 @@ function buildBaziArchetypeSection(chartResult: BaziChartResult | null): string 
 function anchorSection(chartResult: BaziChartResult | null): string {
   const anchor = buildBaziArchetypeSection(chartResult);
   return anchor ? `【原型法理锚定】\n${anchor}` : '';
+}
+
+/**
+ * T2-04：盘面 → 分支上下文（旺衰七级 + 关联术语）→ 分支白话段（纯确定性，零 LLM）。
+ * 旺衰七级来自 core 三倾向多数表决（T1 审计口径）；关联术语取四柱天干十神与藏干十神。
+ */
+function buildBranchMatches(chartResult: BaziChartResult | null): BranchMatch[] {
+  if (!chartResult?.pillars || !chartResult.dayMaster) return [];
+  const strength = chartResult.analysis?.dayMasterStrength?.status;
+  if (!strength || strength === '未知') return [];
+  const related = new Set<string>();
+  const tenGodValues = Object.values(chartResult.tenGods ?? {});
+  for (const god of tenGodValues) related.add(god);
+  for (const list of Object.values(chartResult.hiddenTenGods ?? {})) {
+    for (const god of list ?? []) related.add(god);
+  }
+  // 分支候选：四柱天干十神（按柱序），仅盘面出现的术语参与选择
+  const termKeys = [...new Set(tenGodValues)];
+  return selectBranches(termKeys, { dayMasterStrength: strength, relatedTerms: [...related] }, 4);
+}
+
+/** 分支白话段：无命中时返回空串（joinPromptSections 会过滤空段）。 */
+function branchSection(chartResult: BaziChartResult | null): string {
+  return buildBranchSection(buildBranchMatches(chartResult), 4);
 }
 
 
@@ -194,6 +223,7 @@ export function buildPromptFromConfig(
         buildPromptSection('当前时间', formatPromptCurrentTime()),
         buildPromptSection('排盘信息', [chartData, enhancedSection].filter(Boolean).join('\n')),
         anchorSection(chartResult),
+        branchSection(chartResult),
         hasFullFortuneOutput
           ? buildPromptSection('分析对象', buildBaziFullAnalysisObjectSection())
           : '',
@@ -223,6 +253,7 @@ export function buildPromptFromConfig(
       buildPromptSection('当前时间', formatPromptCurrentTime()),
       buildPromptSection('排盘信息', chartData),
       anchorSection(chartResult),
+      branchSection(chartResult),
       hasFullFortuneOutput
         ? buildPromptSection('分析对象', buildBaziFullAnalysisObjectSection())
         : '',
