@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { handleAiAnalyze } from '../src/lib/ai/proxy';
+import { createTranslatedTagFilter } from '../src/lib/ai/translate-templates';
 
 // T3 多语言（M1）：/api/v1/ai/analyze 的 lang 白名单与受限翻译档行为。
 
@@ -175,4 +176,68 @@ test('env 限定启用语言：未启用 lang 显式 400 LANG_NOT_ENABLED', asyn
   } finally {
     restore();
   }
+});
+
+test('layer=L1：system prompt 载入古籍层约束与 ja 输出标记', async () => {
+  const capture: { current: Captured | null } = { current: null };
+  const restore = stubUpstream(capture);
+  try {
+    const response = await handleAiAnalyze(
+      makeRequest({
+        prompt: '翻译这段古籍解读',
+        lang: 'ja',
+        mode: 'translate',
+        layer: 'L1',
+        aiConfig: AI_CONFIG,
+      }),
+    );
+    assert.equal(response.status, 200);
+    await response.text();
+    assert.ok(capture.current);
+    const system = capture.current.body.messages?.[0]?.content ?? '';
+    assert.ok(system.includes('L1'), '应载入古籍层指令');
+    assert.ok(system.includes('日本語'));
+    assert.ok(system.includes('<translated lang="ja">'), '应要求输出标记');
+    assert.ok(system.includes('不得改变'), '数值/方向禁改约束');
+  } finally {
+    restore();
+  }
+});
+
+test('非法 layer 显式 400 INVALID_LAYER；translate+zh-CN 显式 400', async () => {
+  const restore = stubUpstream({ current: null });
+  try {
+    const badLayer = await handleAiAnalyze(
+      makeRequest({
+        prompt: '翻译',
+        lang: 'en',
+        mode: 'translate',
+        layer: 'L9',
+        aiConfig: AI_CONFIG,
+      }),
+    );
+    assert.equal(badLayer.status, 400);
+    assert.equal((await badLayer.json()).error.code, 'INVALID_LAYER');
+
+    const zhTarget = await handleAiAnalyze(
+      makeRequest({ prompt: '翻译', lang: 'zh-CN', mode: 'translate', aiConfig: AI_CONFIG }),
+    );
+    assert.equal(zhTarget.status, 400);
+    assert.equal((await zhTarget.json()).error.code, 'INVALID_LANG');
+  } finally {
+    restore();
+  }
+});
+
+test('<translated> 标记剥离器：跨 delta 分裂可剥，非本管线标记透传', () => {
+  const filter = createTranslatedTagFilter();
+  assert.equal(filter.push('<tran'), '');
+  assert.equal(filter.push('slated lang="vi">Xin chào'), 'Xin chào');
+  assert.equal(filter.push(' thế</tran'), ' thế');
+  assert.equal(filter.push('slated>') + filter.flush(), '');
+
+  const passthrough = createTranslatedTagFilter();
+  assert.equal(passthrough.push('数值 <b>甲子</b> 保持'), '数值 <b>甲子</b> 保持');
+  assert.equal(passthrough.push('半个尖括号 < 5'), '半个尖括号 < 5');
+  assert.equal(passthrough.flush(), '');
 });

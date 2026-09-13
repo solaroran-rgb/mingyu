@@ -1,0 +1,56 @@
+name: i18n-nightly
+
+# T3 多语言：回译校验与术语表门禁的夜间巡检（口径 G1-G5 配套）。
+# 每日 UTC 22:00（本地 06:00）运行；LLM 回译档仅在配置 secrets 后启用。
+
+on:
+  schedule:
+    - cron: '0 22 * * *'
+  workflow_dispatch:
+
+env:
+  T3_LLM_BASE_URL: ${{ secrets.T3_LLM_BASE_URL }}
+  T3_LLM_MODEL: ${{ secrets.T3_LLM_MODEL }}
+  T3_LLM_API_KEY: ${{ secrets.T3_LLM_API_KEY }}
+
+jobs:
+  gates:
+    name: 术语表门禁 + 多语言行为测试（G1-lite/G2 前置）
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm --filter @temposoul/core build
+      # 生成物与快照一致性：重建 terms-7lang.ts，与提交版本必须零 diff（键变更须会签）
+      - name: Regenerate terms-7lang and verify no drift
+        run: |
+          python scripts/i18n/gen-terms-7lang.py
+          git diff --exit-code -- src/data/terms-7lang.ts docs/audit/2026-09-13-上线前加固/shared/cases/_keys_snapshot.json
+      - name: Term table guard tests (G1-lite)
+        run: npx tsx --tsconfig tsconfig.app.json --test tests/terms-7lang.test.ts
+      - name: AI analyze lang behavior tests
+        run: npx tsx --tsconfig tsconfig.app.json --test tests/ai-analyze-lang.test.ts
+      - name: Backtranslate dry-run（确定性完整性，硬伤必须为 0）
+        run: python "docs/audit/2026-09-13-上线前加固/thread-03-多语言翻译实现与准确性/output/05_backtranslate_check.py" --dry-run
+
+  backtranslate:
+    name: LLM 回译一致率试测（需 secrets，可选）
+    runs-on: ubuntu-latest
+    needs: gates
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run backtranslate round-trip（仅当 secrets 已配置）
+        if: env.T3_LLM_BASE_URL != ''
+        run: |
+          python "docs/audit/2026-09-13-上线前加固/thread-03-多语言翻译实现与准确性/output/05_backtranslate_check.py" --per-lang 6
+      - name: Skipped notice
+        if: env.T3_LLM_BASE_URL == ''
+        run: echo "未配置 T3_LLM_BASE_URL secrets，跳过 LLM 回译（本档为 M4 nightly 可选项）"

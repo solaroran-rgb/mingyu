@@ -78,3 +78,15 @@
 - 测试修正记录：断言口径三轮校正——①键是 pinyin 连写（bijian 非 bi_jian）；②命宫按 zh 跨 3 域是多键，须按 archetype_key 查（正体现「键即契约」设计）；③丁/鼎是 en 译文值撞车（各自键各自语境渲染，非 zh 多键）。
 - 下一步（余量）：M2 尾——ZiweiBoard/AstrolabeBoard/QizhengBoard（后者需 astrology 域术语或引擎键化）；BP1 引擎输出键化（四线程会签）；L1/L3/L5 结构化模板语言分支×7（M3 模板件）；05 回译脚本 nightly 化；母语复核表待人员。
 - 阻塞项：同前。
+
+## 2026-09-13 08:40 · 队3指令批次：M2尾 + L1/L3/L5模板×7 + nightly CI + BP1会签材料 ✅（commit ea007b2）
+
+- 做了什么：
+  1. **M2 尾**：ZiweiBoard 接入 TermText（摘要卡命主/身主/命宫支/身宫支/生肖 + 详情卡宫名/干支/主星/辅星/对宫/三方四正）；joinText 调用点改组件化渲染。**至此八字+紫微全链 L0 查表落地**；Astrolabe/Qizheng 有意不接（结论落 `output/07_BP1键化会签材料.md` 第一节）。
+  2. **L1/L3/L5 模板 ×7**：新增 `src/lib/ai/translate-templates.ts`——`buildTranslateSystemPrompt(layer, locale, termInjection)`（L1 古籍锚点/L3 白话逐句/L5 场景模板字段三套约束 × 7 语言输出指令 + `<translated lang>` 标记要求）；`createTranslatedTagFilter()` 流式剥离器（跨 delta 分裂安全，非本管线标记透传）；proxy 接入 `layer` 参数（非法→400 INVALID_LAYER；translate+zh-CN→400 INVALID_LANG）并统一语言标签来源。
+  3. **nightly CI**：`.github/workflows/i18n-nightly.yml`——gates 档（重生成 terms-7lang 防漂移零 diff + G1-lite + lang 行为测试 + 回译 dry-run 硬伤 0）+ backtranslate 档（LLM 回译，secrets T3_LLM_* 门控，未配置自动跳过）。
+  4. **BP1 会签材料**：`output/07_BP1键化会签材料.md`——已定结论（两板不接的语境边界）+ 待 T1 签署的键化范围提案（ganzhi 常量对象化/iztro 映射层加键/60 甲子拼键，附加字段式不破坏旧消费者）+ 会签记录栏。
+- ⚠️ **交接断点事故与恢复（本轮最大教训实证）**：工作中途工作区被并行会话切回 `codex/website-basic-settings`（合并操作），proxy/术语表/测试在工作区全部「消失」；T3 提交因已推远端而无损。恢复过程：识别 10 个「未跟踪 vs 已跟踪」冲突文件 → 逐文件比对磁盘 vs 分支内容 → 7 个同内容移除、2 个 T1/T2 WORKLOG 磁盘新版**备份后回写保留**、Codex 会话的 terms-shim 临时桩（透传 zh 的占位实现）**留档 .bak_stub_0805**（其调用方仅传 zh，本线程真实现为 API 超集，无 en= 调用方）。工具留档：`output/_safe_checkout.py`、`_diff_shim.py`。**建议主控：各线程用 `git worktree` 独立工作区，杜绝切分支互踩。**
+- 关键结论/数据：多语言测试 **13/13**；api/prompt 回归全绿；build 16.6s；commit ea007b2（8 文件 +449/-54）已推。
+- 下一步：BP1 待 T1 签署后动引擎（Codex 席位）；T2 L3 白话源文本对接（模板已就绪，等 T2 决策 A 管线产出源文本）；nightly 运行 3 天观察（验收项）；母语复核待人员。
+- 阻塞项：同前 + BP1 会签等待 T1。

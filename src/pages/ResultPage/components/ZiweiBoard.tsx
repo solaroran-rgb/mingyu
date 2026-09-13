@@ -5,7 +5,8 @@ import { getDefaultHoroscopeContext } from '@temposoul/core/ziwei';
 import type { AnalysisPayloadV1, ScopeType } from '@/types/analysis';
 import type { ChartInput } from '@/types/chart';
 import type { ZiweiRuntimeState } from '../ResultPage.types';
-import { getZiweiDisplaySurroundedPalaces, joinText } from '../ResultPage.helpers';
+import { getZiweiDisplaySurroundedPalaces } from '../ResultPage.helpers';
+import { TermText } from '@/lib/i18n/terms-shim';
 import { createDisplayWorker } from '../utils/createDisplayWorker';
 import { ZiweiTraditionalBoard } from './ZiweiTraditionalBoard';
 import { ZiweiFortuneSelector } from './ZiweiFortuneSelector';
@@ -102,18 +103,28 @@ export const ZiweiBoard = memo(function ZiweiBoard(props: {
       <div className="result-summary-grid">
         <div className="result-stat-card result-stat-card-accent">
           <span>命主</span>
-          <strong>{displayPayload.basic_info.soul}</strong>
-          <small>命宫支 {displayPayload.basic_info.soul_palace_branch}</small>
+          <strong>
+            <TermText zh={displayPayload.basic_info.soul} />
+          </strong>
+          <small>
+            命宫支 <TermText zh={displayPayload.basic_info.soul_palace_branch} />
+          </small>
         </div>
         <div className="result-stat-card">
           <span>身主</span>
-          <strong>{displayPayload.basic_info.body}</strong>
-          <small>身宫支 {displayPayload.basic_info.body_palace_branch}</small>
+          <strong>
+            <TermText zh={displayPayload.basic_info.body} />
+          </strong>
+          <small>
+            身宫支 <TermText zh={displayPayload.basic_info.body_palace_branch} />
+          </small>
         </div>
         <div className="result-stat-card">
           <span>五行局</span>
           <strong>{displayPayload.basic_info.five_elements_class}</strong>
-          <small>{displayPayload.basic_info.zodiac}</small>
+          <small>
+            <TermText zh={displayPayload.basic_info.zodiac} />
+          </small>
         </div>
         <div className="result-stat-card">
           <span>当前时限</span>
@@ -175,12 +186,14 @@ export const ZiweiBoard = memo(function ZiweiBoard(props: {
                 <div className="ziwei-detail-head">
                   <div>
                     <span className="ziwei-detail-kicker">当前宫位</span>
-                    <h4>{selectedPalace.name}</h4>
+                    <h4>
+                      <TermText zh={selectedPalace.name} />
+                    </h4>
                   </div>
                   <div className="result-chip-stack">
                     <span className="result-chip">
-                      {selectedPalace.heavenly_stem}
-                      {selectedPalace.earthly_branch}
+                      <TermText zh={selectedPalace.heavenly_stem} />
+                      <TermText zh={selectedPalace.earthly_branch} />
                     </span>
                     {selectedPalace.dynamic_scope_name ? (
                       <span className="result-chip result-chip-highlight">
@@ -193,32 +206,46 @@ export const ZiweiBoard = memo(function ZiweiBoard(props: {
                   <div>
                     <span>主星</span>
                     <strong>
-                      {joinText(
-                        selectedPalace.major_stars.map((item) => item.name),
-                        '无主星',
-                      )}
+                      {selectedPalace.major_stars.length === 0
+                        ? '无主星'
+                        : selectedPalace.major_stars.map((item, index) => (
+                            <span key={`major-${item.name}-${index}`}>
+                              {index > 0 ? '、' : ''}
+                              <TermText zh={item.name} />
+                            </span>
+                          ))}
                     </strong>
                   </div>
                   <div>
                     <span>辅星</span>
                     <strong>
-                      {joinText(
-                        selectedPalace.minor_stars.map((item) => item.name),
-                        '无',
-                      )}
+                      {selectedPalace.minor_stars.length === 0
+                        ? '无'
+                        : selectedPalace.minor_stars.map((item, index) => (
+                            <span key={`minor-${item.name}-${index}`}>
+                              {index > 0 ? '、' : ''}
+                              <TermText zh={item.name} />
+                            </span>
+                          ))}
                     </strong>
                   </div>
                   <div>
                     <span>对宫</span>
-                    <strong>{oppositePalace?.name ?? '暂无'}</strong>
+                    <strong>
+                      <TermText zh={oppositePalace?.name ?? '暂无'} />
+                    </strong>
                   </div>
                   <div>
                     <span>三方四正</span>
                     <strong>
-                      {joinText(
-                        surroundedPalaces.map((item) => item.name),
-                        '暂无',
-                      )}
+                      {surroundedPalaces.length === 0
+                        ? '暂无'
+                        : surroundedPalaces.map((item, index) => (
+                            <span key={`surrounded-${item.index}`}>
+                              {index > 0 ? '、' : ''}
+                              <TermText zh={item.name} />
+                            </span>
+                          ))}
                     </strong>
                   </div>
                 </div>

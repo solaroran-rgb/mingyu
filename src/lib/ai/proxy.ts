@@ -20,6 +20,14 @@ import {
   FUSED_NOTICE,
   OutputFuse,
 } from './compliance';
+import {
+  buildTranslateSystemPrompt,
+  createTranslatedTagFilter,
+  isTranslateLayer,
+  LOCALE_LABELS,
+  TRANSLATE_LAYERS,
+  type TranslateLayer,
+} from './translate-templates';
 
 const DEFAULT_BASE_URL = 'https://api.deepseek.com/v1';
 const DEFAULT_MODEL = 'deepseek-chat';
@@ -67,22 +75,7 @@ const SYSTEM_PROMPT_CHAT = '用户的第一条消息是本次排盘资料和问�
 const SUPPORTED_AI_LOCALES = ['zh-CN', 'en', 'es-ES', 'ja', 'ko-KN', 'th-TH', 'vi-VN'] as const;
 type SupportedAiLocale = (typeof SUPPORTED_AI_LOCALES)[number];
 
-const AI_LOCALE_LABELS: Record<SupportedAiLocale, string> = {
-  'zh-CN': '中文',
-  en: 'English',
-  'es-ES': 'Español',
-  ja: '日本語',
-  'ko-KN': '한국어',
-  'th-TH': 'ไทย',
-  'vi-VN': 'Tiếng Việt',
-};
-
-// 受限翻译档（决策 A）：temperature=0、数值/干支/吉凶方向禁改；术语表注入在 M3 接入。
-const SYSTEM_PROMPT_TRANSLATE_BASE =
-  '你是中华命理内容的专业译者。逐句翻译用户提供的资料，遵守：' +
-  '1) 数值、干支、星曜名、宫位名、卦名与吉凶方向一律不得改变；' +
-  '2) 术语译法必须与资料中已有译法一致，不得自行发明；' +
-  '3) 只输出译文正文，不附加解释。';
+// 语言标签与受限翻译档模板统一由 ./translate-templates 提供（L1/L3/L5 × 7 语言）。
 
 // I18N 内容语言门控：env.I18N_ENABLED_LOCALES 配置启用集（CSV），缺省全开
 function parseEnabledLocales(env?: AiEnv): Set<string> {
@@ -131,6 +124,7 @@ export async function handleAiAnalyze(request: Request, env?: AiEnv): Promise<Re
     aiConfig?: AiProviderConfig;
     lang?: unknown;
     mode?: unknown;
+    layer?: unknown;
   };
   try {
     body = parseJsonObject(await readLimitedRequestText(request, DEFAULT_MAX_REQUEST_BODY_BYTES));
@@ -157,6 +151,17 @@ export async function handleAiAnalyze(request: Request, env?: AiEnv): Promise<Re
     : 'zh-CN';
   // 受限翻译档（决策 A）：mode=translate 时 temperature 固定 0（BP4）
   const translationMode = body.mode === 'translate';
+  if (translationMode) {
+    if (locale === 'zh-CN') {
+      return aiJsonError(400, 'INVALID_LANG', '受限翻译档的目标语言不能是 zh-CN。');
+    }
+    if (body.layer != null && !isTranslateLayer(body.layer)) {
+      return aiJsonError(400, 'INVALID_LAYER', `不支持的翻译层级：${String(body.layer)}。`, {
+        supported: TRANSLATE_LAYERS as readonly string[],
+      });
+    }
+  }
+  const translateLayer: TranslateLayer = isTranslateLayer(body.layer) ? body.layer : 'L3';
 
   const enabledLocales = parseEnabledLocales(env);
   if (!enabledLocales.has(locale)) {
@@ -214,13 +219,12 @@ export async function handleAiAnalyze(request: Request, env?: AiEnv): Promise<Re
     return aiJsonError(400, 'PROMPT_TOO_LONG', `提示词不能超过 ${MAX_PROMPT_LENGTH} 字符。`);
   }
 
-  // 融合（主控合并 2026-09-13）：T3 翻译档 + T2 M1 合规约束全量并入 system。
   const baseSystemPrompt = isMultiTurn ? SYSTEM_PROMPT_CHAT : SYSTEM_PROMPT_SINGLE;
   const languageDirective =
     locale !== 'zh-CN' && !translationMode
-      ? ` 请全程使用${AI_LOCALE_LABELS[locale]}撰写解读。`
+      ? ` 请全程使用${LOCALE_LABELS[locale]}撰写解读。`
       : '';
-  // M1：user 内容保持原样转发，避免破坏调用方契约。
+  // M1 合规约束（T2）：user 内容保持原样转发，合规铁律/敏感领域注入/术语口径查表并入 system。
   const userText = chatMessages.map((m) => m.content).join('\n');
   const compliancePart = [
     COMPLIANCE_RULES,
@@ -233,7 +237,7 @@ export async function handleAiAnalyze(request: Request, env?: AiEnv): Promise<Re
     ? await buildTermInjection(userText, locale)
     : '';
   const systemPrompt = translationMode
-    ? `${SYSTEM_PROMPT_TRANSLATE_BASE}目标语言：${AI_LOCALE_LABELS[locale]}（${locale}）。${termInjection}\n\n${compliancePart}`
+    ? `${buildTranslateSystemPrompt(translateLayer, locale, termInjection)}\n\n${compliancePart}`
     : `${baseSystemPrompt}${languageDirective}\n\n${compliancePart}`;
 
   const endpoint = `${provider.baseUrl}/chat/completions`;
@@ -275,7 +279,8 @@ export async function handleAiAnalyze(request: Request, env?: AiEnv): Promise<Re
     });
   }
 
-  // 将 upstream SSE 流转换为前端可读的 SSE 流
+  // 将 upstream SSE 流转换为前端可读的 SSE 流（受限翻译档剥离 <translated> 标记；M1 输出流内熔断）
+  const tagFilter = translationMode ? createTranslatedTagFilter() : null;
   const { readable, writable } = new TransformStream();
   const writer = writable.getWriter();
   const encoder = new TextEncoder();
@@ -308,8 +313,11 @@ export async function handleAiAnalyze(request: Request, env?: AiEnv): Promise<Re
         }
         return false;
       }
-      const payload = JSON.stringify({ content: delta });
-      await writer.write(encoder.encode(`data: ${payload}\n\n`));
+      const text = tagFilter ? tagFilter.push(delta) : delta;
+      if (text) {
+        const payload = JSON.stringify({ content: text });
+        await writer.write(encoder.encode(`data: ${payload}\n\n`));
+      }
       return true;
     };
 
@@ -329,6 +337,14 @@ export async function handleAiAnalyze(request: Request, env?: AiEnv): Promise<Re
 
           const data = trimmed.slice(5).trim();
           if (data === '[DONE]') {
+            if (tagFilter) {
+              const tail = tagFilter.flush();
+              if (tail) {
+                await writer.write(
+                  encoder.encode(`data: ${JSON.stringify({ content: tail })}\n\n`),
+                );
+              }
+            }
             await writer.write(encoder.encode('data: [DONE]\n\n'));
             continue;
           }
@@ -363,6 +379,13 @@ export async function handleAiAnalyze(request: Request, env?: AiEnv): Promise<Re
               }
             } catch {
               // 忽略
+            }
+          } else if (data === '[DONE]' && tagFilter) {
+            const tail = tagFilter.flush();
+            if (tail) {
+              await writer.write(
+                encoder.encode(`data: ${JSON.stringify({ content: tail })}\n\n`),
+              );
             }
           }
         }
