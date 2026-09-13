@@ -77,8 +77,12 @@ test('六爻：静爻被日冲且旺相标记为暗动，休囚标记为日破',
         `第${yao.position}爻暗动应旺相，实际 ${yao.seasonState}`,
       );
     }
-    // 日破与暗动不同时成立
-    assert.ok(!(yao.isDayBreak && yao.isHiddenMove) || yao.isHiddenMove, '');
+    // 日破（被日冲且休囚）与暗动（被日冲且旺相）互斥——H3 修复：原断言为恒真式
+    const isRiPo = yao.isDayBreak && (yao.seasonState === '休' || yao.seasonState === '囚');
+    assert.ok(
+      !(isRiPo && yao.isHiddenMove),
+      `第${yao.position}爻暗动与日破不应同爻（seasonState=${yao.seasonState}）`,
+    );
   }
   void dayBranch;
 });
