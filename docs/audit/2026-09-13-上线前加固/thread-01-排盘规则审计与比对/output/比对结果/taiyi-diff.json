@@ -1,0 +1,212 @@
+[
+  {
+    "case": "taiyi-001",
+    "field": "yinYang",
+    "expected": "阳遁",
+    "status": "match",
+    "engine": "阳遁"
+  },
+  {
+    "case": "taiyi-001",
+    "field": "bureau",
+    "expected": 46,
+    "status": "match",
+    "engine": 46
+  },
+  {
+    "case": "taiyi-001",
+    "field": "accumulatedYears",
+    "expected": 10153918,
+    "status": "match",
+    "engine": 10153918
+  },
+  {
+    "case": "taiyi-002",
+    "field": "yinYang",
+    "expected": "阳遁",
+    "status": "match",
+    "engine": "阳遁"
+  },
+  {
+    "case": "taiyi-002",
+    "field": "bureau",
+    "expected": 13,
+    "status": "match",
+    "engine": 13
+  },
+  {
+    "case": "taiyi-002",
+    "field": "accumulatedYears",
+    "expected": 10155901,
+    "status": "match",
+    "engine": 10155901
+  },
+  {
+    "case": "taiyi-003",
+    "field": "yinYang",
+    "expected": "阳遁",
+    "status": "match",
+    "engine": "阳遁"
+  },
+  {
+    "case": "taiyi-003",
+    "field": "bureau",
+    "expected": 29,
+    "status": "match",
+    "engine": 29
+  },
+  {
+    "case": "taiyi-003",
+    "field": "accumulatedYears",
+    "expected": 10155917,
+    "status": "match",
+    "engine": 10155917
+  },
+  {
+    "case": "taiyi-004",
+    "field": "yinYang",
+    "expected": "阳遁",
+    "status": "match",
+    "engine": "阳遁"
+  },
+  {
+    "case": "taiyi-004",
+    "field": "bureau",
+    "expected": 33,
+    "status": "match",
+    "engine": 33
+  },
+  {
+    "case": "taiyi-004",
+    "field": "accumulatedYears",
+    "expected": 10155921,
+    "status": "match",
+    "engine": 10155921
+  },
+  {
+    "case": "taiyi-005",
+    "field": "yinYang",
+    "expected": "阳遁",
+    "status": "match",
+    "engine": "阳遁"
+  },
+  {
+    "case": "taiyi-005",
+    "field": "bureau",
+    "expected": 53,
+    "status": "match",
+    "engine": 53
+  },
+  {
+    "case": "taiyi-005",
+    "field": "accumulatedYears",
+    "expected": 10155941,
+    "status": "match",
+    "engine": 10155941
+  },
+  {
+    "case": "taiyi-006",
+    "field": "yinYang",
+    "expected": "阳遁",
+    "status": "match",
+    "engine": "阳遁"
+  },
+  {
+    "case": "taiyi-006",
+    "field": "bureau",
+    "expected": 55,
+    "status": "match",
+    "engine": 55
+  },
+  {
+    "case": "taiyi-006",
+    "field": "accumulatedYears",
+    "expected": 10155943,
+    "status": "match",
+    "engine": 10155943
+  },
+  {
+    "case": "taiyi-007",
+    "field": "yinYang",
+    "expected": "阳遁",
+    "status": "match",
+    "engine": "阳遁"
+  },
+  {
+    "case": "taiyi-007",
+    "field": "bureau",
+    "expected": 41,
+    "status": "match",
+    "engine": 41
+  },
+  {
+    "case": "taiyi-007",
+    "field": "accumulatedYears",
+    "expected": 10156001,
+    "status": "match",
+    "engine": 10156001
+  },
+  {
+    "case": "taiyi-008",
+    "field": "yinYang",
+    "expected": "阳遁",
+    "status": "match",
+    "engine": "阳遁"
+  },
+  {
+    "case": "taiyi-008",
+    "field": "bureau",
+    "expected": 57,
+    "status": "match",
+    "engine": 57
+  },
+  {
+    "case": "taiyi-008",
+    "field": "accumulatedYears",
+    "expected": 10156017,
+    "status": "match",
+    "engine": 10156017
+  },
+  {
+    "case": "taiyi-009",
+    "field": "yinYang",
+    "expected": "阳遁",
+    "status": "match",
+    "engine": "阳遁"
+  },
+  {
+    "case": "taiyi-009",
+    "field": "bureau",
+    "expected": 5,
+    "status": "match",
+    "engine": 5
+  },
+  {
+    "case": "taiyi-009",
+    "field": "accumulatedYears",
+    "expected": 10158917,
+    "status": "match",
+    "engine": 10158917
+  },
+  {
+    "case": "taiyi-010",
+    "field": "yinYang",
+    "expected": "阳遁",
+    "status": "match",
+    "engine": "阳遁"
+  },
+  {
+    "case": "taiyi-010",
+    "field": "bureau",
+    "expected": 36,
+    "status": "match",
+    "engine": 36
+  },
+  {
+    "case": "taiyi-010",
+    "field": "accumulatedYears",
+    "expected": 10163916,
+    "status": "match",
+    "engine": 10163916
+  }
+]

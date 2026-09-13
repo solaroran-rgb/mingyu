@@ -1,0 +1,22 @@
+{
+  "caseId": "wuyun-003",
+  "system": "wuyun-liuqi",
+  "desc": "1986 年（丙寅）岁运与司天在泉",
+  "input": {
+    "year": 1986
+  },
+  "expected": {
+    "yearGanZhi": "丙寅",
+    "annualMovement.element": "水",
+    "annualMovement.strength": "太过",
+    "sitian.name": "少阳相火",
+    "zaiquan.name": "厥阴风木"
+  },
+  "expectedAssumption": "交司以大寒起运为引擎现行口径（B3）；本样例只锁岁运五行/太少与司天在泉名",
+  "source": {
+    "type": "典籍推演",
+    "note": "《素问·天元纪大论/五运行大论》七篇独立算式；大寒起运口径按引擎声明仅锁岁运/司天在泉"
+  },
+  "boundaryTags": [],
+  "yearRange": "1900-2100"
+}

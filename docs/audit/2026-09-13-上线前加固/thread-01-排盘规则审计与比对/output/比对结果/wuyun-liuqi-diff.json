@@ -1,0 +1,352 @@
+[
+  {
+    "case": "wuyun-001",
+    "field": "yearGanZhi",
+    "expected": "甲子",
+    "status": "match",
+    "engine": "甲子"
+  },
+  {
+    "case": "wuyun-001",
+    "field": "annualMovement.element",
+    "expected": "土",
+    "status": "match",
+    "engine": "土"
+  },
+  {
+    "case": "wuyun-001",
+    "field": "annualMovement.strength",
+    "expected": "太过",
+    "status": "match",
+    "engine": "太过"
+  },
+  {
+    "case": "wuyun-001",
+    "field": "sitian.name",
+    "expected": "少阴君火",
+    "status": "match",
+    "engine": "少阴君火"
+  },
+  {
+    "case": "wuyun-001",
+    "field": "zaiquan.name",
+    "expected": "阳明燥金",
+    "status": "match",
+    "engine": "阳明燥金"
+  },
+  {
+    "case": "wuyun-002",
+    "field": "yearGanZhi",
+    "expected": "乙丑",
+    "status": "match",
+    "engine": "乙丑"
+  },
+  {
+    "case": "wuyun-002",
+    "field": "annualMovement.element",
+    "expected": "金",
+    "status": "match",
+    "engine": "金"
+  },
+  {
+    "case": "wuyun-002",
+    "field": "annualMovement.strength",
+    "expected": "不及",
+    "status": "match",
+    "engine": "不及"
+  },
+  {
+    "case": "wuyun-002",
+    "field": "sitian.name",
+    "expected": "太阴湿土",
+    "status": "match",
+    "engine": "太阴湿土"
+  },
+  {
+    "case": "wuyun-002",
+    "field": "zaiquan.name",
+    "expected": "太阳寒水",
+    "status": "match",
+    "engine": "太阳寒水"
+  },
+  {
+    "case": "wuyun-003",
+    "field": "yearGanZhi",
+    "expected": "丙寅",
+    "status": "match",
+    "engine": "丙寅"
+  },
+  {
+    "case": "wuyun-003",
+    "field": "annualMovement.element",
+    "expected": "水",
+    "status": "match",
+    "engine": "水"
+  },
+  {
+    "case": "wuyun-003",
+    "field": "annualMovement.strength",
+    "expected": "太过",
+    "status": "match",
+    "engine": "太过"
+  },
+  {
+    "case": "wuyun-003",
+    "field": "sitian.name",
+    "expected": "少阳相火",
+    "status": "match",
+    "engine": "少阳相火"
+  },
+  {
+    "case": "wuyun-003",
+    "field": "zaiquan.name",
+    "expected": "厥阴风木",
+    "status": "match",
+    "engine": "厥阴风木"
+  },
+  {
+    "case": "wuyun-004",
+    "field": "yearGanZhi",
+    "expected": "戊辰",
+    "status": "match",
+    "engine": "戊辰"
+  },
+  {
+    "case": "wuyun-004",
+    "field": "annualMovement.element",
+    "expected": "火",
+    "status": "match",
+    "engine": "火"
+  },
+  {
+    "case": "wuyun-004",
+    "field": "annualMovement.strength",
+    "expected": "太过",
+    "status": "match",
+    "engine": "太过"
+  },
+  {
+    "case": "wuyun-004",
+    "field": "sitian.name",
+    "expected": "太阳寒水",
+    "status": "match",
+    "engine": "太阳寒水"
+  },
+  {
+    "case": "wuyun-004",
+    "field": "zaiquan.name",
+    "expected": "太阴湿土",
+    "status": "match",
+    "engine": "太阴湿土"
+  },
+  {
+    "case": "wuyun-005",
+    "field": "yearGanZhi",
+    "expected": "辛未",
+    "status": "match",
+    "engine": "辛未"
+  },
+  {
+    "case": "wuyun-005",
+    "field": "annualMovement.element",
+    "expected": "水",
+    "status": "match",
+    "engine": "水"
+  },
+  {
+    "case": "wuyun-005",
+    "field": "annualMovement.strength",
+    "expected": "不及",
+    "status": "match",
+    "engine": "不及"
+  },
+  {
+    "case": "wuyun-005",
+    "field": "sitian.name",
+    "expected": "太阴湿土",
+    "status": "match",
+    "engine": "太阴湿土"
+  },
+  {
+    "case": "wuyun-005",
+    "field": "zaiquan.name",
+    "expected": "太阳寒水",
+    "status": "match",
+    "engine": "太阳寒水"
+  },
+  {
+    "case": "wuyun-006",
+    "field": "yearGanZhi",
+    "expected": "庚辰",
+    "status": "match",
+    "engine": "庚辰"
+  },
+  {
+    "case": "wuyun-006",
+    "field": "annualMovement.element",
+    "expected": "金",
+    "status": "match",
+    "engine": "金"
+  },
+  {
+    "case": "wuyun-006",
+    "field": "annualMovement.strength",
+    "expected": "太过",
+    "status": "match",
+    "engine": "太过"
+  },
+  {
+    "case": "wuyun-006",
+    "field": "sitian.name",
+    "expected": "太阳寒水",
+    "status": "match",
+    "engine": "太阳寒水"
+  },
+  {
+    "case": "wuyun-006",
+    "field": "zaiquan.name",
+    "expected": "太阴湿土",
+    "status": "match",
+    "engine": "太阴湿土"
+  },
+  {
+    "case": "wuyun-007",
+    "field": "yearGanZhi",
+    "expected": "庚子",
+    "status": "match",
+    "engine": "庚子"
+  },
+  {
+    "case": "wuyun-007",
+    "field": "annualMovement.element",
+    "expected": "金",
+    "status": "match",
+    "engine": "金"
+  },
+  {
+    "case": "wuyun-007",
+    "field": "annualMovement.strength",
+    "expected": "太过",
+    "status": "match",
+    "engine": "太过"
+  },
+  {
+    "case": "wuyun-007",
+    "field": "sitian.name",
+    "expected": "少阴君火",
+    "status": "match",
+    "engine": "少阴君火"
+  },
+  {
+    "case": "wuyun-007",
+    "field": "zaiquan.name",
+    "expected": "阳明燥金",
+    "status": "match",
+    "engine": "阳明燥金"
+  },
+  {
+    "case": "wuyun-008",
+    "field": "yearGanZhi",
+    "expected": "甲辰",
+    "status": "match",
+    "engine": "甲辰"
+  },
+  {
+    "case": "wuyun-008",
+    "field": "annualMovement.element",
+    "expected": "土",
+    "status": "match",
+    "engine": "土"
+  },
+  {
+    "case": "wuyun-008",
+    "field": "annualMovement.strength",
+    "expected": "太过",
+    "status": "match",
+    "engine": "太过"
+  },
+  {
+    "case": "wuyun-008",
+    "field": "sitian.name",
+    "expected": "太阳寒水",
+    "status": "match",
+    "engine": "太阳寒水"
+  },
+  {
+    "case": "wuyun-008",
+    "field": "zaiquan.name",
+    "expected": "太阴湿土",
+    "status": "match",
+    "engine": "太阴湿土"
+  },
+  {
+    "case": "wuyun-009",
+    "field": "yearGanZhi",
+    "expected": "丙午",
+    "status": "match",
+    "engine": "丙午"
+  },
+  {
+    "case": "wuyun-009",
+    "field": "annualMovement.element",
+    "expected": "水",
+    "status": "match",
+    "engine": "水"
+  },
+  {
+    "case": "wuyun-009",
+    "field": "annualMovement.strength",
+    "expected": "太过",
+    "status": "match",
+    "engine": "太过"
+  },
+  {
+    "case": "wuyun-009",
+    "field": "sitian.name",
+    "expected": "少阴君火",
+    "status": "match",
+    "engine": "少阴君火"
+  },
+  {
+    "case": "wuyun-009",
+    "field": "zaiquan.name",
+    "expected": "阳明燥金",
+    "status": "match",
+    "engine": "阳明燥金"
+  },
+  {
+    "case": "wuyun-010",
+    "field": "yearGanZhi",
+    "expected": "癸亥",
+    "status": "match",
+    "engine": "癸亥"
+  },
+  {
+    "case": "wuyun-010",
+    "field": "annualMovement.element",
+    "expected": "火",
+    "status": "match",
+    "engine": "火"
+  },
+  {
+    "case": "wuyun-010",
+    "field": "annualMovement.strength",
+    "expected": "不及",
+    "status": "match",
+    "engine": "不及"
+  },
+  {
+    "case": "wuyun-010",
+    "field": "sitian.name",
+    "expected": "厥阴风木",
+    "status": "match",
+    "engine": "厥阴风木"
+  },
+  {
+    "case": "wuyun-010",
+    "field": "zaiquan.name",
+    "expected": "少阳相火",
+    "status": "match",
+    "engine": "少阳相火"
+  }
+]

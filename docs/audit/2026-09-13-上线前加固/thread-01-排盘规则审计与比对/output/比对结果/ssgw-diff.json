@@ -1,0 +1,216 @@
+[
+  {
+    "case": "ssgw-001",
+    "field": "number",
+    "expected": 1,
+    "status": "match",
+    "engine": 1
+  },
+  {
+    "case": "ssgw-001",
+    "field": "poolSize",
+    "expected": 92,
+    "status": "match",
+    "engine": 92
+  },
+  {
+    "case": "ssgw-001",
+    "field": "shouldThrow",
+    "expected": false,
+    "status": "match",
+    "engine": "ok"
+  },
+  {
+    "case": "ssgw-002",
+    "field": "number",
+    "expected": 2,
+    "status": "match",
+    "engine": 2
+  },
+  {
+    "case": "ssgw-002",
+    "field": "poolSize",
+    "expected": 92,
+    "status": "match",
+    "engine": 92
+  },
+  {
+    "case": "ssgw-002",
+    "field": "shouldThrow",
+    "expected": false,
+    "status": "match",
+    "engine": "ok"
+  },
+  {
+    "case": "ssgw-003",
+    "field": "number",
+    "expected": 23,
+    "status": "match",
+    "engine": 23
+  },
+  {
+    "case": "ssgw-003",
+    "field": "poolSize",
+    "expected": 92,
+    "status": "match",
+    "engine": 92
+  },
+  {
+    "case": "ssgw-003",
+    "field": "shouldThrow",
+    "expected": false,
+    "status": "match",
+    "engine": "ok"
+  },
+  {
+    "case": "ssgw-004",
+    "field": "number",
+    "expected": 45,
+    "status": "match",
+    "engine": 45
+  },
+  {
+    "case": "ssgw-004",
+    "field": "poolSize",
+    "expected": 92,
+    "status": "match",
+    "engine": 92
+  },
+  {
+    "case": "ssgw-004",
+    "field": "shouldThrow",
+    "expected": false,
+    "status": "match",
+    "engine": "ok"
+  },
+  {
+    "case": "ssgw-005",
+    "field": "number",
+    "expected": 46,
+    "status": "match",
+    "engine": 46
+  },
+  {
+    "case": "ssgw-005",
+    "field": "poolSize",
+    "expected": 92,
+    "status": "match",
+    "engine": 92
+  },
+  {
+    "case": "ssgw-005",
+    "field": "shouldThrow",
+    "expected": false,
+    "status": "match",
+    "engine": "ok"
+  },
+  {
+    "case": "ssgw-006",
+    "field": "number",
+    "expected": 88,
+    "status": "match",
+    "engine": 88
+  },
+  {
+    "case": "ssgw-006",
+    "field": "poolSize",
+    "expected": 92,
+    "status": "match",
+    "engine": 92
+  },
+  {
+    "case": "ssgw-006",
+    "field": "shouldThrow",
+    "expected": false,
+    "status": "match",
+    "engine": "ok"
+  },
+  {
+    "case": "ssgw-007",
+    "field": "number",
+    "expected": 91,
+    "status": "match",
+    "engine": 91
+  },
+  {
+    "case": "ssgw-007",
+    "field": "poolSize",
+    "expected": 92,
+    "status": "match",
+    "engine": 92
+  },
+  {
+    "case": "ssgw-007",
+    "field": "shouldThrow",
+    "expected": false,
+    "status": "match",
+    "engine": "ok"
+  },
+  {
+    "case": "ssgw-008",
+    "field": "number",
+    "expected": 92,
+    "status": "match",
+    "engine": 92
+  },
+  {
+    "case": "ssgw-008",
+    "field": "poolSize",
+    "expected": 92,
+    "status": "match",
+    "engine": 92
+  },
+  {
+    "case": "ssgw-008",
+    "field": "shouldThrow",
+    "expected": false,
+    "status": "match",
+    "engine": "ok"
+  },
+  {
+    "case": "ssgw-009",
+    "field": "number",
+    "expected": 0,
+    "status": "engine-throw",
+    "engine": null,
+    "note": "引擎抛错: 签号需为1至92的整数"
+  },
+  {
+    "case": "ssgw-009",
+    "field": "poolSize",
+    "expected": 92,
+    "status": "engine-throw",
+    "engine": null,
+    "note": "引擎抛错: 签号需为1至92的整数"
+  },
+  {
+    "case": "ssgw-009",
+    "field": "shouldThrow",
+    "expected": true,
+    "status": "match",
+    "engine": "签号需为1至92的整数"
+  },
+  {
+    "case": "ssgw-010",
+    "field": "number",
+    "expected": 93,
+    "status": "engine-throw",
+    "engine": null,
+    "note": "引擎抛错: 签号需为1至92的整数"
+  },
+  {
+    "case": "ssgw-010",
+    "field": "poolSize",
+    "expected": 92,
+    "status": "engine-throw",
+    "engine": null,
+    "note": "引擎抛错: 签号需为1至92的整数"
+  },
+  {
+    "case": "ssgw-010",
+    "field": "shouldThrow",
+    "expected": true,
+    "status": "match",
+    "engine": "签号需为1至92的整数"
+  }
+]

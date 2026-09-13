@@ -1,0 +1,21 @@
+{
+  "caseId": "zodiac-006",
+  "system": "zodiac",
+  "desc": "2017 年 鸡 流年干支",
+  "input": {
+    "zodiac": "鸡",
+    "year": 2017
+  },
+  "expected": {
+    "yearGanZhi": "丁酉",
+    "zodiac": "鸡",
+    "yearBranch": "酉"
+  },
+  "expectedAssumption": "年柱探针 2/10 依赖立春≤2/5；期望值按标准干支纪年（立春界，年中一致）",
+  "source": {
+    "type": "典籍推演",
+    "note": "干支纪年 (year-1984)%60 独立算式；与引擎 tyme4ts 立春界年柱交叉验证"
+  },
+  "boundaryTags": [],
+  "yearRange": "1900-2100"
+}
