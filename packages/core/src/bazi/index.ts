@@ -120,6 +120,11 @@ export { analyzeTombStorage } from './tombStorage';
 export { analyzeLifeStageProfile, analyzeTenGodLifeStageProfile } from './lifeStageAnalysis';
 export { analyzeUsefulGodPlacement } from './usefulGodPlacement';
 export { calculateMingGua } from './mingGua';
+export {
+  isSouthernHemisphere,
+  monthStemByYearStem,
+  reverseMonthForSouthernHemisphere,
+} from './southernHemisphere';
 export { calculateXiaoYunProfile, buildLuckDirectionProfile } from './luckDetails';
 export { analyzeNayinProfile } from './nayinAnalysis';
 export { analyzeMonthQiProfile } from './monthCommand';

@@ -49,6 +49,10 @@ import {
 import { getTimeIndexFromClock } from '../calendar/dateUtils';
 import { getBirthDateValidationMessage } from '../calendar/date-validation';
 import { calculateMingGua } from './mingGua';
+import {
+  isSouthernHemisphere,
+  reverseMonthForSouthernHemisphere,
+} from './southernHemisphere';
 import { analyzePillarRelations } from './baziPromptEnhancement';
 import { analyzeBaziNatalEvidence } from './natalEvidence';
 import { buildBaziEvidenceTrail } from './baziEvidence';
@@ -147,6 +151,14 @@ export class BaziCalculator {
     }
     if (typeof person.applyChinaDst !== 'undefined' && typeof person.applyChinaDst !== 'boolean') {
       throw new Error('applyChinaDst 必须是布尔值。');
+    }
+    if (
+      typeof person.birthLatitude !== 'undefined' &&
+      (!Number.isFinite(person.birthLatitude) ||
+        person.birthLatitude < -90 ||
+        person.birthLatitude > 90)
+    ) {
+      throw new Error('出生纬度需在 -90 到 90 之间。');
     }
 
     assertBaziGender(gender);
@@ -343,6 +355,13 @@ export class BaziCalculator {
 
     const yearColumn = eightChar.getYear();
     const monthColumn = eightChar.getMonth();
+    // 468红线 1.3-10 南半球月令反转：仅翻转月柱干支（月支对冲 + 月干重排五虎遁），
+    // 建立在 tyme4ts 已给出的北半球月柱之上，与节气/星历核心解耦；年/日/时柱不变。
+    const southern = isSouthernHemisphere(person);
+    const northernMonthGanZhi = monthColumn.getName();
+    const monthGanZhi = southern
+      ? reverseMonthForSouthernHemisphere(yearColumn.getHeavenStem().getName(), northernMonthGanZhi)
+      : northernMonthGanZhi;
     // §16 收敛：dayDivide='current' 晚子时（23:00-24:00）归当日，与当日早子时同柱。
     // 仅替换日柱/时柱，年柱/月柱保留原始 eightChar——立春当日 00:30 与 23:30 分处节气两侧，
     // 若整体替换为同日 00:30 的 eightChar，会把年/月柱也回退（生肖/月令错乱）。
@@ -370,9 +389,9 @@ export class BaziCalculator {
         ganZhi: yearColumn.getName(),
       },
       month: {
-        gan: monthColumn.getHeavenStem().getName(),
-        zhi: monthColumn.getEarthBranch().getName(),
-        ganZhi: monthColumn.getName(),
+        gan: monthGanZhi[0],
+        zhi: monthGanZhi[1],
+        ganZhi: monthGanZhi,
       },
       day: {
         gan: dayColumn.getHeavenStem().getName(),
